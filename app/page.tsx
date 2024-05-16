@@ -8,30 +8,11 @@ import Nav from '@/components/nav';
 export default function Home() {
   return (
     <>
-      <header className='flex items-center justify-center'>
+      <header className='flex items-center w-3/4  mx-auto justify-center'>
         <Nav />
-        <div>
-          <label htmlFor="theme" className="theme">
-            <span className="theme__toggle-wrap">
-              <input id="theme" className="theme__toggle" type="checkbox" role="switch" name="theme" value="dark" />
-                <span className="theme__fill"></span>
-                <span className="theme__icon">
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                  <span className="theme__icon-part"></span>
-                </span>
-            </span>
-          </label>
-        </div>
       </header>
       <main className="mt-24">
-        Hey what is going on
+        
       </main>
     </>
   );
