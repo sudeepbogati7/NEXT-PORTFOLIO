@@ -15,7 +15,7 @@ export default function Home() {
         <div className='flex flex-col  items-center justify-center '>
           {/* profile photo */}
           <div className=''>
-            <Image objectFit='cover' src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='rounded-full' />
+            <Image objectFit='cover' src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='rounded-full border-gray-400 border-2 ' />
           </div>
           {/* name and addres */}
           <div className='flex flex-col py-4'>
@@ -28,7 +28,7 @@ export default function Home() {
 
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
-            <span> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-widest hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
+            <span> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
             <span className='font-medium'>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-semibold border-b-2 hover:border-gray-400 border-gray-300 '>Greentick Nepal</Link></span>
           </div>
 
