@@ -4,8 +4,9 @@ import Image from "next/image";
 import '@/app/theme.css';
 import Link from 'next/link';
 import Nav from '@/components/nav';
-
+import { usePathname } from 'next/navigation';
 export default function Home() {
+
   return (
     <>
       <main className="mt-24">
@@ -113,7 +114,7 @@ export default function Home() {
             <p className='text-gray-900'>I'm Sudeep Bogati, a skilled <strong> Full Stack Software Engineer </strong>with a passion for crafting dynamic web applications. Whether it's building sleek user interfaces with NEXT.js, managing server-side logic with Node.js,Django or handling data storage with MongoDB,PostgreSQL. I thrive on creating seamless, end-to-end solutions.</p>
             <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 '>  Know more about my skills and what I do  </div></Link>
           </div>
-          
+
         </div>
       </main>
     </>
