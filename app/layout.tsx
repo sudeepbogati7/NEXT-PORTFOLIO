@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/nav";
 
 const inter = Inter({ subsets: ["latin"] });
-
+import { Suspense } from "react";
 export const metadata: Metadata = {
-  title: "Sudeep Bogati || Home ",
+  title: "Sudeep Bogati",
   description: "Hello , I'm Sudeep Bogati . A passionate Software Engineer from Nepal",
 };
 
@@ -20,7 +21,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <header className=''>
+        <Nav />
+      </header>
+      <Suspense fallback={<div>Loading......</div>} >
+        <body className={inter.className}>{children}</body>
+      </Suspense>
     </html>
   );
 }
