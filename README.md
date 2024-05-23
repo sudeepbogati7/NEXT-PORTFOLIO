@@ -5,5 +5,5 @@
 
 
 
-### Loading ..............
+### 
 https://sudipbogati.com.np
