@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-hello@sudipbogati.com.np
+sudipbogati.com.np
