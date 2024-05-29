@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Nav from '@/components/nav';
 import { usePathname } from 'next/navigation';
 export default function Home() {
-
   return (
     <>
       <main className="mt-24">
