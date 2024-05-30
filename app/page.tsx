@@ -10,9 +10,10 @@ export default function Home() {
     <>
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
+          <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div>
           {/* profile photo */}
           <div className=''>
-            <Image objectFit='cover' src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='rounded-full border-gray-400 border-2 ' />
+            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='rounded-full border-gray-400 border-2 ' />
           </div>
           {/* name and addres */}
           <div className='flex flex-col py-4'>
@@ -109,9 +110,9 @@ export default function Home() {
           </div>
 
           <div className='px-4 my-14'>
-            <div className='text-xl font-medium my-4 flex items-center gap-2  border-b-2 border-gray-300 w-fit  px-4 '> About me <Image objectFit='cover' className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
+            <div className='text-xl font-medium my-4 flex items-center gap-2  border-b-2 border-gray-300 w-fit  px-4 '> About me <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
             <p className='text-gray-900'>I am Sudeep Bogati, a skilled <strong> Full Stack Software Engineer </strong>with a passion for crafting dynamic web applications. Whether its building sleek user interfaces with NEXT.js, managing server-side logic with Node.js,Django or handling data storage with MongoDB,PostgreSQL. I thrive on creating seamless, end-to-end solutions.</p>
-            <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 '>  Know more about my skills and what I do  </div></Link>
+            <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link>
           </div>
 
         </div>
