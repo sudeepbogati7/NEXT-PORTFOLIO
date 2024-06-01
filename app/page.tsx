@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
-          <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div>
+          {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
           {/* profile photo */}
           <div className=''>
-            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='rounded-full border-gray-400 border-2 ' />
+            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl rounded-full border-gray-400 border-2 ' />
           </div>
           {/* name and addres */}
           <div className='flex flex-col py-4'>
@@ -27,7 +27,7 @@ export default function Home() {
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
             <span> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
-            <span className='font-medium'>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-semibold border-b-2 hover:border-green-600  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
+            <span className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
           </div>
 
           {/* links  */}
@@ -109,12 +109,21 @@ export default function Home() {
               </span></Link>
           </div>
 
-          <div className='px-4 my-14'>
+          {/* <div className='px-4 my-14'>
             <div className='text-xl font-medium my-4 flex items-center gap-2  border-b-2 border-gray-300 w-fit  px-4 '> About me <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
             <p className='text-gray-900'>I am Sudeep Bogati, a skilled <strong> Full Stack Software Engineer </strong>with a passion for crafting dynamic web applications. Whether its building sleek user interfaces with NEXT.js, managing server-side logic with Node.js,Django or handling data storage with MongoDB,PostgreSQL. I thrive on creating seamless, end-to-end solutions.</p>
             <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link>
-          </div>
+          </div> */}
 
+
+        {/* <div className='mt-14 flex  gap-4 '>
+          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> About me </button> 
+          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> My Skills </button>
+          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> My Projects  </button>
+          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> Contact me  </button>
+        </div> */}
+
+        <Link href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link>
         </div>
       </main>
     </>
