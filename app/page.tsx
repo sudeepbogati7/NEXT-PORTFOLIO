@@ -1,38 +1,44 @@
 'use client';
 import './globals.css';
+import { useEffect } from 'react';
 import Image from "next/image";
 import '@/app/theme.css';
 import Link from 'next/link';
 import Nav from '@/components/nav';
 import { usePathname } from 'next/navigation';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
+  }, []);
   return (
     <>
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
           {/* profile photo */}
-          <div className=''>
+          <div data-aos="fade-up" className=''>
             <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl rounded-full border-gray-400 border-2 ' />
           </div>
           {/* name and addres */}
           <div className='flex flex-col py-4'>
-            <h1 className='font-semibold tracking-wide text-2xl  '> Sudeep Bogati</h1>
-            <div className='flex items-center text-base justify-center gap-1 '>
-              <span className='flex w-4 h-4'><Image src={'/location.png'} width={30} height={12} alt='location'></Image></span>
-              <span className='tracking-wide'>Chitwan, Nepal 🇳🇵</span>
+            <h1 data-aos="zoom-in" className='font-semibold tracking-wide text-2xl  '> Sudeep Bogati</h1>
+            <div data-aos="zoom-in" className='flex items-center text-base justify-center gap-1 '>
+              <span data-aos="zoom-in" className='flex w-4 h-4'><Image src={'/location.png'} width={30} height={12} alt='location'></Image></span>
+              <span data-aos="zoom-in" className='tracking-wide'>Chitwan, Nepal 🇳🇵</span>
             </div>
           </div>
 
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
-            <span> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
-            <span className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
+            <span data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
+            <span data-aos="zoom-in" className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
           </div>
 
           {/* links  */}
           <div className='flex gap-4 mt-4 '>
-            <Link target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+            <Link data-aos="fade-up" target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -43,7 +49,7 @@ export default function Home() {
             </span>
             </Link>
 
-            <Link target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-600">
+            <Link data-aos="fade-up" target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -53,7 +59,7 @@ export default function Home() {
               </svg>
             </span></Link>
 
-            <Link target='_blank' href={'https://instagram.com/the.sudeep_'}>
+            <Link data-aos="fade-up" target='_blank' href={'https://instagram.com/the.sudeep_'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-[#c13584]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +70,7 @@ export default function Home() {
                 </svg>
               </span></Link>
 
-            <Link target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
+            <Link data-aos="fade-up" target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +81,7 @@ export default function Home() {
                 </svg>
               </span></Link>
 
-            <Link href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
+            <Link data-aos="fade-up" href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-orange-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +93,7 @@ export default function Home() {
               </span></Link>
 
 
-            <Link target='_blank' href={'https://x.com/soodeep77'}>
+            <Link data-aos="fade-up" target='_blank' href={'https://x.com/soodeep77'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +103,7 @@ export default function Home() {
                     d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                 </svg>
               </span></Link>
-            <Link href={'/'}>
+            <Link data-aos="fade-up" href={'/'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-green-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +129,7 @@ export default function Home() {
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> Contact me  </button>
         </div> */}
 
-        <Link href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link>
+        <Link data-aos="fade-up" href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link>
         </div>
       </main>
     </>
