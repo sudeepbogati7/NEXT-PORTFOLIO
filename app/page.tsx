@@ -37,8 +37,8 @@ export default function Home() {
           </div>
 
           {/* links  */}
-          <div className='flex gap-4 mt-4 '>
-            <Link data-aos="fade-up" target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+          <div data-aos="fade-up" className='flex gap-4 mt-4 '>
+            <Link target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -49,7 +49,7 @@ export default function Home() {
             </span>
             </Link>
 
-            <Link data-aos="fade-up" target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-600">
+            <Link target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -59,7 +59,7 @@ export default function Home() {
               </svg>
             </span></Link>
 
-            <Link data-aos="fade-up" target='_blank' href={'https://instagram.com/the.sudeep_'}>
+            <Link target='_blank' href={'https://instagram.com/the.sudeep_'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-[#c13584]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export default function Home() {
                 </svg>
               </span></Link>
 
-            <Link data-aos="fade-up" target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
+            <Link target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function Home() {
                 </svg>
               </span></Link>
 
-            <Link data-aos="fade-up" href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
+            <Link href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-orange-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export default function Home() {
               </span></Link>
 
 
-            <Link data-aos="fade-up" target='_blank' href={'https://x.com/soodeep77'}>
+            <Link target='_blank' href={'https://x.com/soodeep77'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ export default function Home() {
                     d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                 </svg>
               </span></Link>
-            <Link data-aos="fade-up" href={'/'}>
+            <Link href={'/'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-green-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,14 +122,14 @@ export default function Home() {
           </div> */}
 
 
-        {/* <div className='mt-14 flex  gap-4 '>
+          {/* <div className='mt-14 flex  gap-4 '>
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> About me </button> 
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> My Skills </button>
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> My Projects  </button>
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> Contact me  </button>
         </div> */}
 
-        <Link data-aos="fade-up" href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link>
+          <Link href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link>
         </div>
       </main>
     </>
