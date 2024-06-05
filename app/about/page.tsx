@@ -142,7 +142,7 @@ export default function About() {
                                     </ol>
                                 </div>
                                 <button
-                                    className="mt-4 flex  transition-all duration-400  items-center gap-2 text-blue-500 font-medium"
+                                    className="mt-4 flex  transition-all duration-500  items-center gap-2 text-blue-500 font-medium"
                                     onClick={toggleReadMore}
                                 >
                                     {isExpanded ? 'Read Less' : 'Read More'} {isExpanded ? <FaChevronUp /> : <FaChevronDown />}

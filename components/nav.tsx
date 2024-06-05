@@ -15,22 +15,23 @@ export default function Nav() {
         return pathname === href ? "border-b-2 border-gray-500  transition-all duration-500 ease-in-out" : 'border-b-2 border-transparent hover:border-gray-300 transition-all duration-500 ease-in-out';
     };
 
+
+    const [sidebarVisible, setSidebarVisible] = useState(false);
+    function toggleSidebar() {
+        setSidebarVisible(!sidebarVisible);
+    }
+
+
     return (
         <>
-        <SideBar />
-            <nav className='fixed bg-white z-50 border-b-2 border-gray-300 font-medium h-14 top-0 px-4 w-full items-center mx-auto flex gap-4 justify-between'>
+            <nav className='fixed bg-white z-20 border-b-2 border-gray-300 font-medium h-16 top-0 px-4 w-full items-center mx-auto flex gap-4 justify-between'>
                 <Link href={'/'} className="p-2">
-                    <Image objectFit="cover" src={'/logo-colored.png'} width={100} height={40} alt="logo" />
+                    <Image  src={'/logo-colored.png'} width={100} height={40} alt="logo" />
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
-                    <div className="usm:block md:hidden px-4">
-                        <input id="checkbox" type="checkbox" />
-                        <label className="toggle" htmlFor="checkbox">
-                            <div id="bar1" className="bars"></div>
-                            <div id="bar2" className="bars"></div>
-                            <div id="bar3" className="bars"></div>
-                        </label>
-                    </div>
+                    <button onClick={() => setSidebarVisible(true)} className="usm:block md:hidden px-4">
+                        <Image src={'/menu.png'} width={30} height={30} alt="menu"></Image>
+                    </button>
 
                     <span className={`${isActive('/about')} usm:hidden md:block`}>
                         <Link href={'/about'} className="font-semibold"> About me </Link>
@@ -49,17 +50,24 @@ export default function Nav() {
                     </span>
                 </div>
             </nav>
+            <SideBar open={sidebarVisible} setOpen={setSidebarVisible} />
         </>
     );
 }
 
 
-function SideBar() {
-    const [open, setOpen] = useState(true)
+function SideBar({ open, setOpen }: any) {
+    // const [open, setOpen] = useState(false)
+
+    const pathname = usePathname();
+
+    const isActive = (href: string) => {
+        return pathname === href ? "border-l-4 px-2 rounded textt-black w-fit border-gray-500  transition-all duration-500 ease-in-out" : 'text-gray-500 border-transparent hover:border-gray-300 transition-all duration-500 ease-in-out';
+    };
 
     return (
         <Transition show={open}>
-            <Dialog className="relative z-10" onClose={setOpen}>
+            <Dialog className="relative z-50" onClose={setOpen}>
                 <TransitionChild
                     enter="ease-in-out duration-500"
                     enterFrom="opacity-0"
@@ -82,7 +90,7 @@ function SideBar() {
                                 leaveFrom="translate-x-0"
                                 leaveTo="translate-x-full"
                             >
-                                <DialogPanel className="pointer-events-auto relative w-screen max-w-md">
+                                <DialogPanel className="pointer-events-auto relative w-screen max-w-56">
                                     <TransitionChild
                                         enter="ease-in-out duration-500"
                                         enterFrom="opacity-0"
@@ -91,7 +99,7 @@ function SideBar() {
                                         leaveFrom="opacity-100"
                                         leaveTo="opacity-0"
                                     >
-                                        <div className="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
+                                        <div className="absolute left-0 top-2 -ml-10 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
                                             <button
                                                 type="button"
                                                 className="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
@@ -99,13 +107,34 @@ function SideBar() {
                                             >
                                                 <span className="absolute -inset-2.5" />
                                                 <span className="sr-only">Close panel</span>
-                                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                                <XMarkIcon className="h-8 w-8" aria-hidden="true" />
                                             </button>
                                         </div>
                                     </TransitionChild>
                                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
-                                        <div className="px-4 sm:px-6">
-                                            <DialogTitle className="text-base font-semibold leading-6 text-gray-900">Panel title</DialogTitle>
+                                        <div className="px-6 sm:px-6">
+                                            <DialogTitle className="text-base font-semibold leading-6 flex items-center justify-center text-gray-900"><Image src={'/hello.png'} height={90} alt="hello" width={90}></Image> </DialogTitle>
+                                            <div className="flex mt-14 flex-col gap-8">
+                                                <span onClick={() => setOpen(false)} className={`${isActive('/about')} `}>
+                                                    <Link href={'/about'} className="font-semibold"> About me </Link>
+                                                </span>
+                                                <span onClick={() => setOpen(false)} className={`${isActive('/skills')} `}>
+                                                    <Link href={'/skills'} className="font-semibold"> Skills </Link>
+                                                </span>
+                                                <span onClick={() => setOpen(false)} className={`${isActive('/projects')} `}>
+                                                    <Link href={'/projects'} className="font-semibold"> Projects </Link>
+                                                </span>
+                                                <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
+                                                    <Link href={'/blogs'} className="font-semibold"> Blogs </Link>
+                                                </span>
+                                                <span onClick={() => setOpen(false)} className={`${isActive('/contact')} `}>
+                                                    <Link href={'/contact'} className="font-semibold"> Contact </Link>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="absolute mx-auto flex flex-col text-center items-center justify-center text-gray-500 bottom-0 py-2 tracking-wide  font-medium  text-xs ">
+                                            <div className="w-fit px-8 ">&copy; 2024 Sudeep Bogati .</div> 
+                                            <div className="px-8">All rights reserved.</div>
                                         </div>
                                         <div className="relative mt-6 flex-1 px-4 sm:px-6">{/* Your content */}</div>
                                     </div>
