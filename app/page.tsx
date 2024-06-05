@@ -37,7 +37,7 @@ export default function Home() {
           </div>
 
           {/* links  */}
-          <div data-aos="fade-up" className='flex gap-4 mt-4 '>
+          <div className='flex gap-4 mt-4 '>
             <Link target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
