@@ -152,7 +152,7 @@ export default function Skills() {
                                     <div data-aos="fade-up" className="absolute left-[18px] w-[3px] bg-gray-300 h-full"></div>
                                     <div data-aos="fade-up" className="relative flex items-center w-full">
                                         <div className="flex flex-col items-start">
-                                            <div className="absolute -left-1 w-4 h-4 bg-green-500 rounded-full -ml-8"></div>
+                                            <div className="absolute -left-1 w-4 h-4 bg-green-600 rounded-full -ml-8"></div>
                                             <h2 className="border-l-4 border-green-500 gap-2 text-sm rounded-md px-2 bg-green-200 font-semibold text-gray-700 flex items-center">
                                                 <Image src={'/nodejs.png'} width={22} height={16} alt="html" />
                                                 NODE.js

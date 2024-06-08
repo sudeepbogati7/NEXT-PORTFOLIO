@@ -39,7 +39,7 @@ export default function About() {
                             </svg> */}
                                 <Image src={'/tu.png'} width={100} height={100} alt="gtn"></Image>
                             </span>
-                            <h3 className="flex items-center text-lg font-bold text-gray-900 "> Bachelors in Information Technology ( BIT ) </h3>
+                            <h3 className="flex items-center  font-bold text-gray-900 "> Bachelors in Information Technology ( BIT ) </h3>
                             <Link href={'https://www.tuiost.edu.np/'} className="hover:underline flex tracking-wide text-base items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Tribhuvan University, Kathmandu </Link>
                             <time className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> 2021 - 2025 </time>
                             <div >

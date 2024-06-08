@@ -19,11 +19,11 @@ export default function Home() {
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
           {/* profile photo */}
           <div data-aos="zoom-in" className=''>
-            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl rounded-full border-gray-400 border-2 ' />
+            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl shadow-gray-500/60 rounded-full border-gray-400 border-4 ' />
           </div>
           {/* name and addres */}
           <div className='flex flex-col py-4'>
-            <h1 data-aos="zoom-in" className='font-semibold tracking-wide text-2xl  '> Sudeep Bogati</h1>
+            <h1 data-aos="zoom-in" className='font-bold tracking-wide text-2xl  '> Sudeep Bogati</h1>
             <div data-aos="zoom-in" className='flex items-center text-base justify-center gap-1 '>
               <span data-aos="zoom-in" className='flex w-4 h-4'><Image src={'/location.png'} width={30} height={12} alt='location'></Image></span>
               <span data-aos="zoom-in" className='tracking-wide'>Chitwan, Nepal 🇳🇵</span>
@@ -31,8 +31,8 @@ export default function Home() {
           </div>
 
           {/* Position and status */}
-          <div className='flex flex-col items-center justify-center '>
-            <span data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
+          <div className='flex text-sm flex-col  items-center justify-center '>
+            <span className='' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide border-b-2 cursor-pointer border-gray-300 hover:border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
             {/* <span data-aos="zoom-in" className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span> */}
           </div>
 
@@ -129,13 +129,8 @@ export default function Home() {
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> Contact me  </button>
         </div> */}
 
-          <Link href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link>
-          <div className='mt-8 font-medium text-blue-600 '> Site is under development  ......... </div>
-
-          <div className='flex flex-col mt-8'>
-            <span className='font-semibold '>Contact</span>
-            <span className='italic tracking-widest'>hello@sudipbogati.com.np</span>
-          </div>
+          {/* <Link href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link> */}
+          {/* <div className='mt-8 cursor-wait font-medium text-blue-600 '> Site is under development  ......... </div> */}
 
         </div>
       </main>
