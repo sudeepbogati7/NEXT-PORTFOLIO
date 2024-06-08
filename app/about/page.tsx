@@ -21,8 +21,8 @@ export default function About() {
         <main className="mt-16">
             <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About me <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
             <div className='px-4 w-full flex flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
+                <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.png'} width={220} height={220} alt="coding"></Image></span>
                 <p  data-aos="fade-up" className='text-gray-700 text-base px-6 w-full md:w-2/3'>The world of software engineering keeps me buzzing! I am a <span className="font-medium ">Full Stack Software Engineer</span>, which means I can design and build the entire picture – from the user-facing website or app you see, all the way down to the engine that makes it work. I love taking complex ideas and turning them into something smooth, functional, and user-friendly. Whether its building a sleek interface or tackling the trickier back-end stuff, I am up for the challenge!</p>
-                <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.png'} width={200} height={60} alt="coding"></Image></span>
                 {/* <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link> */}
             </div>
 
@@ -80,7 +80,7 @@ export default function About() {
                         <h3 data-aos="fade-up" className="flex items-center text-base font-bold text-gray-900 "> +2 , Computer Science </h3>
                         <Link data-aos="fade-up" href={'https://sungavacollege.edu.np/'} className="hover:underline flex tracking-wide text-sm items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Sungava College , Chitwan   </Link>
                         <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> 2019 - 2021 </time>
-                        <div data-aos="fade-up" className="text-sm text-gray-500 tracking-wide">
+                        <div data-aos="fade-up" className="text-sm text-gray-600 tracking-wide">
                             <div> Grade XI CGPA : <span className="font-semibold">3.79</span> </div>
                             <div> Grade XII CGPA : <span className="font-semibold">3.59</span> </div>
                             <div>
@@ -98,7 +98,7 @@ export default function About() {
                 </ol>
             </div>
 
-            <div data-aos="fade-up" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> My Experiences  <Image src={'/career.png'} width={34} height={34} alt="education"></Image> </div>
+            <div data-aos="fade-up" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Work Experiences  <Image src={'/career.png'} width={34} height={34} alt="education"></Image> </div>
             <div className="px-6 mb-8 w-full md:w-4/5 xl:w-3/5 mx-auto">
                 <ol data-aos="fade-up" className="relative border-s-2 border-gray-200 ">
                     <li className="mb-10 ms-6">
@@ -116,7 +116,7 @@ export default function About() {
                                 Proactive Associate Software Developer with a strong background in full stack development. Experienced in designing and implementing user-friendly web applications, optimizing client-side and server-side services, and collaborating with cross-functional teams to deliver high-quality software solutions.
                             </p>
                             <div className="flex flex-col">
-                                <h1 className="font-semibold text-gray-800 my-2 border-b-2 border-gray-300 w-fit">
+                                <h1 className="font-semibold text-gray-700 my-2 border-b-2 border-gray-300 w-fit">
                                     Key Responsibilities
                                 </h1>
                                 <div className={`transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-screen' : 'max-h-0 overflow-hidden'}`}>
@@ -131,8 +131,8 @@ export default function About() {
                                     </ol>
                                 </div>
 
-                                <h1 className="font-semibold text-gray-800 my-2 border-b-2 border-gray-300 w-fit">
-                                    Technical Stack
+                                <h1 className="font-semibold text-gray-700 my-2 border-b-2 border-gray-300 w-fit">
+                                    Technical Stack 
                                 </h1>
                                 <div className={`transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-screen' : 'max-h-0 overflow-hidden'}`}>
                                     <ol className="list-disc px-4 text-gray-700">
@@ -162,7 +162,7 @@ export default function About() {
                             </svg> */}
                             <Image src={'https://i0.wp.com/gtn.com.np/storage/2022/09/greentick-nepal-pvt-lt.png?fit=2294%2C755&ssl=1'} width={100} height={100} alt="gtn"></Image>
                         </span>
-                        <h3 className="flex items-center text-base font-semibold text-gray-900 "> Software Engineer Intern </h3>
+                        <h3 className="flex items-center text-lg font-semibold text-gray-900 "> Software Engineer Intern </h3>
                         <Link href={'https://www.gtn.com.np'} className="hover:underline flex tracking-wide text-sm items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Greentick Nepal- Gyaneshwor, Kathmandu </Link>
                         <time className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> 3 March , 2024 - 29 May, 2024 </time>
                         <p className="mb-4  font-normal text-gray-600 "> Dedicated Full Stack Developer Intern with experience in building web applications using React, Next.js, Tailwind CSS, TypeScript, Django Rest Framework, and Python. Skilled in creating user-friendly interfaces, connecting frontends to backends, and collaborating effectively with teams.</p>
