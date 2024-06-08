@@ -76,43 +76,118 @@ export default function Skills() {
                 <div className="flex flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-3/4 ">
                     <div className="flex flex-col  w-full">
                         <h2 data-aos="fade-up" className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg"><Image src={'/frontend.png'} width={22} height={20} alt="frontend"></Image> Client Side (Frontend)</h2>
-                        <div className="flex flex-col my-4 md:w-4/5 w-5/6  mx-auto justify-center gap-3">
-                            <div data-aos="fade-up" >
-                                <h2 className="border-2 text-sm border-orange-400 w-fit rounded-md px-1 bg-orange-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/html.png'} width={16} height={16} alt="html" /></span>HTML5</h2>
-                                <p className="text-sm  text-gray-500">HTML is the language used to create web pages, allowing developers to structure content and design interactive online experiences.</p>
-                            </div>
-                            <div data-aos="fade-up" >
-                                <h2 className="border-2 text-sm border-blue-500 w-fit rounded-md px-1 bg-blue-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/css.png'} width={16} height={16} alt="html" /></span>CSS3</h2>
-                                <p className="text-sm text-gray-500">CSS, or Cascading Style Sheets, is used to style and layout web pages, controlling the design, colors, and fonts to enhance the appearance and user experience.</p>
-                            </div>
-                            <div data-aos="fade-up" >
-                                <h2 className=" border-2 text-sm border-[#61DBFB] w-fit rounded-md px-1 bg-[#cff5ff] flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/react.png'} width={18} height={18} alt="html" /></span>React JS</h2>
-                                <p className="text-sm text-gray-500"> ReactJS is a JavaScript library for building user interfaces, particularly single-page applications, by enabling developers to create reusable UI components.</p>
-                            </div>
-                            <div data-aos="fade-up" >
-                                <h2 className="border-2 text-sm border-gray-500 w-fit rounded-md px-1 bg-gray-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/nextjs.svg'} width={16} height={16} alt="html" /></span>NEXT.js</h2>
-                                <p className="text-sm text-gray-500">Next.js is a React framework that enables server-side rendering and static site generation, providing an optimized and scalable way to build web applications.</p>
-                            </div>
-                            <div data-aos="fade-up">
-                                <h2 className="border-2 text-sm border-[#06b6d4] w-fit rounded-md px-1 bg-blue-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/tailwind.svg'} width={16} height={16} alt="html" /></span>TailwindCSS</h2>
-                                <p className="text-sm text-gray-500">Tailwind CSS is a utility-first CSS framework that allows developers to style web pages quickly by applying predefined classes directly to HTML elements.</p>
+                        <div className="flex flex-col items-center my-8 w-5/6 md:w-4/5 mx-auto gap-8">
+                            <div className="relative w-full">
+                                <div className="flex flex-col gap-12 pl-12">
+                                    <div data-aos="fade-up" className="absolute left-[18px] w-[3px] bg-gray-300 h-full"></div>
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-orange-400 rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 gap-1 border-orange-400 text-sm rounded-md px-2 bg-orange-100 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/html.png'} width={16} height={16} alt="html" />
+                                                HTML5
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">HTML is the language used to create web pages, allowing developers to structure content and design interactive online experiences.</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-blue-500 rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 gap-1 border-blue-500 text-sm rounded-md px-2 bg-blue-100 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/css.png'} width={16} height={16} alt="css" />
+                                                CSS3
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">CSS, or Cascading Style Sheets, is used to style and layout web pages, controlling the design, colors, and fonts to enhance the appearance and user experience.</p>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-[#61DBFB] rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 border-[#61DBFB] text-sm rounded-md px-2 bg-[#cff5ff] font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/react.png'} width={18} height={18} alt="react" />
+                                                React JS
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">ReactJS is a JavaScript library for building user interfaces, particularly single-page applications, by enabling developers to create reusable UI components.</p>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-gray-500 rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 gap-1 border-gray-500 text-sm rounded-md px-2 bg-gray-200 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/nextjs.svg'} width={16} height={16} alt="next.js" />
+                                                NEXT.js
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">Next.js is a React framework that enables server-side rendering and static site generation, providing an optimized and scalable way to build web applications.</p>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-[#06b6d4] rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 gap-1 border-[#06b6d4] text-sm rounded-md px-2 bg-blue-100 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/tailwind.svg'} width={16} height={16} alt="tailwind" />
+                                                TailwindCSS
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">Tailwind CSS is a utility-first CSS framework that allows developers to style web pages quickly by applying predefined classes directly to HTML elements.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
+
+
                     </div>
                     <div className="flex items-center  flex-col  w-full">
                         <h2 data-aos="fade-up" className="font-semibold mx-auto text-center gap-2 flex items-center py-4 text-lg">  <Image src={'/backend.png'} width={28} height={20} alt="frontend"></Image> Server Side (Backend) </h2>
-                        <div className="flex my-4 flex-col md:w-4/5 w-5/6 justify-start gap-3">
-                            <div data-aos="fade-up" >
-                                <h3 className="border-2 text-sm border-green-500 w-fit rounded-md px-1 bg-green-50  flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/nodejs.png'} width={24} height={16} alt="nodejs" /></span>NODE.js</h3>
-                                <p className="text-sm text-gray-500">Node.js is a runtime environment that allows developers to run JavaScript on the server side, enabling the creation of scalable and high-performance network applications.</p>
-                            </div>
-                            <div data-aos="fade-up">
-                                <h2 className="border-2 text-sm border-gray-500 w-fit rounded-md px-1 bg-gray-100  flex items-center gap-1 font-semibold text-gray-700"> <span className="flex items-center "><Image src={'/expressjs.png'} width={20} height={16} alt="expressjs" /></span>Express.js</h2>
-                                <p className="text-sm text-gray-500">Express.js is a web application framework for Node.js, designed to simplify the development of web servers and APIs by providing robust features and middleware capabilities.</p>
-                            </div>
-                            <div data-aos="fade-up">
-                                <h2 className="border-2 text-sm border-green-600 w-fit rounded-md px-1 bg-gray-100  flex items-center gap-1 font-semibold text-gray-700"> <span className=" py-1 px-2 rounded-xl"><Image src={'/django.svg'} width={32} height={25} alt="html" /></span>Django REST Framework</h2>
-                                <p className="text-sm text-gray-500">Django is a high-level Python web framework that promotes rapid development and clean, pragmatic design, offering built-in features like authentication, ORM, and an admin interface.</p>
+
+                        <div className="flex flex-col items-center my-8 w-5/6 md:w-4/5 mx-auto gap-8">
+                            <div className="relative w-full">
+                                <div className="flex flex-col gap-12 pl-12">
+                                    <div data-aos="fade-up" className="absolute left-[18px] w-[3px] bg-gray-300 h-full"></div>
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-green-500 rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 border-green-500 gap-2 text-sm rounded-md px-2 bg-green-200 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/nodejs.png'} width={22} height={16} alt="html" />
+                                                NODE.js
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">Node.js is a runtime environment that allows developers to run JavaScript on the server side, enabling the creation of scalable and high-performance network applications.</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-gray-500 rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 gap-2 border-green-500 text-sm rounded-md px-2 bg-gray-200 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/expressjs.png'} width={16} height={16} alt="css" />
+                                                Express.js
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">
+                                                Express.js is a web application framework for Node.js, designed to simplify the development of web servers and APIs by providing robust features and middleware capabilities.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div data-aos="fade-up" className="relative flex items-center w-full">
+                                        <div className="flex flex-col items-start">
+                                            <div className="absolute -left-1 w-4 h-4 bg-green-700 rounded-full -ml-8"></div>
+                                            <h2 className="border-l-4 gap-2 border-green-700 text-sm rounded-md px-2 bg-gray-200 font-semibold text-gray-700 flex items-center">
+                                                <Image src={'/django.svg'} width={32} height={18} alt="react" />
+                                                Django REST Framework
+                                            </h2>
+                                            <p className="text-sm text-gray-500 mt-2">
+                                                Django is a high-level Python web framework that promotes rapid development and clean, pragmatic design, offering built-in features like authentication, ORM, and an admin interface.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -121,7 +196,7 @@ export default function Skills() {
             </section>
 
             <footer className="bg-gray-300 h-14 flex items-center justify-center">
-                    <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
+                <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
             </footer>
         </>
     )
