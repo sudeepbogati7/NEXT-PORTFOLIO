@@ -31,7 +31,7 @@ export default function About() {
 
                 <div data-aos="fade-up" className="text-2xl font-semibold mx-auto px-2  text-center  my-8 flex items-center gap-2 w-fit "> My Education <Image src={'/education.png'} width={30} height={30} alt="education"></Image></div>
                 <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
-                    <ol data-aos="fade-up" className="relative border-s-2 border-gray-200 ">
+                    <ol data-aos="fade-up" className="relative border-s-2 border-gray-400 ">
                         <li className="mb-10 ms-6">
                             <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-[#92a91a]  ">
                                 {/* <svg className="w-2.5 h-2.5 text-blue-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -101,7 +101,7 @@ export default function About() {
 
                 <div data-aos="fade-up" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Work Experiences  <Image src={'/career.png'} width={34} height={34} alt="education"></Image> </div>
                 <div className="px-6 mb-8 w-full md:w-4/5 xl:w-3/5 mx-auto">
-                    <ol data-aos="fade-up" className="relative border-s-2 border-gray-200 ">
+                    <ol data-aos="fade-up" className="relative border-s-2 border-gray-400 ">
                         <li className="mb-10 ms-6">
                             <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-[#92a91a]  ">
                                 {/* <svg className="w-2.5 h-2.5 text-blue-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

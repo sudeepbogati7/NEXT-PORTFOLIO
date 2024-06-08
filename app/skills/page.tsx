@@ -17,7 +17,7 @@ export default function Skills() {
                     <p data-aos="fade-up" className='text-gray-700 mt-6 text-base px-6 w-full sm:w-2/3'>As a versatile Full Stack Software Engineer, I excel in both client-side and server-side development. My expertise includes building responsive user interfaces, developing robust server-side applications, managing databases, and implementing CI/CD pipelines. Additionally, I have experience with cloud services and DevOps practices, ensuring efficient deployment and scalable solutions. My comprehensive skill set allows me to deliver seamless, scalable, and efficient software solutions that meet and exceed client expectations.</p>
                 </div>
 
-                <div className="my-4 text-2xl font-semibold mx-auto px-4 w-fit text-center border-b-4 border-gray-300">Hard Skills </div>
+                <div className="my-4 flex gap-2 items-center text-2xl font-semibold mx-auto px-4 w-fit text-center border-b-4 border-gray-300"> <Image src={'/hard-skills.png'} width={25} height={25} alt="hard-skills"></Image> Hard Skills </div>
 
                 {/* [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] */}
 
