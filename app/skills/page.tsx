@@ -205,7 +205,7 @@ export default function Skills() {
                 </div>
 
                 <div className="my-8">
-                    <h1 data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit my-6"> <Image src={'/certificates.png'} height={16} width={24} alt="tools"></Image> License and Certifications </h1>
+                    <h1 data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-6 mt-14"> <Image src={'/certificates.png'} height={16} width={24} alt="tools"></Image> License and Certifications </h1>
                     <div className="flex flex-col w-full xl:w-2/3 mx-auto px-4 items-center justify-center md:flex-row gap-6">
                         <div className="flex flex-col gap-4 w-full items-center justify-center ">
                             <div data-aos="fade-up" className="w-full bg-gray-50 shadow-lg flex justify-start p-4 rounded-lg mx-auto gap-4 border-2 border-gray-400">
@@ -227,7 +227,7 @@ export default function Skills() {
                                     <h2 className="font-semibold"> React </h2>
                                     <h3>Meta  </h3>
                                     <time className="text-gray-500">Issued Feb 2024</time>
-                                    <Link className="py-2" href={'#'}> <span className="flex text-sm items-center gap-2 bg-gray-200 px-2 border-2 border-gray-500 rounded-lg w-fit text-gray-700 " >Show credential <Image src={'/redirect.png'} width={14} height={20} alt="show-credentials"></Image></span> </Link>
+                                    <Link className="py-2" target="_blank" href={'https://www.coursera.org/account/accomplishments/certificate/6WQVDPNQP299'}> <span className="flex text-sm items-center gap-2 bg-gray-200 px-2 border-2 border-gray-500 rounded-lg w-fit text-gray-700 " >Show credential <Image src={'/redirect.png'} width={14} height={20} alt="show-credentials"></Image></span> </Link>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +240,7 @@ export default function Skills() {
                                     <h2 className="font-semibold"> Programming with JavaScript </h2>
                                     <h3> Meta  </h3>
                                     <time className="text-gray-500">Issued Sept 2023</time>
-                                    <Link className="py-2" href={'#'}> <span className="flex text-sm items-center gap-2 bg-gray-200 px-2 border-2 border-gray-500 rounded-lg w-fit text-gray-700 " >Show credential <Image src={'/redirect.png'} width={14} height={20} alt="show-credentials"></Image></span> </Link>
+                                    <Link className="py-2" target="_blank" href={'https://www.coursera.org/account/accomplishments/certificate/3SK63CHTPMZE'}> <span className="flex text-sm items-center gap-2 bg-gray-200 px-2 border-2 border-gray-500 rounded-lg w-fit text-gray-700 " >Show credential <Image src={'/redirect.png'} width={14} height={20} alt="show-credentials"></Image></span> </Link>
                                 </div>
                             </div>
                             <div data-aos="fade-up" className="w-full bg-gray-50 shadow-lg flex justify-start p-4 rounded-lg mx-auto gap-4 border-2 border-gray-400">
@@ -251,7 +251,7 @@ export default function Skills() {
                                     <h2 className="font-semibold"> Deep Learning and Neural Networks </h2>
                                     <h3> DeepLearning.AI  </h3>
                                     <time className="text-gray-500">Issued Sept 2023</time>
-                                    <Link className="py-2" href={'#'}> <span className="flex text-sm items-center gap-2 bg-gray-200 px-2 border-2 border-gray-500 rounded-lg w-fit text-gray-700 " >Show credential <Image src={'/redirect.png'} width={14} height={20} alt="show-credentials"></Image></span> </Link>
+                                    <Link className="py-2" target="_blank" href={'https://www.coursera.org/account/accomplishments/certificate/AXVXYG72PSD8'}> <span className="flex text-sm items-center gap-2 bg-gray-200 px-2 border-2 border-gray-500 rounded-lg w-fit text-gray-700 " >Show credential <Image src={'/redirect.png'} width={14} height={20} alt="show-credentials"></Image></span> </Link>
                                 </div>
                             </div>
                         </div>
