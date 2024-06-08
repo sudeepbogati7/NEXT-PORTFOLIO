@@ -24,7 +24,7 @@ export default function Nav() {
 
     return (
         <>
-            <nav className='fixed bg-white z-20 border-b-2  shadow-md border-gray-300 font-medium h-16 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
+            <nav className='fixed bg-gray-100 z-20 border-b-2  shadow-md border-gray-300 font-medium h-16 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
                 <Link href={'/'} className="p-2">
                     <Image  src={'/logo-colored.png'} width={100} height={40} alt="logo" />
                 </Link>
@@ -136,7 +136,7 @@ function SideBar({ open, setOpen }: any) {
                                             <div className="w-fit px-8 ">&copy; 2024 Sudeep Bogati .</div> 
                                             <div className="px-8">All rights reserved.</div>
                                         </div>
-                                        <div className="relative mt-6 flex-1 px-4 sm:px-6">{/* Your content */}</div>
+                                        <div className="relative mt-6 flex-1 px-4 sm:px-6"></div>
                                     </div>
                                 </DialogPanel>
                             </TransitionChild>

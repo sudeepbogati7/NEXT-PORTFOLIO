@@ -22,11 +22,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <header className=''>
+      <header className='bg-gray-100'>
         <Nav />
       </header>
       <Suspense fallback={<Loading />} >
-        <body className={inter.className}>{children}</body>
+        <body className={`${inter.className} bg-gray-100`}>{children}</body>
       </Suspense>
     </html>
   );
