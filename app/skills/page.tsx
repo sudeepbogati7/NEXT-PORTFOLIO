@@ -9,7 +9,7 @@ export default function Skills() {
         AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
     }, []);
     return (
-        <section className="mt-20">
+        <section className="my-20">
             <h1 data-aos="zoom-in" className='mt-8 mb-4 text-2xl font-semibold mx-auto px-2  text-center  flex items-center gap-2 w-fit  '> My Skills <Image src={'/skills.png'} width={26} height={26} alt="skills"></Image>  </h1>
             <div className='px-4 w-full flex gap-2 flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
                 <span data-aos="fade-up" className="w-fit rounded-lg  mx-auto flex items-center "><Image src={'/skills-header.png'} width={250} height={60} alt="coding"></Image></span>
@@ -21,7 +21,7 @@ export default function Skills() {
             {/* [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] */}
 
 
-            <div data-aos="zoom-in" className="scroll imgBox md:w-[700px] w-full px-4 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <div  className="scroll imgBox md:w-[700px] w-full px-4 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                 <div>
                     <span className=""><Image src={'/html.png'} width={34} height={34} alt="html" /></span>
                     <span className=""><Image src={'/css.png'} width={34} height={34} alt="css" /></span>
@@ -74,25 +74,25 @@ export default function Skills() {
             <h1 data-aos="fade-up" className="font-semibold text-center mx-auto text-xl gap-2 flex items-center w-fit px-4 mt-8 mb-6"><Image src={'/web-app.png'} width={30} height={30} alt="web-applications"></Image>Web Application Development </h1>
             <div  className="flex flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-3/4 ">
                 <div className="flex flex-col  w-full">
-                    <h2 className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg"><Image src={'/frontend.png'} width={22} height={20} alt="frontend"></Image> Client Side (Fronted)</h2>
+                    <h2 data-aos="fade-up" className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg"><Image src={'/frontend.png'} width={22} height={20} alt="frontend"></Image> Client Side (Fronted)</h2>
                     <div className="flex flex-col my-4 md:w-4/5 w-5/6  mx-auto justify-center gap-3">
-                        <div >
+                        <div data-aos="fade-up" >
                             <h2 className="border-2 text-sm border-orange-400 w-fit rounded-md px-1 bg-orange-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/html.png'} width={16} height={16} alt="html" /></span>HTML5</h2>
                             <p className="text-sm  text-gray-500">HTML is the language used to create web pages, allowing developers to structure content and design interactive online experiences.</p>
                         </div>
-                        <div >
+                        <div data-aos="fade-up" >
                             <h2 className="border-2 text-sm border-blue-500 w-fit rounded-md px-1 bg-blue-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/css.png'} width={16} height={16} alt="html" /></span>CSS3</h2>
                             <p className="text-sm text-gray-500">CSS, or Cascading Style Sheets, is used to style and layout web pages, controlling the design, colors, and fonts to enhance the appearance and user experience.</p>
                         </div>
-                        <div >
+                        <div data-aos="fade-up" >
                             <h2 className=" border-2 text-sm border-[#61DBFB] w-fit rounded-md px-1 bg-[#cff5ff] flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/react.png'} width={18} height={18} alt="html" /></span>React JS</h2>
                             <p className="text-sm text-gray-500"> ReactJS is a JavaScript library for building user interfaces, particularly single-page applications, by enabling developers to create reusable UI components.</p>
                         </div>
-                        <div >
+                        <div data-aos="fade-up" >
                             <h2 className="border-2 text-sm border-gray-500 w-fit rounded-md px-1 bg-gray-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/nextjs.svg'} width={16} height={16} alt="html" /></span>NEXT.js</h2>
                             <p className="text-sm text-gray-500">Next.js is a React framework that enables server-side rendering and static site generation, providing an optimized and scalable way to build web applications.</p>
                         </div>
-                        <div >
+                        <div data-aos="fade-up">
                             <h2 className="border-2 text-sm border-[#06b6d4] w-fit rounded-md px-1 bg-blue-100 flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/tailwind.svg'} width={16} height={16} alt="html" /></span>TailwindCSS</h2>
                             <p className="text-sm text-gray-500">Tailwind CSS is a utility-first CSS framework that allows developers to style web pages quickly by applying predefined classes directly to HTML elements.</p>
                         </div>
@@ -101,15 +101,15 @@ export default function Skills() {
                 <div className="flex items-center  flex-col  w-full">
                     <h2 className="font-semibold mx-auto text-center gap-2 flex items-center py-4 text-lg">  <Image src={'/backend.png'} width={28} height={20} alt="frontend"></Image> Server Side (Backend) </h2>
                     <div className="flex my-4 flex-col md:w-4/5 w-5/6 justify-start gap-3">
-                        <div >
+                        <div data-aos="fade-up" >
                             <h3 className="border-2 text-sm border-green-500 w-fit rounded-md px-1 bg-green-50  flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/nodejs.png'} width={24} height={16} alt="nodejs" /></span>NODE.js</h3>
                             <p className="text-sm text-gray-500">Node.js is a runtime environment that allows developers to run JavaScript on the server side, enabling the creation of scalable and high-performance network applications.</p>
                         </div>
-                        <div >
+                        <div data-aos="fade-up">
                             <h2 className="border-2 text-sm border-gray-500 w-fit rounded-md px-1 bg-gray-100  flex items-center gap-1 font-semibold text-gray-700"> <span className="flex items-center "><Image src={'/expressjs.png'} width={20} height={16} alt="expressjs" /></span>Express.js</h2>
                             <p className="text-sm text-gray-500">Express.js is a web application framework for Node.js, designed to simplify the development of web servers and APIs by providing robust features and middleware capabilities.</p>
                         </div>
-                        <div >
+                        <div data-aos="fade-up">
                             <h2 className="border-2 text-sm border-green-600 w-fit rounded-md px-1 bg-gray-100  flex items-center gap-1 font-semibold text-gray-700"> <span className=" py-1 px-2 rounded-xl"><Image src={'/django.svg'} width={32} height={25} alt="html" /></span>Django REST Framework</h2>
                             <p className="text-sm text-gray-500">Django is a high-level Python web framework that promotes rapid development and clean, pragmatic design, offering built-in features like authentication, ORM, and an admin interface.</p>
                         </div>
