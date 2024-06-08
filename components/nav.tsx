@@ -24,7 +24,7 @@ export default function Nav() {
 
     return (
         <>
-            <nav className='fixed bg-white z-20 border-b-2 border-gray-300 font-medium h-16 top-0 px-4 w-full items-center mx-auto flex gap-4 justify-between'>
+            <nav className='fixed bg-white z-20 border-b-2  shadow-md border-gray-300 font-medium h-16 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
                 <Link href={'/'} className="p-2">
                     <Image  src={'/logo-colored.png'} width={100} height={40} alt="logo" />
                 </Link>
@@ -34,19 +34,19 @@ export default function Nav() {
                     </button>
 
                     <span className={`${isActive('/about')} usm:hidden md:block`}>
-                        <Link href={'/about'} className="font-semibold"> About me </Link>
+                        <Link href={'/about'} className="font-medium"> About me </Link>
                     </span>
                     <span className={`${isActive('/skills')} usm:hidden md:block`}>
-                        <Link href={'/skills'} className="font-semibold"> Skills </Link>
+                        <Link href={'/skills'} className="font-medium"> Skills </Link>
                     </span>
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
-                        <Link href={'/projects'} className="font-semibold"> Projects </Link>
+                        <Link href={'/projects'} className="font-medium"> Projects </Link>
                     </span>
                     <span className={`${isActive('/blogs')} usm:hidden md:block`}>
-                        <Link href={'/blogs'} className="font-semibold"> Blogs </Link>
+                        <Link href={'/blogs'} className="font-medium"> Blogs </Link>
                     </span>
                     <span className={`${isActive('/contact')} usm:hidden md:block`}>
-                        <Link href={'/contact'} className="font-semibold"> Contact </Link>
+                        <Link href={'/contact'} className="font-medium"> Contact </Link>
                     </span>
                 </div>
             </nav>
@@ -62,7 +62,7 @@ function SideBar({ open, setOpen }: any) {
     const pathname = usePathname();
 
     const isActive = (href: string) => {
-        return pathname === href ? "border-l-4 px-2 rounded textt-black w-fit border-gray-500  transition-all duration-500 ease-in-out" : 'text-gray-500 border-transparent hover:border-gray-300 transition-all duration-500 ease-in-out';
+        return pathname === href ? "border-l-4 px-2 rounded  w-fit border-gray-500  transition-all duration-500 ease-in-out" : ' text-gray-500 border-transparent hover:border-l-4 hover:text-black hover:px-2 hover:border-gray-300 transition-all duration-300 ease-in-out';
     };
 
     return (
@@ -116,19 +116,19 @@ function SideBar({ open, setOpen }: any) {
                                             <DialogTitle className="text-base font-semibold leading-6 flex items-center justify-center text-gray-900"><Image src={'/hello.png'} height={90} alt="hello" width={90}></Image> </DialogTitle>
                                             <div className="flex mt-14 flex-col gap-8">
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/about')} `}>
-                                                    <Link href={'/about'} className="font-semibold"> About me </Link>
+                                                    <Link href={'/about'} className="font-semibold  "> About me </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/skills')} `}>
-                                                    <Link href={'/skills'} className="font-semibold"> Skills </Link>
+                                                    <Link href={'/skills'} className="font-semibold  "> Skills </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/projects')} `}>
-                                                    <Link href={'/projects'} className="font-semibold"> Projects </Link>
+                                                    <Link href={'/projects'} className="font-semibold  "> Projects </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
-                                                    <Link href={'/blogs'} className="font-semibold"> Blogs </Link>
+                                                    <Link href={'/blogs'} className="font-semibold  "> Blogs </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/contact')} `}>
-                                                    <Link href={'/contact'} className="font-semibold"> Contact </Link>
+                                                    <Link href={'/contact'} className="font-semibold  "> Contact </Link>
                                                 </span>
                                             </div>
                                         </div>

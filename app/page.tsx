@@ -18,7 +18,7 @@ export default function Home() {
         <div className='flex flex-col  items-center justify-center '>
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
           {/* profile photo */}
-          <div data-aos="fade-up" className=''>
+          <div data-aos="zoom-in" className=''>
             <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl rounded-full border-gray-400 border-2 ' />
           </div>
           {/* name and addres */}
@@ -33,12 +33,12 @@ export default function Home() {
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
             <span data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide hover:border-b-2 cursor-pointer border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
-            <span data-aos="zoom-in" className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
+            {/* <span data-aos="zoom-in" className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span> */}
           </div>
 
           {/* links  */}
           <div className='flex gap-4 mt-4 '>
-            <Link target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+            <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -49,7 +49,7 @@ export default function Home() {
             </span>
             </Link>
 
-            <Link target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-600">
+            <Link className=' border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-blue-500' target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer transition-all duration-400 hover:text-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -59,7 +59,7 @@ export default function Home() {
               </svg>
             </span></Link>
 
-            <Link target='_blank' href={'https://instagram.com/the.sudeep_'}>
+            <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-orange-500' target='_blank' href={'https://instagram.com/the.sudeep_'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-[#c13584]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export default function Home() {
                 </svg>
               </span></Link>
 
-            <Link target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
+            <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-blue-600' target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-blue-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function Home() {
                 </svg>
               </span></Link>
 
-            <Link href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
+            <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-orange-500' href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-orange-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export default function Home() {
               </span></Link>
 
 
-            <Link target='_blank' href={'https://x.com/soodeep77'}>
+            <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-gray-700' target='_blank' href={'https://x.com/soodeep77'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ export default function Home() {
                     d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                 </svg>
               </span></Link>
-            <Link href={'/'}>
+            <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-green-500' href={'/'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-green-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
