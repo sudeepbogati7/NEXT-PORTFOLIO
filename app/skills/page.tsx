@@ -63,15 +63,15 @@ export default function Skills() {
             </div>
 
             <div className="flex items-center justify-center flex-col my-4  md:w-4/5 xl:w-3/5 mx-auto">
-                <h1 data-aos="fade-up" className="font-bold text-center mx-auto text-lg py-4 flex items-center gap-2"> Programming Languagues <Image src={'/lang.png'} width={20} height={20} alt="lang"></Image> </h1>
+                <h1  className="font-bold text-center mx-auto text-lg py-4 flex items-center gap-2"> Programming Languagues <Image src={'/lang.png'} width={20} height={20} alt="lang"></Image> </h1>
                 <ul className="flex flex-wrap px-4 mx-auto items-center justify-center md:flex-row gap-4">
-                    <li data-aos="zoom-in" className="flex border-2 rounded-md border-yellow-500  px-2 bg-yellow-100 items-center font-medium gap-2 "> <span className=" flex rounded overflow-hidden items-center border border-gray-700 justify-center w-fit "><Image src={'/js.png'} width={16} height={24} alt="js" /></span> JavaScript </li>
-                    <li data-aos="zoom-in" className="flex border-2 rounded-md border-blue-500  px-2 bg-blue-100 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/ts.png'} width={16} height={24} alt="js" /></span> TypeScript </li>
-                    <li data-aos="zoom-in" className="flex border-2 rounded-md border-yellow-500  px-2 bg-blue-100 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/python.png'} width={16} height={24} alt="js" /></span> Python </li>
-                    <li data-aos="zoom-in" className="flex border-2 rounded-md border-gray-500  px-2 bg-gray-200 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/c.png'} width={16} height={24} alt="js" /></span> C , C++  </li>
+                    <li className="flex border-2 rounded-md border-yellow-500  px-2 bg-yellow-100 items-center font-medium gap-2 "> <span className=" flex rounded overflow-hidden items-center border border-gray-700 justify-center w-fit "><Image src={'/js.png'} width={16} height={24} alt="js" /></span> JavaScript </li>
+                    <li className="flex border-2 rounded-md border-blue-500  px-2 bg-blue-100 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/ts.png'} width={16} height={24} alt="js" /></span> TypeScript </li>
+                    <li className="flex border-2 rounded-md border-yellow-500  px-2 bg-blue-100 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/python.png'} width={16} height={24} alt="js" /></span> Python </li>
+                    <li className="flex border-2 rounded-md border-gray-500  px-2 bg-gray-200 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/c.png'} width={16} height={24} alt="js" /></span> C , C++  </li>
                 </ul>
             </div>
-            <h1 data-aos="fade-up" className="font-bold text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4"><Image src={'/web-app.png'} width={24} height={24} alt="web-applications"></Image>Web Application Development </h1>
+            <h1 className="font-bold text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4"><Image src={'/web-app.png'} width={24} height={24} alt="web-applications"></Image>Web Application Development </h1>
             <div  className="flex flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-3/4 ">
                 <div className="flex flex-col  w-full">
                     <h2 data-aos="fade-up" className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg"><Image src={'/frontend.png'} width={22} height={20} alt="frontend"></Image> Client Side (Frontend)</h2>
@@ -99,7 +99,7 @@ export default function Skills() {
                     </div>
                 </div>
                 <div className="flex items-center  flex-col  w-full">
-                    <h2 className="font-semibold mx-auto text-center gap-2 flex items-center py-4 text-lg">  <Image src={'/backend.png'} width={28} height={20} alt="frontend"></Image> Server Side (Backend) </h2>
+                    <h2 data-aos="fade-up" className="font-semibold mx-auto text-center gap-2 flex items-center py-4 text-lg">  <Image src={'/backend.png'} width={28} height={20} alt="frontend"></Image> Server Side (Backend) </h2>
                     <div className="flex my-4 flex-col md:w-4/5 w-5/6 justify-start gap-3">
                         <div data-aos="fade-up" >
                             <h3 className="border-2 text-sm border-green-500 w-fit rounded-md px-1 bg-green-50  flex items-center gap-1 font-semibold text-gray-700"> <span className=""><Image src={'/nodejs.png'} width={24} height={16} alt="nodejs" /></span>NODE.js</h3>
