@@ -114,7 +114,7 @@ export default function About() {
                             <p className="mb-4 text-base font-normal text-gray-600 ">
                                 Proactive Associate Software Developer with a strong background in full stack development. Experienced in designing and implementing user-friendly web applications, optimizing client-side and server-side services, and collaborating with cross-functional teams to deliver high-quality software solutions.
                             </p>
-                            <div>
+                            <div className="flex flex-col">
                                 <h1 className="font-semibold text-gray-800 my-2 border-b-2 border-gray-300 w-fit">
                                     Key Responsibilities
                                 </h1>
