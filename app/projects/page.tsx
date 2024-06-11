@@ -9,11 +9,9 @@ export default function Projects() {
         setIsFullScreen(!isFullScreen);
     };
     return (
+        
         <main className="mt-20">
             <h1 className="text-xl font-bold w-fit mx-auto my-4 text-gray-800"> Projects that I Have Built </h1>
-
-
-
             <div className="flex flex-col gap-6 mx-auto md:w-5/6 w-full">
                 <div className="border flex flex-col lg:flex-row gap-4  justify-center bg-indigo-50 rounded-lg shadow-2xl border-gray-400  mx-2 p-4  mx-auto">
                     <div className="flex flex-col mx-auto gap-4 py-6 px-2">
@@ -22,7 +20,7 @@ export default function Projects() {
                     </div>
                     <div className="w-full xl:w-2/4 2xl:w-3/5 lg:w-fit">
                         <h2 className="font-bold w-fit mx-auto text-lg text-gray-700 py-2">Hydropower Mapping Nepal </h2>
-                        <p className="text-gray-600 text-center text-sm">Hydropowers Mapping Nepal is a user-friendly app for exploring hydropower in Nepal.  An interactive map with detailed markers lets you visualize hydropower locations and data. Filters help refine searches, and a dashboard offers graphical analysis through charts and diagrams. This app is a valuable tool for anyone interested in Nepal's hydropower development.</p>
+                        <p className="text-gray-600 text-center text-sm">Hydropowers Mapping Nepal is a user-friendly app for exploring hydropower in Nepal.  An interactive map with detailed markers lets you visualize hydropower locations and data. Filters help refine searches, and a dashboard offers graphical analysis through charts and diagrams. This app is a valuable tool for anyone interested in Nepals hydropower development.</p>
                         <div className="text-gray-700 text">
                             <h3 className="font-semibold px-3 my-2 border-b-2 border-gray-400 w-fit">Features</h3>
                             <ul className="list-disc px-6 flex flex-col gap-3">
