@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <header className='bg-gray-100'>
+      <header className=''>
         <Nav />
       </header>
       <Suspense fallback={<Loading />} >
