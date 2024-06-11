@@ -21,7 +21,7 @@ export default function Projects() {
     return (
 
         <main className="my-20">
-            <h1 data-aos="zoom-in" className="text-xl font-bold w-fit mx-auto my-2 text-gray-800"> Projects that I Have Built </h1>
+            <h1 data-aos="zoom-in" className="text-xl font-bold w-fit mx-auto my-2 text-gray-800"> <span className="text-blue-900">Projects</span> that I Have Built </h1>
             <p data-aos="fade-up" className="text-gray-500 font-medium mt-2 mb-4 w-full px-2 md:w-2/4 text-center mx-auto">Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack software development. Take a look to see what I have created and the problems I have solved.</p>
             <div className="flex flex-col gap-8 mx-auto md:w-5/6 w-full">
                 <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-indigo-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
@@ -32,7 +32,7 @@ export default function Projects() {
                     <div className="w-full xl:w-2/4 2xl:w-3/5 lg:w-fit">
                         <h2 className="font-bold w-fit mx-auto text-lg text-gray-700 py-2">Hydropower Mapping Nepal </h2>
                         <p className="text-gray-600 text-center text-sm">Hydropowers Mapping Nepal is a user-friendly app for exploring hydropower in Nepal.  An interactive map with detailed markers lets you visualize hydropower locations and data. Filters help refine searches, and a dashboard offers graphical analysis through charts and diagrams. This app is a valuable tool for anyone interested in Nepals hydropower development.</p>
-                        <div className="flex gap-2 items-center py-4 justify-center flex-wrap">
+                        <div className="flex gap-2 text-sm items-center py-4 justify-center flex-wrap">
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> typescript </span>
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer ">next.js</span>
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> tailwindCSS </span>
@@ -105,7 +105,7 @@ export default function Projects() {
                             <Link target="_blank" href={'https://expense-tracking-system-7rdm0bjty-sudeepbogati7s-projects.vercel.app/'} className="flex items-center gap-2 bg-gray-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
                             <Link href={'https://github.com/sudeepbogati7/Expense-tracking-System'} className="flex items-center gap-2 bg-gray-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                         </div>
-                        <div className="flex gap-2 items-center py-2 justify-center flex-wrap">
+                        <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> typescript </span>
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer ">next.js</span>
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> tailwindCSS </span>
