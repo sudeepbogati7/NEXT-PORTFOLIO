@@ -11,8 +11,8 @@ export default function Contact() {
                     <div className="mx-auto "> <Image className="w-[150px] md:w-[300px]" src={'/contact-me.svg'} height={200} width={300} alt="contact-me"></Image></div>
                     <div className="flex w-fit fle-col gap-2 flex-col mx-auto my-4">
                         <h2 className="font-semibold  text-lg text-blue-900">Sudeep Bogati </h2>
-                        <span className="flex items-center gap-1 font-medium text-gray-600 text-sm"><Image src={'/email.png'} width={18} height={20} alt="email"></Image> hello@sudipbogati.com.np</span>
-                        <span className="flex items-center gap-1 font-medium text-gray-600 text-sm"><Image src={'/location.png'} width={18} height={20} alt="email"></Image> Kathmandu, Nepal </span>
+                        <span className="flex items-center  gap-2 font-medium text-gray-600 text-sm"><Image src={'/email.png'} width={18} height={20} alt="email"></Image> hello@sudipbogati.com.np</span>
+                        <span className="flex items-center gap-2 font-medium text-gray-600 text-sm"><Image src={'/location.png'} width={18} height={20} alt="email"></Image> Kathmandu, Nepal </span>
                     </div>
                 </div>
                 <div className="text-gray-600 mx-auto  font-medium my-4 text-center font-sm md:w-2/4 px-4 ">

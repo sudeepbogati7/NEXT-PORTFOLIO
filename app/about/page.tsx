@@ -20,10 +20,10 @@ export default function About() {
     return (
         <>
             <main className="mt-24">
-                <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About me <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
+                <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About <span className="text-blue-900">me</span> <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
                 <div className='px-4 w-full flex flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
                     <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.png'} width={220} height={220} alt="coding"></Image></span>
-                    <p data-aos="fade-up" className='text-gray-700 text-base px-6 w-full md:w-2/3'>The world of software engineering keeps me buzzing! I am a <span className="font-medium ">Full Stack Software Engineer</span>, which means I can design and build the entire picture – from the user-facing website or app you see, all the way down to the engine that makes it work. I love taking complex ideas and turning them into something smooth, functional, and user-friendly. Whether its building a sleek interface or tackling the trickier back-end stuff, I am up for the challenge!</p>
+                    <div data-aos="fade-up" className='text-gray-700 text-base px-6 w-full md:w-2/3'>The world of software engineering keeps me buzzing! I am a <span className="font-medium ">Full Stack Software Engineer</span>, which means I can design and build the entire picture – from the user-facing website or app you see, all the way down to the engine that makes it work. I love taking complex ideas and turning them into something smooth, functional, and user-friendly. Whether its building a sleek interface or tackling the trickier back-end stuff, I am up for the challenge!</div>
                     {/* <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link> */}
                 </div>
 
