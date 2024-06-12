@@ -50,7 +50,7 @@ export default function Contact() {
                             </div>
                         </Link>
 
-                        <Link className='border-2 px-4 bg-blue-200 border-blue-400 py-1 rounded transition-all duration-400  border-transparent hover:border-blue-600' target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
+                        <Link className='border-2 px-4 bg-blue-200 border-blue-600 py-1 rounded transition-all duration-400  ' target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 flex items-center font-semibold gap-2 text-sm cursor-pointer hover:text-blue-800">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
