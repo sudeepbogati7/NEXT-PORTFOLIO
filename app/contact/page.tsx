@@ -1,24 +1,30 @@
+'use client';
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Contact() {
+    useEffect(() => {
+        AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
+    }, []);
     return (
         <main className="my-20">
-            <h1 className="font-bold text-xl mx-auto w-fit text-gray-700"> <span className="text-blue-900">Reach</span> Me </h1>
+            <h1 data-aos="zoom-in" className="font-bold text-xl mx-auto w-fit text-gray-700"> <span className="text-blue-900">Reach</span> Me </h1>
             <div className="mt-8 flex flex-col w-full md:w-5/6 mx-auto">
-                <div className="flex mx-auto gap-3  md:flex-row">
-                    <div className="mx-auto "> <Image className="w-[150px] md:w-[300px]" src={'/contact-me.svg'} height={200} width={300} alt="contact-me"></Image></div>
+                <div className="flex mx-auto gap-1  md:flex-row">
+                    <div data-aos="fade-up" className="mx-auto "> <Image className="w-[150px] md:w-[300px]" src={'/contact-me.svg'} height={200} width={300} alt="contact-me"></Image></div>
                     <div className="flex w-fit fle-col gap-2 flex-col mx-auto my-4">
-                        <h2 className="font-semibold  text-lg text-blue-900">Sudeep Bogati </h2>
-                        <span className="flex items-center  gap-2 font-medium text-gray-600 text-sm"><Image src={'/email.png'} width={18} height={20} alt="email"></Image> hello@sudipbogati.com.np</span>
-                        <span className="flex items-center gap-2 font-medium text-gray-600 text-sm"><Image src={'/location.png'} width={18} height={20} alt="email"></Image> Kathmandu, Nepal </span>
+                        <h2 data-aos="fade-up" className="font-semibold  text-lg text-blue-900">Sudeep Bogati </h2>
+                        <span data-aos="fade-up" className="flex items-center  gap-2 font-medium text-gray-600 text-sm"><Image src={'/email.png'} width={18} height={20} alt="email"></Image> hello@sudipbogati.com.np</span>
+                        <span data-aos="fade-up" className="flex items-center gap-2 font-medium text-gray-600 text-sm"><Image src={'/location.png'} width={18} height={20} alt="email"></Image> Kathmandu, Nepal </span>
                     </div>
                 </div>
-                <div className="text-gray-600 mx-auto  font-medium my-4 text-center font-sm md:w-2/4 px-4 ">
+                <div data-aos="fade-up" className="text-gray-600 mx-auto  font-medium my-4 text-center font-sm md:w-2/4 px-4 ">
                     Im always excited to connect with fellow developers, potential collaborators, and anyone interested in my work. Feel free to reach out through any of the following channels.
                 </div>
-                <div className="w-full ">
+                <div data-aos="fade-up" className="w-full ">
                     <div className="text-lg font-bold w-fit mx-auto my-4"> My <span className="text-blue-900">Socials</span> </div>
                     <div className='flex flex-wrap px-4 gap-6 mt-4 mx-auto items-center justify-center'>
                         <Link className='px-4 bg-gray-200 py-1 shadow-xl shadow-gray-600/40 border-2 border-gray-500 rounded transition-all duration-400  hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}>

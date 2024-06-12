@@ -19,11 +19,11 @@ export default function Home() {
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
           {/* profile photo */}
           <div data-aos="zoom-in" className=''>
-            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl shadow-gray-500/60 rounded-full border-gray-400 border-4 ' />
+            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl shadow-gray-800/60 rounded-full border-gray-500 border-4 ' />
           </div>
           {/* name and addres */}
-          <div className='flex flex-col py-4'>
-            <h1 data-aos="zoom-in" className='font-bold tracking-wide text-2xl  '> Sudeep Bogati</h1>
+          <div className='flex flex-col my-6'>
+            <h1 data-aos="zoom-in" className='font-extrabold tracking-wide text-2xl  '> Sudeep Bogati</h1>
             <div data-aos="zoom-in" className='flex items-center text-base justify-center gap-1 '>
               <span data-aos="zoom-in" className='flex w-4 h-4'><Image src={'/location.png'} width={30} height={12} alt='location'></Image></span>
               <span data-aos="zoom-in" className='tracking-wide'>Chitwan, Nepal 🇳🇵</span>
@@ -31,9 +31,9 @@ export default function Home() {
           </div>
 
           {/* Position and status */}
-          <div className='flex text-sm flex-col  items-center justify-center '>
+          <div className='flex text-sm flex-col items-center justify-center '>
             <span className='' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide border-b-2 cursor-pointer border-gray-300 hover:border-gray-400 font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
-            {/* <span data-aos="zoom-in" className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span> */}
+            <span data-aos="zoom-in" className=''>Associate Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium border-b-2 hover:border-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
           </div>
 
           {/* links  */}
