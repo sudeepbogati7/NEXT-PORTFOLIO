@@ -42,9 +42,9 @@ export default function Nav() {
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
                         <Link href={'/projects'} className="font-medium"> Projects </Link>
                     </span>
-                    <span className={`${isActive('/blogs')} usm:hidden md:block`}>
+                    {/* <span className={`${isActive('/blogs')} usm:hidden md:block`}>
                         <Link href={'/blogs'} className="font-medium"> Blogs </Link>
-                    </span>
+                    </span> */}
                     <span className={`${isActive('/contact')} usm:hidden md:block`}>
                         <Link href={'/contact'} className="font-medium"> Contact </Link>
                     </span>
@@ -124,9 +124,9 @@ function SideBar({ open, setOpen }: any) {
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/projects')} `}>
                                                     <Link href={'/projects'} className="font-semibold  "> Projects </Link>
                                                 </span>
-                                                <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
+                                                {/* <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
                                                     <Link href={'/blogs'} className="font-semibold  "> Blogs </Link>
-                                                </span>
+                                                </span> */}
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/contact')} `}>
                                                     <Link href={'/contact'} className="font-semibold  "> Contact </Link>
                                                 </span>

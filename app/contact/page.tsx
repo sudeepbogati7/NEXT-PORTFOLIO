@@ -6,12 +6,22 @@ export default function Contact() {
     return (
         <main className="my-20">
             <h1 className="font-bold text-xl mx-auto w-fit text-gray-700"> <span className="text-blue-900">Reach</span> Me </h1>
-            <div className="mt-8 flex flex-col md:flex-row w-full md:w-5/6 mx-auto">
-                <div className="mx-auto "> <Image className="w-[250px] md:w-[600px]" src={'/contact-me.svg'} height={200} width={300} alt="contact-me"></Image></div>
+            <div className="mt-8 flex flex-col w-full md:w-5/6 mx-auto">
+                <div className="flex mx-auto gap-3  md:flex-row">
+                    <div className="mx-auto "> <Image className="w-[150px] md:w-[300px]" src={'/contact-me.svg'} height={200} width={300} alt="contact-me"></Image></div>
+                    <div className="flex w-fit fle-col gap-2 flex-col mx-auto my-4">
+                        <h2 className="font-semibold  text-lg text-blue-900">Sudeep Bogati </h2>
+                        <span className="flex items-center gap-1 font-medium text-gray-600 text-sm"><Image src={'/email.png'} width={18} height={20} alt="email"></Image> hello@sudipbogati.com.np</span>
+                        <span className="flex items-center gap-1 font-medium text-gray-600 text-sm"><Image src={'/location.png'} width={18} height={20} alt="email"></Image> Kathmandu, Nepal </span>
+                    </div>
+                </div>
+                <div className="text-gray-600 mx-auto  font-medium my-4 text-center font-sm md:w-2/4 px-4 ">
+                    Im always excited to connect with fellow developers, potential collaborators, and anyone interested in my work. Feel free to reach out through any of the following channels.
+                </div>
                 <div className="w-full ">
                     <div className="text-lg font-bold w-fit mx-auto my-4"> My <span className="text-blue-900">Socials</span> </div>
-                    <div className='flex flex-wrap gap-4 mt-4 mx-auto items-center justify-center'>
-                        <Link className='px-4 bg-gray-200 py-1 border-2 border-gray-500 rounded transition-all duration-400  hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}>
+                    <div className='flex flex-wrap px-4 gap-6 mt-4 mx-auto items-center justify-center'>
+                        <Link className='px-4 bg-gray-200 py-1 shadow-xl shadow-gray-600/40 border-2 border-gray-500 rounded transition-all duration-400  hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 flex gap-2 items-center text-sm font-semibold cursor-pointer ">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +34,7 @@ export default function Contact() {
                             </div>
                         </Link>
 
-                        <Link className=' border-2 py-1 px-4 border-blue-700 bg-blue-100 rounded transition-all duration-400  ' target='_blank' href={'https://facebook.com/sudeep.bogati07'}>
+                        <Link className=' border-2 py-1 px-4 shadow-xl shadow-blue-600/25 border-blue-700 bg-blue-100 rounded transition-all duration-400  ' target='_blank' href={'https://facebook.com/sudeep.bogati07'}>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 flex items-center gap-2 text-sm font-semibold cursor-pointer transition-all duration-400 hover:text-blue-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +47,7 @@ export default function Contact() {
                             </div>
                         </Link>
 
-                        <Link className='border-2 py-1 px-4 bg-orange-100 border-orange-500 rounded transition-all duration-400 ' target='_blank' href={'https://instagram.com/the.sudeep_'}>
+                        <Link className='border-2 py-1 px-4 shadow-xl shadow-orange-600/30 bg-orange-100 border-orange-500 rounded transition-all duration-400 ' target='_blank' href={'https://instagram.com/the.sudeep_'}>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 font-semibold text-sm flex gap-2 cursor-pointer hover:text-[#c13584]">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +60,7 @@ export default function Contact() {
                             </div>
                         </Link>
 
-                        <Link className='border-2 px-4 bg-blue-200 border-blue-600 py-1 rounded transition-all duration-400  ' target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
+                        <Link className='border-2 px-4 bg-blue-200 shadow-xl shadow-indigo-600/30 border-blue-600 py-1 rounded transition-all duration-400  ' target='_blank' href={'https://linkedin.com/in/sudeep-bogati'}>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 flex items-center font-semibold gap-2 text-sm cursor-pointer hover:text-blue-800">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +73,7 @@ export default function Contact() {
                             </div>
                         </Link>
 
-                        <Link className='border-2 px-4 bg-orange-200 border-orange-600 py-1 rounded transition-all duration-400  border-transparent hover:border-orange-500' href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
+                        <Link className='border-2 px-4 shadow-xl shadow-yellow-600/30 bg-orange-200 border-orange-600 py-1 rounded transition-all duration-400 ' href={'https://stackoverflow.com/users/24161634/sudeepbogati'} target='_blank'>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 flex gap-2 items-center font-semibold text-sm cursor-pointer hover:text-orange-600">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +86,7 @@ export default function Contact() {
                             </div></Link>
 
 
-                        <Link className='border-2 border-gray-600 px-4 bg-gray-200 py-1 rounded transition-all duration-400 ' target='_blank' href={'https://x.com/soodeep77'}>
+                        <Link className='border-2 border-gray-600 px-4 shadow-xl shadow-gray-600/40 bg-gray-200 py-1 rounded transition-all duration-400 ' target='_blank' href={'https://x.com/soodeep77'}>
                             <div className="[&>svg]:h-5 [&>svg]:w-5 flex items-center font-semibold text-sm gap-2  cursor-pointer">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
