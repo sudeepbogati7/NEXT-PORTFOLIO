@@ -64,3 +64,32 @@
     max-width: 100px;
     scale: 0.8;
 }
+
+.curved-bg {
+    position: relative;
+    background: #e5e7eb; /* same as bg-gray-200 */
+    padding: 2rem; /* same as p-4 */
+    overflow: hidden; /* Hide the pseudo-element overflow */
+  }
+  
+  .curved-bg::before,
+  .curved-bg::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    left: 0;
+    background: #e5e7eb; /* same as bg-gray-200 */
+  }
+  
+  .curved-bg::before {
+    top: -50px; /* Adjust position as needed */
+    border-radius: 0 0 50% 50%;
+  }
+  
+  .curved-bg::after {
+    bottom: -50px; /* Adjust position as needed */
+    border-radius: 0 0 50% 50%;
+    transform: rotate(180deg); /* Rotate to match the top curve direction */
+  }
+  

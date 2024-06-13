@@ -10,7 +10,7 @@ export default function Skills() {
         AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
     }, []);
 
-    const myImage='https://lh3.googleusercontent.com/pw/AP1GczP2jWFzV2WTKw5iUPGntIbUYF8j1N3LT3Bw2K55NSguko7KUCABnyHIQgghoPNpcIASFYiCAFJJM4h6ZzKg_sU1lIV0F2OqH0LrNb06vb7P4YP00x11JV_KBWv1g_h3m8wGu8lnLyzDVz7hWShS08kFMEz0KC8nGGKAbHzoMldRKQbmX3D3Oe0vHNlYYKeVZSXHUJqoR48lP0Oi6LcwvLpfPmdOpu_Rk9lO-8X5Eph9uUh23TNIHFZpNZSSfQJaN0zdGtXmINc39jeyHOLei7O9UNF1IMnCxiq9cf2XXF4Sv1G5R1cUXoy7wrPOVWRs77Ih8_B7V8FgbMhHhkfV5giYXqrwpm_Z_YfejXQHEDT-cB4zJWIdXa2BUyVTOs4pzbxtL0Z6OVZEx9X4ofAf0PP_N7Cu7uorKqdV_Xj1l0_HCl5wE1upDiEM_2eH2SS7j3S4La6ePlMfecdu19xiJJaKgrgLPF5_4aa7JFVVa0PYNsaHUmEv2vbEDa5Ov8P8XZvl1rDpyPokCFOsZX8OdpeLSHUjqHdovFfFEcYS1qvsdok3ebly6oKAvB7XvlY4F3YjyubbINfXNp46M7PfSSYY26laT4JWi8JgVSY8iQCwLqF91dzEQMf0fZKkpSfPg0LLynxL5rXQbClqUT9B50ZFV2SZgWIZep_W2j12E7pTmeGNjE21HlqLx6k0dMY_Zy7a74qh7OI5QQe0_Hpa9NRE5j2HJsD0rySc36TrlW7Zx4IfE3Kh-iF3pBZrbahw-Yeqd5kqDuhZ_TKAxd9fhXzcJcPRHyVEgngmOCVgU6J3JVZLyLFLBulmgBoBSYr7S1Dpnp2W37_mC_RyBi6rMh7xedRHlPn-97E9NmuQzRy3fGNjyhnZeCMdMTGwHRfOykwQdJKHdIpVa4VJfgs1oNgpCx0h1ZiPkoRyLfyZDGRZ3cFCiIuGGGJWKjUN8EWFNaXiLJwZkRExW-LVGXO_hZ-W3OecCzoA=w611-h917-s-no-gm?authuser=0';
+    const myImage = 'https://lh3.googleusercontent.com/pw/AP1GczP2jWFzV2WTKw5iUPGntIbUYF8j1N3LT3Bw2K55NSguko7KUCABnyHIQgghoPNpcIASFYiCAFJJM4h6ZzKg_sU1lIV0F2OqH0LrNb06vb7P4YP00x11JV_KBWv1g_h3m8wGu8lnLyzDVz7hWShS08kFMEz0KC8nGGKAbHzoMldRKQbmX3D3Oe0vHNlYYKeVZSXHUJqoR48lP0Oi6LcwvLpfPmdOpu_Rk9lO-8X5Eph9uUh23TNIHFZpNZSSfQJaN0zdGtXmINc39jeyHOLei7O9UNF1IMnCxiq9cf2XXF4Sv1G5R1cUXoy7wrPOVWRs77Ih8_B7V8FgbMhHhkfV5giYXqrwpm_Z_YfejXQHEDT-cB4zJWIdXa2BUyVTOs4pzbxtL0Z6OVZEx9X4ofAf0PP_N7Cu7uorKqdV_Xj1l0_HCl5wE1upDiEM_2eH2SS7j3S4La6ePlMfecdu19xiJJaKgrgLPF5_4aa7JFVVa0PYNsaHUmEv2vbEDa5Ov8P8XZvl1rDpyPokCFOsZX8OdpeLSHUjqHdovFfFEcYS1qvsdok3ebly6oKAvB7XvlY4F3YjyubbINfXNp46M7PfSSYY26laT4JWi8JgVSY8iQCwLqF91dzEQMf0fZKkpSfPg0LLynxL5rXQbClqUT9B50ZFV2SZgWIZep_W2j12E7pTmeGNjE21HlqLx6k0dMY_Zy7a74qh7OI5QQe0_Hpa9NRE5j2HJsD0rySc36TrlW7Zx4IfE3Kh-iF3pBZrbahw-Yeqd5kqDuhZ_TKAxd9fhXzcJcPRHyVEgngmOCVgU6J3JVZLyLFLBulmgBoBSYr7S1Dpnp2W37_mC_RyBi6rMh7xedRHlPn-97E9NmuQzRy3fGNjyhnZeCMdMTGwHRfOykwQdJKHdIpVa4VJfgs1oNgpCx0h1ZiPkoRyLfyZDGRZ3cFCiIuGGGJWKjUN8EWFNaXiLJwZkRExW-LVGXO_hZ-W3OecCzoA=w611-h917-s-no-gm?authuser=0';
     return (
         <>
             <section className="my-24">
@@ -219,12 +219,43 @@ export default function Skills() {
 
 
                 {/* Soft skills section */}
-                <div className="mt-14">
-                    <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto"> <Image src={'/soft-skills.png'} width={24} height={24} alt="soft-skills"></Image> Soft Skills </div>
-                    <div className="flex gap-2 w-full justify-center ">
-                        <div> <Image src={'/soft-skills-demo.png'} width={300} height={300} alt="soft-skills"></Image></div>
-                        <div className="text-gray-700">
-                            <span className="flex gap-2 items-center font-semibold "> <Image src={'/communication.png'} width={20} height={20} alt="communication"></Image> Communication Skills </span>
+                <div className="curved-bg mt-14">
+                    <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto">
+                        <Image src={'/soft-skills.png'} width={24} height={24} alt="soft-skills" />
+                        Soft Skills
+                    </div>
+                    <div className="text-gray-600 w-5/6 md:w-3/4 text-center mx-auto mt-4">
+                        Strong soft skills are crucial for effective communication, teamwork, and problem-solving in software development. These skills complement my technical abilities, helping me work well with others and adapt to new challenges. Here are some of the key soft skills I offer:
+                    </div>
+                    <div className="flex flex-col md:flex-row gap-2 w-full items-center mx-auto justify-center">
+                        <div>
+                            <Image src={'/soft-skills-demo.png'} width={300} height={300} alt="soft-skills" />
+                        </div>
+                        <div className="flex flex-col justify-center gap-4">
+                            <div className="flex gap-2 items-center font-semibold">
+                                <Image src={'/communication.png'} width={20} height={20} alt="communication" />
+                                Communication Skills
+                            </div>
+                            <div className="flex gap-2 items-center font-semibold">
+                                <Image src={'/teamwork.png'} width={20} height={20} alt="teamwork" />
+                                Teamwork and Collaboration
+                            </div>
+                            <div className="flex gap-2 items-center font-semibold">
+                                <Image src={'/thinking.png'} width={22} height={24} alt="thinking" />
+                                Problem-Solving and Critical Thinking
+                            </div>
+                            <div className="flex gap-2 items-center font-semibold">
+                                <Image src={'/leader.png'} width={22} height={24} alt="leadership" />
+                                Leadership and Management
+                            </div>
+                            <div className="flex gap-2 items-center font-semibold">
+                                <Image src={'/adaptive.png'} width={22} height={24} alt="adaptability" />
+                                Adaptability and Flexibility
+                            </div>
+                            <div className="flex gap-2 items-center font-semibold">
+                                <Image src={'/personal-dev.png'} width={22} height={24} alt="personal development" />
+                                Personal Development
+                            </div>
                         </div>
                     </div>
                 </div>
