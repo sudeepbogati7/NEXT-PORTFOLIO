@@ -218,49 +218,67 @@ export default function Skills() {
 
 
 
+
+
+
                 {/* Soft skills section */}
-                <div className="curved-bg mt-14">
-                    <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto">
-                        <Image src={'/soft-skills.png'} width={24} height={24} alt="soft-skills" />
-                        Soft Skills
+                <div className="relative mt-6 bg-gray-200">
+                    {/* Top Wave */}
+                    <div className="custom-shape-divider-top-1718303048">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                        </svg>
                     </div>
-                    <div className="text-gray-600 w-5/6 md:w-3/4 text-center mx-auto mt-4">
-                        Strong soft skills are crucial for effective communication, teamwork, and problem-solving in software development. These skills complement my technical abilities, helping me work well with others and adapt to new challenges. Here are some of the key soft skills I offer:
+                    <div className="relative z-10 py-16">
+                        <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto">
+                            <Image src={'/soft-skills.png'} width={24} height={24} alt="soft-skills" />
+                            Soft Skills
+                        </div>
+                        <div className="text-gray-600 w-5/6 md:w-3/4 text-center mx-auto mt-4">
+                            Strong soft skills are crucial for effective communication, teamwork, and problem-solving in software development. These skills complement my technical abilities, helping me work well with others and adapt to new challenges. Here are some of the key soft skills I offer:
+                        </div>
+                        <div className="flex flex-col md:flex-row gap-2 w-full items-center mx-auto justify-center">
+                            <div>
+                                <Image src={'/soft-skills-demo.png'} width={300} height={300} alt="soft-skills" />
+                            </div>
+                            <div className="flex flex-col justify-center gap-4">
+                                <div className="flex gap-2 items-center font-semibold">
+                                    <Image src={'/communication.png'} width={20} height={20} alt="communication" />
+                                    Communication Skills
+                                </div>
+                                <div className="flex gap-2 items-center font-semibold">
+                                    <Image src={'/teamwork.png'} width={20} height={20} alt="teamwork" />
+                                    Teamwork and Collaboration
+                                </div>
+                                <div className="flex gap-2 items-center font-semibold">
+                                    <Image src={'/thinking.png'} width={22} height={24} alt="thinking" />
+                                    Problem-Solving and Critical Thinking
+                                </div>
+                                <div className="flex gap-2 items-center font-semibold">
+                                    <Image src={'/leader.png'} width={22} height={24} alt="leadership" />
+                                    Leadership and Management
+                                </div>
+                                <div className="flex gap-2 items-center font-semibold">
+                                    <Image src={'/adaptive.png'} width={22} height={24} alt="adaptability" />
+                                    Adaptability and Flexibility
+                                </div>
+                                <div className="flex gap-2 items-center font-semibold">
+                                    <Image src={'/personal-dev.png'} width={22} height={24} alt="personal development" />
+                                    Personal Development
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex flex-col md:flex-row gap-2 w-full items-center mx-auto justify-center">
-                        <div>
-                            <Image src={'/soft-skills-demo.png'} width={300} height={300} alt="soft-skills" />
-                        </div>
-                        <div className="flex flex-col justify-center gap-4">
-                            <div className="flex gap-2 items-center font-semibold">
-                                <Image src={'/communication.png'} width={20} height={20} alt="communication" />
-                                Communication Skills
-                            </div>
-                            <div className="flex gap-2 items-center font-semibold">
-                                <Image src={'/teamwork.png'} width={20} height={20} alt="teamwork" />
-                                Teamwork and Collaboration
-                            </div>
-                            <div className="flex gap-2 items-center font-semibold">
-                                <Image src={'/thinking.png'} width={22} height={24} alt="thinking" />
-                                Problem-Solving and Critical Thinking
-                            </div>
-                            <div className="flex gap-2 items-center font-semibold">
-                                <Image src={'/leader.png'} width={22} height={24} alt="leadership" />
-                                Leadership and Management
-                            </div>
-                            <div className="flex gap-2 items-center font-semibold">
-                                <Image src={'/adaptive.png'} width={22} height={24} alt="adaptability" />
-                                Adaptability and Flexibility
-                            </div>
-                            <div className="flex gap-2 items-center font-semibold">
-                                <Image src={'/personal-dev.png'} width={22} height={24} alt="personal development" />
-                                Personal Development
-                            </div>
-                        </div>
+
+                    {/* Bottom Wave */}
+                    <div className="custom-shape-divider-bottom-1718303150">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+                        </svg>
                     </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-4">
                     <h1 data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-6 mt-14"> <Image src={'/certificates.png'} height={16} width={24} alt="tools"></Image> License and Certifications </h1>
                     <div className="flex flex-col w-full xl:w-2/3 mx-auto px-4 items-center justify-center md:flex-row gap-6">
                         <div className="flex flex-col gap-4 w-full items-center justify-center ">
