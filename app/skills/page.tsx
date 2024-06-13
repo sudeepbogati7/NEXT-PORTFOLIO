@@ -195,12 +195,37 @@ export default function Skills() {
                 </div>
 
                 <div>
-                    <h1 data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit my-4"> <Image src={'/tools.png'} height={16} width={20} alt="tools"></Image> Tools </h1>
+                    <div data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit my-4"> <Image src={'/tools.png'} height={16} width={20} alt="tools"></Image> Tools </div>
                     <div data-aos="fade-up" className="flex gap-4 flex-wrap px-2 mx-auto items-center justify-center">
                         <span className="border-2 shadow-lg shadow-orange-400/50 cursor-pointer py-1 text-sm text-gray-700 border-orange-400 w-fit px-2 rounded bg-orange-100 flex items-center gap-2 font-medim"><Image src={'/git.png'} width={22} height={24} alt="git"></Image>Git </span>
                         <span className="border-2 shadow-lg shadow-gray-800/50 cursor-pointer py-1 text-sm text-gray-700 border-gray-500 w-fit px-2 rounded bg-gray-200 flex items-center gap-2 font-medim"><Image src={'/github.png'} width={22} height={24} alt="git"></Image>Github </span>
                         <span className="border-2 shadow-lg shadow-blue-600/50 cursor-pointer py-1 text-sm text-gray-700 border-blue-600 w-fit px-2 rounded bg-blue-100 flex items-center gap-2 font-medim"><Image src={'/docker.png'} width={22} height={24} alt="git"></Image>Docker </span>
                         <span className="border-2 shadow-lg shadow-orange-800/50 cursor-pointer py-1 text-sm text-gray-700 border-orange-500 w-fit px-2 rounded bg-gray-200 flex items-center gap-2 font-medim"><Image src={'/aws.svg'} width={22} height={24} alt="git"></Image> AWS Cloud  </span>
+                    </div>
+                </div>
+
+
+                <div className="">
+                    <div className="mt-8 mb-4 flex items-center gap-2 w-fit mx-auto text-xl  font-bold"> <Image src={'/db.png'} width={20} height={20} alt="db"></Image> Databases </div>
+                    <div className="flex  text-gray-700 flex-wrap gap-6 mx-auto w-fit ">
+                        <span className="border-indigo-300 border-2 bg-indigo-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mysql.png'} width={20} height={20} alt="mysql"></Image> MySQL</span>
+                        <span className="border-blue-700 border-2 bg-blue-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/postgresql.svg'} width={20} height={20} alt="postgresql"></Image> PostgreSQL </span>
+                        <span className="border-green-400 border-2 bg-green-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mongodb.svg'} width={24} height={24} alt="mongodb"></Image> MongoDB </span>
+                    </div>
+                </div>
+
+
+
+
+
+                {/* Soft skills section */}
+                <div className="mt-14">
+                    <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto"> <Image src={'/soft-skills.png'} width={24} height={24} alt="soft-skills"></Image> Soft Skills </div>
+                    <div className="flex gap-2 w-full justify-center ">
+                        <div> <Image src={'/soft-skills-demo.png'} width={300} height={300} alt="soft-skills"></Image></div>
+                        <div className="text-gray-700">
+                            <span className="flex gap-2 items-center font-semibold "> <Image src={'/communication.png'} width={20} height={20} alt="communication"></Image> Communication Skills </span>
+                        </div>
                     </div>
                 </div>
 
