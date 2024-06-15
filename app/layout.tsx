@@ -25,7 +25,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <title>Sudeep Bogati </title>
         <meta name="description" content="Hello , this is Sudeep Bogati , a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
-        <meta name="keywords" content="Sudip Bogati, Sudeep Bogati, sudeepbogati, sudipbogati , Software Engineer,  portfolio, skills, web developer, projects" />
+        <meta name="keywords" content="Sudip Bogati, Sudeep Bogati, Sudeep Bogati Software Engineer, ASCOL, greentick, sudeepbogati, sudipbogati , Software Engineer,  portfolio, skills, web developer, projects" />
         <link rel="canonical" href="https://sudipbogati.com.np" />
 
 
