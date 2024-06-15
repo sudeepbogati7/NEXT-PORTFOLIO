@@ -209,11 +209,11 @@ export default function Skills() {
 
 
                 <div className="">
-                    <div className="mt-8 mb-4 flex items-center gap-2 w-fit mx-auto text-xl  font-bold"> <Image src={'/db.png'} width={20} height={20} alt="db"></Image> Databases </div>
-                    <div className="flex  text-gray-700 flex-wrap gap-6 mx-auto w-fit ">
-                        <span className="border-indigo-300 border-2 bg-indigo-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mysql.png'} width={20} height={20} alt="mysql"></Image> MySQL</span>
-                        <span className="border-blue-700 border-2 bg-blue-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/postgresql.svg'} width={20} height={20} alt="postgresql"></Image> PostgreSQL </span>
-                        <span className="border-green-400 border-2 bg-green-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mongodb.svg'} width={24} height={24} alt="mongodb"></Image> MongoDB </span>
+                    <div data-aos="fade-up" className="mt-8 mb-4 flex items-center gap-2 w-fit mx-auto text-xl  font-bold"> <Image src={'/db.png'} width={20} height={20} alt="db"></Image> Databases </div>
+                    <div className="flex  text-gray-700 flex-wrap gap-6 px-2 items-center justify-center mx-auto w-fit ">
+                        <span data-aos="fade-up" className="border-blue-900 border-2 shadow-lg shadow-indigo-500/50 bg-blue-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mysql.png'} width={20} height={20} alt="mysql"></Image> MySQL</span>
+                        <span data-aos="fade-up" className="border-blue-700 border-2  shadow-lg shadow-blue-500/50  bg-blue-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/postgresql.svg'} width={20} height={20} alt="postgresql"></Image> PostgreSQL </span>
+                        <span data-aos="fade-up" className="border-green-400 border-2  shadow-lg shadow-green-500/30  bg-green-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mongodb.svg'} width={24} height={24} alt="mongodb"></Image> MongoDB </span>
                     </div>
                 </div>
 

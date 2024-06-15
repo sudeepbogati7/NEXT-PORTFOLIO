@@ -113,7 +113,7 @@ function SideBar({ open, setOpen }: any) {
                                     </TransitionChild>
                                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                                         <div className="px-6 sm:px-6">
-                                            <DialogTitle className="text-base font-semibold leading-6 flex items-center justify-center text-gray-900"><Image src={'/hello.png'} height={90} alt="hello" width={90}></Image> </DialogTitle>
+                                            <DialogTitle className="text-base font-semibold leading-6 flex items-center justify-center text-gray-900"><Image src={'/hello.webp'} height={90} alt="hello" width={90}></Image> </DialogTitle>
                                             <div className="flex mt-14 flex-col gap-8">
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/about')} `}>
                                                     <Link href={'/about'} className="font-semibold  "> About me </Link>
