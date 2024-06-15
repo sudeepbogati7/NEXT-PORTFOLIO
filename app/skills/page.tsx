@@ -13,6 +13,9 @@ export default function Skills() {
     const myImage = 'https://lh3.googleusercontent.com/pw/AP1GczP2jWFzV2WTKw5iUPGntIbUYF8j1N3LT3Bw2K55NSguko7KUCABnyHIQgghoPNpcIASFYiCAFJJM4h6ZzKg_sU1lIV0F2OqH0LrNb06vb7P4YP00x11JV_KBWv1g_h3m8wGu8lnLyzDVz7hWShS08kFMEz0KC8nGGKAbHzoMldRKQbmX3D3Oe0vHNlYYKeVZSXHUJqoR48lP0Oi6LcwvLpfPmdOpu_Rk9lO-8X5Eph9uUh23TNIHFZpNZSSfQJaN0zdGtXmINc39jeyHOLei7O9UNF1IMnCxiq9cf2XXF4Sv1G5R1cUXoy7wrPOVWRs77Ih8_B7V8FgbMhHhkfV5giYXqrwpm_Z_YfejXQHEDT-cB4zJWIdXa2BUyVTOs4pzbxtL0Z6OVZEx9X4ofAf0PP_N7Cu7uorKqdV_Xj1l0_HCl5wE1upDiEM_2eH2SS7j3S4La6ePlMfecdu19xiJJaKgrgLPF5_4aa7JFVVa0PYNsaHUmEv2vbEDa5Ov8P8XZvl1rDpyPokCFOsZX8OdpeLSHUjqHdovFfFEcYS1qvsdok3ebly6oKAvB7XvlY4F3YjyubbINfXNp46M7PfSSYY26laT4JWi8JgVSY8iQCwLqF91dzEQMf0fZKkpSfPg0LLynxL5rXQbClqUT9B50ZFV2SZgWIZep_W2j12E7pTmeGNjE21HlqLx6k0dMY_Zy7a74qh7OI5QQe0_Hpa9NRE5j2HJsD0rySc36TrlW7Zx4IfE3Kh-iF3pBZrbahw-Yeqd5kqDuhZ_TKAxd9fhXzcJcPRHyVEgngmOCVgU6J3JVZLyLFLBulmgBoBSYr7S1Dpnp2W37_mC_RyBi6rMh7xedRHlPn-97E9NmuQzRy3fGNjyhnZeCMdMTGwHRfOykwQdJKHdIpVa4VJfgs1oNgpCx0h1ZiPkoRyLfyZDGRZ3cFCiIuGGGJWKjUN8EWFNaXiLJwZkRExW-LVGXO_hZ-W3OecCzoA=w611-h917-s-no-gm?authuser=0';
     return (
         <>
+        <head>
+            <title>Skills || Sudeep Bogati </title>
+        </head>
             <section className="my-24">
                 <div data-aos="zoom-in" className='mt-8 mb-4 text-2xl font-bold mx-auto px-2  text-center  flex items-center gap-2 w-fit  '> My <span className="text-blue-900 "> Skills </span> <Image src={'/skills.png'} width={26} height={26} alt="skills"></Image>  </div>
                 <div className='px-4 w-full flex gap-2 flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>

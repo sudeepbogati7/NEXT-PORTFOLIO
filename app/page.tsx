@@ -14,6 +14,7 @@ export default function Home() {
   }, []);
   return (
     <>
+    
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
