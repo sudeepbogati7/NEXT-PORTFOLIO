@@ -29,8 +29,8 @@ export default function Projects() {
                 <div className="flex flex-col gap-8 mx-auto md:w-5/6 w-full">
                     <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-indigo-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex flex-col mx-auto gap-4 py-6 px-2">
-                            <div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/hydromap1.png'} height={100} width={500} alt="hydromap-project-preview"></Image> </div>
-                            <div className={` ${showHydroProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/hydromap-1.png'} height={100} width={500} alt="hydromap-project-preview"></Image> </div>
+                            <div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/hydromap1.webp'} height={100} width={500} alt="hydromap-project-preview"></Image> </div>
+                            <div className={` ${showHydroProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/hydromap-1.webp'} height={100} width={500} alt="hydromap-project-preview"></Image> </div>
                         </div>
                         <div className="w-full xl:w-2/4 2xl:w-3/5 lg:w-fit">
                             <h2 className="font-bold w-fit mx-auto text-lg text-gray-700 ">Hydropower Mapping Nepal </h2>
@@ -94,12 +94,12 @@ export default function Projects() {
                     <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-orange-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex mx-auto gap-4 py-6 px-2">
                             <div className="flex flex-col gap-4">
-                                <div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/expense-tracker.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div>
-                                <div className={` ${showExpenseProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/expense-tracker1.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div>
+                                <div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/expense-tracker.webp'} height={100} width={200} alt="hydromap-project-preview"></Image> </div>
+                                <div className={` ${showExpenseProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/expense-tracker1.webp'} height={100} width={200} alt="hydromap-project-preview"></Image> </div>
                             </div>
                             <div className="flex flex-col gap-4">
-                                <Suspense fallback={<Loading />} ><div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/expense-tracker2.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
-                                <Suspense fallback={<Loading />} ><div className={` ${showExpenseProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/expense-tracker4.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
+                                <Suspense fallback={<Loading />} ><div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/expense-tracker2.webp'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
+                                <Suspense fallback={<Loading />} ><div className={` ${showExpenseProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/expense-tracker4.webp'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
                             </div>
                         </div>
                         <div className="w-full xl:w-2/4 2xl:w-3/5 lg:w-fit">
@@ -167,10 +167,10 @@ export default function Projects() {
                         <div className="flex mx-auto gap-4 py-6 px-2">
                             <div className="flex lg:flex-col  gap-4">
                                 <div className="flex flex-row-reverse gap-4">
-                                    <Suspense fallback={<Loading />} ><div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/chat-app3.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
-                                    <Suspense fallback={<Loading />} ><div className={`transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/chat-app2.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
+                                    <Suspense><div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/chat-app3.jpg'} height={100} width={200} alt="chatapp-preview"></Image> </div></Suspense>
+                                    <Suspense><div className={`transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/chat-app-2.webp'} height={100} width={200} alt="chat-app"></Image> </div></Suspense>
                                 </div>
-                                <Suspense fallback={<Loading />} ><div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/chat-app.png'} height={100} width={200} alt="hydromap-project-preview"></Image> </div></Suspense>
+                                <Suspense><div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/chat-app.webp'} height={100} width={200} alt="chat-app-preview"></Image> </div></Suspense>
                             </div>
                         </div>
                         <div className="w-full xl:w-2/4 2xl:w-3/5 lg:w-fit">

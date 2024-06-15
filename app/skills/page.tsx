@@ -19,7 +19,7 @@ export default function Skills() {
             <section className="my-24">
                 <div data-aos="zoom-in" className='mt-8 mb-4 text-2xl font-bold mx-auto px-2  text-center  flex items-center gap-2 w-fit  '> My <span className="text-blue-900 "> Skills </span> <Image src={'/skills.png'} width={26} height={26} alt="skills"></Image>  </div>
                 <div className='px-4 w-full flex gap-2 flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
-                    <span data-aos="fade-up" className="w-fit rounded-lg  mx-auto flex items-center "><Image src={'/skills-header.png'} width={250} height={60} alt="coding"></Image></span>
+                    <span data-aos="fade-up" className="w-fit rounded-lg  mx-auto flex items-center "><Image src={'/skills-header.webp'} width={250} height={60} alt="coding"></Image></span>
                     <p data-aos="fade-up" className='text-gray-600 mt-6 text-base px-2 text-center w-full sm:w-2/3'>As a versatile Full Stack Software Engineer, I excel in both client-side and server-side development. My expertise includes building responsive user interfaces, developing robust server-side applications, managing databases, and implementing CI/CD pipelines. Additionally, I have experience with cloud services and DevOps practices, ensuring efficient deployment and scalable solutions. My comprehensive skill set allows me to deliver seamless, scalable, and efficient software solutions that meet and exceed client expectations.</p>
                 </div>
 
@@ -233,39 +233,39 @@ export default function Skills() {
                         </svg>
                     </div>
                     <div className="relative z-10 py-16">
-                        <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto">
+                        <div data-aos="zoom-in" className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto">
                             <Image src={'/soft-skills.png'} width={24} height={24} alt="soft-skills" />
                             Soft Skills
                         </div>
-                        <div className="text-gray-600 w-5/6 md:w-3/4 text-center mx-auto mt-4">
+                        <div data-aos="fade-up" className="text-gray-600 w-5/6 md:w-3/4 text-center mx-auto mt-4">
                             Strong soft skills are crucial for effective communication, teamwork, and problem-solving in software development. These skills complement my technical abilities, helping me work well with others and adapt to new challenges. Here are some of the key soft skills I offer:
                         </div>
                         <div className="flex flex-col md:flex-row gap-2 w-full items-center mx-auto justify-center">
-                            <div>
-                                <Image src={'/soft-skills-demo.png'} width={300} height={300} alt="soft-skills" />
+                            <div data-aos="fade-up">
+                                <Image src={'/soft-skills-demo.webp'} width={300} height={300} alt="soft-skills" />
                             </div>
                             <div className="flex flex-col justify-center gap-4">
-                                <div className="flex gap-2 items-center font-semibold">
+                                <div data-aos="fade-up" className="flex gap-2 items-center font-semibold">
                                     <Image src={'/communication.png'} width={20} height={20} alt="communication" />
                                     Communication Skills
                                 </div>
-                                <div className="flex gap-2 items-center font-semibold">
+                                <div data-aos="fade-up" className="flex gap-2 items-center font-semibold">
                                     <Image src={'/teamwork.png'} width={20} height={20} alt="teamwork" />
                                     Teamwork and Collaboration
                                 </div>
-                                <div className="flex gap-2 items-center font-semibold">
+                                <div data-aos="fade-up" className="flex gap-2 items-center font-semibold">
                                     <Image src={'/thinking.png'} width={22} height={24} alt="thinking" />
                                     Problem-Solving and Critical Thinking
                                 </div>
-                                <div className="flex gap-2 items-center font-semibold">
+                                <div data-aos="fade-up" className="flex gap-2 items-center font-semibold">
                                     <Image src={'/leader.png'} width={22} height={24} alt="leadership" />
                                     Leadership and Management
                                 </div>
-                                <div className="flex gap-2 items-center font-semibold">
+                                <div data-aos="fade-up" className="flex gap-2 items-center font-semibold">
                                     <Image src={'/adaptive.png'} width={22} height={24} alt="adaptability" />
                                     Adaptability and Flexibility
                                 </div>
-                                <div className="flex gap-2 items-center font-semibold">
+                                <div data-aos="fade-up" className="flex gap-2 items-center font-semibold">
                                     <Image src={'/personal-dev.png'} width={22} height={24} alt="personal development" />
                                     Personal Development
                                 </div>
