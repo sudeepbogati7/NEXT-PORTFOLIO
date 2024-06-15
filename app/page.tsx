@@ -20,7 +20,7 @@ export default function Home() {
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
           {/* profile photo */}
           <div data-aos="zoom-in" className=''>
-            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' className='shadow-2xl shadow-gray-800/60 rounded-full border-gray-500 border-4 ' />
+            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' placeholder="blur"    blurDataURL="/profile.jpg" priority className='shadow-2xl shadow-gray-800/60 rounded-full border-gray-500 border-4 ' />
           </div>
           {/* name and addres */}
           <div className='flex flex-col my-6'>
