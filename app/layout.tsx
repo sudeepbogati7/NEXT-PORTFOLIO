@@ -33,7 +33,7 @@ export default function RootLayout({
         <meta property="og:description" content="Hello, this is Sudeep Bogati, a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
         <meta property="og:url" content="https://sudipbogati.com.np" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/profile.jpg" />
+        <meta property="og:image" content="https://sudipbogati.com.np/profile.jpg" />
 
 
 
