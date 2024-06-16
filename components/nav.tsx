@@ -116,19 +116,19 @@ function SideBar({ open, setOpen }: any) {
                                             <DialogTitle className="text-base font-semibold leading-6 flex items-center justify-center text-gray-900"><Image src={'/hello.webp'} height={90} alt="hello" width={90}></Image> </DialogTitle>
                                             <div className="flex mt-14 flex-col gap-8">
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/about')} `}>
-                                                    <Link href={'/about'} className="font-semibold  "> About me </Link>
+                                                    <Link href={'/about'} className="font-semibold flex items-center gap-2 border-b-2 w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400 "> <Image src={'/about-me-nav.png'} width={16} height={20} alt="about-me"></Image> About me </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/skills')} `}>
-                                                    <Link href={'/skills'} className="font-semibold  "> Skills </Link>
+                                                    <Link href={'/skills'} className="font-semibold flex items-center gap-2 border-b-2 w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400 ">  <Image src={'/skills.png'} width={16} height={20} alt="about-me"></Image>  Skills </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/projects')} `}>
-                                                    <Link href={'/projects'} className="font-semibold  "> Projects </Link>
+                                                    <Link href={'/projects'} className="font-semibold font-semibold flex items-center gap-2 border-b-2 w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/projects.png'} width={16} height={20} alt="about-me"></Image> Projects </Link>
                                                 </span>
                                                 {/* <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
-                                                    <Link href={'/blogs'} className="font-semibold  "> Blogs </Link>
+                                                    <Link href={'/blogs'} className="font-semibold font-semibold flex items-center gap-2 border-b-2 w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> Blogs </Link>
                                                 </span> */}
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/contact')} `}>
-                                                    <Link href={'/contact'} className="font-semibold  "> Contact </Link>
+                                                    <Link href={'/contact'} className="font-semibold font-semibold flex items-center gap-2 border-b-2 w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/contact.png'} width={16} height={20} alt="about-me"></Image> Contact </Link>
                                                 </span>
                                             </div>
                                         </div>
