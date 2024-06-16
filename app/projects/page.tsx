@@ -224,11 +224,14 @@ export default function Projects() {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h1>Github Activity Calender Insights </h1>
-                    <GitHubCalendar  username="sudeepbogati7"/>
+                <div data-aos="fade-up" className="my-14 flex flex-col max-w-full overflow-auto justify-center items-center  mx-auto">
+                    <div className="font-bold md:text-xl text-base flex items-center gap-2 w-fit mx-auto my-3  text-green-800">My Github Activity Calender <span className=" border-b border-gray-300 flex items-center gap-2 text-gray-600 "> <Image src={'/github.png'} height={20} width={20} alt="github"></Image> /sudeepbogati7</span> </div>
+                   <div className=""> <GitHubCalendar  username="sudeepbogati7"/></div>
                 </div>
             </main>
+            <footer className="bg-gray-300 h-14 flex items-center justify-center">
+                <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
+            </footer>
         </>
 
     )
