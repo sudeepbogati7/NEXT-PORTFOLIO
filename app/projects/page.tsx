@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import Loading from "../Loading";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import GitHubCalendar from "react-github-calendar";
 export default function Projects() {
     useEffect(() => {
         AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
@@ -222,6 +223,10 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <h1>Github Activity Calender Insights </h1>
+                    <GitHubCalendar  username="sudeepbogati7"/>
                 </div>
             </main>
         </>
