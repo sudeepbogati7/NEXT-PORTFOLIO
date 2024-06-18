@@ -1,6 +1,6 @@
 # Personal Portfolio
 
 
-Publishing on : 
+Tech Stack 
 
-https://sudipbogati.com.np
+`NEXT.js` `TailwindCSS` , `TypeScript` `bun` 
