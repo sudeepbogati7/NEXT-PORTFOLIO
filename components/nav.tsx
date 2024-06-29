@@ -12,7 +12,7 @@ export default function Nav() {
     const pathname = usePathname();
 
     const isActive = (href: string) => {
-        return pathname === href ? "border-b-2 border-gray-500  transition-all duration-500 ease-in-out" : 'border-b-2 border-transparent hover:border-gray-300 transition-all duration-500 ease-in-out';
+        return pathname === href ? "border-b-2 border-gray-500  transition-all duration-500 ease-in-out" : 'border-b-2 border-transparent hover:border-gray-300 transition-all text-slate-600 hover:text-black duration-500 ease-in-out';
     };
 
 
@@ -42,14 +42,15 @@ export default function Nav() {
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
                         <Link href={'/projects'} className="font-medium"> Projects </Link>
                     </span>
-                    <span className={`${isActive('/blogs')} usm:hidden md:block`}>
-                        <Link href={'https://blogs.sudipbogati.com.np'} className="font-medium"> Blogs </Link>
-                    </span>
+                  
                     {/* <span className={`${isActive('/blogs')} usm:hidden md:block`}>
                         <Link href={'/blogs'} className="font-medium"> Blogs </Link>
                     </span> */}
                     <span className={`${isActive('/contact')} usm:hidden md:block`}>
                         <Link href={'/contact'} className="font-medium"> Contact </Link>
+                    </span>
+                    <span className={`${isActive('/blogs')} usm:hidden md:block`}>
+                        <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className="flex items-center gap-2 font-medium"> Blogs  <Image src={'/redirect.png'} width={11} height={12} alt="redirect-blogs"></Image></Link>
                     </span>
                 </div>
             </nav>

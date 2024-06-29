@@ -28,7 +28,7 @@ export default function Skills() {
                 {/* [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] */}
                 <div className="scroll imgBox md:w-[800px] w-full px-4 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                     <div>
-                        <span className=""><Image src={'/html.png'} width={38} height={38} alt="html" /></span>
+                        <span  className=""><Image src={'/html.png'} width={38} height={38} alt="html" /></span>
                         <span className=""><Image src={'/css.png'} width={38} height={38} alt="css" /></span>
                         <span className=""><Image src={'/js.png'} width={38} height={38} alt="js" /></span>
                         <span className=""><Image src={'/ts.png'} width={38} height={38} alt="ts" /></span>
