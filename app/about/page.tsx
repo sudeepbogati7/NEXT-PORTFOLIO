@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import Link from "next/link";
 export default function About() {
     const [showMore, setShowMore] = useState(false);// om education section
@@ -17,6 +16,7 @@ export default function About() {
     useEffect(() => {
         AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
     }, []);
+
     return (
         <>
             <head>
@@ -33,7 +33,7 @@ export default function About() {
 
                 <div className="relative  px-2 p-6  my-8 w-fit">
                     <Image src="/edu-background.jpg" width={1000} height={1000} alt="background" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gray-100  opacity-90"></div>
+                    <div className="absolute inset-0 bg-gray-100  opacity-85"></div>
                     <div data-aos="zoom-in" className="relative py-4  text-2xl font-semibold flex text-center mx-auto w-fit  items-center gap-2">
                         My Education
                         <Image src="/education.png" width={30} height={30} alt="education" />

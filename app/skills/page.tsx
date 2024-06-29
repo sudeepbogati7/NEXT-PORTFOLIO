@@ -76,7 +76,9 @@ export default function Skills() {
                         <li className="flex border-2 rounded-md shadow-lg shadow-gray-600/40 border-gray-500  px-2 bg-gray-200 items-center font-medium gap-2 "> <span className="flex items-center justify-center w-fit "><Image src={'/c.png'} width={16} height={24} alt="js" /></span> C , C++  </li>
                     </ul>
                 </div>
-                <h1 className="font-bold text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4"><Image src={'/web-app.png'} width={24} height={24} alt="web-applications"></Image>Web Application Development </h1>
+
+                
+                <div className="font-bold text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4"><Image src={'/web-app.png'} width={24} height={24} alt="web-applications"></Image>Web Application Development </div>
                 <div className="flex flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-3/4 ">
                     <div className="flex flex-col  w-full">
                         <h2 data-aos="fade-up" className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg"><Image src={'/frontend.png'} width={22} height={20} alt="frontend"></Image> Client Side (Frontend)</h2>
