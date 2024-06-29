@@ -27,7 +27,8 @@ export default function RootLayout({
         <meta name="description" content="Hello , this is Sudeep Bogati , a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
         <meta name="keywords" content="Sudip Bogati, Sudeep Bogati, Sudeep Bogati Software Engineer, ASCOL, greentick, sudeepbogati, sudipbogati , Software Engineer,  portfolio, skills, web developer, projects" />
         <link rel="canonical" href="https://sudipbogati.com.np" />
-
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5570809106422894"
+          crossOrigin="anonymous"></script>
 
         <meta property="og:title" content="Sudeep Bogati - Software Engineer" />
         <meta property="og:description" content="Hello, this is Sudeep Bogati, a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
