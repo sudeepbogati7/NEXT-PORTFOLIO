@@ -51,7 +51,7 @@ export default function About() {
                                 </Link>
                                 <time className="block italic mb-2 text-sm font-normal leading-none text-gray-500">2021 - 2025</time>
                                 <div className="relative">
-                                    <div style={{ maxHeight: showMore ? '1000px' : '100px' }} className={`${showMore ? 'max-h-fit' : 'max-h-0'} overflow-hidden transition-all duration-500 relative`}>
+                                    <div style={{ maxHeight: showMore ? '1000px' : '100px' }} className={`${showMore ? 'max-h-fit' : 'max-h-0'} overflow-hidden transition-all duration-800 relative`}>
                                         <p className="mb-4 text-base font-normal text-gray-700">
                                             Studied Bachelor of Information Technology (BIT) from Tribhuvan University. My studies covered programming, databases, Web Development, Networking. I gained hands-on experience through projects and internships, developing strong IT and problem-solving skills.
                                         </p>
@@ -107,7 +107,7 @@ export default function About() {
                             <h3 className="flex items-center text-lg font-semibold text-gray-900 "> Associate Software Engineer  <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Currently</span></h3>
                             <Link href={'https://www.gtn.com.np'} className="underline text-sm flex tracking-wide items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Greentick Nepal - Gyaneshwor, Kathmandu </Link>
                             <time className="block mb-2 italic  text-sm font-normal leading-none text-gray-500 "> June 1, 2024 - Present </time>
-                            <div className={`relative flex flex-col transition-max-height duration-500 ease-in-out ${isExpanded ? 'max-h-fit' : 'max-h-24 overflow-hidden'}`}>
+                            <div   className={`relative flex flex-col transition-all duration-800 ease-in-out ${isExpanded ? 'max-h-fit' : 'max-h-24 overflow-hidden'}`}>
                                 <p className="mb-4 text-base font-normal text-gray-600">
                                     Proactive Associate Software Developer with a strong background in full stack development. Experienced in designing and implementing user-friendly web applications, optimizing client-side and server-side services, and collaborating with cross-functional teams to deliver high-quality software solutions.
                                 </p>
