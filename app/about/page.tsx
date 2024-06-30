@@ -39,7 +39,6 @@ export default function About() {
                         <Image src="/education.png" width={30} height={30} alt="education" />
                     </div>
 
-
                     <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
                         <ol data-aos="fade-up" className="relative border-s-2 border-gray-400">
                             <li className="mb-10 ms-6">
