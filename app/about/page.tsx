@@ -14,7 +14,7 @@ export default function About() {
         setIsExpanded(!isExpanded);
     };
     useEffect(() => {
-        AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
+        AOS.init({ duration: 500 }); // Initialize AOS with a duration of 1000ms
     }, []);
 
     return (
