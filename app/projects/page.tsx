@@ -28,7 +28,7 @@ export default function Projects() {
                 <h1 data-aos="zoom-in" className="text-xl font-bold w-fit mx-auto my-2 text-gray-800"> <span className="text-blue-900">Projects</span> that I Have Built </h1>
                 <p data-aos="fade-up" className="text-gray-500 font-medium mt-2 mb-4 w-full px-2 md:w-2/4 text-center mx-auto">Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack software development. Take a look to see what I have created and the problems I have solved.</p>
                 <div className="flex flex-col gap-8 mx-auto md:w-5/6 w-full">
-                    <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-indigo-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                    {/* <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-indigo-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex flex-col mx-auto gap-4 py-6 px-2">
                             <div className="border-2 shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden"> <Image src={'/hydromap1.webp'} height={100} width={500} alt="hydromap-project-preview"></Image> </div>
                             <div className={` ${showHydroProjectMore ? "block" : "hidden"} transition-all duration-400   border-2 block shadow-xl w-fit h-fit border-gray-400 rounded-lg overflow-hidden`}> <Image src={'/hydromap-1.webp'} height={100} width={500} alt="hydromap-project-preview"></Image> </div>
@@ -86,7 +86,7 @@ export default function Projects() {
                                 {showHydroProjectMore ? <FaChevronUp className="ml-2" /> : <FaChevronDown className="ml-2" />}
                             </button>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
