@@ -22,7 +22,7 @@ export default function About() {
             <head>
                 <title>About || Sudeep Bogati </title>
             </head>
-            <main className="mt-24">
+            <main className="mt-24 font-sans">
                 <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About <span className="text-blue-900">me</span> <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
                 <div className='px-4 w-full flex flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
                     <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.webp'} width={220} height={220} alt="coding"></Image></span>

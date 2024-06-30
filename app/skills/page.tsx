@@ -20,10 +20,10 @@ export default function Skills() {
                 <div data-aos="zoom-in" className='mt-8 mb-4 text-2xl font-bold mx-auto px-2  text-center  flex items-center gap-2 w-fit  '> My <span className="text-blue-900 "> Skills </span> <Image src={'/skills.png'} width={26} height={26} alt="skills"></Image>  </div>
                 <div className='px-4 w-full flex gap-2 flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
                     <span data-aos="fade-up" className="w-fit rounded-lg  mx-auto flex items-center "><Image src={'/skills-header.webp'} width={250} height={60} alt="coding"></Image></span>
-                    <p data-aos="fade-up" className='text-gray-600 mt-6 text-base px-2 text-center w-full sm:w-2/3'>As a versatile Full Stack Software Engineer, I excel in both client-side and server-side development. My expertise includes building responsive user interfaces, developing robust server-side applications, managing databases, and implementing CI/CD pipelines. Additionally, I have experience with cloud services and DevOps practices, ensuring efficient deployment and scalable solutions. My comprehensive skill set allows me to deliver seamless, scalable, and efficient software solutions that meet and exceed client expectations.</p>
+                    <p data-aos="fade-up" className='text-gray-600 mt-6 text-base px-2 text-center w-full sm:w-2/3 font-sans'>As a versatile Full Stack Software Engineer, I excel in both client-side and server-side development. My expertise includes building responsive user interfaces, developing robust server-side applications, managing databases, and implementing CI/CD pipelines. Additionally, I have experience with cloud services and DevOps practices, ensuring efficient deployment and scalable solutions. My comprehensive skill set allows me to deliver seamless, scalable, and efficient software solutions that meet and exceed client expectations.</p>
                 </div>
 
-                <div className="my-4 flex gap-2 items-center text-2xl font-semibold mx-auto px-4 w-fit text-center border-b-4 border-gray-300"> <Image src={'/hard-skills.png'} width={25} height={25} alt="hard-skills"></Image> Hard Skills </div>
+                <div className="my-4 font-sans flex gap-2 items-center text-2xl font-semibold mx-auto px-4 w-fit text-center border-b-4 border-gray-300"> <Image src={'/hard-skills.png'} width={25} height={25} alt="hard-skills"></Image> Hard Skills </div>
 
                 {/* [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] */}
                 <div className="scroll imgBox md:w-[800px] w-full px-4 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
@@ -78,8 +78,8 @@ export default function Skills() {
                 </div>
 
                 
-                <div className="font-bold text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4"><Image src={'/web-app.png'} width={24} height={24} alt="web-applications"></Image>Web Application Development </div>
-                <div className="flex flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-3/4 ">
+                <div className="font-bold font-sans text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4"><Image src={'/web-app.png'} width={24} height={24} alt="web-applications"></Image>Web Application Development </div>
+                <div className="flex font-mono flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-3/4 ">
                     <div className="flex flex-col  w-full">
                         <h2 data-aos="fade-up" className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg"><Image src={'/frontend.png'} width={22} height={20} alt="frontend"></Image> Client Side (Frontend)</h2>
                         <div className="flex flex-col items-center my-8 w-5/6 md:w-4/5 mx-auto gap-8">
@@ -201,7 +201,7 @@ export default function Skills() {
 
                 <div>
                     <div data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit my-4"> <Image src={'/tools.png'} height={16} width={20} alt="tools"></Image> Tools </div>
-                    <div data-aos="fade-up" className="flex gap-4 flex-wrap px-2 mx-auto items-center justify-center">
+                    <div data-aos="fade-up " className="flex gap-4 flex-wrap px-2 mx-auto items-center justify-center">
                         <span className="border-2 shadow-lg shadow-orange-400/50 cursor-pointer py-1 text-sm text-gray-700 border-orange-400 w-fit px-2 rounded bg-orange-100 flex items-center gap-2 font-medim"><Image src={'/git.png'} width={22} height={24} alt="git"></Image>Git </span>
                         <span className="border-2 shadow-lg shadow-gray-800/50 cursor-pointer py-1 text-sm text-gray-700 border-gray-500 w-fit px-2 rounded bg-gray-200 flex items-center gap-2 font-medim"><Image src={'/github.png'} width={22} height={24} alt="git"></Image>Github </span>
                         <span className="border-2 shadow-lg shadow-blue-600/50 cursor-pointer py-1 text-sm text-gray-700 border-blue-600 w-fit px-2 rounded bg-blue-100 flex items-center gap-2 font-medim"><Image src={'/docker.png'} width={22} height={24} alt="git"></Image>Docker </span>
@@ -210,7 +210,7 @@ export default function Skills() {
                 </div>
 
 
-                <div className="">
+                <div className="font-mono">
                     <div data-aos="fade-up" className="mt-8 mb-4 flex items-center gap-2 w-fit mx-auto text-xl  font-bold"> <Image src={'/db.png'} width={20} height={20} alt="db"></Image> Databases </div>
                     <div className="flex  text-gray-700 flex-wrap gap-6 px-2 items-center justify-center mx-auto w-fit ">
                         <span data-aos="fade-up" className="border-blue-900 border-2 shadow-lg shadow-indigo-500/50 bg-blue-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mysql.png'} width={20} height={20} alt="mysql"></Image> MySQL</span>
@@ -227,7 +227,7 @@ export default function Skills() {
 
 
                 {/* Soft skills section */}
-                <div className="relative mt-6 bg-gray-200">
+                <div className="relative mt-6 bg-gray-200 font-sans">
                     {/* Top Wave */}
                     <div className="custom-shape-divider-top-1718303048">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -283,7 +283,7 @@ export default function Skills() {
                     </div>
                 </div>
 
-                <div className="my-4">
+                <div className="my-4 font-sans">
                     <h1 data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-6 mt-14"> <Image src={'/certificates.png'} height={16} width={24} alt="tools"></Image> License and Certifications </h1>
                     <div className="flex flex-col w-full xl:w-2/3 mx-auto px-4 items-center justify-center md:flex-row gap-6">
                         <div className="flex flex-col gap-4 w-full items-center justify-center ">
@@ -338,7 +338,7 @@ export default function Skills() {
                 </div>
             </section>
 
-            <footer className="bg-gray-300 h-14 flex items-center justify-center">
+            <footer className="bg-gray-300 font-sans h-14 flex items-center justify-center">
                 <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
             </footer>
         </>

@@ -27,14 +27,14 @@ export default function Home() {
             <h1 data-aos="zoom-in" className='font-extrabold tracking-wide text-2xl  '> Sudeep Bogati</h1>
             <div data-aos="zoom-in" className='flex items-center text-base justify-center gap-1 '>
               <span data-aos="zoom-in" className='flex w-4 h-4'><Image src={'/location.png'} width={20} height={20} alt='location'></Image></span>
-              <span data-aos="zoom-in" className='tracking-wide text-sm'>Chitwan, Nepal 🇳🇵</span>
+              <span data-aos="zoom-in" className='tracking-wide text-sm font-mono'>Chitwan, Nepal 🇳🇵</span>
             </div>
           </div>
 
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
-            <span className='text-sm' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide  cursor-pointer underline font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
-            <span data-aos="zoom-in" className=' text-sm'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
+            <span className='text-sm font-sans' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide  cursor-pointer underline font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
+            <span data-aos="zoom-in" className=' text-sm font-sans'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
           </div>
 
           {/* links  */}

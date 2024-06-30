@@ -14,7 +14,7 @@ export default function Contact() {
         <head>
             <title> Contact || Sudeep Bogati </title>
         </head>
-            <main className="my-20">
+            <main className="my-20 font-sans">
                 <h1 data-aos="zoom-in" className="font-bold text-xl mx-auto w-fit text-gray-700"> <span className="text-blue-900">Reach</span> Me </h1>
                 <div className="mt-8 flex flex-col w-full md:w-5/6 mx-auto">
                     <div className="flex mx-auto gap-1  md:flex-row">

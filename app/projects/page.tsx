@@ -24,7 +24,7 @@ export default function Projects() {
         <head>
             <title>Projects || Sudeep Bogati </title>
         </head>
-            <main className="my-20">
+            <main className="my-20 font-sans">
                 <h1 data-aos="zoom-in" className="text-xl font-bold w-fit mx-auto my-2 text-gray-800"> <span className="text-blue-900">Projects</span> that I Have Built </h1>
                 <p data-aos="fade-up" className="text-gray-500 font-medium mt-2 mb-4 w-full px-2 md:w-2/4 text-center mx-auto">Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack software development. Take a look to see what I have created and the problems I have solved.</p>
                 <div className="flex flex-col gap-8 mx-auto md:w-5/6 w-full">
