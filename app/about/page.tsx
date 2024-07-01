@@ -7,16 +7,13 @@ import 'aos/dist/aos.css';
 import Link from "next/link";
 export default function About() {
     const [showMore, setShowMore] = useState(false);// om education section
-
     const [isExpanded, setIsExpanded] = useState(false);
-
     const toggleReadMore = () => {
         setIsExpanded(!isExpanded);
     };
     useEffect(() => {
         AOS.init({ duration: 500 }); // Initialize AOS with a duration of 1000ms
     }, []);
-
     return (
         <>
             <head>
@@ -36,7 +33,6 @@ export default function About() {
                         My Education
                         <Image src="/education.png" width={30} height={30} alt="education" />
                     </div>
-
                     <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
                         <ol data-aos="fade-up" className="relative border-s-2 border-gray-400">
                             <li className="mb-10 ms-6">
@@ -167,12 +163,8 @@ export default function About() {
                         </li>
                     </ol>
                 </div>
-
-
                 <div>
                     <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Voluteering   <Image src={'/volunteer.png'} width={34} height={34} alt="education"></Image> </div>
-
-
                     <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
                         <ol className="relative border-s-2 border-gray-400 ">
                             <li className="mb-10 ms-6">
@@ -204,7 +196,6 @@ export default function About() {
                             <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
                         </svg> Download ZIP</a> */}
                             </li>
-
                         </ol>
                     </div>
                 </div>
