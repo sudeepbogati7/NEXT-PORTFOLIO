@@ -6,13 +6,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from "next/link";
 export default function About() {
-    const [showMore, setShowMore] = useState(false);// om education section
+    const [showMore, setShowMore] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleReadMore = () => {
         setIsExpanded(!isExpanded);
     };
     useEffect(() => {
-        AOS.init({ duration: 500 }); // Initialize AOS with a duration of 1000ms
+        AOS.init({ duration: 500 });
     }, []);
     return (
         <>
