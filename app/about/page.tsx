@@ -90,8 +90,6 @@ export default function About() {
                     </div>
 
                 </div>
-
-
                 <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Work Experiences  <Image src={'/career.png'} width={34} height={34} alt="education"></Image> </div>
                 <div className="px-6 mb-8 w-full md:w-4/5 xl:w-3/5 mx-auto">
                     <ol data-aos="fade-up" className="relative border-s-2 border-gray-400 ">
@@ -161,7 +159,6 @@ export default function About() {
                         </li>
                     </ol>
                 </div>
-
                 <div className="bg-white p-2">
                     <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Voluteering   <Image src={'/volunteer.png'} width={34} height={34} alt="education"></Image> </div>
                     <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
