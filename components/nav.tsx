@@ -26,12 +26,18 @@ export default function Nav() {
         <>
             <nav className='fixed bg-gray-100 z-20 border-b-2  shadow-md border-gray-300 font-medium h-14 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
                 <Link href={'/'} className="p-2">
-                    <Image  src={'/logo-colored.png'} width={100} height={40} alt="logo" />
+                    <Image src={'/logo-colored.png'} width={100} height={40} alt="logo" />
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
-                    <button onClick={() => setSidebarVisible(true)} className="usm:block md:hidden border-2 rounded-lg border-slate-400 shadow px-2">
-                        <Image src={'/menu.png'} width={30} height={30} alt="menu"></Image>
-                    </button>
+                    <div className="relative p-1 rounded-xl">
+                        <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
+                        <button
+                            onClick={() => setSidebarVisible(true)}
+                            className="relative usm:block md:hidden border-2 rounded-lg bg-gray-200 border-slate-400 shadow-lg px-2 z-10"
+                        >
+                            <Image src={'/menu.png'} width={30} height={30} alt="menu" />
+                        </button>
+                    </div>
 
                     <span className={`${isActive('/about')} usm:hidden md:block`}>
                         <Link href={'/about'} className="font-medium"> About me </Link>
@@ -42,7 +48,7 @@ export default function Nav() {
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
                         <Link href={'/projects'} className="font-medium"> Projects </Link>
                     </span>
-                  
+
                     {/* <span className={`${isActive('/blogs')} usm:hidden md:block`}>
                         <Link href={'/blogs'} className="font-medium"> Blogs </Link>
                     </span> */}
@@ -129,7 +135,7 @@ function SideBar({ open, setOpen }: any) {
                                                     <Link href={'/projects'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/projects.png'} width={16} height={20} alt="about-me"></Image> Projects </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/blogs')}`}>
-                                                    <Link href={'https://blogs.sudipbogati.com.np'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/blogs.png'} width={16} height={20} alt="about-me"></Image> Blogs </Link>
+                                                    <Link href={'https://blogs.sudipbogati.com.np'} className="font-semibold font-semibold flex items-center gap-1 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/blogs.png'} width={16} height={20} alt="about-me"></Image> Blogs<Image src={'/redirect.png'} width={12} height={12} alt="redirect"></Image> </Link>
                                                 </span>
                                                 {/* <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
                                                     <Link href={'/blogs'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> Blogs </Link>
@@ -140,7 +146,7 @@ function SideBar({ open, setOpen }: any) {
                                             </div>
                                         </div>
                                         <div className="absolute mx-auto flex flex-col text-center items-center justify-center text-gray-500 bottom-0 py-2 tracking-wide  font-medium  text-xs ">
-                                            <div className="w-fit px-8 ">&copy; 2024 Sudeep Bogati .</div> 
+                                            <div className="w-fit px-8 ">&copy; 2024 Sudeep Bogati .</div>
                                             <div className="px-8">All rights reserved.</div>
                                         </div>
                                         <div className="relative mt-6 flex-1 px-4 sm:px-6"></div>

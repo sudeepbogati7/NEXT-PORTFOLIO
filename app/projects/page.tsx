@@ -18,9 +18,9 @@ export default function Projects() {
     const [showExpenseProjectMore, setShowExpenseProjectMore] = useState(false);
     return (
         <>
-        <head>
-            <title>Projects || Sudeep Bogati </title>
-        </head>
+            <head>
+                <title>Projects || Sudeep Bogati </title>
+            </head>
             <main className="my-20 font-sans">
                 <h1 data-aos="zoom-in" className="text-xl font-bold w-fit mx-auto my-2 text-gray-800"> <span className="text-blue-900">Projects</span> that I Have Built </h1>
                 <p data-aos="fade-up" className="text-gray-500 font-medium mt-2 mb-4 w-full px-2 md:w-2/4 text-center mx-auto">Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack software development. Take a look to see what I have created and the problems I have solved.</p>
@@ -180,7 +180,96 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
+                    <div data-aos="fade-up" className="border p-4 flex flex-col gap-4 justify-center bg-blue-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <div className="font-semibold flex items-center gap-2 "> <Image src={'/python.png'} width={16} height={13} alt="py"></Image> Python Script for Multimedia Gesture Automation </div>
+                        <div className="p-2 flex flex-wrap gap-2 items-center">
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer"> python </span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">mediapipe</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer"> cv2 </span>
+                        </div>
+                        <div> A python script for automating multimedia control like play, pause, fast-forward and rewind with hand gesture in realtime </div>
+                        <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/python-script-for-multimedia-gestures'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
+                    </div>
+                    <div data-aos="fade-up" className="border-2 flex flex-col gap-4 justify-center items-center  bg-white rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <h1 className="font-bold w-fit mx-auto text-lg my-2"> Backend APIs </h1>
+                        <div className="flex w-full flex-col lg:flex-row  gap-3">
+                            <div className="bg-indigo-50 p-4 border-2 border-indigo-300 rounded-md w-full">
+                                <h2 className="font-semibold "> Authentication API using Expres.js </h2>
+                                <time className="text-gray-500 tracking-wider p-1 text-sm " > Jan, 2024 </time>
+                                <div className="p-2 flex flex-wrap gap-2 items-center ">
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">passport.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">typescript</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">express.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">node.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">postgresql</span>
+                                </div>
+                                <div className="text-gray-700">Includes features like email verification, password reset, and social media authentication using session storage.</div>
+                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Authentication-Project-PostgreSQL'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
+                            </div>
+                            <div className="bg-gray-50 p-4 border-2 border-gray-300 rounded-md w-full">
+                                <h2 className="font-semibold "> Event Ticket Manager Application  </h2>
+                                <time className="text-gray-500 tracking-wider p-1 text-sm " > Dec, 2023 </time>
+                                <div className="p-2 flex flex-wrap gap-2 items-center ">
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">JavaScript</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">expres.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">mysql2</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">node.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">bcrypt</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">jwt</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">sequelize ORM </span>
+                                </div>
+                                <div className="text-gray-700"> A backend API with two user roles : Organizers and Attendees , Oragnizers can create tickets for events , sell tickets and attendees can purchase. </div>
+                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Event-Ticket-Manager-App-NODE.js.-MySQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
+                            </div>
+                        </div>
+                        <div className="flex w-full flex-col lg:flex-row  gap-3">
+                            <div className="bg-gray-50 p-4 border-2 border-gray-300 rounded-md w-full">
+                                <h2 className="font-semibold "> Task Management System  </h2>
+                                <time className="text-gray-500 tracking-wider p-1 text-sm " > Jan, 2024 </time>
+                                <div className="p-2 flex flex-wrap gap-2 items-center ">
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">typescript</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">expres.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">postgresql</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">node.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">bcrypt</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">jwt</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">sequelize ORM </span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer"> nodemailer </span>
+                                </div>
+                                <div className="text-gray-700"> A backend with proper user authentication and authorization. Users can create , delete , modify their tasks / works when they are logged in. OTP based authentication for password reset through email . </div>
+                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/tasks-maganagement-system-PostgreSQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
+                            </div>
+                            <div className="bg-indigo-50 p-4 border-2 border-indigo-300 rounded-md w-full">
+                                <h2 className="font-semibold "> URL Shortner API  </h2>
+                                <time className="text-gray-500 tracking-wider p-1 text-sm " > Jan, 2024 </time>
+                                <div className="p-2 flex flex-wrap gap-2 items-center ">
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">typescript</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">expres.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">mongoDB</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">node.js</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">nanoid</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">jest</span>
+                                    <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">supertest </span>
+                                </div>
+                                <div className="text-gray-700">A Test Driven Development (TDD) project for shortening lengthy URLs. </div>
+                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/URL-Shortner-API-MongoDB'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
+                            </div>
+                        </div>
+                    </div>
 
+
+                    <div data-aos="fade-up" className="border flex flex-col  justify-center bg-red-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                            <h1 className="font-semibold text-lg"> Human Resource Mgnt System  </h1>
+                            <time className="text-sm text-gray-500" > Feb, 2024 </time>
+                            <div>The backend application API which allows you to fetch the information of HR , Jobs, and candidates for the respective job</div>
+                            <div>
+                                <ul>
+                                    <li>Only HR/Admin can register to the system and has the most authorities.</li>
+                                    <li>HR can post , update and delete jobs.</li>
+                                    <li>An automated email is sent to the HR's email-address when the new Job is posted.</li>
+                                </ul>
+                            </div>
+                    </div>
 
                     {/* create blog application  */}
                     <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-purple-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
@@ -211,10 +300,16 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
+                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-red-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <div className="px-3 font-semibold flex  items-center gap-2 "> <Image src={'/debian.svg'} width={16} height={14} alt="debian"></Image> Shell Scripts For Debian  </div>
+                        <div className="text-gray-700"> Custom shell scripts for automating repeatative tasks and so on. </div>
+                        <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Shell-Scripts-for-Debian-'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Explore </Link>
+
+                    </div>
                 </div>
                 <div data-aos="fade-up" className="mt-14  mb-4 font-bold md:text-xl text-base flex items-center gap-2 w-fit mx-auto  text-green-800">My Github Activity Calender <Link href={'https://github.com/sudeepbogati7/'}><span className=" border-b border-gray-300 flex items-center gap-2 text-gray-600 "> <Image src={'/github.png'} height={20} width={20} alt="github"></Image> /sudeepbogati7</span> </Link></div>
                 <div data-aos="fade-up" className=" flex my-2 flex-col max-w-full overflow-auto justify-center items-center  mx-auto">
-                   <div className=""> <GitHubCalendar  username="sudeepbogati7"/></div>
+                    <div className=""> <GitHubCalendar username="sudeepbogati7" /></div>
                 </div>
             </main>
             <footer className="bg-gray-300 h-14 flex items-center justify-center">

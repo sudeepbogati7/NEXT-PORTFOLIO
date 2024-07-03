@@ -51,3 +51,26 @@
     transform-origin:right;
   } */
   
+
+  @keyframes outerPing {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75%, 100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.animate-outer-ping::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background-color: rgba(69, 69, 69, 0.5); /* Tailwind blue-500 with 50% opacity */
+    animation: outerPing 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
