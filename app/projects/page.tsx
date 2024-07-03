@@ -351,7 +351,7 @@ export default function Projects() {
                     <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
                             <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
-                                <div className="w-fit rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={500} height={100} alt="chatbot"></Image> </div>
+                                <div className="w-fit rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={700} height={100} alt="chatbot"></Image> </div>
                                 <div className="flex flex-col items-center justify-center mx-auto w-fit">
                                     <h1 className="font-semibold text-lg py-4"> Image Search App </h1>
                                     <div className="text-gray-600 p-3"> A fully functional image search application where anyone can search images based on keywords(eg.dog, cat, coding ....).  </div>
@@ -369,10 +369,10 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-blue-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
                             <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
-                                <div className="w-fit rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={500} height={100} alt="chatbot"></Image> </div>
+                                <div className="w-fit h-fit rounded-lg overflow-hidden border-2 border-blue-400 object-cover"> <Image src={'/password-gen.png'} width={800} height={100} alt="chatbot"></Image> </div>
                                 <div className="flex flex-col items-center justify-center mx-auto w-fit">
                                     <h1 className="font-semibold text-lg py-4"> Password Generator </h1>
                                     <div className="text-gray-600 p-3"> An application that helps you to generate a strong password made up of numbers, symbols and aplbhates.  </div>
