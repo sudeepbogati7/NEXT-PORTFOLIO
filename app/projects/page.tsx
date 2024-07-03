@@ -193,7 +193,7 @@ export default function Projects() {
                     <div data-aos="fade-up" className="border-2 flex flex-col gap-4 justify-center items-center  bg-white rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <h1 className="font-bold w-fit mx-auto text-lg my-2"> Backend APIs </h1>
                         <div className="flex w-full flex-col lg:flex-row  gap-3">
-                            <div className="bg-indigo-50 p-4 border-2 border-indigo-300 rounded-md w-full">
+                            <div className="bg-gray-100 p-4 border-2 border-gray-400 rounded-md w-full">
                                 <h2 className="font-semibold "> Authentication API using Expres.js </h2>
                                 <time className="text-gray-500 tracking-wider p-1 text-sm " > Jan, 2024 </time>
                                 <div className="p-2 flex flex-wrap gap-2 items-center ">
@@ -206,7 +206,7 @@ export default function Projects() {
                                 <div className="text-gray-700">Includes features like email verification, password reset, and social media authentication using session storage.</div>
                                 <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Authentication-Project-PostgreSQL'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
                             </div>
-                            <div className="bg-gray-50 p-4 border-2 border-gray-300 rounded-md w-full">
+                            <div className="bg-gray-100 p-4 border-2 border-gray-400 rounded-md w-full">
                                 <h2 className="font-semibold "> Event Ticket Manager Application  </h2>
                                 <time className="text-gray-500 tracking-wider p-1 text-sm " > Dec, 2023 </time>
                                 <div className="p-2 flex flex-wrap gap-2 items-center ">
@@ -223,7 +223,7 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className="flex w-full flex-col lg:flex-row  gap-3">
-                            <div className="bg-gray-50 p-4 border-2 border-gray-300 rounded-md w-full">
+                            <div className="bg-gray-100 p-4 border-2 border-gray-400 rounded-md w-full">
                                 <h2 className="font-semibold "> Task Management System  </h2>
                                 <time className="text-gray-500 tracking-wider p-1 text-sm " > Jan, 2024 </time>
                                 <div className="p-2 flex flex-wrap gap-2 items-center ">
@@ -239,7 +239,7 @@ export default function Projects() {
                                 <div className="text-gray-700"> A backend with proper user authentication and authorization. Users can create , delete , modify their tasks / works when they are logged in. OTP based authentication for password reset through email . </div>
                                 <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/tasks-maganagement-system-PostgreSQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
                             </div>
-                            <div className="bg-indigo-50 p-4 border-2 border-indigo-300 rounded-md w-full">
+                            <div className="bg-gray-100 p-4 border-2 border-gray-400 rounded-md w-full">
                                 <h2 className="font-semibold "> URL Shortner API  </h2>
                                 <time className="text-gray-500 tracking-wider p-1 text-sm " > Jan, 2024 </time>
                                 <div className="p-2 flex flex-wrap gap-2 items-center ">
@@ -258,17 +258,33 @@ export default function Projects() {
                     </div>
 
 
-                    <div data-aos="fade-up" className="border flex flex-col  justify-center bg-red-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
-                            <h1 className="font-semibold text-lg"> Human Resource Mgnt System  </h1>
-                            <time className="text-sm text-gray-500" > Feb, 2024 </time>
-                            <div>The backend application API which allows you to fetch the information of HR , Jobs, and candidates for the respective job</div>
-                            <div>
-                                <ul>
-                                    <li>Only HR/Admin can register to the system and has the most authorities.</li>
-                                    <li>HR can post , update and delete jobs.</li>
-                                    <li>An automated email is sent to the HR's email-address when the new Job is posted.</li>
-                                </ul>
-                            </div>
+                    <div data-aos="fade-up" className="border flex flex-col  justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <h1 className="font-semibold text-lg"> Human Resource Management System API </h1>
+                        <time className="text-sm text-gray-500 p-1"  > Feb, 2024 </time>
+                        <div className="text-gray-800 my-2">The backend application API which allows you to fetch the information of HR , Jobs, and candidates for the respective job</div>
+                        <div className="p-2 flex flex-wrap gap-2 items-center ">
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">JavaScript</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">expres.js</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">node.js</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">jwt</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">nodemailer</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">multer</span>
+                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">mongoDB</span>
+                        </div>
+                        <div>
+                            <h2 className="font-semibold text-gray-800 p-2 "> Features </h2>
+                            <ul className="list-disc px-6 text-gray-700">
+                                <li>Only HR/Admin can register to the system and has the most authorities.</li>
+                                <li>HR can post , update and delete jobs.</li>
+                                <li>An automated email is sent to the HR's email-address when the new Job is posted.</li>
+                                <li>Candidates are allowed to see all the jobs and can apply any job.</li>
+                                <li>Candidates will receive an email to confirm their application is submitted successfully.</li>
+                                <li>Only HR has the permission to see the job applications.</li>
+                            </ul>
+                        </div>
+                        <Link className="flex gap-2 m-4 my-6 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/HRM-System'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
+
+
                     </div>
 
                     {/* create blog application  */}
@@ -300,12 +316,81 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-red-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
-                        <div className="px-3 font-semibold flex  items-center gap-2 "> <Image src={'/debian.svg'} width={16} height={14} alt="debian"></Image> Shell Scripts For Debian  </div>
+
+                    {/* shell scripts for debian linux */}
+                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-red-50 rounded-lg shadow-md border-gray-400  mx-4 p-6">
+                        <div className=" font-semibold flex  text-lg items-center gap-2 "> <Image src={'/debian.svg'} width={16} height={14} alt="debian"></Image> Shell Scripts For Debian  </div>
                         <div className="text-gray-700"> Custom shell scripts for automating repeatative tasks and so on. </div>
                         <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Shell-Scripts-for-Debian-'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Explore </Link>
-
                     </div>
+
+
+
+                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <div className="flex flex-col items-center justify-center mx-auto w-fit p-4">
+                            <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
+                                <div className="w-fit rounded-lg overflow-hidden border-2 border-purple-400"> <Image src={'/chatbot.png'} width={400} height={100} alt="chatbot"></Image> </div>
+                                <div className="flex flex-col items-center justify-center mx-auto w-fit">
+                                    <h1 className="font-semibold text-lg py-4"> My AI Charbot  </h1>
+                                    <div className="text-gray-600 p-3"> Developed a fully responsive charbot to integrate on websites as a chat assistant. Used OpenAI API for response text. </div>
+                                    <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> OpenAI API </span>
+                                    </div>
+                                    <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
+                                        <Link target="_blank" href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                        <Link href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
+                            <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
+                                <div className="w-fit rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={500} height={100} alt="chatbot"></Image> </div>
+                                <div className="flex flex-col items-center justify-center mx-auto w-fit">
+                                    <h1 className="font-semibold text-lg py-4"> Image Search App </h1>
+                                    <div className="text-gray-600 p-3"> A fully functional image search application where anyone can search images based on keywords(eg.dog, cat, coding ....).  </div>
+                                    <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> unsplash.com API </span>
+                                    </div>
+                                    <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
+                                        <Link target="_blank" href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                        <Link href={'https://sudeepbogati7.github.io/Image-Search-App/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                        <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
+                            <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
+                                <div className="w-fit rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={500} height={100} alt="chatbot"></Image> </div>
+                                <div className="flex flex-col items-center justify-center mx-auto w-fit">
+                                    <h1 className="font-semibold text-lg py-4"> Password Generator </h1>
+                                    <div className="text-gray-600 p-3"> An application that helps you to generate a strong password made up of numbers, symbols and aplbhates.  </div>
+                                    <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
+                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
+                                    </div>
+                                    <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
+                                        <Link target="_blank" href={'https://github.com/sudeepbogati7/Password-Generator'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                        <Link href={'https://sudeepbogati7.github.io/Password-Generator/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div data-aos="fade-up" className="mt-14  mb-4 font-bold md:text-xl text-base flex items-center gap-2 w-fit mx-auto  text-green-800">My Github Activity Calender <Link href={'https://github.com/sudeepbogati7/'}><span className=" border-b border-gray-300 flex items-center gap-2 text-gray-600 "> <Image src={'/github.png'} height={20} width={20} alt="github"></Image> /sudeepbogati7</span> </Link></div>
                 <div data-aos="fade-up" className=" flex my-2 flex-col max-w-full overflow-auto justify-center items-center  mx-auto">
