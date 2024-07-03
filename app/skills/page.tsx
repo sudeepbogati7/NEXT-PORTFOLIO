@@ -218,14 +218,6 @@ export default function Skills() {
                         <span data-aos="fade-up" className="border-green-400 border-2  shadow-lg shadow-green-500/30  bg-green-100 flex items-center px-2 py-1  rounded w-fit text-sm gap-2 "><Image src={'/mongodb.svg'} width={24} height={24} alt="mongodb"></Image> MongoDB </span>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
                 {/* Soft skills section */}
                 <div className="relative mt-6 bg-gray-200 font-sans">
                     {/* Top Wave */}
@@ -274,7 +266,6 @@ export default function Skills() {
                             </div>
                         </div>
                     </div>
-
                     {/* Bottom Wave */}
                     <div className="custom-shape-divider-bottom-1718303150">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -282,7 +273,6 @@ export default function Skills() {
                         </svg>
                     </div>
                 </div>
-
                 <div className="my-4 font-sans">
                     <h1 data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-6 mt-14"> <Image src={'/certificates.png'} height={16} width={24} alt="tools"></Image> License and Certifications </h1>
                     <div className="flex flex-col w-full xl:w-2/3 mx-auto px-4 items-center justify-center md:flex-row gap-6">
@@ -337,7 +327,6 @@ export default function Skills() {
                     </div>
                 </div>
             </section>
-
             <footer className="bg-gray-300 font-sans h-14 flex items-center justify-center">
                 <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
             </footer>
