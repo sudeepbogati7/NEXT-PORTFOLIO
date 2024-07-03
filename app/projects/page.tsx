@@ -326,45 +326,47 @@ export default function Projects() {
 
 
 
-                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
-                        <div className="flex flex-col items-center justify-center mx-auto w-fit p-4">
-                            <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
-                                <div className="w-fit rounded-lg overflow-hidden border-2 border-purple-400"> <Image src={'/chatbot.png'} width={400} height={100} alt="chatbot"></Image> </div>
-                                <div className="flex flex-col items-center justify-center mx-auto w-fit">
-                                    <h1 className="font-semibold text-lg py-4"> My AI Charbot  </h1>
-                                    <div className="text-gray-600 p-3"> Developed a fully responsive charbot to integrate on websites as a chat assistant. Used OpenAI API for response text. </div>
-                                    <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> OpenAI API </span>
+                    <div className="flex flex-col lg:flex-row items-center w-full justify-center ">
+                        <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                            <div className="flex flex-col items-center justify-center mx-auto w-fit p-4">
+                                <div className="flex flex-col lg:flex-row w-full">
+                                    <div className="w-fit h-fit rounded-lg overflow-hidden border-2 border-purple-400"> <Image src={'/chatbot.png'} width={400} height={100} alt="chatbot"></Image> </div>
+                                    <div className="flex flex-col items-center justify-center mx-auto w-fit">
+                                        <h1 className="font-semibold text-lg py-4"> My AI Charbot  </h1>
+                                        <div className="text-gray-600 p-3"> Developed a fully responsive charbot to integrate on websites as a chat assistant. Used OpenAI API for response text. </div>
+                                        <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> OpenAI API </span>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
-                                        <Link target="_blank" href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                        <Link href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
-                                    </div>
+                                </div>
+                                <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
+                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                    <Link href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
-                        <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
-                            <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
-                                <div className="w-fit rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={700} height={100} alt="chatbot"></Image> </div>
-                                <div className="flex flex-col items-center justify-center mx-auto w-fit">
-                                    <h1 className="font-semibold text-lg py-4"> Image Search App </h1>
-                                    <div className="text-gray-600 p-3"> A fully functional image search application where anyone can search images based on keywords(eg.dog, cat, coding ....).  </div>
-                                    <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
-                                        <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> unsplash.com API </span>
+                        <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                            <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
+                                <div className="flex flex-col lg:flex-row w-full">
+                                    <div className="w-fit h-fit  rounded-lg overflow-hidden border-2 border-green-400"> <Image src={'/img-search.png'} width={700} height={100} alt="chatbot"></Image> </div>
+                                    <div className="flex flex-col items-center justify-center mx-auto w-fit">
+                                        <h1 className="font-semibold text-lg py-4"> Image Search App </h1>
+                                        <div className="text-gray-600 p-3"> A fully functional image search application where anyone can search images based on keywords(eg.dog, cat, coding ....).  </div>
+                                        <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> JavaScript </span>
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
+                                            <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> unsplash.com API </span>
+                                        </div>
                                     </div>
-                                    <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
-                                        <Link target="_blank" href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                        <Link href={'https://sudeepbogati7.github.io/Image-Search-App/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
-                                    </div>
+                                </div>
+                                <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
+                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                    <Link href={'https://sudeepbogati7.github.io/Image-Search-App/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                             </div>
                         </div>
