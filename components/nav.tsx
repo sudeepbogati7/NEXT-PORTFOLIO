@@ -29,7 +29,7 @@ export default function Nav() {
                     <Image src={'/logo-colored.png'} width={100} height={40} alt="logo" />
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
-                    <div className="relative p-1 rounded-xl">
+                    <div className="relative p-1 block md:hidden rounded-xl">
                         <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
                         <button
                             onClick={() => setSidebarVisible(true)}
