@@ -48,10 +48,6 @@ export default function Nav() {
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
                         <Link href={'/projects'} className="font-medium"> Projects </Link>
                     </span>
-
-                    {/* <span className={`${isActive('/blogs')} usm:hidden md:block`}>
-                        <Link href={'/blogs'} className="font-medium"> Blogs </Link>
-                    </span> */}
                     <span className={`${isActive('/contact')} usm:hidden md:block`}>
                         <Link href={'/contact'} className="font-medium"> Contact </Link>
                     </span>
@@ -137,9 +133,6 @@ function SideBar({ open, setOpen }: any) {
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/blogs')}`}>
                                                     <Link href={'https://blogs.sudipbogati.com.np'} className="font-semibold font-semibold flex items-center gap-1 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/blogs.png'} width={16} height={20} alt="about-me"></Image> Blogs<Image src={'/redirect.png'} width={12} height={12} alt="redirect"></Image> </Link>
                                                 </span>
-                                                {/* <span onClick={() => setOpen(false)} className={`${isActive('/blogs')} `}>
-                                                    <Link href={'/blogs'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> Blogs </Link>
-                                                </span> */}
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/contact')} `}>
                                                     <Link href={'/contact'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/contact.png'} width={16} height={20} alt="about-me"></Image> Contact </Link>
                                                 </span>
