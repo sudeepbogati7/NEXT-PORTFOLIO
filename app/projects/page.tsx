@@ -338,8 +338,8 @@ export default function Projects() {
                                     </div>
                                 </div>
                                 <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
-                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                    <Link href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                    <Link href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                             </div>
                         </div>
@@ -360,15 +360,15 @@ export default function Projects() {
                                     </div>
                                 </div>
                                 <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
-                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                    <Link href={'https://sudeepbogati7.github.io/Image-Search-App/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    <Link target="_blank" href={'https://sudeepbogati7.github.io/Image-Search-App/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                    <Link href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-blue-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
+                    <div data-aos="fade-up" className="border w-fit  flex flex-col gap-4 justify-center bg-blue-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
-                            <div className="flex flex-col lg:flex-row w-full lg:w-2/3">
+                            <div className="flex flex-col lg:flex-row w-fit">
                                 <div className="w-fit h-fit rounded-lg overflow-hidden border-2 border-blue-400 object-cover"> <Image src={'/password-gen.png'} width={800} height={100} alt="chatbot"></Image> </div>
                                 <div className="flex flex-col items-center justify-center mx-auto w-fit">
                                     <h1 className="font-semibold text-lg py-4"> Password Generator </h1>
@@ -378,10 +378,10 @@ export default function Projects() {
                                         <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> HTML5 </span>
                                         <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> CSS3 </span>
                                     </div>
-                                    <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
-                                        <Link target="_blank" href={'https://github.com/sudeepbogati7/Password-Generator'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                        <Link href={'https://sudeepbogati7.github.io/Password-Generator/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
-                                    </div>
+                                <div className="flex items-center justify-around gap-6 my-4 px-8 w-full ">
+                                    <Link target="_blank" href={'https://sudeepbogati7.github.io/Password-Generator/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
+                                    <Link href={'https://github.com/sudeepbogati7/Password-Generator'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                </div>
                                 </div>
                             </div>
                         </div>
