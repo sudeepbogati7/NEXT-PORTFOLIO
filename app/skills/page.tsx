@@ -95,9 +95,7 @@ export default function Skills() {
                                             </h2>
                                             <p className="text-sm text-gray-500 mt-2">HTML is the language used to structure content and design interactive online experiences.</p>
                                         </div>
-
                                     </div>
-
                                     <div data-aos="fade-up" className="relative flex items-center w-full">
                                         <div className="flex flex-col items-start">
                                             <div className="absolute -left-1 w-4 h-4 bg-blue-500 rounded-full -ml-8"></div>
@@ -108,7 +106,6 @@ export default function Skills() {
                                             <p className="text-sm text-gray-500 mt-2">Cascading Style Sheets is used to style and layout web pages, controlling the design, colors, and fonts to enhance the appearance and user experience.</p>
                                         </div>
                                     </div>
-
                                     <div data-aos="fade-up" className="relative flex items-center w-full">
                                         <div className="flex flex-col items-start">
                                             <div className="absolute -left-1 w-4 h-4 bg-[#61DBFB] rounded-full -ml-8"></div>
@@ -119,7 +116,6 @@ export default function Skills() {
                                             <p className="text-sm text-gray-500 mt-2">ReactJS is a JavaScript library for building user interfaces, particularly single-page applications, by enabling developers to create reusable UI components.</p>
                                         </div>
                                     </div>
-
                                     <div data-aos="fade-up" className="relative flex items-center w-full">
                                         <div className="flex flex-col items-start">
                                             <div className="absolute -left-1 w-4 h-4 bg-gray-500 rounded-full -ml-8"></div>
