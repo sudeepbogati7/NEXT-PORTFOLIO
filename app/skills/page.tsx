@@ -140,10 +140,6 @@ export default function Skills() {
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
                     <div className="flex items-center  flex-col  w-full">
                         <h2 data-aos="fade-up" className="font-semibold mx-auto text-center gap-2 flex items-center py-4 text-lg">  <Image src={'/backend.png'} width={28} height={20} alt="frontend"></Image> Server Side (Backend) </h2>
