@@ -6,13 +6,6 @@ import Nav from "@/components/nav";
 import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
-
-import Head from "next/head";
-// export const metadata: Metadata = {
-//   title: "Sudeep Bogati",
-//   description: "Hello , I'm Sudeep Bogati . A passionate Software Engineer from Nepal",
-// };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,8 +28,6 @@ export default function RootLayout({
         <meta property="og:url" content="https://sudipbogati.com.np" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sudipbogati.com.np/profile.jpg" />
-
-
 
         <meta name="twitter:card" content="summarsy_large_image" />
         <meta name="twitter:title" content="Sudeep Bogati - Software Engineer" />
