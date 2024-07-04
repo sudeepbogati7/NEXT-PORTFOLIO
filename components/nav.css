@@ -71,6 +71,6 @@
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    background-color: rgba(69, 69, 69, 0.5); /* Tailwind blue-500 with 50% opacity */
-    animation: outerPing 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    background-color: rgba(69, 69, 69, 0.5);
+    animation: outerPing 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
