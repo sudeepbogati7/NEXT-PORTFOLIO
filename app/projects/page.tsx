@@ -283,8 +283,6 @@ export default function Projects() {
                             </ul>
                         </div>
                         <Link className="flex gap-2 m-4 my-6 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/HRM-System'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
-
-
                     </div>
 
                     {/* create blog application  */}
@@ -323,9 +321,6 @@ export default function Projects() {
                         <div className="text-gray-700"> Custom shell scripts for automating repeatative tasks and so on. </div>
                         <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Shell-Scripts-for-Debian-'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Explore </Link>
                     </div>
-
-
-
                     <div className="flex flex-col lg:flex-row items-center w-full justify-center ">
                         <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                             <div className="flex flex-col items-center justify-center mx-auto w-fit p-4">
