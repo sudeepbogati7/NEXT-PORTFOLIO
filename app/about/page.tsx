@@ -178,10 +178,6 @@ export default function About() {
                                 <Link data-aos="fade-up" href={'https://osac.org.np/'} className="underline flex tracking-wide text-base items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Open-Source ASCOL Circle , OSAC </Link>
                                 <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> 2023 - present </time>
                                 <p data-aos="fade-up" className="mb-4 text-sm font-normal text-gray-700">OSAC (Open Source ASCOL Circle) is a group of lerners based primarily on Computer Science and Information Technologies students from Amrit Science College, Tribhuvan University, Nepal.</p>
-                                {/* <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 "><svg className="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
-                            <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
-                        </svg> Download ZIP</a> */}
                             </li>
                             <li className="mb-10 ms-6">
                                 <span data-aos="fade-up" className="absolute flex items-center justify-center w-8 h-8 bg-pink-100 rounded-full -start-4 border border-[#92a91a]  ">
@@ -191,10 +187,6 @@ export default function About() {
                                 <Link data-aos="fade-up" href={'https://www.hultprize.org/'} className="underline flex tracking-wide text-sm items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Hult Prize, ASCOL   </Link>
                                 <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> Sept 2023 - Feb 2024 </time>
                                 <p data-aos="fade-up" className="mb-4 text-base font-normal text-gray-600 ">The Hult Prize is the worlds largest student social entrepreneurship competition. Run in partnership with the United Nations, student teams from universities from across the world compete to solve a pressing social issue by developing a scalable, sustainable social enterprise.</p>
-                                {/* <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 "><svg className="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
-                            <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
-                        </svg> Download ZIP</a> */}
                             </li>
                         </ol>
                     </div>
