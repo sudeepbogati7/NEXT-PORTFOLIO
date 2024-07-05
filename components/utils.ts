@@ -1,6 +1,5 @@
 import { Props } from './GithubCalender';
 import { Activity } from './types';
-
 export const transformData = (
   data: Array<Activity>,
   transformFn?: Props['transformData'],
@@ -8,15 +7,12 @@ export const transformData = (
   if (typeof transformFn !== 'function') {
     return data;
   }
-
   const transformedData = transformFn(data);
-
   if (!Array.isArray(transformedData)) {
     throw Error(
       `Passed function transformData must return a list of Day objects.`,
     );
   }
-
   if (transformedData.length > 0) {
     const testObj = transformedData[0];
 
