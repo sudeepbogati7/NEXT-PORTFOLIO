@@ -20,8 +20,6 @@ export default function Nav() {
     function toggleSidebar() {
         setSidebarVisible(!sidebarVisible);
     }
-
-
     return (
         <>
             <nav className='fixed bg-gray-100 z-20 border-b-2  shadow-md border-gray-300 font-medium h-14 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
