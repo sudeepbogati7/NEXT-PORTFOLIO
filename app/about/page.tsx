@@ -148,9 +148,6 @@ export default function About() {
                         </li>
                         <li className="mb-10 ms-6">
                             <span data-aos="fade-up" className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-[#92a91a]  ">
-                                {/* <svg className="w-2.5 h-2.5 text-blue-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                            </svg> */}
                                 <Image src={'https://i0.wp.com/gtn.com.np/storage/2022/09/greentick-nepal-pvt-lt.png?fit=2294%2C755&ssl=1'} width={100} height={100} alt="gtn"></Image>
                             </span>
                             <h3 data-aos="fade-up" className="flex items-center text-lg font-semibold text-gray-900 "> Software Engineer Intern </h3>
