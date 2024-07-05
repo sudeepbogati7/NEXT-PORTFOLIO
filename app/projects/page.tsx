@@ -10,11 +10,9 @@ import 'aos/dist/aos.css';
 import GitHubCalendar from "react-github-calendar";
 export default function Projects() {
     useEffect(() => {
-        AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
+        AOS.init({ duration: 700 }); 
     }, []);
     const [showHydroProjectMore, setShowHydroProjectMore] = useState(false);
-
-
     const [showExpenseProjectMore, setShowExpenseProjectMore] = useState(false);
     return (
         <>
