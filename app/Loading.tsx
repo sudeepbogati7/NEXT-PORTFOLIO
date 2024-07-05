@@ -3,7 +3,6 @@ export default function Loading() {
     return (
         <div className="fixed inset-0 z-40 min-h-full overflow-y-auto overflow-x-hidden flex items-center justify-center">
             <div className="animate-pulse flex flex-col items-center gap-4 w-96">
-                <div> </div>
                 <div>
                     <div className="w-48 h-6 bg-slate-400 rounded-md"></div>
                     <div className="w-28 h-4 bg-slate-400 mx-auto mt-3 rounded-md"></div>
