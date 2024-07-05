@@ -27,7 +27,6 @@ export const transformData = (
         `Required property "date: YYYY-MM-DD" missing or invalid. Got: ${testObj.date}`,
       );
     }
-
     if (
       typeof testObj.level !== 'number' ||
       testObj.level < 0 ||
