@@ -60,9 +60,12 @@ export default function Nav() {
     );
 }
 
+
 function SideBar({ open, setOpen }: any) {
     // const [open, setOpen] = useState(false)
-    const pathname = usePathname();\
+
+    const pathname = usePathname();
+
     const isActive = (href: string) => {
         return pathname === href ? "border-l-4 px-2 rounded  w-fit border-gray-500  transition-all duration-500 ease-in-out" : ' text-gray-500 border-transparent hover:border-l-4 hover:text-black hover:px-2 hover:border-gray-300 transition-all duration-300 ease-in-out';
     };
