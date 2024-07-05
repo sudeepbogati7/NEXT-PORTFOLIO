@@ -66,8 +66,6 @@ const GitHubCalendar: FunctionComponent<Props> = ({
   }, [username, year]);
 
   useEffect(fetchData, [fetchData]);
-
-  // React error boundaries can't handle asynchronous code, so rethrow.
   if (error) {
     if (throwOnError) {
       throw error;
