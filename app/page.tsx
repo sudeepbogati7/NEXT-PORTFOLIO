@@ -8,13 +8,14 @@ import Nav from '@/components/nav';
 import { usePathname } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 700 }); 
   }, []);
+  
   return (
     <>
-    
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
