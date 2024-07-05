@@ -149,6 +149,7 @@ export default function Projects() {
                             </button>
                         </div>
                     </div>
+
                     {/* realtime chat application  */}
                     <div data-aos="fade-up" className="border flex flex-col lg:flex-row gap-4 justify-center bg-blue-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <div className="flex mx-auto gap-4 py-6 px-2">
@@ -341,6 +342,7 @@ export default function Projects() {
                                 </div>
                             </div>
                         </div>
+
 
                         <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                             <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
