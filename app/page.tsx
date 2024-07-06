@@ -10,7 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function Home() {
   useEffect(() => {
-    AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
+    AOS.init({ duration: 700 }); 
   }, []);
   return (
     <>
