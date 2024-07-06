@@ -17,7 +17,7 @@ export default function Contact() {
             <main className="my-20 font-sans">
                 <h1 data-aos="zoom-in" className="font-bold text-xl mx-auto w-fit text-gray-700"> <span className="text-blue-900">Reach</span> Me </h1>
                 <div className="mt-8 flex flex-col w-full md:w-5/6 mx-auto">
-                    <div className="flex mx-auto gap-1  md:flex-row">
+                    <div className="flex mx-auto  md:flex-row">
                         <div data-aos="fade-up" className="mx-auto "> <Image className="w-[150px] md:w-[300px]" src={'/contact-me.svg'} height={200} width={300} alt="contact-me"></Image></div>
                         <div className="flex w-fit fle-col gap-2 flex-col mx-auto my-4">
                             <h2 data-aos="fade-up" className="font-semibold  text-lg text-blue-900">Sudeep Bogati </h2>
