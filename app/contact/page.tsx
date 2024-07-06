@@ -112,6 +112,10 @@ export default function Contact() {
                     </div>
                 </div>
 
+                <div className="mt-8 mx-auto  w-fit ">
+                    <h1 className="font-semibold text-lg w-fit mx-auto"> Support  </h1>
+                    <Link target="_blank" href={'https://www.buymeacoffee.com/sudeepbogati'}> <div className="w-fit h-fit border-2 border-gray-600 rounded-lg overflow-hidden "> <Image src={'/bmc.png'} height={100} width={150} alt="coffee"></Image> </div></Link>
+                </div>
             </main>
         </>
 
