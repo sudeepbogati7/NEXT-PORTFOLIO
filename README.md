@@ -1,4 +1,4 @@
-# Minimalistic Personal Portfolio with NEXT.js 
+# Minimalistic Personal Portfolio with NEXT.js on bun ENV
 
 
 Tech Stack 
