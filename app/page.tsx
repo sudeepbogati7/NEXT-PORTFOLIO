@@ -33,8 +33,8 @@ export default function Home() {
 
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
-            <span className='text-sm font-sans' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='tracking-wide  cursor-pointer underline font-medium'> BIT </Link> Student at <span className='font-medium  '>Tribhuvan University </span></span>
-            <span data-aos="zoom-in" className=' text-sm font-sans'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-medium underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
+            <span className='text-sm  text-gray-600  font-sans' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='hover:font-extrabold hover:tracking-widest font-semibold tracking-wide  px-1  cursor-pointer underline font-medium'> BIT</Link> Student at <span className='font-semibold  '>Tribhuvan University </span></span>
+            <span data-aos="zoom-in" className=' text-sm font-semibold text-gray-600 font-sans'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-semibold underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
           </div>
 
           {/* links  */}

@@ -193,7 +193,7 @@ export default function Skills() {
 
                 <div>
                     <div data-aos="fade-up" className="flex items-center gap-2 font-bold text-xl mx-auto w-fit my-4"> <Image src={'/tools.png'} height={16} width={20} alt="tools"></Image> Tools </div>
-                    <div data-aos="fade-up " className="flex gap-4 flex-wrap px-2 mx-auto items-center justify-center">
+                    <div data-aos="fade-up" className="flex gap-4 flex-wrap px-2 mx-auto items-center justify-center">
                         <span className="border-2 shadow-lg shadow-orange-400/50 cursor-pointer py-1 text-sm text-gray-700 border-orange-400 w-fit px-2 rounded bg-orange-100 flex items-center gap-2 font-medim"><Image src={'/git.png'} width={22} height={24} alt="git"></Image>Git </span>
                         <span className="border-2 shadow-lg shadow-gray-800/50 cursor-pointer py-1 text-sm text-gray-700 border-gray-500 w-fit px-2 rounded bg-gray-200 flex items-center gap-2 font-medim"><Image src={'/github.png'} width={22} height={24} alt="git"></Image>Github </span>
                         <span className="border-2 shadow-lg shadow-blue-600/50 cursor-pointer py-1 text-sm text-gray-700 border-blue-600 w-fit px-2 rounded bg-blue-100 flex items-center gap-2 font-medim"><Image src={'/docker.png'} width={22} height={24} alt="git"></Image>Docker </span>
