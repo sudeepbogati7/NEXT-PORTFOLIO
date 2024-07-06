@@ -26,7 +26,8 @@ export default function Nav() {
         <>
             <nav className='fixed bg-gray-100 z-20 border-b-2  shadow-md border-gray-300 font-medium h-14 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
                 <Link href={'/'} className="p-2">
-                    <Image src={'/logo-colored.png'} width={100} height={40} alt="logo" />
+                    <Image src={'/sudeep-logo.png'} width={120} height={40} alt="logo" />
+                    {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
                     <div className="relative active:-translate-x-3  transform transition-all duration-600 ease-in-out p-1 block md:hidden rounded-xl">
