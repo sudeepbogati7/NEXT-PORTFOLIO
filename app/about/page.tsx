@@ -91,6 +91,7 @@ export default function About() {
 
                 </div>
 
+
                 <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Work Experiences  <Image src={'/career.png'} width={34} height={34} alt="education"></Image> </div>
                 <div className="px-6 mb-8 w-full md:w-4/5 xl:w-3/5 mx-auto">
                     <ol data-aos="fade-up" className="relative border-s-2 border-gray-400 ">
@@ -101,7 +102,7 @@ export default function About() {
                             <h3 className="flex items-center text-lg font-semibold text-gray-900 "> Associate Software Engineer  <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Currently</span></h3>
                             <Link href={'https://www.gtn.com.np'} className="underline text-sm flex tracking-wide items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Greentick Nepal - Gyaneshwor, Kathmandu </Link>
                             <time className="block mb-2 italic  text-sm font-normal leading-none text-gray-500 "> June 1, 2024 - Present </time>
-                            <div   className={`relative flex flex-col transition-all duration-800 ease-in-out ${isExpanded ? 'max-h-fit' : 'max-h-24 overflow-hidden'}`}>
+                            <div className={`relative flex flex-col transition-all duration-800 ease-in-out ${isExpanded ? 'max-h-fit' : 'max-h-24 overflow-hidden'}`}>
                                 <p className="mb-4 text-base font-normal text-gray-600">
                                     Proactive Associate Software Developer with a strong background in full stack development. Experienced in designing and implementing user-friendly web applications, optimizing client-side and server-side services, and collaborating with cross-functional teams to deliver high-quality software solutions.
                                 </p>
@@ -163,7 +164,8 @@ export default function About() {
                         </li>
                     </ol>
                 </div>
-                <div>
+
+                <div className="bg-white p-2">
                     <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Voluteering   <Image src={'/volunteer.png'} width={34} height={34} alt="education"></Image> </div>
                     <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
                         <ol className="relative border-s-2 border-gray-400 ">

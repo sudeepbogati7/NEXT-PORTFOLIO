@@ -103,7 +103,7 @@ export default function Projects() {
                             <p className="text-gray-600 text-center text-sm"> Developed a comprehensive expense tracking system with user authentication for secure login and logout functionality. The system allows users to add, edit, and delete daily expenses, categorizing them for better organization. Users can filter expenses based on categories for detailed insights. Additionally, the system features an intuitive dashboard that enables users to view and analyze their expenses graphically, aiding in effective financial management. This project demonstrates proficiency in full-stack development, user experience design, and data visualization techniques.</p>
                             <div className="flex items-center justify-around pb-4 pt-8 px-8">
                                 <Link target="_blank" href={'https://expense-tracker-neon-one.vercel.app/'} className="flex items-center gap-2 bg-gray-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                <Link href={'https://github.com/sudeepbogati7/Expense-tracking-System'} className="flex items-center gap-2 bg-gray-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                <Link target="_blank" href={'https://github.com/sudeepbogati7/Expense-tracking-System'} className="flex items-center gap-2 bg-gray-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                             </div>
                             <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
                                 <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> typescript </span>
@@ -169,7 +169,7 @@ export default function Projects() {
                             <p className="text-gray-600 text-center text-sm"> Developed a realtime chat application using WebSockets, React, and Node.js. Enables users to chat anonymously in real time, demonstrating my skills in full-stack development and real-time communication technologies.</p>
                             <div className="flex items-center justify-around pb-4 pt-8 px-8">
                                 <Link target="_blank" href={'https://node-js-realtime-chat-app.onrender.com'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                <Link href={'https://github.com/sudeepbogati7/Node.js-Realtime-Chat-App-'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                <Link target="_blank" href={'https://github.com/sudeepbogati7/Node.js-Realtime-Chat-App-'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                             </div>
                             <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
                                 <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> typescript </span>
@@ -188,7 +188,7 @@ export default function Projects() {
                             <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer"> cv2 </span>
                         </div>
                         <div> A python script for automating multimedia control like play, pause, fast-forward and rewind with hand gesture in realtime </div>
-                        <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/python-script-for-multimedia-gestures'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
+                        <Link target="_blank" className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/python-script-for-multimedia-gestures'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
                     </div>
                     <div data-aos="fade-up" className="border-2 flex flex-col gap-4 justify-center items-center  bg-white rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <h1 className="font-bold w-fit mx-auto text-lg my-2"> Backend APIs </h1>
@@ -204,7 +204,7 @@ export default function Projects() {
                                     <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">postgresql</span>
                                 </div>
                                 <div className="text-gray-700">Includes features like email verification, password reset, and social media authentication using session storage.</div>
-                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Authentication-Project-PostgreSQL'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
+                                <Link target="_blank" className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Authentication-Project-PostgreSQL'}> <Image src={'/github.png'} width={16} height={12} alt="github"></Image> Source code </Link>
                             </div>
                             <div className="bg-gray-100 p-4 border-2 border-gray-400 rounded-md w-full">
                                 <h2 className="font-semibold "> Event Ticket Manager Application  </h2>
@@ -219,7 +219,7 @@ export default function Projects() {
                                     <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer">sequelize ORM </span>
                                 </div>
                                 <div className="text-gray-700"> A backend API with two user roles : Organizers and Attendees , Oragnizers can create tickets for events , sell tickets and attendees can purchase. </div>
-                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Event-Ticket-Manager-App-NODE.js.-MySQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
+                                <Link target="_blank" className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Event-Ticket-Manager-App-NODE.js.-MySQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
                             </div>
                         </div>
                         <div className="flex w-full flex-col lg:flex-row  gap-3">
@@ -237,7 +237,7 @@ export default function Projects() {
                                     <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer"> nodemailer </span>
                                 </div>
                                 <div className="text-gray-700"> A backend with proper user authentication and authorization. Users can create , delete , modify their tasks / works when they are logged in. OTP based authentication for password reset through email . </div>
-                                <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/tasks-maganagement-system-PostgreSQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
+                                <Link target="_blank" className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/tasks-maganagement-system-PostgreSQL'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Source code </Link>
                             </div>
                             <div className="bg-gray-100 p-4 border-2 border-gray-400 rounded-md w-full">
                                 <h2 className="font-semibold "> URL Shortner API  </h2>
@@ -303,7 +303,7 @@ export default function Projects() {
                             <p className="text-gray-600 text-center text-sm"> Built a blog application using Node.js and Express with server-side rendering. Implemented user login and logout, and features for adding, deleting, and editing blogs. Utilized JWT for secure authentication, showcasing my skills in backend development and user authentication.</p>
                             <div className="flex items-center justify-around pb-4 pt-8 px-8">
                                 <Link target="_blank" href={'https://createyourownblogs.onrender.com/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                <Link href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                <Link target="_blank" href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                             </div>
                             <div className="flex gap-2 text-sm items-center py-2 justify-center flex-wrap">
                                 <span className="bg-gray-600 text-white shadow-xl px-2 rounded-lg cursor-pointer "> typescript </span>
@@ -319,7 +319,7 @@ export default function Projects() {
                     <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-red-50 rounded-lg shadow-md border-gray-400  mx-4 p-6">
                         <div className=" font-semibold flex  text-lg items-center gap-2 "> <Image src={'/debian.svg'} width={16} height={14} alt="debian"></Image> Shell Scripts For Debian  </div>
                         <div className="text-gray-700"> Custom shell scripts for automating repeatative tasks and so on. </div>
-                        <Link className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Shell-Scripts-for-Debian-'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Explore </Link>
+                        <Link  target="_blank" className="flex gap-2 items-center justify-center my-2 shadow-md bg-gray-100 font-medium border-2 border-gray-400 w-fit px-1 rounded" href={'https://github.com/sudeepbogati7/Shell-Scripts-for-Debian-'}> <Image src={'/github.png'} width={12} height={12} alt="github"></Image> Explore </Link>
                     </div>
                     <div className="flex flex-col lg:flex-row items-center w-full justify-center ">
                         <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
@@ -339,7 +339,7 @@ export default function Projects() {
                                 </div>
                                 <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
                                     <Link target="_blank" href={'https://github.com/sudeepbogati7/CreateBlog_NODE.js'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                    <Link href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/My-Chat-Bot'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                             </div>
                         </div>
@@ -361,7 +361,7 @@ export default function Projects() {
                                 </div>
                                 <div className="flex items-center justify-around gap-6 my-4 px-8 w-fit ">
                                     <Link target="_blank" href={'https://sudeepbogati7.github.io/Image-Search-App/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                    <Link href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/Image-Search-App'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                             </div>
                         </div>
@@ -380,7 +380,7 @@ export default function Projects() {
                                     </div>
                                 <div className="flex items-center justify-around gap-6 my-4 px-8 w-full ">
                                     <Link target="_blank" href={'https://sudeepbogati7.github.io/Password-Generator/'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400">Visit site <span> <Image src={'/redirect.png'} width={12} height={20} alt="redirect-png"></Image></span> </Link>
-                                    <Link href={'https://github.com/sudeepbogati7/Password-Generator'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
+                                    <Link target="_blank" href={'https://github.com/sudeepbogati7/Password-Generator'} className="flex items-center gap-2 bg-blue-200 px-2 shadow-xl rounded-md border-2 border-gray-400"> <span><Image src={'/github.png'} width={20} height={20} alt="github"></Image></span> Github </Link>
                                 </div>
                                 </div>
                             </div>
