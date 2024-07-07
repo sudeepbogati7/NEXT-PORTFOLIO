@@ -132,15 +132,13 @@ export default function About() {
                                         </ol>
                                     </div>
                                 </div>
-
                                 {!isExpanded && (
                                     <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-gray-100 to-transparent pointer-events-none"></div>
                                 )}
                             </div>
                             <button data-aos="fade-up"
                                 className={`mt-4 flex transition-all duration-500 items-center gap-2 text-blue-500 font-medium`}
-                                onClick={toggleReadMore}
-                            >
+                                onClick={toggleReadMore}>
                                 {isExpanded ? 'Read Less' : 'Read More'} {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
                             </button>
                         </li>
