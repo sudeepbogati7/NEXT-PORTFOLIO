@@ -15,7 +15,6 @@ export interface Activity {
   export interface ApiErrorResponse {
     error: string;
   }
-  
   type Color = string;
   type ColorScale = [Color, Color, Color, Color, Color];
   
