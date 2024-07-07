@@ -255,8 +255,6 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-
-
                     <div data-aos="fade-up" className="border flex flex-col  justify-center bg-gray-100 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                         <h1 className="font-semibold text-lg"> Human Resource Management System API </h1>
                         <time className="text-sm text-gray-500 p-1"  > Feb, 2024 </time>
@@ -342,8 +340,6 @@ export default function Projects() {
                                 </div>
                             </div>
                         </div>
-
-
                         <div data-aos="fade-up" className="border flex flex-col gap-4 justify-center bg-green-50 rounded-lg shadow-md border-gray-400  mx-4 p-2">
                             <div className="flex flex-col items-center justify-center mx-auto p-4 w-fit">
                                 <div className="flex flex-col lg:flex-row w-full">
