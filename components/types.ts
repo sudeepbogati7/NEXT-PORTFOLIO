@@ -3,7 +3,6 @@ export interface Activity {
     count: number;
     level: 0 | 1 | 2 | 3 | 4;
   }
-  
   export type Year = number | 'last';
   export interface ApiResponse {
     total: {
