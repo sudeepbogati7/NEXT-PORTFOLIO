@@ -10,7 +10,7 @@ export const transformData = (
   const transformedData = transformFn(data);
   if (!Array.isArray(transformedData)) {
     throw Error(
-      `Passed function transformData must return a list of Day objects.`,
+      `Passed function transformData must return a list of Day objects`,
     );
   }
   if (transformedData.length > 0) {
