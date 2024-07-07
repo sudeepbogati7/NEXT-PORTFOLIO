@@ -117,14 +117,6 @@ export default function Home() {
               </span></Link>
           </div>
 
-
-          {/* <div className='mt-14 flex  gap-4 '>
-          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> About me </button> 
-          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> My Skills </button>
-          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> My Projects  </button>
-          <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> Contact me  </button>
-        </div> */}
-
           {/* <Link href={'/about'} className='mt-14 border border-gray-400 px-2 rounded-lg text-gray-700 hover:border-black hover:text-black transition-all duration-200 ease-in-out bg-gray-100'>Know more about me </Link> */}
           {/* <div className='mt-8 cursor-wait font-medium text-blue-600 '> Site is under development  ......... </div> */}
 
