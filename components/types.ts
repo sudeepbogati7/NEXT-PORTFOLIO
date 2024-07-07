@@ -5,15 +5,13 @@ export interface Activity {
   }
   
   export type Year = number | 'last';
-  
   export interface ApiResponse {
     total: {
       [year: number]: number;
-      [year: string]: number; // 'lastYear;
+      [year: string]: number; 
     };
     contributions: Array<Activity>;
   }
-  
   export interface ApiErrorResponse {
     error: string;
   }
