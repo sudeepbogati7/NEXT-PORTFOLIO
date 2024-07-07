@@ -117,12 +117,6 @@ export default function Home() {
               </span></Link>
           </div>
 
-          {/* <div className='px-4 my-14'>
-            <div className='text-xl font-medium my-4 flex items-center gap-2  border-b-2 border-gray-300 w-fit  px-4 '> About me <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div>
-            <p className='text-gray-900'>I am Sudeep Bogati, a skilled <strong> Full Stack Software Engineer </strong>with a passion for crafting dynamic web applications. Whether its building sleek user interfaces with NEXT.js, managing server-side logic with Node.js,Django or handling data storage with MongoDB,PostgreSQL. I thrive on creating seamless, end-to-end solutions.</p>
-            <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link>
-          </div> */}
-
 
           {/* <div className='mt-14 flex  gap-4 '>
           <button className='text-gray-600 hover:text-black hover:border-gray-800 border-b transition-all duration-200 ease-linear'> About me </button> 
