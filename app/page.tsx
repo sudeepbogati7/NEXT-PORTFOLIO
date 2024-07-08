@@ -13,7 +13,7 @@ export default function Home() {
     AOS.init({ duration: 700 }); 
   }, []);
 
-  
+
   return (
     <>
       <main className="mt-24">
@@ -31,6 +31,8 @@ export default function Home() {
               <span data-aos="zoom-in" className='tracking-wide text-sm font-mono'>Chitwan, Nepal 🇳🇵</span>
             </div>
           </div>
+
+
 
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
