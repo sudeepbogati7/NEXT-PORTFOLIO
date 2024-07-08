@@ -12,6 +12,8 @@ export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 700 }); 
   }, []);
+
+  
   return (
     <>
       <main className="mt-24">
