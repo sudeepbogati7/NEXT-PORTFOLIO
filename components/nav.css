@@ -50,8 +50,6 @@
     transition-duration: .3s;
     transform-origin:right;
   } */
-  
-
   @keyframes outerPing {
     0% {
         transform: scale(1);
@@ -62,7 +60,6 @@
         opacity: 0;
     }
 }
-
 .animate-outer-ping::before {
     content: '';
     position: absolute;
