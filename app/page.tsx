@@ -12,8 +12,6 @@ export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 700 }); 
   }, []);
-
-
   return (
     <>
       <main className="mt-24">
@@ -31,9 +29,6 @@ export default function Home() {
               <span data-aos="zoom-in" className='tracking-wide text-sm font-mono'>Chitwan, Nepal 🇳🇵</span>
             </div>
           </div>
-
-
-
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
             <span className='text-sm  text-gray-600  font-sans' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='hover:font-extrabold hover:tracking-widest transition-all duration-300 ease-in-out font-semibold tracking-wide  px-1  cursor-pointer underline font-medium'> BIT</Link> Student at <span className='font-semibold  '>Tribhuvan University </span></span>
