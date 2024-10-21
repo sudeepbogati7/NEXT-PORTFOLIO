@@ -54,9 +54,9 @@ export default function RootLayout({
         </script>
       </head>
 
-      <header className=''>
+      <div className=''>
         <Nav />
-      </header>
+      </div>
       <Suspense fallback={<Loading />} >
         <body className={`${inter.className} bg-gray-100`}>{children}</body>
       </Suspense>

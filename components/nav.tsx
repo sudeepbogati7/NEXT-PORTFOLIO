@@ -22,7 +22,7 @@ export default function Nav() {
     }
     return (
         <>
-            <nav className='fixed bg-gray-100 z-20 font-medium h-14 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-16 justify-between'>
+            <nav className='fixed w-full z-20 font-medium h-14 top-0 px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between'>
                 <Link href={'/'} className="p-2">
                     <Image src={'/logo.png'} width={80} height={80} alt="logo" />
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}

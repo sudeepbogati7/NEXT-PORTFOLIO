@@ -17,10 +17,20 @@ export default function Home() {
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
           {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
+
+
           {/* profile photo */}
-          <div data-aos="zoom-in" className=''>
-            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' placeholder="blur"    blurDataURL="/profile.jpg" priority className='shadow-2xl shadow-gray-800/60 rounded-full border-gray-500 border-4 ' />
+          {/* <div data-aos="zoom-in" className=''>
+            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' placeholder="blur"  blurDataURL="/profile.jpg" priority className='shadow-2xl shadow-gray-800/60 rounded-full border-gray-500 border-4 ' />
+          </div> */}
+          
+          <div className="relative flex mb-2  justify-center items-center bg-gray-100">
+            <div className="absolute bg-blue-400 w-64 shadow-xl shadow-blue-400/60 h-64 transform translate-x-4 translate-y-4 rounded-lg"></div>
+            <div className="relative overflow-hidden w-64 h-64 border-2 z-20 border-gray-400 rounded-lg ">
+              <img src={'/profile.webp'} alt="profile" className="w-full h-full object-cover rounded-lg" />
+            </div>
           </div>
+
           {/* name and addres */}
           <div className='flex flex-col my-4'>
             <h1 data-aos="zoom-in" className='font-extrabold tracking-wide text-2xl  '> Sudeep Bogati</h1>
