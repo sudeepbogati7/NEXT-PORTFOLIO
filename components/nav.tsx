@@ -22,9 +22,9 @@ export default function Nav() {
     }
     return (
         <>
-            <nav className='fixed bg-gray-100 z-20 border-b-2  shadow-md border-gray-300 font-medium h-14 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-4 justify-between'>
+            <nav className='fixed bg-gray-100 z-20 font-medium h-14 top-0 px-4 md:px-14 w-full items-center mx-auto flex gap-16 justify-between'>
                 <Link href={'/'} className="p-2">
-                    <Image src={'/sudeep-logo.png'} width={120} height={40} alt="logo" />
+                    <Image src={'/logo.png'} width={80} height={80} alt="logo" />
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
@@ -47,12 +47,15 @@ export default function Nav() {
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
                         <Link href={'/projects'} className="font-medium"> Projects </Link>
                     </span>
-                    <span className={`${isActive('/contact')} usm:hidden md:block`}>
-                        <Link href={'/contact'} className="font-medium"> Contact </Link>
-                    </span>
                     <span className={`${isActive('/blogs')} usm:hidden md:block`}>
                         <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className="flex items-center gap-2 font-medium"> Blogs  <Image src={'/redirect.png'} width={11} height={12} alt="redirect-blogs"></Image></Link>
                     </span>
+                    {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center md:block`}>
+                        <Link href={'/contact'} className="font-medium"> Contact me ! </Link>
+                    </span> */}
+                </div>
+                <div className="usm:hidden bg-green-500 rounded py-1 px-2 text-white border-none hover:text-white hover:bg-green-700 flex items-center justify-center md:block"> 
+                    <Link href={'/contact'} className="font-medium"> Get in touch </Link>
                 </div>
             </nav>
             <SideBar open={sidebarVisible} setOpen={setSidebarVisible} />

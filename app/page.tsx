@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 700 }); 
   }, []);
-  return (
+  return (  
     <>
       <main className="mt-24">
         <div className='flex flex-col  items-center justify-center '>
@@ -32,7 +32,7 @@ export default function Home() {
           {/* Position and status */}
           <div className='flex flex-col items-center justify-center '>
             <span className='text-sm  text-gray-600  font-sans' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='hover:font-extrabold hover:tracking-widest transition-all duration-300 ease-in-out font-semibold tracking-wide  px-1  cursor-pointer underline font-medium'> BIT</Link> Student at <span className='font-semibold  '>Tribhuvan University </span></span>
-            <span data-aos="zoom-in" className=' text-sm font-semibold text-gray-600 font-sans'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-semibold underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Greentick Nepal</Link></span>
+            <span data-aos="zoom-in" className=' text-sm font-semibold text-gray-600 font-sans'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-semibold underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Green Tick Nepal</Link></span>
           </div>
 
           {/* links  */}

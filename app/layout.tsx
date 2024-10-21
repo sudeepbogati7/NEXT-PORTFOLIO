@@ -38,7 +38,7 @@ export default function RootLayout({
           {`
           {
             "@context": "https://schema.org",
-            "@type": "Person",
+            "@type": "  Person",
             "name": "Sudeep Bogati",
             "url": "https://sudipbogati.com.np",
             "sameAs": [
