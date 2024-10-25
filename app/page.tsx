@@ -15,15 +15,11 @@ export default function Home() {
   return (  
     <>
       <main className="mt-24">
+
+        
+
         <div className='flex flex-col  items-center justify-center '>
-          {/* <div className='bg-red-300 px-4 rounded-xl text-gray-600 mb-8 '>Under construction ..........</div> */}
 
-
-          {/* profile photo */}
-          {/* <div data-aos="zoom-in" className=''>
-            <Image src={'/profile.jpg'} width={200} height={200} alt='profile-photo' placeholder="blur"  blurDataURL="/profile.jpg" priority className='shadow-2xl shadow-gray-800/60 rounded-full border-gray-500 border-4 ' />
-          </div> */}
-          
           <div className="relative flex mb-2  justify-center items-center bg-gray-100">
             <div className="absolute bg-blue-400 w-64 shadow-xl shadow-blue-400/60 h-64 transform translate-x-4 translate-y-4 rounded-lg"></div>
             <div className="relative overflow-hidden w-64 h-64 border-2 z-20 border-gray-400 rounded-lg ">
@@ -32,18 +28,18 @@ export default function Home() {
           </div>
 
           {/* name and addres */}
-          <div className='flex flex-col my-4'>
+          {/* <div className='flex flex-col my-4'>
             <h1 data-aos="zoom-in" className='font-extrabold tracking-wide text-2xl  '> Sudeep Bogati</h1>
             <div data-aos="zoom-in" className='flex items-center text-base justify-center gap-1 '>
               <span data-aos="zoom-in" className='flex w-4 h-4'><Image src={'/location.png'} width={20} height={20} alt='location'></Image></span>
               <span data-aos="zoom-in" className='tracking-wide text-sm font-mono'>Chitwan, Nepal 🇳🇵</span>
             </div>
-          </div>
+          </div> */}
           {/* Position and status */}
-          <div className='flex flex-col items-center justify-center '>
+          {/* <div className='flex flex-col items-center justify-center '>
             <span className='text-sm  text-gray-600  font-sans' data-aos="zoom-in"> <Link target='_blank' href={'https://cct.tu.edu.np/courses/188'} className='hover:font-extrabold hover:tracking-widest transition-all duration-300 ease-in-out font-semibold tracking-wide  px-1  cursor-pointer underline font-medium'> BIT</Link> Student at <span className='font-semibold  '>Tribhuvan University </span></span>
             <span data-aos="zoom-in" className=' text-sm font-semibold text-gray-600 font-sans'>Software Engineer at <Link target='_blank' href={'https://www.gtn.com.np'} className='font-semibold underline hover:text-[#92a91a]  transition-all duration-200 ease-in-out border-gray-300 '>Green Tick Nepal</Link></span>
-          </div>
+          </div> */}
 
           {/* links  */}
           <div className='flex gap-4 mt-4 '>
@@ -57,7 +53,7 @@ export default function Home() {
               </svg>
             </span>
             </Link>
-            <Link className=' border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-blue-500' target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer transition-all duration-400 hover:text-blue-600">
+            {/* <Link className=' border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-blue-500' target='_blank' href={'https://facebook.com/sudeep.bogati07'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer transition-all duration-400 hover:text-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -65,7 +61,7 @@ export default function Home() {
                 <path
                   d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
               </svg>
-            </span></Link>
+            </span></Link> */}
             <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-orange-500' target='_blank' href={'https://instagram.com/the.sudeep_'}>
               <span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer hover:text-[#c13584]">
                 <svg
