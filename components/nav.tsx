@@ -7,12 +7,15 @@ import '@/components/nav.css';
 import { Fragment, useState } from 'react'
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-
-export default function Nav() {
+interface NavProps {
+    bgColor: string;
+  }
+export default function Nav({ bgColor }:any) {
+    console.log("color:", bgColor)
     const pathname = usePathname();
 
     const isActive = (href: string) => {
-        return pathname === href ? "border-b-2 border-gray-500  transition-all duration-500 ease-in-out" : 'border-b-2 border-transparent hover:border-gray-300 transition-all text-slate-600 hover:text-black duration-500 ease-in-out';
+        return pathname === href ? "border-b-2 border-gray-600  transition-all duration-500 ease-in-out" : 'border-b-2 border-transparent hover:border-gray-300 transition-all text-slate-600 hover:text-black duration-500 ease-in-out';
     };
 
 
@@ -22,7 +25,7 @@ export default function Nav() {
     }
     return (
         <>
-            <nav className='fixed w-full z-20 font-medium h-14 top-0 px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between'>
+            <nav className={`fixed  ${bgColor} w-full z-20 font-medium h-14 top-0 px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between`}>
                 <Link href={'/'} className="p-2">
                     <Image src={'/logo.png'} width={80} height={80} alt="logo" />
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}
@@ -39,16 +42,16 @@ export default function Nav() {
                     </div>
 
                     <span className={`${isActive('/about')} usm:hidden md:block`}>
-                        <Link href={'/about'} className="font-medium"> About me </Link>
+                        <Link href={'/about'} className="font-medium relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> About me </Link>
                     </span>
                     <span className={`${isActive('/skills')} usm:hidden md:block`}>
-                        <Link href={'/skills'} className="font-medium"> Skills </Link>
+                        <Link href={'/skills'} className="font-medium relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Skills </Link>
                     </span>
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
-                        <Link href={'/projects'} className="font-medium"> Projects </Link>
+                        <Link href={'/projects'} className="font-medium relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Projects </Link>
                     </span>
                     <span className={`${isActive('/blogs')} usm:hidden md:block`}>
-                        <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className="flex items-center gap-2 font-medium"> Blogs  <Image src={'/redirect.png'} width={11} height={12} alt="redirect-blogs"></Image></Link>
+                        <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-centerfont-medium"> Blogs </Link>
                     </span>
                     {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center md:block`}>
                         <Link href={'/contact'} className="font-medium"> Contact me ! </Link>

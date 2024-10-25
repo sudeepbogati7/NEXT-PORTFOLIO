@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/nav";
+import Head from "next/head";
 import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Sudeep Bogati </title>
         <meta name="description" content="Hello , this is Sudeep Bogati , a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
@@ -52,13 +53,18 @@ export default function RootLayout({
           }
           `}
         </script>
-      </head>
-
-      <div className=''>
-        <Nav />
-      </div>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> */}
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans:ital,wght@0,100;400;700;900;1,100;400;700;900&family=Space+Mono:ital,wght@0,400;700;1,400;700&display=swap" 
+          rel="stylesheet" 
+        />
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> */}
+      </Head>
       <Suspense fallback={<Loading />} >
-        <body className={`${inter.className} bg-gray-100`}>{children}</body>
+        <body className={`${inter.className} bg-gray-100 font-sans`}>{children}</body>
       </Suspense>
     </html>
   );
