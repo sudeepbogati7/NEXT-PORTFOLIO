@@ -20,10 +20,12 @@ export default function Home() {
         {/* Background Section */}
         <div
           style={{
-            backgroundImage: "url('/blur_bg.jpg')",
+            backgroundImage: "url('/blur_bg.jpg'), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%)",
           }}
-          className="absolute top-0 left-0 w-full h-screen bg-cover bg-center opacity-30"
-        ></div>
+          className="absolute top-0 left-0 w-full min-h-screen bg-cover bg-center opacity-30"
+        >
+          <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-white to-transparent"></div>
+        </div>
 
         {/* Content Section */}
         <div className="relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
@@ -53,7 +55,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-8">
               <h1 className="text-xl font-semibold">What can I do?</h1>
               <div className="text-gray-600">
                 I can build software tailored to your specific needs, offering a wide
@@ -61,10 +63,10 @@ export default function Home() {
                 are some examples of what I can create for you:
               </div>
 
-              <div className="flex flex-col md:flex-row gap-3">
+              <div className=" mt-6 flex flex-col md:flex-wrap md:flex-row gap-4">
                 {/* Card 1 */}
-                <div className="bg-gradient-to-r rounded-md shadow-md p-4 from-blue-200 to-green-200">
-                  <h2 className="flex gap-1 px-2 font-semibold text-gray-700">
+                <div className="bg-gradient-to-t rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                  <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
                       src={'/trading-up.svg'}
@@ -74,7 +76,7 @@ export default function Home() {
                     />
                     Business Websites
                   </h2>
-                  <ul className="list-disc text-gray-700 px-6 text-sm">
+                  <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
                     <li>Informational websites for small to large businesses</li>
                     <li>Portfolio websites for professionals</li>
                     <li>Company profile websites</li>
@@ -82,23 +84,77 @@ export default function Home() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="bg-gradient-to-r rounded-md shadow-md p-4 from-blue-200 to-green-200">
-                  <h2 className="flex gap-1 px-2 font-semibold text-gray-700">
+                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                  <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
-                      src={'/trading-up.svg'}
+                      src={'/shop.svg'}
                       width={20}
                       height={20}
                       alt="business"
                     />
                     E-Commerce Platforms
                   </h2>
-                  <ul className="list-disc text-gray-700 px-6 text-sm">
+                  <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
                     <li>Custom online stores</li>
                     <li>Integration with payment gateways</li>
                     <li>User-friendly shopping experiences</li>
                   </ul>
                 </div>
+
+                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                  <h2 className="flex gap-1 font-semibold text-indigo-900">
+                    <Image
+                      className="text-red-300"
+                      src={'/grid.svg'}
+                      width={20}
+                      height={20}
+                      alt="business"
+                    />
+                    Custom Web Applications
+                  </h2>
+                  <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
+                    <li>Dashboards for data visualization</li>
+                    <li>Workflow management tools</li>
+                    <li>SaaS (Software as a Service) applications</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                  <h2 className="flex gap-1 font-semibold text-indigo-900">
+                    <Image
+                      className="text-red-300"
+                      src={'/education.svg'}
+                      width={20}
+                      height={20}
+                      alt="business"
+                    />
+                    Educational Platforms
+                  </h2>
+                  <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
+                    <li> Online learning management systems </li>
+                    <li>E-learning platforms with video and quiz integrations</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                  <h2 className="flex gap-1 font-semibold text-indigo-900">
+                    <Image
+                      className="text-red-300"
+                      src={'/portfolio.svg'}
+                      width={16}
+                      height={20}
+                      alt="business"
+                    />
+                    Portfolio Websites
+                  </h2>
+                  <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
+                    <li> Personal branding websites for creatives and professionals </li>
+                    <li> Showcase sites for photographers, designers, etc. </li>
+                  </ul>
+                </div>
+
+
               </div>
             </div>
           </div>
