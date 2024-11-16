@@ -7,6 +7,7 @@ import Head from "next/head";
 import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,8 +17,9 @@ export default function RootLayout({
 
     <html lang="en">
       <Head>
+        <title> Sudeep Bogati </title>
         <link rel="icon" href="/favicon.ico" />
-        <title>Sudeep Bogati </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person_pin_circle" />
         <meta name="description" content="Hello , this is Sudeep Bogati , a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
         <meta name="keywords" content="Sudip Bogati, Sudeep Bogati, Sudeep Bogati Software Engineer, ASCOL, greentick, sudeepbogati, sudipbogati , Software Engineer,  portfolio, skills, web developer, projects" />
         <link rel="canonical" href="https://sudipbogati.com.np" />
@@ -53,12 +55,7 @@ export default function RootLayout({
           }
           `}
         </script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> */}
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans:ital,wght@0,100;400;700;900;1,100;400;700;900&family=Space+Mono:ital,wght@0,400;700;1,400;700&display=swap" 
-          rel="stylesheet" 
-        />
+        
         {/* <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> */}
