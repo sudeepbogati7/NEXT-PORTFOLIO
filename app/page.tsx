@@ -52,10 +52,10 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className=" relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-3/4 mx-auto justify-between w-full">
+        <div className=" relative z-10 mt-16 flex flex-col-reverse md:flex-row md:w-3/4 mx-auto justify-between w-full">
           {/* Left Content */}
-          <div className="mt-6 px-1 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
-            <div className=' px-3 mt-6'>
+          <div className=" px-1 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
+            <div className=' px-3'>
               <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
               <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-300 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
               <div className='text-gray-600 text-lg font-medium'>originating from the beautiful landscapes of Nepal 🇳🇵. </div>
@@ -89,7 +89,7 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className='px-3 mt-6'>
+            <div className='px-3 mt-8'>
               <div className="text-lg font-semibold text-gray-800 font-handwriting">
                 As a <span className="text-green-600">Software Engineer</span>,
               </div>
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
           </div>
           {/* Right Content */}
-          <div className=" mt-6 relative overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
+          <div className=" relative overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
             <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
               <Image
                 src={'/profile_green_bg.jpg'}
@@ -147,7 +147,7 @@ export default function Home() {
           </div>
         </div>
 
-      <div className='flex flex-col md:mt-48 my-12 md:w-5/6 mx-auto w-full md:flex-row'>
+      <div className='flex flex-col md:mt-48 my-8 md:w-5/6 mx-auto w-full md:flex-row'>
         <div className='z-20 px-4 w-full md:w-1/2'> 
             <MyServices /> 
         </div>
