@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import SocialLinks from '@/components/SocialLinks';
+import MyServices from '@/components/MyServices';
 // import DevelopmentSteps from '@/components/DevSteps';
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,9 +52,9 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className=" relative z-10 mt-16 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
+        <div className=" relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
           {/* Left Content */}
-          <div className="mt-6 px-1 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
+          <div className="mt-6  px-1 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
             <div className=' px-3 mt-6'>
               <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
               <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-200 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
@@ -112,112 +113,10 @@ export default function Home() {
                   Contact me
                 </Link>
               </div>
-
-              <div className="mt-8">
-                <h1 className="text-xl font-semibold">What can I do?</h1>
-                <div data-aos="fade-up" className="text-gray-600">
-                  I can build software tailored to your specific needs, offering a wide
-                  range of websites designed to support and grow your business. Here
-                  are some examples of what I can create for you:
-                </div>
-
-                <div className="px-1 my-6 w-full flex flex-col  gap-6">
-                  <div className='w-full flex flex-col md:flex-row gap-4'>
-                    <div data-aos="flip-up" className="bg-gradient-to-t w-full md:w-1/2 rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/trading-up.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                        />
-                        Business Websites
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li>Informational websites for small to large businesses</li>
-                        <li>Portfolio websites for professionals</li>
-                        <li>Company profile websites</li>
-                      </ul>
-                    </div>
-
-                    <div data-aos="flip-up" className="bg-gradient-to-b rounded-md w-full md:w-1/2 shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/shop.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                        />
-                        E-Commerce Platforms
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li>Custom online stores</li>
-                        <li>Integration with payment gateways</li>
-                        <li>User-friendly shopping experiences</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className='flex w-full flex-col md:flex-row gap-4'>
-                    <div data-aos="flip-up" className="w-full md:w-1/2 bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/grid.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                          />
-                        Custom Web Applications
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li>Dashboards for data visualization</li>
-                        <li>Workflow management tools</li>
-                        <li>SaaS (Software as a Service) applications</li>
-                      </ul>
-                    </div>
-                    <div data-aos="flip-up" className="w-full md:w-1/2 bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/education.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                          />
-                        Educational Platforms
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li> Online learning management systems </li>
-                        <li>E-learning platforms with video and quiz integrations</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div data-aos="flip-up" className="w-full md:w-1/2 bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                    <h2 className="flex gap-1 font-semibold text-indigo-900">
-                      <Image
-                        className="text-red-300"
-                        src={'/portfolio.svg'}
-                        width={16}
-                        height={20}
-                        alt="business"
-                      />
-                      Portfolio Websites
-                    </h2>
-                    <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                      <li> Personal branding websites for creatives and professionals </li>
-                      <li> Showcase sites for photographers, designers, etc. </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-
           {/* Right Content */}
-          <div className="relative  overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
+          <div className="relative overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
             <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
               <Image
                 src={'/profile_photo.jpg'}
@@ -246,12 +145,17 @@ export default function Home() {
             </div>
             <SocialLinks />
           </div>
-      </div>
+        </div>
 
-        <div className='mt-4'>
-          <h1 className='flex gap-1 items-center w-fit mx-auto font-semibold text-gray-600 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
-          <div className='w-fit object-cover mx-auto mt-5'><Image src={'/dev_steps.png'} width={350} height={200} alt='development-steps'></Image></div>
-          </div>
+      <div className='flex flex-col mt-8 md:w-5/6 mx-auto w-full md:flex-row'>
+        <div className='z-20 border border-black w-full md:w-1/2'> 
+            <MyServices /> 
+        </div>
+        <div className='w-full border border-red-500 md:w-1/2 z-20 '>
+          <h1 className='flex gap-1 items-center w-fit mx-auto font-semibold text-blue-900 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
+          <div className='w-fit object-fit mx-auto mt-5 border border-l-purple-600'><Image src={'/dev_steps.png'} width={450} height={200} alt='development-steps'></Image></div>
+      </div>
+      </div>
       </main>
 
     </>
