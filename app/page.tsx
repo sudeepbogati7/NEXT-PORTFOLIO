@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Nav bgColor="bg-transparent" />
-      <main className="mt-24">
+      <main className="mt-20">
         <div
           className="flex flex-col items-center justify-center ">
           <div className='h-screen w-screen absolute top-0 left-0 bg-cover bg-center opacity-50 z-0'
@@ -26,28 +26,22 @@ export default function Home() {
           ></div>
 
           <div className='flex flex-col-reverse z-20 md:flex-row  justify-around w-full'>
-            <div className='  flex flex-col gap-4 md:gap-0 w-full md:w-3/4 px-2   md:w-full mx-auto mb-2'>
-              {/* <div className='text-gray-800 text-base md:text-lg'>Hello, My name is <span className='text-lg text-red-400 font-semibold'>Sudeep Bogati</span>. </div> */}
-              {/* <div className='text-lg text-gray-800 md:text-2xl '> I am a <span className='text-green-500 font-semibold '>Software Engineer</span> with more than a year of experience. </div> */}
-              {/* <div className='font-cursive text-center text-3xl md:text-4xl font-medium mt-8 md:mt-0 '> Lets innovate Digital Solutions together....  </div> */}
-              <div>
-                {/* <DevelopmentSteps /> */}
-              </div>
+            <div className='mt-6 w-full px-4 md:w-3/4  mx-auto mb-2'>
+                <div className='text-lg font-semibold text-gray-800 font-handwriting'> As a <span className='text-green-600'>Software Engineer</span>, </div>
+                <div  className='text-2xl  font-semibold  text-indigo-900'>I build complete Web Applications to solve business problems </div>
+                <div className='text-gray-700 text-lg font-medium'>focusing on making them user-friendly and reliable. </div>
             </div>
 
-            <div className=' flex flex-col w-2/3 mx-auto  gap-4 items-center '>
-              <div className="relative flex mb-2 z-20">
-                <div className="absolute bg-blue-400 w-64 shadow-xl shadow-blue-400/60 h-64 transform translate-x-4 translate-y-4 rounded-lg"></div>
-                <div className="relative overflow-hidden w-64 h-64 border-2 z-20 border-gray-400 rounded-lg">
-                  <img src={'/pp.jpg'} alt="profile" className="w-full h-full object-cover" />
-                </div>
+            <div className=' flex flex-col w-2/3 mx-auto  gap-2 items-center '>
+              <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden z-20">
+                <Image objectFit='cover' src={'/profile_photo.jpg'} width={200} height={100} alt='Profle image'></Image>
               </div>
               <div className='flex flex-col w-full items-center justify-centers'>
-                <div className='font-semibold text-lg text-gray-900'>Sudeep Bogati</div>
+                <div className='font-bold text-xl text-blue-900'>Sudeep Bogati</div>
                 <div className='text-gray-700 '><strong className='text-green-600'>Software Engineer</strong> at Green Tick Nepal </div>
               </div>
-              <div className=" z-20 flex gap-4">
-                <Link className='border-b-2 py-1 rounded transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+              <div className=" z-20 flex  gap-8">
+                <Link className='border-b-2 rounded-full p-1 rounded transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"

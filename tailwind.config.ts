@@ -16,7 +16,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         cursive: ['"Dancing Script"', 'cursive'],
-        poppins: ["Poppins", "sans-serif"],
+        handwriting: ["Sour Gummy", "sans"],
       },
       keyframes: {
         scroll: {
