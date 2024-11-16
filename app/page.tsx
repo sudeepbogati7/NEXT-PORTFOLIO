@@ -53,7 +53,7 @@ export default function Home() {
         {/* Content Section */}
         <div className=" relative z-10 mt-16 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
           {/* Left Content */}
-          <div className="mt-6 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
+          <div className="mt-6 px-1 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
             <div className=' px-3 mt-6'>
               <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
               <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-200 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
@@ -62,7 +62,7 @@ export default function Home() {
 
 
             {/* ----------- terminal ----------- */}
-            <div className="bg-gray-900 text-white p-6 w-full shadow-lg font-mono mt-4 max-w-2xl ">
+            <div className="bg-gray-900 text-white px-4 py-6 w-full shadow-lg rounded-md font-mono mt-4 max-w-2xl ">
               {/* Terminal Header */}
               <div className="flex items-center mb-4">
                 <div className="flex gap-2">
