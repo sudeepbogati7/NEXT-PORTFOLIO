@@ -30,6 +30,7 @@ export default function Home() {
                 <div className='text-lg font-semibold text-gray-800 font-handwriting'> As a <span className='text-green-600'>Software Engineer</span>, </div>
                 <div  className='text-2xl  font-semibold text-indigo-900'>I build complete Web Applications to solve business problems </div>
                 <div className='text-gray-700 text-lg font-medium '>focusing on making them user-friendly and reliable. </div>
+                <div className='bg-green-300 mt-3 text-green-900 text-lg  font-medium border border-green-500 px-4 rounded w-fit'> <Link href={'/contacct'}></Link> Contact me  </div>
             </div>
 
             <div className=' flex flex-col md:w-2/3 w-full mx-auto  gap-2 items-center '>
@@ -37,8 +38,9 @@ export default function Home() {
                 <Image  src={'/profile_photo.jpg'} width={180} height={100} alt='Profle image'></Image>
               </div>
               <div className='flex flex-col  w-full items-center justify-centers'>
-                <div className='font-bold text-2xl text-blue-900'>Sudeep Bogati</div>
+                <div className='font-extrabold text-3xl tracking-wide text-gray-700'>Sudeep Bogati</div>
                 <div className='text-gray-700'><strong className='text-green-600'>Software Engineer</strong> at Green Tick Nepal </div>
+                <div className='flex gap-1 text-gray-700'><Image src={'/location.svg'} width={18} height={20} alt='Location-svg'></Image> Kathmandu, Nepal </div>
               </div>
               <div className=" z-20 flex mt-2 gap-8">
                 <Link className='border-b-2 rounded-full p-1 transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
