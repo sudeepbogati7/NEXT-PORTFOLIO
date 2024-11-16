@@ -16,34 +16,123 @@ export default function Home() {
   return (
     <>
       <Nav bgColor="bg-transparent" />
-      <main className="mt-20">
+      <main className="">
+        {/* Background Section */}
         <div
-          className="flex flex-col items-center justify-center ">
-          <div className='h-screen w-screen absolute top-0 left-0 bg-cover bg-center opacity-50 z-0'
-            style={{
-              backgroundImage: "url('/blur_bg.jpg')",
-            }}
-          ></div>
+          style={{
+            backgroundImage: "url('/blur_bg.jpg')",
+          }}
+          className="absolute top-0 left-0 w-full h-screen bg-cover bg-center opacity-30"
+        ></div>
 
-          <div className='flex flex-col-reverse z-20 md:flex-row  justify-around w-full'>
-            <div className='mt-6 w-full px-4 md:w-3/4  mx-auto mb-2'>
-                <div className='text-lg font-semibold text-gray-800 font-handwriting'> As a <span className='text-green-600'>Software Engineer</span>, </div>
-                <div  className='text-2xl  font-semibold text-indigo-900'>I build complete Web Applications to solve business problems </div>
-                <div className='text-gray-700 text-lg font-medium '>focusing on making them user-friendly and reliable. </div>
-                <div className='bg-green-300 mt-3 text-green-900 text-lg  font-medium border border-green-500 px-4 rounded w-fit'> <Link href={'/contacct'}></Link> Contact me  </div>
+        {/* Content Section */}
+        <div className="relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
+          {/* Left Content */}
+          <div className="mt-6 md:mt-0 w-full px-4 md:w-4/5 mx-auto mb-2">
+            <div className="text-lg font-semibold text-gray-800 font-handwriting">
+              As a <span className="text-green-600">Software Engineer</span>,
+            </div>
+            <div className="text-2xl font-semibold text-indigo-900">
+              I build complete Web Applications to solve business problems
+            </div>
+            <div className="text-gray-700 text-lg font-medium">
+              focusing on making them user-friendly and reliable.
+            </div>
+            <div className="bg-blue-200 mt-3 text-green-800 font-medium border border-green-500 px-3 rounded w-fit">
+              <Link
+                className="flex items-center gap-1"
+                href={'contact'}
+              >
+                <Image
+                  src={'/contact.svg'}
+                  width={18}
+                  height={16}
+                  alt="contact-svg"
+                />
+                Contact me
+              </Link>
             </div>
 
-            <div className=' flex flex-col md:w-2/3 w-full mx-auto  gap-2 items-center '>
-              <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden z-20">
-                <Image  src={'/profile_photo.jpg'} width={180} height={100} alt='Profle image'></Image>
+            <div className="mt-6">
+              <h1 className="text-xl font-semibold">What can I do?</h1>
+              <div className="text-gray-600">
+                I can build software tailored to your specific needs, offering a wide
+                range of websites designed to support and grow your business. Here
+                are some examples of what I can create for you:
               </div>
-              <div className='flex flex-col  w-full items-center justify-centers'>
-                <div className='font-extrabold text-3xl tracking-wide text-gray-700'>Sudeep Bogati</div>
-                <div className='text-gray-700'><strong className='text-green-600'>Software Engineer</strong> at Green Tick Nepal </div>
-                <div className='flex gap-1 text-gray-700'><Image src={'/location.svg'} width={18} height={20} alt='Location-svg'></Image> Kathmandu, Nepal </div>
+
+              <div className="flex flex-col md:flex-row gap-3">
+                {/* Card 1 */}
+                <div className="bg-gradient-to-r rounded-md shadow-md p-4 from-blue-200 to-green-200">
+                  <h2 className="flex gap-1 px-2 font-semibold text-gray-700">
+                    <Image
+                      className="text-red-300"
+                      src={'/trading-up.svg'}
+                      width={20}
+                      height={20}
+                      alt="business"
+                    />
+                    Business Websites
+                  </h2>
+                  <ul className="list-disc text-gray-700 px-6 text-sm">
+                    <li>Informational websites for small to large businesses</li>
+                    <li>Portfolio websites for professionals</li>
+                    <li>Company profile websites</li>
+                  </ul>
+                </div>
+
+                {/* Card 2 */}
+                <div className="bg-gradient-to-r rounded-md shadow-md p-4 from-blue-200 to-green-200">
+                  <h2 className="flex gap-1 px-2 font-semibold text-gray-700">
+                    <Image
+                      className="text-red-300"
+                      src={'/trading-up.svg'}
+                      width={20}
+                      height={20}
+                      alt="business"
+                    />
+                    E-Commerce Platforms
+                  </h2>
+                  <ul className="list-disc text-gray-700 px-6 text-sm">
+                    <li>Custom online stores</li>
+                    <li>Integration with payment gateways</li>
+                    <li>User-friendly shopping experiences</li>
+                  </ul>
+                </div>
               </div>
-              <div className=" z-20 flex mt-2 gap-8">
-                <Link className='border-b-2 rounded-full p-1 transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="relative flex flex-col md:w-2/5 w-full mx-auto gap-4 items-center">
+            <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
+              <Image
+                src={'/profile_photo.jpg'}
+                width={180}
+                height={100}
+                alt="Profile image"
+              />
+            </div>
+            <div className="flex flex-col w-full items-center">
+              <div className="font-extrabold text-3xl tracking-wide text-gray-700">
+                Sudeep Bogati
+              </div>
+              <div className="text-gray-700">
+                <strong className="text-green-600">Software Engineer</strong> at Green
+                Tick Nepal
+              </div>
+              <div className="flex gap-1 text-gray-700">
+                <Image
+                  src={'/location.svg'}
+                  width={18}
+                  height={20}
+                  alt="Location-svg"
+                />
+                Kathmandu, Nepal
+              </div>
+            </div>
+            <div className="flex mt-2 gap-8">
+            <Link className='border-b-2 rounded-full p-1 transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -105,12 +194,11 @@ export default function Home() {
                     </svg>
                   </span>
                 </Link>
-              </div>
-
             </div>
-          </div>  
+          </div>
         </div>
       </main>
+
     </>
   );
 }
