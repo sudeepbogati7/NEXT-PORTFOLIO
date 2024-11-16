@@ -45,23 +45,47 @@ export default function Home() {
           style={{
             backgroundImage: "linear-gradient(to right, rgba(225, 238, 247, 1) 0%, rgba(180, 210, 230, 1) 100%)",
           }}
-          className="absolute top-0 left-0 w-full min-h-screen bg-cover bg-center opacity-50"
+          className="absolute top-0 left-0 w-full min-h-screen bg-cover bg-center opacity-70"
         >
           <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-gray-100 to-transparent"></div>
         </div>
 
         {/* Content Section */}
-        <div className="max-h-screen relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
+        <div className="max-h-screen relative z-10 mt-16 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
           {/* Left Content */}
-          <div className='px-3 mt-6'>
-            <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
-            <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-200 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
-            <div className='text-gray-600 text-lg font-medium'>originating from the beautiful landscapes of Nepal 🇳🇵. </div>
-            <div className='text-lg flex flex-col font-mono  font-medium mt-4'>I am a programmer who loves 
-              <div className='flex gap-1 w-fit  text-green-800 font-sans px-2 font-semibold rounded-xl text-2xl bg-gradient-to-r from-blue-300 to-green-200'> <Image src={'/learn.svg'} width={25} height={20} alt='learning'></Image> learning </div>
-              <div className='flex gap-1 w-fit  mt-2 text-blue-800 font-sans px-3 blue font-semibold rounded-xl text-2xl bg-gradient-to-l from-indigo-200 to-blue-300'> <Image src={'/terminal.svg'} width={25} height={20} alt='learning'></Image> building new things</div>
-              <span className='inline-flex items-center  w-fit font-sans text-lg gap-1 font-semibold'> and creating solutions that help businesses grow. </span>
+          <div>
+            <div className=' px-3 mt-6'>
+              <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
+              <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-200 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
+              <div className='text-gray-600 text-lg font-medium'>originating from the beautiful landscapes of Nepal 🇳🇵. </div>
             </div>
+            <div className="bg-gray-900 text-white p-6  shadow-lg font-mono mt-4 max-w-2xl ">
+              {/* Terminal Header */}
+              <div className="flex items-center mb-4">
+              <div className="flex gap-2">
+              <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+              <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+              <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+              </div>
+              </div>
+
+              {/* Terminal Content */}
+              <div className="text-lg flex flex-col font-medium">
+                I am a programmer who loves
+                <div className="flex gap-1 w-fit text-green-800 font-sans px-2 font-semibold rounded-xl text-2xl bg-gradient-to-r from-blue-300 to-green-200">
+                <Image src="/learn.svg" width={25} height={20} alt="learning" />
+                learning
+                </div>
+                <div className="flex gap-1 w-fit mt-2 text-blue-800 font-sans px-3 font-semibold rounded-xl text-2xl bg-gradient-to-l from-indigo-200 to-blue-300">
+                <Image src="/terminal.svg" width={25} height={20} alt="building" />
+                building new things
+                </div>
+                <span className="inline-flex items-center w-fit font-sans text-lg gap-1 font-semibold">
+                and creating solutions that help businesses grow.
+                </span>
+              </div>
+            </div>
+
           </div>
           {/* <div className="mt-6 md:mt-0 w-full px-4 md:w-4/5 mx-auto mb-2">
             <div className="text-lg font-semibold text-gray-800 font-handwriting">
@@ -191,7 +215,7 @@ export default function Home() {
           </div> */}
 
           {/* Right Content */}
-          <div className="relative pb-6 bg-gradient-to-b from-transparent to-blue-200 flex flex-col md:w-2/5 w-full mx-auto gap-4 items-center">
+          <div className="relative  overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto gap-4 items-center">
             <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
               <Image
                 src={'/profile_photo.jpg'}
@@ -220,7 +244,7 @@ export default function Home() {
             </div>
             <SocialLinks />
           </div>
-        </div>
+      </div>
 
         <div className='mt-4'>
           <h1 className='flex gap-1 items-center w-fit mx-auto font-semibold text-gray-600 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
