@@ -57,7 +57,7 @@ export default function Home() {
 
             <div className="mt-8">
               <h1 className="text-xl font-semibold">What can I do?</h1>
-              <div className="text-gray-600">
+              <div data-aos="fade-up" className="text-gray-600">
                 I can build software tailored to your specific needs, offering a wide
                 range of websites designed to support and grow your business. Here
                 are some examples of what I can create for you:
@@ -65,7 +65,7 @@ export default function Home() {
 
               <div className=" mt-6 flex flex-col md:flex-wrap md:flex-row gap-4">
                 {/* Card 1 */}
-                <div className="bg-gradient-to-t rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="fade-left" className="bg-gradient-to-t rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="fade-right" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -102,7 +102,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="fade-left" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -120,7 +120,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="fade-right" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -137,7 +137,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="fade-left" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
