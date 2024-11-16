@@ -51,9 +51,19 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className="relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
+        <div className="max-h-screen relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
           {/* Left Content */}
-          <div className="mt-6 md:mt-0 w-full px-4 md:w-4/5 mx-auto mb-2">
+          <div className='px-3 mt-6'>
+            <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
+            <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-200 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
+            <div className='text-gray-600 text-lg font-medium'>originating from the beautiful landscapes of Nepal 🇳🇵. </div>
+            <div className='text-lg flex flex-col font-mono  font-medium mt-4'>I am a programmer who loves 
+              <div className='flex gap-1 w-fit  text-green-800 font-sans px-2 font-semibold rounded-xl text-2xl bg-gradient-to-r from-blue-300 to-green-200'> <Image src={'/learn.svg'} width={25} height={20} alt='learning'></Image> learning </div>
+              <div className='flex gap-1 w-fit  mt-2 text-blue-800 font-sans px-3 blue font-semibold rounded-xl text-2xl bg-gradient-to-l from-indigo-200 to-blue-300'> <Image src={'/terminal.svg'} width={25} height={20} alt='learning'></Image> building new things</div>
+              <span className='inline-flex items-center  w-fit font-sans text-lg gap-1 font-semibold'> and creating solutions that help businesses grow. </span>
+            </div>
+          </div>
+          {/* <div className="mt-6 md:mt-0 w-full px-4 md:w-4/5 mx-auto mb-2">
             <div className="text-lg font-semibold text-gray-800 font-handwriting">
               As a <span className="text-green-600">Software Engineer</span>,
             </div>
@@ -106,7 +116,6 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  {/* Card 2 */}
                   <div data-aos="flip-up" className="bg-gradient-to-b rounded-md w-full md:w-1/2 shadow-md px-4 py-2 from-slate-200 to-blue-200">
                     <h2 className="flex gap-1 font-semibold text-indigo-900">
                       <Image
@@ -179,30 +188,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Right Content */}
-          <div className="relative flex flex-col md:w-2/5 w-full mx-auto gap-4 items-center">
+          <div className="relative pb-6 bg-gradient-to-b from-transparent to-blue-200 flex flex-col md:w-2/5 w-full mx-auto gap-4 items-center">
             <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
               <Image
                 src={'/profile_photo.jpg'}
-                width={180}
+                width={150}
                 height={100}
                 alt="Profile image"
               />
             </div>
             <div className="flex flex-col w-full items-center">
-              <div className="font-extrabold text-3xl tracking-wide text-gray-700">
+              <div className="font-extrabold text-2xl tracking-wide text-gray-700">
                 Sudeep Bogati
               </div>
-              <div className="text-gray-700">
-                <strong className="text-green-600">Software Engineer</strong> at Green
+              <div className="text-gray-700 text-sm">
+                <strong className="text-green-600 ">Software Engineer</strong> at Green
                 Tick Nepal
               </div>
-              <div className="flex gap-1 text-gray-700">
+              <div className="flex text-sm gap-1 text-gray-700">
                 <Image
                   src={'/location.svg'}
-                  width={18}
+                  width={16}
                   height={20}
                   alt="Location-svg"
                 />
@@ -214,7 +223,7 @@ export default function Home() {
         </div>
 
         <div className='mt-4'>
-          <h1 className='w-fit mx-auto font-semibold text-gray-600 '> Web Development Lifecycle Stages </h1>
+          <h1 className='flex gap-1 items-center w-fit mx-auto font-semibold text-gray-600 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
           <div className='w-fit object-cover mx-auto mt-5'><Image src={'/dev_steps.png'} width={350} height={200} alt='development-steps'></Image></div>
           </div>
       </main>
