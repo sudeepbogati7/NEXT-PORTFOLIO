@@ -52,12 +52,12 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className=" relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-5/6 mx-auto justify-between w-full">
+        <div className=" relative z-10 mt-20 flex flex-col-reverse md:flex-row md:w-3/4 mx-auto justify-between w-full">
           {/* Left Content */}
-          <div className="mt-6  px-1 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
+          <div className="mt-6 px-1 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
             <div className=' px-3 mt-6'>
               <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !</h1>
-              <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-200 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
+              <div className='text-2xl font-extrabold '>My name is <span className='bg-gradient-to-r from-red-200 to-blue-300 rounded-md px-2 text-gray-700'>Sudeep Bogati</span> </div>
               <div className='text-gray-600 text-lg font-medium'>originating from the beautiful landscapes of Nepal 🇳🇵. </div>
             </div>
 
@@ -84,8 +84,8 @@ export default function Home() {
                 <Image src="/terminal.svg" width={25} height={20} alt="building" />
                 building new things
                 </div>
-                <span className="inline-flex items-center w-fit font-sans text-base gap-1 font-semibold">
-                and creating solutions that help businesses grow.
+                <span className="inline-flex bg-gradient-to-r from-yellow-300 to-red-300 px-3 text-xl rounded-xl mt-2 text-yellow-800 items-center w-fit font-sans gap-1 font-semibold">
+                and turning ideas into reality.
                 </span>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function Home() {
               <div className="text-gray-700 text-lg font-medium">
                 focusing on making them user-friendly and reliable.
               </div>
-              <div className="bg-blue-200 mt-3 text-green-800 font-medium border border-green-500 px-3 rounded w-fit">
+              <div className="bg-blue-200 hover:bg-green-300 transition-all duration-200 ease-linear shadow-md hover:shadow-xl mt-3 text-xl text-green-800 font-medium border border-green-500 px-3 rounded w-fit">
                 <Link
                   className="flex items-center gap-1"
                   href={'contact'}
@@ -116,11 +116,11 @@ export default function Home() {
             </div>
           </div>
           {/* Right Content */}
-          <div className="relative overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
+          <div className=" mt-6 relative overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
             <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
               <Image
-                src={'/profile_photo.jpg'}
-                width={150}
+                src={'/profile_green_bg.jpg'}
+                width={200}
                 height={100}
                 alt="Profile image"
               />
@@ -147,13 +147,13 @@ export default function Home() {
           </div>
         </div>
 
-      <div className='flex flex-col mt-8 md:w-5/6 mx-auto w-full md:flex-row'>
-        <div className='z-20 border border-black w-full md:w-1/2'> 
+      <div className='flex flex-col md:mt-48 my-12 md:w-5/6 mx-auto w-full md:flex-row'>
+        <div className='z-20 px-4 w-full md:w-1/2'> 
             <MyServices /> 
         </div>
-        <div className='w-full border border-red-500 md:w-1/2 z-20 '>
-          <h1 className='flex gap-1 items-center w-fit mx-auto font-semibold text-blue-900 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
-          <div className='w-fit object-fit mx-auto mt-5 border border-l-purple-600'><Image src={'/dev_steps.png'} width={450} height={200} alt='development-steps'></Image></div>
+        <div className='w-full  md:w-1/2 z-20 '>
+          <h1 className='flex gap-1 items-center  text-lg w-fit mx-auto font-semibold text-blue-900 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
+          <div className='w-fit object-fit mx-auto mt-5 '><Image src={'/dev_steps.png'} width={450} height={200} alt='development-steps'></Image></div>
       </div>
       </div>
       </main>

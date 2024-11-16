@@ -5,7 +5,7 @@ export default function MyServices (){
     return (
         <>
             <div className="z-20 ">
-                <h1 className="text-lg font-semibold">What can I do?</h1>
+                <h1 className="text-lg text-blue-900 font-semibold"> What Can I do ?  </h1>
                 <div data-aos="fade-up" className="text-gray-600">
                   I can build software tailored to your specific needs, offering a wide
                   range of websites designed to support and grow your business. Here
@@ -86,7 +86,7 @@ export default function MyServices (){
                     </div>
                   </div>
 
-                  <div data-aos="flip-up" className="w-full md:w-1/2 bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                  <div data-aos="flip-up" className="w-full bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                     <h2 className="flex gap-1 font-semibold text-indigo-900">
                       <Image
                         className="text-red-300"
