@@ -1,6 +1,6 @@
 'use client';
 import './globals.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import '@/app/theme.css';
 import Link from 'next/link';
@@ -10,12 +10,34 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // import DevelopmentSteps from '@/components/DevSteps';
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
   useEffect(() => {
+    
+    const handleScroll = () => {
+      setIsScrolled (window.scrollY > 200);
+    };
+    
+    window.addEventListener('scroll', handleScroll)
+    
     AOS.init({ duration: 700 });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
+
+  let navBgColor = ''
+  if (isScrolled === false) {
+    navBgColor = "bg-transparent"
+  }else{
+    navBgColor = "bg-white bg-opacity-40 backdrop-blur-sm "
+  }
   return (
     <>
-      <Nav bgColor="bg-transparent" />
+      <Nav bgColor= {navBgColor} />
       <main className="">
         {/* Background Section */}
         <div
@@ -63,9 +85,9 @@ export default function Home() {
                 are some examples of what I can create for you:
               </div>
 
-              <div className=" mt-6 flex flex-col md:flex-wrap md:flex-row gap-4">
+              <div className=" mt-6 max-w-full flex flex-col md:flex-wrap md:flex-row gap-4">
                 {/* Card 1 */}
-                <div data-aos="fade-left" className="bg-gradient-to-t rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="flip-up" className="bg-gradient-to-t rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -84,7 +106,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 2 */}
-                <div data-aos="fade-right" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="flip-up" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -102,7 +124,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div data-aos="fade-left" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="flip-up" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -120,7 +142,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div data-aos="fade-right" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="flip-up" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -137,7 +159,7 @@ export default function Home() {
                   </ul>
                 </div>
 
-                <div data-aos="fade-left" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
+                <div data-aos="flip-up" className="bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                   <h2 className="flex gap-1 font-semibold text-indigo-900">
                     <Image
                       className="text-red-300"
@@ -153,8 +175,6 @@ export default function Home() {
                     <li> Showcase sites for photographers, designers, etc. </li>
                   </ul>
                 </div>
-
-
               </div>
             </div>
           </div>
