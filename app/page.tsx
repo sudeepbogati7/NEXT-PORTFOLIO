@@ -28,20 +28,20 @@ export default function Home() {
           <div className='flex flex-col-reverse z-20 md:flex-row  justify-around w-full'>
             <div className='mt-6 w-full px-4 md:w-3/4  mx-auto mb-2'>
                 <div className='text-lg font-semibold text-gray-800 font-handwriting'> As a <span className='text-green-600'>Software Engineer</span>, </div>
-                <div  className='text-2xl  font-semibold  text-indigo-900'>I build complete Web Applications to solve business problems </div>
-                <div className='text-gray-700 text-lg font-medium'>focusing on making them user-friendly and reliable. </div>
+                <div  className='text-2xl  font-semibold text-indigo-900'>I build complete Web Applications to solve business problems </div>
+                <div className='text-gray-700 text-lg font-medium '>focusing on making them user-friendly and reliable. </div>
             </div>
 
-            <div className=' flex flex-col w-2/3 mx-auto  gap-2 items-center '>
+            <div className=' flex flex-col md:w-2/3 w-full mx-auto  gap-2 items-center '>
               <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden z-20">
-                <Image objectFit='cover' src={'/profile_photo.jpg'} width={200} height={100} alt='Profle image'></Image>
+                <Image  src={'/profile_photo.jpg'} width={180} height={100} alt='Profle image'></Image>
               </div>
-              <div className='flex flex-col w-full items-center justify-centers'>
-                <div className='font-bold text-xl text-blue-900'>Sudeep Bogati</div>
-                <div className='text-gray-700 '><strong className='text-green-600'>Software Engineer</strong> at Green Tick Nepal </div>
+              <div className='flex flex-col  w-full items-center justify-centers'>
+                <div className='font-bold text-2xl text-blue-900'>Sudeep Bogati</div>
+                <div className='text-gray-700'><strong className='text-green-600'>Software Engineer</strong> at Green Tick Nepal </div>
               </div>
-              <div className=" z-20 flex  gap-8">
-                <Link className='border-b-2 rounded-full p-1 rounded transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+              <div className=" z-20 flex mt-2 gap-8">
+                <Link className='border-b-2 rounded-full p-1 transition-all duration-400  border-transparent hover:border-gray-500' target='_blank' href={'https://github.com/sudeepbogati7/'}><span className="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
