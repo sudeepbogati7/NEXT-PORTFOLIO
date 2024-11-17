@@ -146,8 +146,23 @@ export default function Home() {
             <SocialLinks />
           </div>
         </div>
+        <div className="relative  bg-gradient-to-b from-transparent to-blue-200 h-24 md:h-64">
+          <div className="absolute bottom-0 left-0 right-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="w-full h-auto"
+              >
+              <path
+                fill="#f3f4f6"
+                fillOpacity="1"
+                d="M0,160C360,320,1080,0,1440,160L1440,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
 
-      <div className='flex flex-col md:mt-48 my-8 md:w-5/6 mx-auto w-full md:flex-row'>
+      <div className='relative md:bottom-16 bottom-6 flex flex-col  md:w-5/6 mx-auto w-full md:flex-row'>
         <div className='z-20 px-4 w-full md:w-1/2'> 
             <MyServices /> 
         </div>
