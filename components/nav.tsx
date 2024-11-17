@@ -25,7 +25,7 @@ export default function Nav({ bgColor }:any) {
     }
     return (
         <>
-            <nav className={`fixed  ${bgColor}  w-full z-20 font-medium h-14 top-0 px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between`}>
+            <nav className={`fixed  ${bgColor}  w-full z-50 font-medium h-14 top-0 px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between`}>
                 <Link href={'/'} className="p-2">
                     <Image src={'/logo.png'} width={80} height={80} alt="logo" />
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}
@@ -35,7 +35,7 @@ export default function Nav({ bgColor }:any) {
                         <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
                         <button
                             onClick={() => setSidebarVisible(true)}
-                            className="relative  usm:block md:hidden border-2 rounded-lg bg-gray-200 border-slate-400 shadow-lg px-2 z-10"
+                            className="relative  usm:block md:hidden border-2 rounded-lg bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
                         >
                             <Image src={'/menu.png'} width={30} height={30} alt="menu" />
                         </button>

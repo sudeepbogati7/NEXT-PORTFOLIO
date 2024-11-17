@@ -5,6 +5,7 @@ import Image from "next/image";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './scroll.css';
+import Nav from "@/components/nav";
 export default function Skills() {
     useEffect(() => {
         AOS.init({ duration: 700 }); // Initialize AOS with a duration of 1000ms
@@ -16,6 +17,7 @@ export default function Skills() {
         <head>
             <title>Skills || Sudeep Bogati </title>
         </head>
+        <Nav bgColor="bg-gray-100"/>
             <section className="my-24">
                 <div data-aos="zoom-in" className='mt-8 mb-4 text-2xl font-bold mx-auto px-2  text-center  flex items-center gap-2 w-fit  '> My <span className="text-blue-900 "> Skills </span> <Image src={'/skills.png'} width={26} height={26} alt="skills"></Image>  </div>
                 <div className='px-4 w-full flex gap-2 flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>

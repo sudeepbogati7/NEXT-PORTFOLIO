@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import Nav from "@/components/nav";
 export default function Contact() {
     useEffect(() => {
         AOS.init({ duration: 700 });
@@ -14,6 +14,7 @@ export default function Contact() {
         <head>
             <title> Contact || Sudeep Bogati </title>
         </head>
+        <Nav bgColor="bg-gray-100"/>
             <main className="my-20 font-sans">
                 <h1 data-aos="zoom-in" className="font-bold text-xl mx-auto w-fit text-gray-700"> <span className="text-blue-900">Reach</span> Me </h1>
                 <div className="mt-8 flex flex-col w-full md:w-5/6 mx-auto">
