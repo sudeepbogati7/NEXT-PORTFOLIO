@@ -13,7 +13,7 @@ export default function MyServices (){
                 </div>
 
                 <div className="px-1 my-6 w-full flex flex-col  gap-6">
-                  <div className='w-full flex flex-col md:flex-row gap-4'>
+                  <div className='w-full flex flex-col lg:flex-row gap-4'>
                     <div data-aos="flip-up" className="bg-gradient-to-t w-full  rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
                       <h2 className="flex gap-1 font-semibold text-indigo-900">
                         <Image

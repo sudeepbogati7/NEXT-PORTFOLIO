@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className=" relative z-10 mt-16 flex flex-col-reverse md:flex-row md:w-3/4 mx-auto justify-between w-full">
+        <div className=" relative z-10 mt-16 flex flex-col-reverse lg:flex-row lg:w-3/4 mx-auto justify-between w-full">
           {/* Left Content */}
           <div className=" px-1 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
             <div className=' px-3'>
@@ -110,7 +110,7 @@ export default function Home() {
                     height={16}
                     alt="contact-svg"
                   />
-                  Contact me
+                  Book a meeting
                 </Link>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function Home() {
           <div className=" relative overflow-hidden pb-6  flex flex-col md:w-2/5 w-full mx-auto items-center">
             <div className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-blue-300 w-fit object-cover bg-black overflow-hidden">
               <Image
-                src={'/profile_green_bg.jpg'}
+                src={'/black_shirt_profile.png'}
                 width={200}
                 height={100}
                 alt="Profile image"
@@ -162,11 +162,11 @@ export default function Home() {
           </div>
         </div>
 
-      <div className='relative md:bottom-16 bottom-6 flex flex-col  md:w-5/6 mx-auto w-full md:flex-row'>
-        <div className='z-20 px-4 w-full md:w-1/2'> 
+      <div className='relative lg:bottom-16 bottom-6 flex flex-col  lg:w-5/6 mx-auto w-full lg:flex-row'>
+        <div className='z-20 px-4 w-4/5 mx-auto lg:w-1/2'> 
             <MyServices /> 
         </div>
-        <div className='w-full  md:w-1/2 z-20 '>
+        <div className='w-full  lg:w-1/2 z-20 '>
           <h1 className='flex gap-1 items-center  text-lg w-fit mx-auto font-semibold text-blue-900 '> Web Development Lifecycle Stages  <Image src={'/steps.svg'} width={20} height={20} alt='steps'></Image></h1>
           <div className='w-fit object-fit mx-auto mt-5 '><Image src={'/dev_steps.png'} width={450} height={200} alt='development-steps'></Image></div>
       </div>

@@ -31,13 +31,13 @@ export default function Nav({ bgColor }:any) {
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
-                    <div className="relative active:-translate-x-3  transform transition-all duration-600 ease-in-out p-1 block md:hidden rounded-xl">
+                    <div className="relative  transition-all duration-600 ease-in-out p-1 block md:hidden rounded-xl">
                         <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
                         <button
                             onClick={() => setSidebarVisible(true)}
                             className="relative  usm:block md:hidden border-2 rounded-lg bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
                         >
-                            <Image src={'/menu.png'} width={30} height={30} alt="menu" />
+                            {/* <Image src={'/menu.png'} width={30} height={30} alt="menu" /> */}
                         </button>
                     </div>
 
