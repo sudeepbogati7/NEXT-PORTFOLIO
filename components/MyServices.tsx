@@ -5,8 +5,8 @@ export default function MyServices (){
     return (
         <>
             <div className="z-20 ">
-                <h1 className="text-lg text-blue-900 font-semibold"> What Can I do ?  </h1>
-                <div data-aos="fade-up" className="text-gray-600">
+                <h1 className="text-lg text-blue-900 font-semibold px-2"> What Can I do ?  </h1>
+                <div data-aos="fade-up" className="text-gray-600 px-2">
                   I can build software tailored to your specific needs, offering a wide
                   range of websites designed to support and grow your business. Here
                   are some examples of what I can create for you:

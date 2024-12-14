@@ -10,7 +10,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 interface NavProps {
     bgColor: string;
   }
-export default function Nav({ bgColor }:any) {
+export default function Nav( {bgColor = "bg-gray-100" }: { bgColor?: string }) {
     console.log("color:", bgColor)
     const pathname = usePathname();
 
@@ -25,19 +25,19 @@ export default function Nav({ bgColor }:any) {
     }
     return (
         <>
-            <nav className={`fixed  ${bgColor}  w-full z-50 font-medium h-14 top-0 px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between`}>
+            <nav className={`fixed  ${bgColor} w-full z-50 font-medium h-16 top-0  px-4 md:px-14 items-center  mx-auto flex gap-16 justify-between`}>
                 <Link href={'/'} className="p-2">
-                    <Image src={'/logo.png'} width={80} height={80} alt="logo" />
+                    <Image className="h-auto w-auto" src={'/logo.png'} width={80} height={80} alt="logo" />
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}
                 </Link>
                 <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
-                    <div className="relative  transition-all duration-600 ease-in-out p-1 block md:hidden rounded-xl">
+                    <div className="relative  transition-all duration-600 ease-in-out p-1 block md:hidden rounded-full">
                         <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
                         <button
                             onClick={() => setSidebarVisible(true)}
-                            className="relative  usm:block md:hidden border-2 rounded-lg bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
+                            className="relative usm:block md:hidden border rounded-full bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
                         >
-                            {/* <Image src={'/menu.png'} width={30} height={30} alt="menu" /> */}
+                            <Image src={'/menu.svg'} width={30} height={30} alt="menu" />
                         </button>
                     </div>
 
@@ -125,19 +125,19 @@ function SideBar({ open, setOpen }: any) {
                                             <DialogTitle className="text-base font-semibold leading-6 flex items-center justify-center text-gray-900"><Image src={'/hello.webp'} height={90} alt="hello" width={90}></Image> </DialogTitle>
                                             <div className="flex mt-14 flex-col gap-8">
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/about')} `}>
-                                                    <Link href={'/about'} className="font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400 "> <Image src={'/about-me-nav.png'} width={16} height={20} alt="about-me"></Image> About me </Link>
+                                                    <Link href={'/about'} className="font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400 "> <Image className="text-white" src={'/about_me.svg'} width={18} height={20} alt="about-me"></Image> About me </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/skills')} `}>
-                                                    <Link href={'/skills'} className="font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400 ">  <Image src={'/skills.png'} width={16} height={20} alt="about-me"></Image>  Skills </Link>
+                                                    <Link href={'/skills'} className="font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400 ">  <Image src={'/skills.svg'} width={16} height={20} alt="skills"></Image>  Skills </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/projects')} `}>
-                                                    <Link href={'/projects'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/projects.png'} width={16} height={20} alt="about-me"></Image> Projects </Link>
+                                                    <Link href={'/projects'} className=" font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/projects.svg'} width={16} height={20} alt="about-me"></Image> Projects </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/blogs')}`}>
-                                                    <Link href={'https://blogs.sudipbogati.com.np'} className="font-semibold font-semibold flex items-center gap-1 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/blogs.png'} width={16} height={20} alt="about-me"></Image> Blogs<Image src={'/redirect.png'} width={12} height={12} alt="redirect"></Image> </Link>
+                                                    <Link href={'https://blogs.sudipbogati.com.np'} className="font-semibold flex items-center gap-1 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/blogs.svg'} width={18} height={20} alt="about-me"></Image> Blogs<Image src={'/redirect.png'} width={8} height={12} alt="redirect"></Image> </Link>
                                                 </span>
                                                 <span onClick={() => setOpen(false)} className={`${isActive('/contact')} `}>
-                                                    <Link href={'/contact'} className="font-semibold font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/contact.png'} width={16} height={20} alt="about-me"></Image> Contact </Link>
+                                                    <Link href={'/contact'} className="font-semibold flex items-center gap-2 border-2 px-2 rounded-lg w-fit  transition-all duration-300 ease-linear boder-gray-300 hover:border-gray-400  "> <Image src={'/contact.svg'} width={16} height={20} alt="about-me"></Image> Contact </Link>
                                                 </span>
                                             </div>
                                         </div>

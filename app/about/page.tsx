@@ -20,20 +20,20 @@ export default function About() {
             <head>
                 <title>About || Sudeep Bogati </title>
             </head>
-            <Nav bgColor="bg-gray-100"/>
-            <main className="mt-20 font-sans">
+            <Nav bgColor="bg-transparent backdrop-blur-sm "/>
+            <main className=" font-sans">
                 {/* <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About <span className="text-blue-900">me</span> <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div> */}
-                <div className='px-4 w-full flex flex-col md:flex-row items-center justify-center  md:w-4/5 xl:w-3/5 mx-auto'>
-                    <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.webp'} width={220} height={220} alt="coding"></Image></span>
-                    <div data-aos="fade-up" className='font-medium text-gray-700 text-base px-2 text-center w-full md:w-2/3'>The world of software engineering keeps me buzzing! I am a <span className="font-medium ">Full Stack Software Engineer</span>, which means I can design and build the entire picture – from the user-facing website or app you see, all the way down to the engine that makes it work. I love taking complex ideas and turning them into something smooth, functional, and user-friendly. Whether its building a sleek interface or tackling the trickier back-end stuff, I am up for the challenge!</div>
-                    {/* <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link> */}
+                <div className="z-0 pt-16 w-full bg-gradient-to-br from-transparent via-blue-200 to-transparent h-screen">
+                    <div className='px-4 flex flex-col md:flex-row items-center  md:w-4/5 xl:w-3/5 mx-auto'>
+                        <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.webp'} width={220} height={220} alt="coding"></Image></span>
+                        <div data-aos="fade-up" className='font-medium text-gray-700 text-base px-2 text-center w-full md:w-2/3'>The world of software engineering keeps me buzzing! I am a <span className="font-medium ">Full Stack Software Engineer</span>, which means I can design and build the entire picture – from the user-facing website or app you see, all the way down to the engine that makes it work. I love taking complex ideas and turning them into something smooth, functional, and user-friendly. Whether its building a sleek interface or tackling the trickier back-end stuff, I am up for the challenge!</div>
+                        {/* <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link> */}
+                    </div>
                 </div>
                 <div className="relative  px-2 p-6  my-8 w-fit">
-                    <Image src="/edu-background.jpg" width={1000} height={1000} alt="background" className="absolute inset-0 w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gray-100  opacity-85"></div>
                     <div data-aos="zoom-in" className="relative py-4  text-2xl font-semibold flex text-center mx-auto w-fit  items-center gap-2">
                         My Education
-                        <Image src="/education.png" width={30} height={30} alt="education" />
                     </div>
                     <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
                         <ol data-aos="fade-up" className="relative border-s-2 border-gray-400">
