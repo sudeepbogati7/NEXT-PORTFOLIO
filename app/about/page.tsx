@@ -5,32 +5,94 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from "next/link";
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import Nav from "@/components/nav";
+import { BackgroundLines } from "@/components/ui/background-lines";
 export default function About() {
     const [showMore, setShowMore] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleReadMore = () => {
         setIsExpanded(!isExpanded);
     };
+    const [isScrolled, setIsScrolled] = useState(false);
+
+
     useEffect(() => {
-        AOS.init({ duration: 500 });
+
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll)
+
+        AOS.init({ duration: 700 });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
+
+
+    let navBgColor = ''
+    if (isScrolled === false) {
+        navBgColor = "bg-transparent"
+    } else {
+        navBgColor = "md:bg-gradient-to-br bg-white from-white to-white via-blue-100  bg-opacity-60 border border-indigo-100 shadow md:shadow-lg  bg-opacity-70 backdrop-blur-sm md:top-4 duration-700 ease-in-out transition-all"
+    }
     return (
         <>
             <head>
                 <title>About || Sudeep Bogati </title>
             </head>
-            <Nav bgColor="bg-transparent backdrop-blur-sm "/>
-            <main className=" font-sans">
+            <Nav bgColor={navBgColor} />
+            <main className="font-sans">
                 {/* <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About <span className="text-blue-900">me</span> <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div> */}
-                <div className="z-0 pt-16 w-full bg-gradient-to-br from-transparent via-blue-200 to-transparent h-screen">
-                    <div className='px-4 flex flex-col md:flex-row items-center  md:w-4/5 xl:w-3/5 mx-auto'>
-                        <span data-aos="fade-up" className="w-fit  mx-auto flex items-center "><Image src={'/about-coding.webp'} width={220} height={220} alt="coding"></Image></span>
-                        <div data-aos="fade-up" className='font-medium text-gray-700 text-base px-2 text-center w-full md:w-2/3'>The world of software engineering keeps me buzzing! I am a <span className="font-medium ">Full Stack Software Engineer</span>, which means I can design and build the entire picture – from the user-facing website or app you see, all the way down to the engine that makes it work. I love taking complex ideas and turning them into something smooth, functional, and user-friendly. Whether its building a sleek interface or tackling the trickier back-end stuff, I am up for the challenge!</div>
-                        {/* <Link href={'/skills'}> <div className='mt-2 font-medium text-gray-500 tracking-wide border-b-2 transition-all duration-300  border-gray-400 w-fit hover:text-gray-900 hover:border-gray-700 text-xs '>  Know more about my skills and what I do  </div></Link> */}
+                <div className="min-h-fit w-full bg-gradient-to-b from-transparent via-indigo-200 to-transparent md:pt-12  p-4">
+
+
+                    {/* 
+                    to do
+                    Design a profile type profile view with cover photo and profile picture...
+                    */}
+                    <div className="group w-full mx-auto  px-4 py-8 md:w-4/5 grid grid-cols-1 lg:grid-cols-2 md:gap-0 gap-4 items-center">
+                        <div className="relative rounded-2xl shadow-xl  overflow-hidden aspect-square w-3/5  mx-auto lg:max-w-none">
+                            <Image
+                                src="/profile.jpg"
+                                alt="Sudeep Bogati"
+                                layout="fill"
+                                objectFit="cover"
+                                priority
+                                className="transform group-hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl"
+                            />
+                        </div>
+                        <div className="text-justify w-full lg:text-left">
+                            <h1 className="text-3xl font-bold text-blue-900 text-center md:text-justify">Sudeep Bogati</h1>
+                            <h2 className=" text-gray-700 font-semibold mb-6 text-center md:text-justify"> Professional Software Engineer</h2>
+                            <p className="text-gray-700 mb-3 leading-relaxed">
+                               Hello, I am <strong>Sudeep Bogati</strong>, a <strong>Full-Stack Software Engineer</strong> passionate about solving business problems through innovative and effective software solutions. I possess a strong foundation in software development principles and a drive to create high-quality, user-centric applications.
+                            </p>
+                            <p className="text-gray-600 mb-6">
+                                Throughout my career, I'm currently working at <strong>Green Tick Nepal Pvt. Ltd</strong> as a Software Engineer. At greentick, I'm involved in building <strong>Cybersecurity Products</strong> and implementing other cybersecurity measures, while also enforcing <strong>DevSecOps</strong> principles.
+                            </p>
+                            <div className="flex flex-wrap text-base justify-center lg:justify-start gap-6 text-gray-700">
+                                <a href="mailto:your.email@example.com" className="flex items-center hover:text-indigo-600 transition-colors">
+                                    <Mail className="w-5 h-6 mr-2" />
+                                    <span>hello@sudipbogati.com.np</span>
+                                </a>
+                                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-indigo-600 transition-colors">
+                                    <Linkedin className="w-5 h-6 mr-2" />
+                                    <span>/in/sudeep-bogati</span>
+                                </a>
+                                <a href="https://github.com/sudeepbogati7" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-indigo-600 transition-colors">
+                                    <Github className="w-5 h-6 mr-2" />
+                                    <span>/sudeepbogati7</span>
+                                </a>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="relative  px-2 p-6  my-8 w-fit">
+                <div className="relative bg-gradient-to-b from-transparent via-purple-300 to-transparent px-2 p-6  my-8 w-fit">
                     <div className="absolute inset-0 bg-gray-100  opacity-85"></div>
                     <div data-aos="zoom-in" className="relative py-4  text-2xl font-semibold flex text-center mx-auto w-fit  items-center gap-2">
                         My Education
@@ -62,7 +124,7 @@ export default function About() {
                                             <li><span className="font-semibold">Hands-On Projects:</span> Gained real-world experience through projects and internships.</li>
                                         </ol>
                                     </div>
-                                    {!showMore && <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-gray-100 opacity-80 to-transparent pointer-events-none"></div>}
+                                    {!showMore && <div className="absolute bottom-0 left-0 w-full pointer-events-none"></div>}
                                 </div>
                                 <button onClick={() => setShowMore(!showMore)} className="flex gap-2 items-center mt-1 text-blue-500">
                                     {showMore ? 'Read Less' : 'Read More'} {showMore ? <FaChevronUp /> : <FaChevronDown />}

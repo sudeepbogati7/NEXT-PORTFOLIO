@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Nav from '@/components/nav';
 import { usePathname } from 'next/navigation';
 import AOS from 'aos';
+import { BackgroundLines } from '@/components/ui/background-lines';
 import 'aos/dist/aos.css';
 import SocialLinks from '@/components/SocialLinks';
 import MyServices from '@/components/MyServices';
@@ -18,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     
     const handleScroll = () => {
-      setIsScrolled (window.scrollY > 150);
+      setIsScrolled (window.scrollY > 100);
     };
     
     window.addEventListener('scroll', handleScroll)
@@ -35,12 +36,12 @@ export default function Home() {
   if (isScrolled === false) {
     navBgColor = "bg-transparent"
   }else{
-    navBgColor = "bg-white bg-opacity-40 backdrop-blur-sm "
+    navBgColor = "md:bg-gradient-to-br bg-white from-white to-white via-blue-100  bg-opacity-60 border border-indigo-100 shadow md:shadow-lg  bg-opacity-70 backdrop-blur-sm md:top-4 duration-700 ease-in-out transition-all"
   }
   return (
     <>
       <Nav bgColor= {navBgColor} />
-      <main className="">
+      <main className=" md:min-h-screen">
         {/* Background Section */}
         <div
           style={{
@@ -48,11 +49,12 @@ export default function Home() {
           }}
           className="absolute top-0 left-0 w-full min-h-screen bg-cover bg-center opacity-70"
         >
+
           <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-gray-100 to-transparent"></div>
         </div>
 
         {/* Content Section */}
-        <div className=" relative z-10 mt-16 flex flex-col-reverse lg:flex-row lg:w-3/4 mx-auto justify-between w-full">
+        <div className=" relative z-10  mt-16 flex flex-col-reverse lg:flex-row lg:w-3/4 mx-auto justify-between w-full">
           {/* Left Content */}
           <div className=" px-6 md:px-2 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2">
             <div className=' px-3'>
@@ -125,6 +127,7 @@ export default function Home() {
                 alt="Profile image"
               />
             </div>
+
             <div className="flex flex-col w-full items-center">
               <div className="mt-2 font-extrabold text-2xl tracking-wide text-gray-700">
                 Sudeep Bogati
@@ -162,7 +165,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className='relative left-0 black lg:px-16 lg:bottom-16 -bottom-2 bg-gray-100 z-40 flex flex-col   mx-auto w-full lg:flex-row'>
+      <div className='relative left-0 black lg:px-16 lg:bottom-24 -bottom-2 bg-gray-100 z-40 flex flex-col   mx-auto w-full lg:flex-row'>
         <div className='z-20 w-full px-4 mx-auto lg:w-1/2'> 
             <MyServices /> 
         </div>
