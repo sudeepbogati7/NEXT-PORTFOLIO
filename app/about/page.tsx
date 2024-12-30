@@ -72,7 +72,7 @@ export default function About() {
                                Hello, I am <strong>Sudeep Bogati</strong>, a <strong>Full-Stack Software Engineer</strong> passionate about solving business problems through innovative and effective software solutions. I possess a strong foundation in software development principles and a drive to create high-quality, user-centric applications.
                             </p>
                             <p className="text-gray-600 mb-6">
-                                Throughout my career, I'm currently working at <strong>Green Tick Nepal Pvt. Ltd</strong> as a Software Engineer. At greentick, I'm involved in building <strong>Cybersecurity Products</strong> and implementing other cybersecurity measures, while also enforcing <strong>DevSecOps</strong> principles.
+                                Throughout my career, I am currently working at <strong>Green Tick Nepal Pvt. Ltd</strong> as a Software Engineer. At greentick, I am involved in building <strong>Cybersecurity Products</strong> and implementing other cybersecurity measures, while also enforcing <strong>DevSecOps</strong> principles.
                             </p>
                             <div className="flex flex-wrap text-base justify-center lg:justify-start gap-6 text-gray-700">
                                 <a href="mailto:your.email@example.com" className="flex items-center hover:text-indigo-600 transition-colors">
