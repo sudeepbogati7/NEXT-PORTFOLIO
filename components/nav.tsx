@@ -17,7 +17,7 @@ export default function Nav( {bgColor = "bg-gray-100" }: { bgColor?: string }) {
     const pathname = usePathname();
 
     const isActive = (href: string) => {
-        return pathname === href ? " border-b-2 border-gray-600 transition-all duration-500 ease-in-out" : ' transition-all text-slate-500 hover:text-black duration-500 ease-in-out';
+        return pathname === href ? " border-b-2 border-gray-600 transition-all duration-500 ease-in-out" : ' transition-all text-slate-500 hover:text-black duration-300 ease-in-out';
     };
 
 
@@ -27,7 +27,7 @@ export default function Nav( {bgColor = "bg-gray-100" }: { bgColor?: string }) {
     }
     return (
         <>
-            <nav className={`sticky  ${bgColor}  lg:w-3/4  md:rounded-full w-full  mx-auto z-50 font-semibold h-16 top-0  px-4 md:px-14 items-center   flex  justify-between`}>
+            <nav className={`sticky  ${bgColor}  lg:w-3/4  md:rounded-xl w-full  mx-auto z-50 font-semibold h-16 top-0  px-4 md:px-14 items-center   flex  justify-between`}>
                 <Link href={'/'} className="p-2">
                     <Image className="h-auto w-auto" src={'/logo.png'} width={60} height={80} alt="logo" />
                     {/* <Image src={'/cat-theme-logo.png'} width={100} height={40} alt="logo" /> */}

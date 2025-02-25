@@ -1,109 +1,112 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-export default function MyServices (){
-    return (
-        <>
-            <div className="z-20 ">
-                <h1 className="text-lg text-blue-900 font-semibold px-2"> What Can I do ?  </h1>
-                <div data-aos="fade-up" className="text-gray-600 px-2">
-                  I can build software tailored to your specific needs, offering a wide
-                  range of websites designed to support and grow your business. Here
-                  are some examples of what I can create for you:
-                </div>
+"use client"
+import Image from "next/image"
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-                <div className="px-1 my-6 w-full flex flex-col  gap-6">
-                  <div className='w-full flex flex-col lg:flex-row gap-4'>
-                    <div data-aos="flip-up" className="bg-gradient-to-t w-full  rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/trading-up.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                        />
-                        Business Websites
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li>Informational websites for small to large businesses</li>
-                        <li>Portfolio websites for professionals</li>
-                        <li>Company profile websites</li>
-                      </ul>
-                    </div>
+export default function ProfessionalServices() {
+  return (
+    <section className="w-full md:w-5/6 mx-auto p-4 space-y-6">  
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-[#1a365d] tracking-tight">Technical Expertise & Solutions</h2>
+        <p className="text-[#4a5568] leading-relaxed">
+          As a software engineer, I specialize in developing sophisticated digital solutions leveraging cutting-edge
+          technologies. My expertise encompasses the following domains:
+        </p>
+      </div>
 
-                    <div data-aos="flip-up" className="bg-gradient-to-b rounded-md w-full  shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/shop.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                        />
-                        E-Commerce Platforms
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li>Custom online stores</li>
-                        <li>Integration with payment gateways</li>
-                        <li>User-friendly shopping experiences</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className='flex w-full flex-col md:flex-row gap-4'>
-                    <div data-aos="flip-up" className="w-full md:w-1/2 bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/grid.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                          />
-                        Custom Web Applications
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li>Dashboards for data visualization</li>
-                        <li>Workflow management tools</li>
-                        <li>SaaS (Software as a Service) applications</li>
-                      </ul>
-                    </div>
-                    <div data-aos="flip-up" className="w-full md:w-1/2 bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                      <h2 className="flex gap-1 font-semibold text-indigo-900">
-                        <Image
-                          className="text-red-300"
-                          src={'/education.svg'}
-                          width={20}
-                          height={20}
-                          alt="business"
-                          />
-                        Educational Platforms
-                      </h2>
-                      <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                        <li> Online learning management systems </li>
-                        <li>E-learning platforms with video and quiz integrations</li>
-                      </ul>
-                    </div>
-                  </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card className="transition-all duration-300 hover:shadow-lg border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc]">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/trading-up.svg"
+                width={24}
+                height={24}
+                alt="Enterprise Solutions"
+                className="text-[#2c5282]"
+              />
+              <h3 className="font-semibold text-[#2c5282]">Enterprise Solutions</h3>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <ul className="list-disc ml-4 text-[#4a5568] space-y-1">
+              <li>Enterprise-grade web applications with scalable architecture</li>
+              <li>High-performance corporate digital platforms</li>
+              <li>Integrated business process automation systems</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-                  <div data-aos="flip-up" className="w-full bg-gradient-to-b rounded-md shadow-md px-4 py-2 from-slate-200 to-blue-200">
-                    <h2 className="flex gap-1 font-semibold text-indigo-900">
-                      <Image
-                        className="text-red-300"
-                        src={'/portfolio.svg'}
-                        width={16}
-                        height={20}
-                        alt="business"
-                      />
-                      Portfolio Websites
-                    </h2>
-                    <ul className="list-disc mt-1 text-gray-700 px-6 text-sm">
-                      <li> Personal branding websites for creatives and professionals </li>
-                      <li> Showcase sites for photographers, designers, etc. </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-        </>
-    )
+        <Card className="transition-all duration-300 hover:shadow-lg border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc]">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Image src="/shop.svg" width={24} height={24} alt="E-Commerce Solutions" className="text-[#2c5282]" />
+              <h3 className="font-semibold text-[#2c5282]">E-Commerce Solutions</h3>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <ul className="list-disc ml-4 text-[#4a5568] space-y-1">
+              <li>Scalable e-commerce infrastructures with microservices architecture</li>
+              <li>Secure payment gateway integrations and transaction processing</li>
+              <li>Advanced inventory management systems</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="transition-all duration-300 hover:shadow-lg border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc]">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Image src="/grid.svg" width={24} height={24} alt="Full-Stack Applications" className="text-[#2c5282]" />
+              <h3 className="font-semibold text-[#2c5282]">Full-Stack Applications</h3>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <ul className="list-disc ml-4 text-[#4a5568] space-y-1">
+              <li>Real-time data analytics dashboards</li>
+              <li>Cloud-native enterprise workflow solutions</li>
+              <li>Scalable SaaS platforms with multi-tenant architecture</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="transition-all duration-300 hover:shadow-lg border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc]">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/education.svg"
+                width={24}
+                height={24}
+                alt="Educational Technology"
+                className="text-[#2c5282]"
+              />
+              <h3 className="font-semibold text-[#2c5282]">Educational Technology</h3>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <ul className="list-disc ml-4 text-[#4a5568] space-y-1">
+              <li>Learning Management Systems (LMS) with advanced analytics</li>
+              <li>Interactive educational platforms with real-time collaboration</li>
+              <li>Assessment and progress tracking systems</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+
+      <Card className="transition-all duration-300 hover:shadow-lg border border-[#e2e8f0] bg-gradient-to-b from-white to-[#f8fafc]">
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <Image src="/portfolio.svg" width={20} height={24} alt="Digital Presence" className="text-[#2c5282]" />
+            <h3 className="font-semibold text-[#2c5282]">Digital Presence Solutions</h3>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <ul className="list-disc ml-4 text-[#4a5568] space-y-1">
+            <li>Professional digital portfolios with SEO optimization</li>
+            <li>Content management systems for digital asset presentation</li>
+            <li>Performance-optimized web platforms for global reach</li>
+          </ul>
+        </CardContent>
+      </Card>
+    </section>
+  )
 }
+

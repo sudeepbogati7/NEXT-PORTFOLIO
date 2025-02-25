@@ -2,8 +2,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { useEffect, useState } from "react";
 import Nav from "@/components/nav";
 import Head from "next/head";
+import AOS from 'aos';
+
 import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
@@ -13,6 +16,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
+  useEffect(() => {
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll)
+
+    AOS.init({ duration: 700 });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+  let navBgColor = ''
+  if (isScrolled === false) {
+    navBgColor = "bg-transparent transition-all duration-300 ease-in-out"
+  } else {
+    navBgColor = "md:bg-gray-100 bg-white   bg-opacity-50 border border-indigo-100 shadow md:shadow-lg  bg-opacity-70 backdrop-blur-sm md:top-4 duration-700 ease-in-out transition-all"
+  }
   return (
 
     <html lang="en">
@@ -56,7 +84,11 @@ export default function RootLayout({
           `}
         </script>
       </Head>
-        <body className={`${inter.className} bg-gray-100 font-sans`}>{children}</body>
+      
+        <body className={`${inter.className} bg-gray-100 font-poppins`}>
+      <Nav bgColor={navBgColor} />
+
+          {children}</body>
     </html>
   );
 }

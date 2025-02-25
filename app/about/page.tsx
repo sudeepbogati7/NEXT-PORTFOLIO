@@ -1,251 +1,263 @@
-'use client';
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Link from "next/link";
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
-import Nav from "@/components/nav";
-import { BackgroundLines } from "@/components/ui/background-lines";
-export default function About() {
-    const [showMore, setShowMore] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
-    const toggleReadMore = () => {
-        setIsExpanded(!isExpanded);
-    };
-    const [isScrolled, setIsScrolled] = useState(false);
+"use client"
 
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { GraduationCap, Briefcase, Heart, Mail, Linkedin, Github } from "lucide-react"
 
-    useEffect(() => {
+const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+}
 
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
+const TimelineItem = ({
+    year,
+    title,
+    organization,
+    description,
+    details,
+}: {
+    year: string
+    title: string
+    organization: string
+    description: string
+    details?: string[]
+}) => (
+    <motion.div
+        className="relative pl-8 pb-8 border-l border-gray-200 last:border-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        transition={{ duration: 0.5 }}
+    >
+        <div className="absolute left-0 transform -translate-x-1/2 w-4 h-4 rounded-full bg-sky-700"></div>
+        <div className="text-sm text-gray-600">{year}</div>
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+        <div className="text-gray-600">{organization}</div>
+        <p className="mt-2 text-gray-700">{description}</p>
+        {details && (
+            <ul className="mt-4 list-disc list-inside space-y-1">
+                {details.map((detail, index) => (
+                    <li key={index} className="text-sm text-gray-600">
+                        {detail}
+                    </li>
+                ))}
+            </ul>
+        )}
+    </motion.div>
+)
 
-        window.addEventListener('scroll', handleScroll)
-
-        AOS.init({ duration: 700 });
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-
-    let navBgColor = ''
-    if (isScrolled === false) {
-        navBgColor = "bg-transparent"
-    } else {
-        navBgColor = "md:bg-gradient-to-br bg-white from-white to-white via-blue-100  bg-opacity-60 border border-indigo-100 shadow md:shadow-lg  bg-opacity-70 backdrop-blur-sm md:top-4 duration-700 ease-in-out transition-all"
-    }
+export default function AboutPage() {
     return (
-        <>
-            <head>
-                <title>About || Sudeep Bogati </title>
-            </head>
-            <Nav bgColor={navBgColor} />
-            <main className="font-sans">
-                {/* <div data-aos="fade-up" className=' pt-2 text-2xl font-semibold mx-auto px-2  text-center  my-4 flex items-center gap-2 w-fit  '> About <span className="text-blue-900">me</span> <Image className='h-6 w-6' src={'/about-me.png'} height={30} width={30} alt='about-me'></Image> </div> */}
-                <div className="min-h-fit w-full bg-gradient-to-b from-transparent via-indigo-200 to-transparent md:pt-12  p-4">
+        <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+            {/* Hero Section */}
+            <motion.div
+                className="max-w-5xl mx-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+            >
+                <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">
+                    <motion.div className="relative w-64 h-64" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+                        {/* SVG Mask Definition */}
+                        <svg width="0" height="0" className="hidden">
+                            <defs>
+                                <clipPath id="splash-mask" clipPathUnits="objectBoundingBox">
+                                    <path d="M0.99,0.475 C0.99,0.475 0.99,0.475 0.99,0.475 C0.99,0.74 0.77,0.95 0.5,0.95 C0.23,0.95 0.01,0.74 0.01,0.475 C0.01,0.475 0.01,0.475 0.01,0.475 C0.01,0.475 0.01,0.215 0.01,0.215 C0.01,0.215 0.01,0.215 0.01,0.215 C0.01,-0.05 0.23,0.16 0.5,0.16 C0.77,0.16 0.99,-0.05 0.99,0.215 C0.99,0.215 0.99,0.215 0.99,0.215 C0.99,0.215 0.99,0.475 0.99,0.475 Z M0.5,0.85 C0.71,0.85 0.88,0.68 0.88,0.475 C0.88,0.27 0.71,0.1 0.5,0.1 C0.29,0.1 0.12,0.27 0.12,0.475 C0.12,0.68 0.29,0.85 0.5,0.85 Z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
 
-
-                    {/* 
-                    to do
-                    Design a profile type profile view with cover photo and profile picture...
-                    */}
-                    <div className="group w-full mx-auto  px-4 py-8 md:w-4/5 grid grid-cols-1 lg:grid-cols-2 md:gap-0 gap-4 items-center">
-                        <div className="relative rounded-2xl shadow-xl  overflow-hidden aspect-square w-3/5  mx-auto lg:max-w-none">
+                        {/* Image Container with Mask */}
+                        <div
+                            className="relative w-64 h-64 rounded-2xl overflow-hidden border-4 border-sky-700"
+                            style={{ clipPath: "url(#splash-mask)" }}
+                        >
                             <Image
-                                src="/profile.jpg"
+                                src="/black_shirt_profile.png"
                                 alt="Sudeep Bogati"
-                                layout="fill"
-                                objectFit="cover"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 256px"
                                 priority
-                                className="transform group-hover:scale-110 transition-all duration-300 ease-in-out shadow-2xl"
                             />
                         </div>
-                        <div className="text-justify w-full lg:text-left">
-                            <h1 className="text-3xl font-bold text-blue-900 text-center md:text-justify">Sudeep Bogati</h1>
-                            <h2 className=" text-gray-700 font-semibold mb-6 text-center md:text-justify"> Professional Software Engineer</h2>
-                            <p className="text-gray-700 mb-3 leading-relaxed">
-                               Hello, I am <strong>Sudeep Bogati</strong>, a <strong>Full-Stack Software Engineer</strong> passionate about solving business problems through innovative and effective software solutions. I possess a strong foundation in software development principles and a drive to create high-quality, user-centric applications.
-                            </p>
-                            <p className="text-gray-600 mb-6">
-                                Throughout my career, I am currently working at <strong>Green Tick Nepal Pvt. Ltd</strong> as a Software Engineer. At greentick, I am involved in building <strong>Cybersecurity Products</strong> and implementing other cybersecurity measures, while also enforcing <strong>DevSecOps</strong> principles.
-                            </p>
-                            <div className="flex flex-wrap text-base justify-center lg:justify-start gap-6 text-gray-700">
-                                <a href="mailto:your.email@example.com" className="flex items-center hover:text-indigo-600 transition-colors">
-                                    <Mail className="w-5 h-6 mr-2" />
-                                    <span>hello@sudipbogati.com.np</span>
-                                </a>
-                                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-indigo-600 transition-colors">
-                                    <Linkedin className="w-5 h-6 mr-2" />
-                                    <span>/in/sudeep-bogati</span>
-                                </a>
-                                <a href="https://github.com/sudeepbogati7" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-indigo-600 transition-colors">
-                                    <Github className="w-5 h-6 mr-2" />
-                                    <span>/sudeepbogati7</span>
-                                </a>
 
+                        {/* Decorative Splash Effect */}
+                        <div
+                            className="absolute -inset-1 bg-gradient-to-r from-sky-600 to-sky-800 rounded-2xl -z-10 blur-sm opacity-50"
+                            style={{ clipPath: "url(#splash-mask)" }}
+                        />
+                    </motion.div>
+                    <div className="flex-1 text-center lg:text-left">
+                        <motion.h1
+                            className="text-3xl font-bold text-gray-900"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            Sudeep Bogati
+                        </motion.h1>
+                        <motion.h2
+                            className="text-base md:text-base text-sky-800 mb-4"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            Full Stack Software Engineer
+                        </motion.h2>
+                        <motion.p
+                            className="md:text-base text-base text-justify text-gray-500 mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                        >
+                            A Full-Stack Software Engineer passionate about solving business problems through innovative and effective
+                            software solutions. Currently working at Green Tick Nepal Pvt. Ltd, building Cybersecurity Products and
+                            implementing DevSecOps principles.
+                        </motion.p>
+                        <motion.div
+                            className="flex flex-wrap gap-4 justify-center lg:justify-start"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                        >
+                            <a
+                                href="mailto:hello@sudipbogati.com.np"
+                                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-sky-100 transition-colors"
+                            >
+                                <Mail className="w-4 h-4" />
+                                Email
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/sudeep-bogati"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-sky-100 transition-colors"
+                            >
+                                <Linkedin className="w-4 h-4" />
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://github.com/sudeepbogati7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-sky-100 transition-colors"
+                            >
+                                <Github className="w-4 h-4" />
+                                GitHub
+                            </a>
+                        </motion.div>
+                    </div>
+                </div>
+
+                {/* Education Section */}
+                <motion.section
+                    className="mb-16"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeIn}
+                >
+                    <div className="bg-gray-50 group  rounded-lg border border-gray-200   shadow-sm">
+                        <div className="p-6">
+                            <div className="flex items-center gap-2 mb-6">
+                                <GraduationCap className="w-6 h-6 text-sky-700" />
+                                <h2 className="text-2xl font-bold text-gray-900">Education</h2>
+                            </div>
+                            <div className="space-y-6">
+                                <TimelineItem
+                                    year="2021 - 2025"
+                                    title="Bachelors in Information Technology (BIT)"
+                                    organization="Tribhuvan University, Kathmandu"
+                                    description="Comprehensive study of Information Technology with focus on programming, databases, and web development."
+                                    details={[
+                                        "Programming: Java, C and C++",
+                                        "Databases: SQL and NoSQL",
+                                        "Web Development: HTML, CSS, PHP and JavaScript",
+                                        "Software Engineering and System Design",
+                                        "Networking and Security",
+                                        "Data Structures and Algorithms",
+                                    ]}
+                                />
+                                <TimelineItem
+                                    year="2019 - 2021"
+                                    title="+2, Computer Science"
+                                    organization="Sungava College, Chitwan"
+                                    description="Grade XI CGPA: 3.79 | Grade XII CGPA: 3.59"
+                                    details={["Major Subjects: Physics, Chemistry, Mathematics, Computer"]}
+                                />
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="relative bg-gradient-to-b from-transparent via-purple-300 to-transparent px-2 p-6  my-8 w-fit">
-                    <div className="absolute inset-0 bg-gray-100  opacity-85"></div>
-                    <div data-aos="zoom-in" className="relative py-4  text-2xl font-semibold flex text-center mx-auto w-fit  items-center gap-2">
-                        My Education
-                    </div>
-                    <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
-                        <ol data-aos="fade-up" className="relative border-s-2 border-gray-400">
-                            <li className="mb-10 ms-6">
-                                <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-orange-400">
-                                    <Image src="/tu.png" width={100} height={100} alt="gtn" />
-                                </span>
-                                <h3 className="flex items-center font-bold text-gray-900">Bachelors in Information Technology (BIT)</h3>
-                                <Link href="https://www.tuiost.edu.np/" className="underline flex tracking-wide text-base items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600">
-                                    Tribhuvan University, Kathmandu
-                                </Link>
-                                <time className="block italic mb-2 text-sm font-normal leading-none text-gray-500">2021 - 2025</time>
-                                <div className="relative">
-                                    <div style={{ maxHeight: showMore ? '1000px' : '100px' }} className={`${showMore ? 'max-h-fit' : 'max-h-0'} overflow-hidden transition-all duration-800 relative`}>
-                                        <p className="mb-4 text-base font-normal text-gray-700">
-                                            Studied Bachelor of Information Technology (BIT) from Tribhuvan University. My studies covered programming, databases, Web Development, Networking. I gained hands-on experience through projects and internships, developing strong IT and problem-solving skills.
-                                        </p>
-                                        <ol className="list-disc px-4 text-sm flex flex-col gap-2 overflow-hidden transition-all duration-500">
-                                            <li><span className="font-semibold">Programming</span>: Learned Java, C and C++.</li>
-                                            <li><span className="font-semibold">Databases</span>: Managed and created databases using SQL as well as NoSQL.</li>
-                                            <li><span className="font-semibold">Web Development</span>: Built websites using HTML, CSS, PHP and JavaScript.</li>
-                                            <li><span className="font-semibold">Software Engineering</span>: Studied how to plan and build software projects.</li>
-                                            <li><span className="font-semibold">Networking:</span> Learned about computer networks and security.</li>
-                                            <li><span className="font-semibold">Information Systems:</span> Studied how to create systems to solve business problems.</li>
-                                            <li><span className="font-semibold">Data Structures:</span> Learned about organizing and using data efficiently.</li>
-                                            <li><span className="font-semibold">Hands-On Projects:</span> Gained real-world experience through projects and internships.</li>
-                                        </ol>
-                                    </div>
-                                    {!showMore && <div className="absolute bottom-0 left-0 w-full pointer-events-none"></div>}
-                                </div>
-                                <button onClick={() => setShowMore(!showMore)} className="flex gap-2 items-center mt-1 text-blue-500">
-                                    {showMore ? 'Read Less' : 'Read More'} {showMore ? <FaChevronUp /> : <FaChevronDown />}
-                                </button>
-                            </li>
-                            <li className="mb-10 ms-6">
-                                <span data-aos="fade-up" className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-[#92a91a]">
-                                    <svg className="w-2.5 h-2.5 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                    </svg>
-                                </span>
-                                <h3 data-aos="fade-up" className="flex items-center text-base font-bold text-gray-900">+2, Computer Science</h3>
-                                <Link data-aos="fade-up" href="https://sungavacollege.edu.np/" className="underline flex tracking-wide text-sm items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600">
-                                    Sungava College, Chitwan
-                                </Link>
-                                <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500">2019 - 2021</time>
-                                <div data-aos="fade-up" className="text-sm text-gray-600 tracking-wide">
-                                    <div>Grade XI CGPA: <span className="font-semibold">3.79</span></div>
-                                    <div>Grade XII CGPA: <span className="font-semibold">3.59</span></div>
-                                    <div><span className="font-semibold">Major Subjects:</span> Physics, Chemistry, Mathematics, Computer</div>
-                                </div>
-                                <Link data-aos="fade-up" target="_blank" className="flex text-gray-600 items-center gap-1 border-b-2 border-gray-300 hover:border-black transition-all duration-200 ease hover:text-black w-fit my-4" href="https://drive.google.com/file/d/1HQmnNRXbOQFOO1TB0UoquRGiYusXoyur/view?usp=sharing">
-                                    See more <Image src="/redirect.png" width={12} height={12} alt="see-more" />
-                                </Link>
-                            </li>
-                        </ol>
-                    </div>
+                </motion.section>
 
-                </div>
-                <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Work Experiences  <Image src={'/career.png'} width={34} height={34} alt="education"></Image> </div>
-                <div className="px-6 mb-8 w-full md:w-4/5 xl:w-3/5 mx-auto">
-                    <ol data-aos="fade-up" className="relative border-s-2 border-gray-400 ">
-                        <li className="mb-10 ms-6">
-                            <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-[#92a91a]  ">
-                                <Image src={'https://i0.wp.com/gtn.com.np/storage/2022/09/greentick-nepal-pvt-lt.png?fit=2294%2C755&ssl=1'} width={100} height={100} alt="gtn"></Image>
-                            </span>
-                            <h3 className="flex items-center text-lg font-semibold text-gray-900 "> Associate Software Engineer  <span className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Currently</span></h3>
-                            <Link href={'https://www.gtn.com.np'} className="underline text-sm flex tracking-wide items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Greentick Nepal - Gyaneshwor, Kathmandu </Link>
-                            <time className="block mb-2 italic  text-sm font-normal leading-none text-gray-500 "> June 1, 2024 - Present </time>
-                            <div className={`relative flex flex-col transition-all duration-800 ease-in-out ${isExpanded ? 'max-h-fit' : 'max-h-24 overflow-hidden'}`}>
-                                <p className="mb-4 text-base font-normal text-gray-600">
-                                    Proactive Associate Software Developer with a strong background in full stack development. Experienced in designing and implementing user-friendly web applications, optimizing client-side and server-side services, and collaborating with cross-functional teams to deliver high-quality software solutions.
-                                </p>
-                                <h1 className="font-semibold text-gray-700 my-2 border-b-2 border-gray-300 w-fit">
-                                    Key Responsibilities
-                                </h1>
-                                <div >
-                                    <ol className="list-disc px-4 text-gray-700">
-                                        <li>Developed and maintained web applications using React, Next.js, Tailwind CSS, and TypeScript for the frontend.</li>
-                                        <li>Built and optimized backend services with Django Rest Framework and Python, ensuring robust and scalable server-side logic.</li>
-                                        <li>Integrated RESTful APIs to connect the frontend with backend services, enhancing data retrieval and user interactions.</li>
-                                        <li>Collaborated with cross-functional teams to define, design, and ship new features.</li>
-                                        <li>Implemented responsive design practices to ensure seamless user experiences across different devices.</li>
-                                        <li>Participated in code reviews, debugging, and refactoring to maintain high-quality code standards.</li>
-                                        <li>Used version control systems like Git for collaborative development and project management.</li>
-                                    </ol>
-                                </div>
-
-                                <div className="flex flex-col gap-2 mt-2">
-                                    <h1 className="font-semibold text-gray-700 my-2 border-b-2 border-gray-300 w-fit">
-                                        Technical Stack
-                                    </h1>
-                                    <div>
-                                        <ol className="list-disc px-4 text-gray-700">
-                                            <li><span className="font-medium">Frontend:</span> React, Next.js, Tailwind CSS, TypeScript</li>
-                                            <li><span className="font-medium">Backend:</span> Python, Django REST Framework</li>
-                                            <li><span className="font-medium">Database:</span> MySQL, PostgreSQL</li>
-                                            <li><span className="font-medium">Tools:</span> Docker, Git, GitHub</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                {!isExpanded && (
-                                    <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-gray-100 to-transparent pointer-events-none"></div>
-                                )}
+                {/* Work Experience Section */}
+                <motion.section
+                    className="mb-16"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeIn}
+                >
+                    <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
+                        <div className="p-6">
+                            <div className="flex items-center gap-2 mb-6">
+                                <Briefcase className="w-6 h-6 text-sky-700" />
+                                <h2 className="text-2xl font-bold text-gray-900">Work Experience</h2>
                             </div>
-                            <button data-aos="fade-up"
-                                className={`mt-4 flex transition-all duration-500 items-center gap-2 text-blue-500 font-medium`}
-                                onClick={toggleReadMore}>
-                                {isExpanded ? 'Read Less' : 'Read More'} {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
-                            </button>
-                        </li>
-                        <li className="mb-10 ms-6">
-                            <span data-aos="fade-up" className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -start-4 border border-[#92a91a]  ">
-                                <Image src={'https://i0.wp.com/gtn.com.np/storage/2022/09/greentick-nepal-pvt-lt.png?fit=2294%2C755&ssl=1'} width={100} height={100} alt="gtn"></Image>
-                            </span>
-                            <h3 data-aos="fade-up" className="flex items-center text-lg font-semibold text-gray-900 "> Software Engineer Intern </h3>
-                            <Link data-aos="fade-up" href={'https://www.gtn.com.np'} className="underline flex tracking-wide text-sm items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Greentick Nepal- Gyaneshwor, Kathmandu </Link>
-                            <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> 3 March , 2024 - 29 May, 2024 </time>
-                            <p data-aos="fade-up" className="mb-4  font-normal text-gray-600 "> Dedicated Full Stack Developer Intern with experience in building web applications using React, Next.js, Tailwind CSS, TypeScript, Django Rest Framework, and Python. Skilled in creating user-friendly interfaces, connecting frontends to backends, and collaborating effectively with teams.</p>
-                        </li>
-                    </ol>
-                </div>
-                <div className="bg-white p-2">
-                    <div data-aos="zoom-in" className="text-2xl flex font-semibold mx-auto px-2 justify-center text-center my-8 flex items-center gap-2 w-fit "> Voluteering   <Image src={'/volunteer.png'} width={34} height={34} alt="education"></Image> </div>
-                    <div className="px-6 w-full md:w-4/5 xl:w-3/5 mx-auto">
-                        <ol className="relative border-s-2 border-gray-400 ">
-                            <li className="mb-10 ms-6">
-                                <span data-aos="fade-up" className="absolute flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full -start-4 border border-gray-500  ">
-                                    <Image src={'/osac.png'} width={100} height={100} alt="gtn"></Image>
-                                </span>
-                                <h3 data-aos="fade-up" className="flex items-center  font-bold text-gray-900 "> Executive </h3>
-                                <Link data-aos="fade-up" href={'https://osac.org.np/'} className="underline flex tracking-wide text-base items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Open-Source ASCOL Circle , OSAC </Link>
-                                <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> 2023 - present </time>
-                                <p data-aos="fade-up" className="mb-4 text-sm font-normal text-gray-700">OSAC (Open Source ASCOL Circle) is a group of lerners based primarily on Computer Science and Information Technologies students from Amrit Science College, Tribhuvan University, Nepal.</p>
-                            </li>
-                            <li className="mb-10 ms-6">
-                                <span data-aos="fade-up" className="absolute flex items-center justify-center w-8 h-8 bg-pink-100 rounded-full -start-4 border border-[#92a91a]  ">
-                                    <Image src={'/hult-prize.png'} width={100} height={100} alt="gtn"></Image>
-                                </span>
-                                <h3 data-aos="fade-up" className="flex items-center text-base font-bold text-gray-900 "> Judges and Expert Coordinator  </h3>
-                                <Link data-aos="fade-up" href={'https://www.hultprize.org/'} className="underline flex tracking-wide text-sm items-center mb-2 font-medium text-gray-800 w-fit hover:border-gray-600"> Hult Prize, ASCOL   </Link>
-                                <time data-aos="fade-up" className="block italic mb-2 text-sm font-normal leading-none text-gray-500 "> Sept 2023 - Feb 2024 </time>
-                                <p data-aos="fade-up" className="mb-4 text-base font-normal text-gray-600 ">The Hult Prize is the worlds largest student social entrepreneurship competition. Run in partnership with the United Nations, student teams from universities from across the world compete to solve a pressing social issue by developing a scalable, sustainable social enterprise.</p>
-                            </li>
-                        </ol>
+                            <div className="space-y-6">
+                                <TimelineItem
+                                    year="June 2024 - Present"
+                                    title="Associate Software Engineer"
+                                    organization="Greentick Nepal - Gyaneshwor, Kathmandu"
+                                    description="Proactive Associate Software Developer with a strong background in full stack development."
+                                    details={[
+                                        "Developed web applications using React, Next.js, Tailwind CSS, and TypeScript",
+                                        "Built backend services with Django Rest Framework and Python",
+                                        "Integrated RESTful APIs for enhanced data retrieval",
+                                        "Implemented responsive design practices",
+                                        "Technical Stack: React, Next.js, TypeScript, Python, Django REST Framework, MySQL, PostgreSQL, Docker, Git",
+                                    ]}
+                                />
+                                <TimelineItem
+                                    year="March 2024 - May 2024"
+                                    title="Software Engineer Intern"
+                                    organization="Greentick Nepal - Gyaneshwor, Kathmandu"
+                                    description="Full Stack Developer Intern focusing on web application development using modern technologies."
+                                />
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </main>
-            <footer className="bg-gray-300 h-14 flex items-center justify-center">
-                <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
-            </footer>
-        </>
+                </motion.section>
+
+                {/* Volunteering Section */}
+                <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+                    <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
+                        <div className="p-6">
+                            <div className="flex items-center gap-2 mb-6">
+                                <Heart className="w-6 h-6 text-sky-700" />
+                                <h2 className="text-2xl font-bold text-gray-900">Volunteering Experience</h2>
+                            </div>
+                            <div className="space-y-6">
+                                <TimelineItem
+                                    year="2023 - Present"
+                                    title="Executive"
+                                    organization="Open-Source ASCOL Circle (OSAC)"
+                                    description="OSAC is a group of learners based primarily on Computer Science and Information Technologies students from Amrit Science College, Tribhuvan University, Nepal."
+                                />
+                                <TimelineItem
+                                    year="Sept 2023 - Feb 2024"
+                                    title="Judges and Expert Coordinator"
+                                    organization="Hult Prize, ASCOL"
+                                    description="Coordinated for the world's largest student social entrepreneurship competition, partnering with the United Nations to solve pressing social issues through sustainable social enterprises."
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </motion.section>
+            </motion.div>
+        </div>
     )
 }
+
