@@ -44,16 +44,16 @@ export default function Nav( {bgColor = "bg-gray-100" }: { bgColor?: string }) {
                     </div>
 
                     <span className={`${isActive('/about')} usm:hidden md:block`}>
-                        <Link href={'/about'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> About me </Link>
+                        <Link href={'/about'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.7px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> About me </Link>
                     </span>
                     <span className={`${isActive('/skills')} usm:hidden md:block`}>
-                        <Link href={'/skills'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Skills </Link>
+                        <Link href={'/skills'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.7px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Skills </Link>
                     </span>
                     <span className={`${isActive('/projects')} usm:hidden md:block`}>
-                        <Link href={'/projects'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Projects </Link>
+                        <Link href={'/projects'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.7px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Projects </Link>
                     </span>
                     <span className={`${isActive('/blogs')} usm:hidden md:block`}>
-                        <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "> Blogs </Link>
+                        <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.7px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "> Blogs </Link>
                     </span>
                     {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center md:block`}>
                         <Link href={'/contact'} className=""> Contact me ! </Link>
