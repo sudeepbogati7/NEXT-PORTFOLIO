@@ -1,6 +1,6 @@
 'use client';
 import './globals.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef,useState } from 'react';
 import Image from "next/image";
 import '@/app/theme.css';
 import Link from 'next/link';
@@ -18,19 +18,139 @@ import { motion } from 'framer-motion';
 
 
 export default function Home() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return
+
+    // Set canvas to full window size with pixel ratio for crisp lines
+    const setupCanvas = () => {
+      const pixelRatio = window.devicePixelRatio || 1
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      canvas.width = width * pixelRatio
+      canvas.height = height * pixelRatio
+      canvas.style.width = `100%`
+      canvas.style.height = `100%`
+
+      ctx.scale(pixelRatio, pixelRatio)
+
+      drawProfessionalNet()
+    }
+
+    // Draw a clean, professional net pattern
+    const drawProfessionalNet = () => {
+      if (!ctx || !canvas) return
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      // Professional configuration
+      const primaryColor = "#e2e8f0" // Very light slate color
+      const secondaryColor = "#f1f5f9" // Even lighter slate for secondary lines
+      const density = 16 // Reduced density for cleaner look
+      const primaryLineWidth = 0.5
+      const secondaryLineWidth = 0.3
+
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      const cellWidth = width / density
+      const cellHeight = height / density
+
+      // Create gradient background (subtle)
+      const gradient = ctx.createLinearGradient(0, 0, 0, height)
+      gradient.addColorStop(0, "#ffffff")
+      gradient.addColorStop(1, "#fafafa")
+
+      ctx.fillStyle = gradient
+      ctx.fillRect(0, 0, width, height)
+
+      // Draw secondary grid lines (thinner, lighter)
+      ctx.strokeStyle = secondaryColor
+      ctx.lineWidth = secondaryLineWidth
+
+      // Secondary horizontal lines (between main lines)
+      for (let i = 0; i <= density * 2; i++) {
+        if (i % 2 !== 0) {
+          // Only draw secondary lines
+          ctx.beginPath()
+          ctx.moveTo(0, i * (cellHeight / 2))
+          ctx.lineTo(width, i * (cellHeight / 2))
+          ctx.stroke()
+        }
+      }
+
+      // Secondary vertical lines (between main lines)
+      for (let i = 0; i <= density * 2; i++) {
+        if (i % 2 !== 0) {
+          // Only draw secondary lines
+          ctx.beginPath()
+          ctx.moveTo(i * (cellWidth / 2), 0)
+          ctx.lineTo(i * (cellWidth / 2), height)
+          ctx.stroke()
+        }
+      }
+
+      // Draw primary grid lines
+      ctx.strokeStyle = primaryColor
+      ctx.lineWidth = primaryLineWidth
+
+      // Primary horizontal lines
+      for (let i = 0; i <= density; i++) {
+        ctx.beginPath()
+        ctx.moveTo(0, i * cellHeight)
+        ctx.lineTo(width, i * cellHeight)
+        ctx.stroke()
+      }
+
+      // Primary vertical lines
+      for (let i = 0; i <= density; i++) {
+        ctx.beginPath()
+        ctx.moveTo(i * cellWidth, 0)
+        ctx.lineTo(i * cellWidth, height)
+        ctx.stroke()
+      }
+
+      // Add subtle dots at intersections
+      ctx.fillStyle = primaryColor
+
+      for (let i = 0; i <= density; i++) {
+        for (let j = 0; j <= density; j++) {
+          ctx.beginPath()
+          ctx.arc(i * cellWidth, j * cellHeight, 1, 0, Math.PI * 2)
+          ctx.fill()
+        }
+      }
+    }
+
+    // Initial setup
+    setupCanvas()
+
+    // Handle window resize
+    window.addEventListener("resize", setupCanvas)
+
+    return () => {
+      window.removeEventListener("resize", setupCanvas)
+    }
+  }, [])
   return (
     <>
     <motion.main 
-      className="md:min-h-screen"
+      className="md:min-h-screen overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+    <canvas ref={canvasRef} className="absolute w-full h-full overflow-hidden inset-0 z-0" />
+
       {/* Background Section */}
       <div
-        style={{
-          backgroundImage: "linear-gradient(to right, rgba(225, 238, 247, 1) 0%, rgba(180, 210, 230, 1) 100%)",
-        }}
         className="absolute top-0 left-0 w-full min-h-screen bg-cover bg-center opacity-70"
       >
         <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-gray-100 to-transparent"></div>
@@ -141,13 +261,13 @@ export default function Home() {
 
         {/* Right Content */}
         <motion.div 
-          className="relative overflow-hidden pb-6 flex flex-col md:w-2/5 w-full mx-auto items-center"
+          className="relative overflow-hidden pb-6 z-0 flex flex-col md:w-2/5 w-full mx-auto items-center"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <motion.div 
-            className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-sky-700 w-fit object-cover bg-black overflow-hidden"
+            className="shadow-lg shadow-blue-500/30 rounded-full border-4 border-sky-800 w-fit object-cover bg-black overflow-hidden"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -193,14 +313,17 @@ export default function Home() {
         </motion.div>
       </div>
     </motion.main>
-    <motion.div 
+    
+    {/* <motion.div 
+    
       className='relative left-0 black lg:px-16 lg:bottom-24 -bottom-2 bg-gray-100 z-40 flex flex-col mx-auto w-full lg:flex-row'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 1.6 }}
     >
+
       <MyServices />
-    </motion.div>
+    </motion.div> */}
   </>
   );
 }

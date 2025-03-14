@@ -49,8 +49,9 @@ const TimelineItem = ({
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+        <div className="  py-12 px-4 sm:px-6 lg:px-8">
             {/* Hero Section */}
+
             <motion.div
                 className="max-w-5xl mx-auto"
                 initial={{ opacity: 0 }}
