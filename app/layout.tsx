@@ -7,6 +7,8 @@ import Nav from "@/components/nav";
 import Head from "next/head";
 import AOS from 'aos';
 
+
+import { Toaster } from "@/components/ui/toaster"
 import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
@@ -47,12 +49,16 @@ export default function RootLayout({
       <Head>
         <title> Sudeep Bogati </title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person_pin_circle" />
         <meta name="description" content="Hello , this is Sudeep Bogati , a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
         <meta name="keywords" content="Sudip Bogati, Sudeep Bogati, Sudeep Bogati Software Engineer, ASCOL, software engineer, software engineer from nepal, software developer, software developer from nepal , talented software developer from nepal, IT, software, engineer, nepal , nepali in IT, developer, engineer, green tick nepal, digitalize business, sudeep, bogati, sudip, bogati, boy,greentick, sudeepbogati, sudipbogati , Software Engineer,  portfolio, skills, web developer, projects" />
         <link rel="canonical" href="https://sudipbogati.com.np" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5570809106422894"
           crossOrigin="anonymous"></script>
+
+
+
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="e1b474a2-bdcd-4552-9eab-89f9f8a3fea6"></script>
+
 
         <meta property="og:title" content="Sudeep Bogati - Software Engineer" />
         <meta property="og:description" content="Hello, this is Sudeep Bogati, a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
@@ -84,11 +90,12 @@ export default function RootLayout({
           `}
         </script>
       </Head>
-      
-        <body className={`${inter.className} bg-gray-100 font-poppins`}>
-      <Nav bgColor={navBgColor} />
 
-          {children}</body>
+      <body className={`${inter.className} bg-gray-100 font-poppins`}>
+        <Toaster />
+        <Nav />
+
+        {children}</body>
     </html>
   );
 }

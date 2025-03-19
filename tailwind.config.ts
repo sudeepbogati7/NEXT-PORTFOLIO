@@ -17,7 +17,13 @@ const config: Config = {
       fontFamily: {
         cursive: ['"Dancing Script"', 'cursive'],
         handwriting: ["Sour Gummy", "sans"],
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        karla: ['Karla', 'sans-serif'],
+        railway: ['Railway', 'sans-serif'],
+        open_sans: ['Open Sans', 'sans-serif']
+
+
+
       },
       keyframes: {
         scroll: {
