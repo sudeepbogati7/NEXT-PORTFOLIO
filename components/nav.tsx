@@ -144,7 +144,7 @@ function SideBar({ open, setOpen }: any) {
                                         <div className="px-6 sm:px-6">
                                             <DialogTitle className="text-base font-semibold leading-6 flex flex-col text-center items-center justify-center gap-2">
                                                 <Image src={'/hi.svg'} width={60} height={40} alt="hi"></Image>
-                                                <span className="text-lg font-bold text-gray-800">Let's Explore My Story 📖</span>
+                                                <span className="text-lg font-bold text-gray-800">Lets Explore My Story 📖</span>
                                             </DialogTitle>
                                             <div className="flex mt-14 flex-col gap-8">
                                                 {menuItems.map((item) => (
