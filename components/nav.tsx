@@ -27,8 +27,8 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
     }
     return (
         <>
-            <nav className={`sticky top-0 z-50 shadow h-20 flex items-center justify-center bg-white `}>
-                <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-semibold  top-0  items-center   ">
+            <nav className={`fixed w-full  z-50 shadow transition-all duration-300   h-20 flex items-center justify-center bg-white `}>
+                <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-semibold  items-center   ">
                     <Link href={'/'} className="p-2 flex items-center gap-2 justify-center">
                         <Image src={'/profile.jpg'} className="rounded-full" width={40} height={40} alt="logo" />
                         <div className="flex flex-col gap-2">
@@ -75,7 +75,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
 }
 
 const menuItems = [
-    { href: "/about", label: "About me", icon: <User size={20} className="text-sky-700" /> },
+    { href: "/about", label: "About me", icon: <User size={20} className="" /> },
     { href: "/skills", label: "Skills", icon: <Code size={20} /> },
     { href: "/projects", label: "Projects", icon: <BookOpen size={20} /> },
     {

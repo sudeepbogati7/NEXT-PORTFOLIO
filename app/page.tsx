@@ -142,7 +142,7 @@ export default function Home() {
   return (
     <>
       <motion.main
-        className="overflow-hidden w-full container  mx-auto"
+        className="overflow-hidden w-full md:container  mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -157,10 +157,10 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className="relative z-10 mt-16 flex flex-col-reverse h-full  lg:flex-row lg:w-4/5 mx-auto items-center justify-center w-full">
+        <div className="relative z-10 mt-16 flex flex-col-reverse h-full  lg:flex-row  lg:w-4/5 mx-auto items-center justify-center w-full">
           {/* Left Content */}
           <motion.div
-            className="px-6 md:px-2 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2"
+            className="px-4 md:px-2 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -177,8 +177,8 @@ export default function Home() {
               <div className='text-2xl font-extrabold'>
                 My name is <span className='bg-gradient-to-r from-green-200 to-blue-300 rounded-md px-2 text-gray-700'>Sudeep Bogati</span>
               </div>
-              <div className='text-gray-600 text-lg font-medium'>
-                originating from the beautiful landscapes of Nepal 🇳🇵.
+              <div className='text-gray-600 text-lg flex  font-medium'>
+                originating from the beautiful landscapes of Nepal <Image src={'/nepal_flag.svg'} width={20} height={20} alt='nepal'></Image>
               </div>
             </motion.div>
 
@@ -231,7 +231,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className='px-3 w-full mx-auto md:w-full mt-8'
+              className='px-3 w-ful text-justify mx-auto md:w-full mt-8'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}

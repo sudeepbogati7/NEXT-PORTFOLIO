@@ -3,7 +3,8 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { GraduationCap, Briefcase, Heart, Mail, Linkedin, Github } from "lucide-react"
-
+import './about.css'
+import { SvgComponent1 } from "@/components/SvgFrame"
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -51,7 +52,6 @@ export default function AboutPage() {
     return (
         <div className="  py-12 px-4 sm:px-6 lg:px-8">
             {/* Hero Section */}
-
             <motion.div
                 className="max-w-5xl mx-auto"
                 initial={{ opacity: 0 }}
@@ -71,24 +71,18 @@ export default function AboutPage() {
 
                         {/* Image Container with Mask */}
                         <div
-                            className="relative w-64 h-64 rounded-2xl overflow-hidden border-4 border-sky-700"
-                            style={{ clipPath: "url(#splash-mask)" }}
+                            className="relative w-64 h-64 rounded-2xl overflow-hidden "
                         >
                             <Image
-                                src="/black_shirt_profile.png"
+                                src="/hero_pic.webp"
                                 alt="Sudeep Bogati"
                                 fill
-                                className="object-cover"
+                                className="object-cover drop-shadow-xl"
                                 sizes="(max-width: 768px) 100vw, 256px"
                                 priority
                             />
                         </div>
-
-                        {/* Decorative Splash Effect */}
-                        <div
-                            className="absolute -inset-1 bg-gradient-to-r from-sky-600 to-sky-800 rounded-2xl -z-10 blur-sm opacity-50"
-                            style={{ clipPath: "url(#splash-mask)" }}
-                        />
+                
                     </motion.div>
                     <div className="flex-1 text-center lg:text-left">
                         <motion.h1
