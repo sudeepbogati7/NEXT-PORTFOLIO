@@ -28,7 +28,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
     return (
         <>
             <nav className={`fixed w-full  z-50 shadow transition-all duration-300   h-20 flex items-center justify-center bg-white `}>
-                <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-semibold  items-center   ">
+                <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-medium  items-center   ">
                     <Link href={'/'} className="p-2 flex items-center gap-2 justify-center">
                         <Image src={'/profile.jpg'} className="rounded-full" width={40} height={40} alt="logo" />
                         <div className="flex flex-col gap-2">
@@ -57,9 +57,14 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                         <span className={`${isActive('/projects')} usm:hidden border-b-2 md:block`}>
                             <Link href={'/projects'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> Projects </Link>
                         </span>
-                        <span className={`${isActive('/blogs')} usm:hidden border-b-2 md:block`}>
-                            <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "> Blogs </Link>
-                        </span>
+                        <div className={`${isActive('/blogs')} usm:hidden border-b-2   md:flex items-center gap-1`}>
+                            <Link target="_blank" href={'https://blogs.sudipbogati.com.np'} className="  gap-1 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "> Blogs </Link>
+                            <ExternalLink size={14} />
+                        </div>
+                        <div className={`${isActive('/analytics')} usm:hidden border-b-2   md:flex items-center gap-1`}>
+                            <Link target="_blank" href={'https://analytics.sudipbogati.com.np/share/PzlltMCGz9DUl4l3/sudipbogati.com.np'} className="  gap-1 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "> Analytics </Link>
+                            <ExternalLink size={14} />
+                        </div>
                         {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center md:block`}>
                         <Link href={'/contact'} className=""> Contact me ! </Link>
                     </span> */}
