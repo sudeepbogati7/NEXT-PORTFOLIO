@@ -221,11 +221,11 @@ export default function Skills() {
             <section className="my-24">
                 <div className="flex   mx-auto p-4 md:w-4/6 w-full flex-col lg:flex-row items-center gap-8 mb-16">
                     {/* Left Column - Illustration */}
-                    <div data-aos="fade-right" className="w-4/6  lg:w-2/6 flex justify-center">
+                    <div data-aos="fade-right" className="w-3/6  lg:w-2/6 flex justify-center">
                         <div className="relative w-full rounded-2xl overflow-hidden  p-6">
                             <Image
                                 src="/skills_illustration.svg"
-                                width={400}
+                                width={250}
                                 height={400}
                                 alt="Developer skills illustration"
                                 className="object-contain  drop-shadow-lg"

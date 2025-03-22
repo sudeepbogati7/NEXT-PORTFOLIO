@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import '@/components/nav.css';
-import { Phone, Hand, User, Code, BookOpen, Mail, ExternalLink } from "lucide-react";
+import { Phone, Hand, User, Code, BookOpen, Mail, ExternalLink, ChartNoAxesCombined } from "lucide-react";
 
 import { Fragment, useState } from 'react'
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
@@ -27,7 +27,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
     }
     return (
         <>
-            <nav className={`fixed w-full  z-50 shadow transition-all duration-300   h-20 flex items-center justify-center bg-white `}>
+            <nav className={`fixed w-full px-3 z-50 shadow transition-all duration-300   h-20 flex items-center justify-center bg-white `}>
                 <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-medium  items-center   ">
                     <Link href={'/'} className="p-2 flex items-center gap-2 justify-center">
                         <Image src={'/profile.jpg'} className="rounded-full" width={40} height={40} alt="logo" />
@@ -70,7 +70,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                     </span> */}
                     </div>
                     <div className="usm:hidden bg-green-100 rounded-xl py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center md:block">
-                        <Link href={'/contact'} className="flex items-center gap-1 "> <Phone  className="hover:text-white" size={18} /> Get in touch </Link>
+                        <Link href={'/contact'} className="flex items-center gap-1 "> <Phone className="hover:text-white" size={18} /> Get in touch </Link>
                     </div>
                 </div>
             </nav>
@@ -87,6 +87,12 @@ const menuItems = [
         href: "https://blogs.sudipbogati.com.np",
         label: "Blogs",
         icon: <BookOpen size={20} />,
+        external: true,
+    },
+    {
+        href: "https://analytics.sudipbogati.com.np/share/PzlltMCGz9DUl4l3/sudipbogati.com.np",
+        label: "Analytics",
+        icon: <ChartNoAxesCombined size={20} />,
         external: true,
     },
     { href: "/contact", label: "Contact", icon: <Mail size={20} /> },
