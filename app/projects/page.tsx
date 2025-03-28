@@ -559,7 +559,7 @@ export default function Projects() {
                                     key={index}
                                     variants={staggerItem}
                                     whileHover={{ y: -5 }}
-                                    className={`rounded-lg ${project.bgColor}`}
+                                    className={`rounded-lg h-fit shadow-lg ${project.bgColor}`}
                                 >
                                     <Card className="h-full border-0 bg-transparent transition-all duration-300 hover:shadow-lg">
                                         <CardHeader>
@@ -655,7 +655,6 @@ export default function Projects() {
                             href="https://github.com/sudeepbogati7/"
                             className="text-gray-600 border-b border-gray-300 flex items-center gap-2 hover:text-gray-800 transition-colors duration-300"
                         >
-                            <Github className="h-5 w-5" /> /sudeepbogati7
                         </Link>
                     </h2>
 
@@ -664,10 +663,10 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="max-w-full overflow-auto bg-white p-6 rounded-lg shadow-md"
+                        className="max-w-full overflow-auto bg-white w-fit mx-auto p-6 rounded-lg shadow-md"
                     >
                         <Suspense fallback={<Loading />}>
-                            <GitHubCalendar username="sudeepbogati7" />
+                            <GitHubCalendar  username="sudeepbogati7" />
                         </Suspense>
                     </motion.div>
                 </motion.div>
