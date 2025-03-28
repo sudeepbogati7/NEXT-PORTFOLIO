@@ -44,7 +44,7 @@ interface Project {
 const projectsData: Project[] = [
     {
         id: "expense-tracker",
-        title: "Expense Tracking System",
+        title: "Kharcha ",
         date: "April 2, 2024",
         description:
             "Developed a comprehensive expense tracking system with user authentication for secure login and logout functionality. The system allows users to add, edit, and delete daily expenses, categorizing them for better organization. Users can filter expenses based on categories for better insights. Additionally, the system features an intuitive dashboard that enables users to view and analyze their expenses graphically, aiding in effective financial management.",
@@ -83,14 +83,14 @@ const projectsData: Project[] = [
             },
         ],
         images: [
-            { src: "/expense-tracker.webp", alt: "Expense tracker preview" },
-            { src: "/expense-tracker1.webp", alt: "Expense tracker dashboard" },
-            { src: "/expense-tracker2.webp", alt: "Expense tracker mobile view" },
-            { src: "/expense-tracker4.webp", alt: "Expense tracker analytics" },
+            { src: "/kharcha_dashboard.png", alt: "Kharcha Dashboard" },
+            { src: "/kharcha_homepage.png", alt: "Kharcha Homepage" },
+            { src: "/kharcha_reports.png", alt: "Kharcha Report Generation" },
+            { src: "/kharch_overview.png", alt: "KharchaOverview" },           
         ],
-        liveUrl: "https://expense-tracker-neon-one.vercel.app/",
+        liveUrl: "https://kharcha.sudipbogati.com.np/",
         githubUrl: "https://github.com/sudeepbogati7/Expense-tracking-System",
-        bgColor: "bg-orange-50",
+        bgColor: "bg-sky-50",
     },
     {
         id: "chat-app",
@@ -559,7 +559,7 @@ export default function Projects() {
                                     key={index}
                                     variants={staggerItem}
                                     whileHover={{ y: -5 }}
-                                    className={`rounded-lg h-fit shadow-lg ${project.bgColor}`}
+                                    className={`rounded-lg h-fit shadow-md  ${project.bgColor}`}
                                 >
                                     <Card className="h-full border-0 bg-transparent transition-all duration-300 hover:shadow-lg">
                                         <CardHeader>
