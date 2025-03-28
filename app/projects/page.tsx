@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { ChevronDown, ChevronUp, Github, ExternalLink } from "lucide-react"
 import Link from "next/link"
@@ -47,7 +47,7 @@ const projectsData: Project[] = [
         title: "Expense Tracking System",
         date: "April 2, 2024",
         description:
-            "Developed a comprehensive expense tracking system with user authentication for secure login and logout functionality. The system allows users to add, edit, and delete daily expenses, categorizing them for better organization. Users can filter expenses based on categories for detailed insights. Additionally, the system features an intuitive dashboard that enables users to view and analyze their expenses graphically, aiding in effective financial management.",
+            "Developed a comprehensive expense tracking system with user authentication for secure login and logout functionality. The system allows users to add, edit, and delete daily expenses, categorizing them for better organization. Users can filter expenses based on categories for better insights. Additionally, the system features an intuitive dashboard that enables users to view and analyze their expenses graphically, aiding in effective financial management.",
         technologies: [
             { name: "typescript" },
             { name: "next.js" },
@@ -276,27 +276,6 @@ const Loading = () => (
 export default function Projects() {
     const [expandedProjects, setExpandedProjects] = useState<Record<string, boolean>>({})
 
-    // Animation on scroll effect
-    useEffect(() => {
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll(".animate-on-scroll")
-
-            elements.forEach((element) => {
-                const position = element.getBoundingClientRect()
-
-                // Check if element is in viewport
-                if (position.top < window.innerHeight && position.bottom >= 0) {
-                    element.classList.add("animate-fade-in")
-                }
-            })
-        }
-
-        window.addEventListener("scroll", animateOnScroll)
-        animateOnScroll() // Initial check
-
-        return () => window.removeEventListener("scroll", animateOnScroll)
-    }, [])
-
     const toggleProjectDetails = (projectId: string) => {
         setExpandedProjects((prev) => ({
             ...prev,
@@ -304,17 +283,41 @@ export default function Projects() {
         }))
     }
 
+    // Animation variants
+    const fadeIn = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5 },
+        },
+    }
+
+    const staggerContainer = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+            },
+        },
+    }
+
+    const staggerItem = {
+        hidden: { opacity: 0, y: 10 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.3 },
+        },
+    }
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
             <main className="md:container mx-auto py-20 px-4 font-sans">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="text-center mb-16"
-                >
+                <motion.div initial="hidden" animate="visible" variants={fadeIn} className="text-center mb-16">
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-                        <span className="text-sky-600">Projects</span> that I Have Built
+                        <span className="text-blue-600">Projects</span> that I Have Built
                     </h1>
                     <p className="text-gray-500 max-w-3xl mx-auto">
                         Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack
@@ -330,23 +333,47 @@ export default function Projects() {
                     </TabsList>
 
                     <TabsContent value="featured" className="space-y-12">
-                        {projectsData.map((project) => (
+                        {projectsData.map((project, index) => (
                             <motion.div
                                 key={project.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
+                                initial="hidden"
+                                whileInView="visible"
                                 viewport={{ once: true }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: {
+                                            duration: 0.5,
+                                            delay: index * 0.1,
+                                        },
+                                    },
+                                }}
+                                whileHover={{ y: -5 }}
                                 className={`rounded-xl shadow-lg overflow-hidden ${project.bgColor}`}
                             >
                                 <Card className="border-0 bg-transparent">
                                     <CardContent className="p-0">
                                         <div className="grid md:grid-cols-2 gap-6 p-6">
-                                            <div className="space-y-4">
+                                            <motion.div
+                                                className="space-y-4"
+                                                variants={{
+                                                    hidden: { opacity: 0, x: -20 },
+                                                    visible: {
+                                                        opacity: 1,
+                                                        x: 0,
+                                                        transition: { duration: 0.5, delay: 0.1 },
+                                                    },
+                                                }}
+                                            >
                                                 <div className="grid grid-cols-2 gap-2">
-                                                    {project.images.slice(0, 4).map((image, index) => (
-                                                        <Suspense key={index} fallback={<Loading />}>
-                                                            <div className="aspect-video rounded-lg overflow-hidden border border-gray-300 shadow-md">
+                                                    {project.images.slice(0, 4).map((image, idx) => (
+                                                        <Suspense key={idx} fallback={<Loading />}>
+                                                            <motion.div
+                                                                whileHover={{ scale: 1.05 }}
+                                                                className="aspect-video rounded-lg overflow-hidden border border-gray-300 shadow-md"
+                                                            >
                                                                 <Image
                                                                     src={image.src || "/placeholder.svg"}
                                                                     alt={image.alt}
@@ -354,13 +381,23 @@ export default function Projects() {
                                                                     height={200}
                                                                     className="w-full h-full object-cover"
                                                                 />
-                                                            </div>
+                                                            </motion.div>
                                                         </Suspense>
                                                     ))}
                                                 </div>
-                                            </div>
+                                            </motion.div>
 
-                                            <div className="space-y-4">
+                                            <motion.div
+                                                className="space-y-4"
+                                                variants={{
+                                                    hidden: { opacity: 0, x: 20 },
+                                                    visible: {
+                                                        opacity: 1,
+                                                        x: 0,
+                                                        transition: { duration: 0.5, delay: 0.2 },
+                                                    },
+                                                }}
+                                            >
                                                 <div>
                                                     <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
                                                     <CardDescription className="text-sm mt-1">{project.date}</CardDescription>
@@ -368,23 +405,34 @@ export default function Projects() {
 
                                                 <p className="text-gray-600">{project.description}</p>
 
-                                                <div className="flex flex-wrap gap-2">
-                                                    {project.technologies.map((tech, index) => (
-                                                        <Badge key={index} variant="secondary" className="bg-gray-700 text-white hover:bg-gray-600">
-                                                            {tech.name}
-                                                        </Badge>
+                                                <motion.div
+                                                    className="flex flex-wrap gap-2"
+                                                    variants={staggerContainer}
+                                                    initial="hidden"
+                                                    whileInView="visible"
+                                                    viewport={{ once: true }}
+                                                >
+                                                    {project.technologies.map((tech, idx) => (
+                                                        <motion.div key={idx} variants={staggerItem}>
+                                                            <Badge
+                                                                variant="secondary"
+                                                                className="bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-300"
+                                                            >
+                                                                {tech.name}
+                                                            </Badge>
+                                                        </motion.div>
                                                     ))}
-                                                </div>
+                                                </motion.div>
 
                                                 <div className="space-y-2">
                                                     <h3 className="font-semibold border-b border-gray-300 pb-1 w-fit">Features</h3>
                                                     <div className="relative">
                                                         <ul
-                                                            className={`list-disc pl-5 space-y-2 transition-all duration-300 ${expandedProjects[project.id] ? "max-h-[400px]" : "max-h-24 overflow-hidden"
+                                                            className={`list-disc pl-5 space-y-2 transition-all duration-500 ${expandedProjects[project.id] ? "max-h-[400px]" : "max-h-24 overflow-hidden"
                                                                 }`}
                                                         >
-                                                            {project.features.map((feature, index) => (
-                                                                <li key={index} className="text-sm">
+                                                            {project.features.map((feature, idx) => (
+                                                                <li key={idx} className="text-sm">
                                                                     <span className="font-semibold">{feature.title}: </span>
                                                                     {feature.description}
                                                                 </li>
@@ -397,7 +445,7 @@ export default function Projects() {
                                                     <Button
                                                         variant="ghost"
                                                         size="sm"
-                                                        className="flex items-center text-blue-600"
+                                                        className="flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-300"
                                                         onClick={() => toggleProjectDetails(project.id)}
                                                     >
                                                         {expandedProjects[project.id] ? (
@@ -414,19 +462,29 @@ export default function Projects() {
 
                                                 <div className="flex gap-4">
                                                     {project.liveUrl && (
-                                                        <Button asChild variant="outline" size="sm">
+                                                        <Button
+                                                            asChild
+                                                            variant="outline"
+                                                            size="sm"
+                                                            className="hover:bg-blue-50 transition-colors duration-300"
+                                                        >
                                                             <Link href={project.liveUrl} target="_blank" className="flex items-center gap-2">
                                                                 Visit Site <ExternalLink className="h-4 w-4" />
                                                             </Link>
                                                         </Button>
                                                     )}
-                                                    <Button asChild variant="outline" size="sm">
+                                                    <Button
+                                                        asChild
+                                                        variant="outline"
+                                                        size="sm"
+                                                        className="hover:bg-gray-100 transition-colors duration-300"
+                                                    >
                                                         <Link href={project.githubUrl} target="_blank" className="flex items-center gap-2">
                                                             <Github className="h-4 w-4" /> GitHub
                                                         </Link>
                                                     </Button>
                                                 </div>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -435,32 +493,48 @@ export default function Projects() {
                     </TabsContent>
 
                     <TabsContent value="apis" className="space-y-6">
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <motion.div
+                            className="grid md:grid-cols-2 gap-6"
+                            variants={staggerContainer}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                        >
                             {apiProjectsData.map((project, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                >
-                                    <Card>
+                                <motion.div key={index} variants={staggerItem} whileHover={{ y: -5 }}>
+                                    <Card className="h-full transition-all duration-300 hover:shadow-lg">
                                         <CardHeader>
                                             <CardTitle>{project.title}</CardTitle>
                                             <CardDescription>{project.date}</CardDescription>
                                         </CardHeader>
                                         <CardContent>
                                             <p className="text-gray-600 mb-4">{project.description}</p>
-                                            <div className="flex flex-wrap gap-2 mb-4">
+                                            <motion.div
+                                                className="flex flex-wrap gap-2 mb-4"
+                                                variants={staggerContainer}
+                                                initial="hidden"
+                                                whileInView="visible"
+                                                viewport={{ once: true }}
+                                            >
                                                 {project.technologies.map((tech, i) => (
-                                                    <Badge key={i} variant="secondary" className="bg-gray-700 text-white hover:bg-gray-600">
-                                                        {tech}
-                                                    </Badge>
+                                                    <motion.div key={i} variants={staggerItem}>
+                                                        <Badge
+                                                            variant="secondary"
+                                                            className="bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-300"
+                                                        >
+                                                            {tech}
+                                                        </Badge>
+                                                    </motion.div>
                                                 ))}
-                                            </div>
+                                            </motion.div>
                                         </CardContent>
                                         <CardFooter>
-                                            <Button asChild variant="outline" size="sm">
+                                            <Button
+                                                asChild
+                                                variant="outline"
+                                                size="sm"
+                                                className="hover:bg-gray-100 transition-colors duration-300"
+                                            >
                                                 <Link href={project.githubUrl} target="_blank" className="flex items-center gap-2">
                                                     <Github className="h-4 w-4" /> Source Code
                                                 </Link>
@@ -469,28 +543,35 @@ export default function Projects() {
                                     </Card>
                                 </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </TabsContent>
 
                     <TabsContent value="small" className="space-y-6">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ gridAutoFlow: 'dense' }}>
+                        <motion.div
+                            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                            variants={staggerContainer}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                        >
                             {smallProjectsData.map((project, index) => (
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                    className={`rounded-lg h-fit  shadow-md ${project.bgColor}`}
+                                    variants={staggerItem}
+                                    whileHover={{ y: -5 }}
+                                    className={`rounded-lg ${project.bgColor}`}
                                 >
-                                    <Card className="h-fit  border-0 bg-transparent">
+                                    <Card className="h-full border-0 bg-transparent transition-all duration-300 hover:shadow-lg">
                                         <CardHeader>
                                             <CardTitle className="text-lg">{project.title}</CardTitle>
                                             {project.date && <CardDescription>{project.date}</CardDescription>}
                                         </CardHeader>
                                         <CardContent className="space-y-4">
                                             {project.image && (
-                                                <div className="rounded-lg overflow-hidden border border-gray-300 shadow-md">
+                                                <motion.div
+                                                    whileHover={{ scale: 1.03 }}
+                                                    className="rounded-lg overflow-hidden border border-gray-300 shadow-md"
+                                                >
                                                     <Image
                                                         src={project.image || "/placeholder.svg"}
                                                         alt={project.title}
@@ -498,16 +579,27 @@ export default function Projects() {
                                                         height={200}
                                                         className="w-full h-auto object-cover"
                                                     />
-                                                </div>
+                                                </motion.div>
                                             )}
                                             <p className="text-gray-600 text-sm">{project.description}</p>
-                                            <div className="flex flex-wrap gap-2">
+                                            <motion.div
+                                                className="flex flex-wrap gap-2"
+                                                variants={staggerContainer}
+                                                initial="hidden"
+                                                whileInView="visible"
+                                                viewport={{ once: true }}
+                                            >
                                                 {project.technologies.map((tech, i) => (
-                                                    <Badge key={i} variant="secondary" className="bg-gray-700 text-white hover:bg-gray-600">
-                                                        {tech}
-                                                    </Badge>
+                                                    <motion.div key={i} variants={staggerItem}>
+                                                        <Badge
+                                                            variant="secondary"
+                                                            className="bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-300"
+                                                        >
+                                                            {tech}
+                                                        </Badge>
+                                                    </motion.div>
                                                 ))}
-                                            </div>
+                                            </motion.div>
                                             {project.features && (
                                                 <div>
                                                     <h3 className="font-semibold text-sm mb-2">Features</h3>
@@ -521,13 +613,23 @@ export default function Projects() {
                                         </CardContent>
                                         <CardFooter className="flex gap-4">
                                             {project.liveUrl && (
-                                                <Button asChild variant="outline" size="sm">
+                                                <Button
+                                                    asChild
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className="hover:bg-blue-50 transition-colors duration-300"
+                                                >
                                                     <Link href={project.liveUrl} target="_blank" className="flex items-center gap-2">
                                                         Visit Site <ExternalLink className="h-4 w-4" />
                                                     </Link>
                                                 </Button>
                                             )}
-                                            <Button asChild variant="outline" size="sm">
+                                            <Button
+                                                asChild
+                                                variant="outline"
+                                                size="sm"
+                                                className="hover:bg-gray-100 transition-colors duration-300"
+                                            >
                                                 <Link href={project.githubUrl} target="_blank" className="flex items-center gap-2">
                                                     <Github className="h-4 w-4" /> GitHub
                                                 </Link>
@@ -536,35 +638,42 @@ export default function Projects() {
                                     </Card>
                                 </motion.div>
                             ))}
-                        </div>
+                        </motion.div>
                     </TabsContent>
                 </Tabs>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true }}
+                    variants={fadeIn}
                     className="mt-20 text-center"
                 >
-                    <h2 className="text-2xl w-fit mx-auto font-bold mb-8  items-center justify-center gap-2 text-green-800">
+                    <h2 className="text-2xl font-bold mb-8 flex items-center justify-center gap-2 text-green-800">
                         My GitHub Activity Calendar
                         <Link
                             href="https://github.com/sudeepbogati7/"
-                            className="text-gray-600 flex items-center gap-2"
+                            className="text-gray-600 border-b border-gray-300 flex items-center gap-2 hover:text-gray-800 transition-colors duration-300"
                         >
+                            <Github className="h-5 w-5" /> /sudeepbogati7
                         </Link>
                     </h2>
 
-                    <div className="max-w-fit mx-auto overflow-auto bg-white p-6 rounded-lg shadow-md">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="max-w-full overflow-auto bg-white p-6 rounded-lg shadow-md"
+                    >
                         <Suspense fallback={<Loading />}>
                             <GitHubCalendar username="sudeepbogati7" />
                         </Suspense>
-                    </div>
+                    </motion.div>
                 </motion.div>
             </main>
 
-            <footer className="bg-gray-200 text-gray-700 py-6 text-center">
+            <footer className="bg-gray-800 text-white py-6 text-center">
                 <div className="container mx-auto">
                     <p className="text-sm">&copy; {new Date().getFullYear()} Sudeep Bogati. All rights reserved.</p>
                 </div>
