@@ -306,7 +306,7 @@ export default function Projects() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-            <main className="container mx-auto py-20 px-4 font-sans">
+            <main className="md:container mx-auto py-20 px-4 font-sans">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -314,7 +314,7 @@ export default function Projects() {
                     className="text-center mb-16"
                 >
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-                        <span className="text-blue-600">Projects</span> that I Have Built
+                        <span className="text-sky-600">Projects</span> that I Have Built
                     </h1>
                     <p className="text-gray-500 max-w-3xl mx-auto">
                         Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack
@@ -547,13 +547,12 @@ export default function Projects() {
                     viewport={{ once: true }}
                     className="mt-20 text-center"
                 >
-                    <h2 className="text-2xl font-bold mb-8 flex items-center justify-center gap-2 text-green-800">
+                    <h2 className="text-2xl font-bold mb-8  items-center justify-center gap-2 text-green-800">
                         My GitHub Activity Calendar
                         <Link
                             href="https://github.com/sudeepbogati7/"
                             className="text-gray-600 border-b border-gray-300 flex items-center gap-2"
                         >
-                            <Github className="h-5 w-5" /> /sudeepbogati7
                         </Link>
                     </h2>
 
