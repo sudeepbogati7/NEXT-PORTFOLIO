@@ -473,71 +473,69 @@ export default function Projects() {
                     </TabsContent>
 
                     <TabsContent value="small" className="space-y-6">
-                        <div className="space-y-6">
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ gridAutoFlow: "dense" }}>
-                                {smallProjectsData.map((project, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        viewport={{ once: true }}
-                                        className={`rounded-lg h-fit shadow-md ${project.bgColor}`}
-                                    >
-                                        <Card className="h-fit border-0 bg-transparent">
-                                            <CardHeader>
-                                                <CardTitle className="text-lg">{project.title}</CardTitle>
-                                                {project.date && <CardDescription>{project.date}</CardDescription>}
-                                            </CardHeader>
-                                            <CardContent className="space-y-4">
-                                                {project.image && (
-                                                    <div className="rounded-lg overflow-hidden border border-gray-300 shadow-md">
-                                                        <Image
-                                                            src={project.image || "/placeholder.svg"}
-                                                            alt={project.title}
-                                                            width={400}
-                                                            height={200}
-                                                            className="w-full h-auto object-cover"
-                                                        />
-                                                    </div>
-                                                )}
-                                                <p className="text-gray-600 text-sm">{project.description}</p>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {project.technologies.map((tech, i) => (
-                                                        <Badge key={i} variant="secondary" className="bg-gray-700 text-white hover:bg-gray-600">
-                                                            {tech}
-                                                        </Badge>
-                                                    ))}
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ gridAutoFlow: 'dense' }}>
+                            {smallProjectsData.map((project, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    className={`rounded-lg h-fit  shadow-md ${project.bgColor}`}
+                                >
+                                    <Card className="h-fit  border-0 bg-transparent">
+                                        <CardHeader>
+                                            <CardTitle className="text-lg">{project.title}</CardTitle>
+                                            {project.date && <CardDescription>{project.date}</CardDescription>}
+                                        </CardHeader>
+                                        <CardContent className="space-y-4">
+                                            {project.image && (
+                                                <div className="rounded-lg overflow-hidden border border-gray-300 shadow-md">
+                                                    <Image
+                                                        src={project.image || "/placeholder.svg"}
+                                                        alt={project.title}
+                                                        width={400}
+                                                        height={200}
+                                                        className="w-full h-auto object-cover"
+                                                    />
                                                 </div>
-                                                {project.features && (
-                                                    <div>
-                                                        <h3 className="font-semibold text-sm mb-2">Features</h3>
-                                                        <ul className="list-disc pl-5 space-y-1 text-sm">
-                                                            {project.features.map((feature, i) => (
-                                                                <li key={i}>{feature}</li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                )}
-                                            </CardContent>
-                                            <CardFooter className="flex gap-4">
-                                                {project.liveUrl && (
-                                                    <Button asChild variant="outline" size="sm">
-                                                        <Link href={project.liveUrl} target="_blank" className="flex items-center gap-2">
-                                                            Visit Site <ExternalLink className="h-4 w-4" />
-                                                        </Link>
-                                                    </Button>
-                                                )}
+                                            )}
+                                            <p className="text-gray-600 text-sm">{project.description}</p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.technologies.map((tech, i) => (
+                                                    <Badge key={i} variant="secondary" className="bg-gray-700 text-white hover:bg-gray-600">
+                                                        {tech}
+                                                    </Badge>
+                                                ))}
+                                            </div>
+                                            {project.features && (
+                                                <div>
+                                                    <h3 className="font-semibold text-sm mb-2">Features</h3>
+                                                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                                                        {project.features.map((feature, i) => (
+                                                            <li key={i}>{feature}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+                                        </CardContent>
+                                        <CardFooter className="flex gap-4">
+                                            {project.liveUrl && (
                                                 <Button asChild variant="outline" size="sm">
-                                                    <Link href={project.githubUrl} target="_blank" className="flex items-center gap-2">
-                                                        <Github className="h-4 w-4" /> GitHub
+                                                    <Link href={project.liveUrl} target="_blank" className="flex items-center gap-2">
+                                                        Visit Site <ExternalLink className="h-4 w-4" />
                                                     </Link>
                                                 </Button>
-                                            </CardFooter>
-                                        </Card>
-                                    </motion.div>
-                                ))}
-                            </div>
+                                            )}
+                                            <Button asChild variant="outline" size="sm">
+                                                <Link href={project.githubUrl} target="_blank" className="flex items-center gap-2">
+                                                    <Github className="h-4 w-4" /> GitHub
+                                                </Link>
+                                            </Button>
+                                        </CardFooter>
+                                    </Card>
+                                </motion.div>
+                            ))}
                         </div>
                     </TabsContent>
                 </Tabs>
