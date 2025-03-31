@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import AOS from 'aos';
@@ -9,6 +9,10 @@ import { Braces } from 'lucide-react'
 import Nav from "@/components/nav";
 import { ExternalLink, Medal } from "lucide-react"
 import { MessageSquare, Users, Brain, Trophy, Shuffle, GraduationCap, Sparkles } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 export default function Skills() {
     useEffect(() => {
         AOS.init({ duration: 900 }); // Initialize AOS with a duration of 1000ms
@@ -515,6 +519,17 @@ export default function Skills() {
                     </div>
                 </div>
 
+                <Tabs defaultValue="featured" className="mb-16">
+                    <TabsList className="  px-12 max-w-md w-fit mx-auto py-6 gap-3 flex items-center mb-8">
+                        <TabsTrigger className="rounded-md" value="dev_tools">Dev Tools</TabsTrigger>
+                        <TabsTrigger value="db_and_caching">DB and Caching </TabsTrigger>
+                    </TabsList>
+
+                    <TabsContent value="featured" className="space-y-12">
+
+                    </TabsContent>
+                </Tabs>
+
                 <div className="py-12 mx-auto md:w-4/6 font-mono rounded-2xl shadow  w-full bg-sky-100 ">
                     <div className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-8">
                         <Image src={"/tools.png"} height={20} width={24} alt="Development and DevOps tools icon" />
@@ -614,7 +629,6 @@ export default function Skills() {
                                     className="relative z-10 drop-shadow-2xl rounded-lg"
                                 />
                             </div>
-
                             <div className="flex flex-col justify-center gap-6 p-4">
                                 {softSkills.map((skill, index) => (
                                     <div
