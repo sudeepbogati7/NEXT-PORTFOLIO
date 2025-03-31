@@ -178,14 +178,14 @@ export default function TechTabs() {
     }, [])
 
     return (
-        <div data-aos="fade-up" className="w-full my-12 mx-auto md:w-4/6 font-mono rounded-2xl shadow bg-gray-50 p-5">
+        <div data-aos="fade-up" className="w-full my-12 mx-auto md:w-4/6 font-mono rounded-2xl shadow bg-white p-5">
             <Tabs
                 defaultValue="dev-tools"
                 orientation="horizontal"
                 className="flex flex-col md:flex-row gap-6"
                 onValueChange={setActiveTab}
             >
-                <TabsList className="flex flex-row md:flex-col gap-2 h-auto md:h-auto md:w-64 p-2 bg-sky-100 rounded-xl">
+                <TabsList className="flex  flex-col gap-2 h-auto md:h-auto md:w-64 p-2 bg-sky-100 rounded-xl">
                     <TabsTrigger
                         value="languages"
                         className="flex items-center gap-2 justify-start w-full px-4 py-3 data-[state=active]:bg-white data-[state=active]:shadow-md data-[state=active]:text-sky-600 transition-all duration-200"
@@ -388,7 +388,7 @@ export default function TechTabs() {
                             </div>
 
                             <motion.div
-                                className="flex items-center justify-center  w-full gap-4 mt-6"
+                                className="flex flex-col-reverse md:flex-row items-center justify-center  w-full gap-4 mt-6"
                                 variants={illustrationVariants}
                                 initial="hidden"
                                 animate="visible"
@@ -411,7 +411,7 @@ export default function TechTabs() {
                                     </ul>
                                 </div>
 
-                                <div className="relative w-full md:w-1/2  flex items-center justify-center">
+                                <div className="relative hidden w-full md:w-1/2  md:flex items-center justify-center">
                                     <Image
                                         src="/coding_illustration.svg"
                                         alt="Database illustration"

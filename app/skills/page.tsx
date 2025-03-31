@@ -492,9 +492,7 @@ export default function Skills() {
                     </div>
                 </div>
             </section>
-            <footer className="bg-gray-300 font-sans h-14 flex items-center justify-center">
-                <div className="w-fit font-semibold text-sm text-gray-600 flex flex-wrap">&copy; 2024 Sudeep Bogati .All rights reserved.</div>
-            </footer>
+          
         </>
     )
 }

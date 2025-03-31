@@ -136,7 +136,7 @@ export default function InteractiveSoftSkills() {
                 transition={{ duration: 0.5 }}
                 className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto mb-12"
             >
-                <Image src={'/teamwork.svg'} width={300} height={200} alt="soft skills"></Image>
+                <Image className="md:w-[300px] w-[150px] " src={'/teamwork.svg'} width={300} height={200} alt="soft skills"></Image>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -203,7 +203,7 @@ export default function InteractiveSoftSkills() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="md:col-span-8 lg:col-span-6"
+                        className="md:col-span-6 lg:col-span-7"
                     >
                         {selectedSkill !== null ? (
                             <AnimatePresence mode="wait">
@@ -279,23 +279,6 @@ export default function InteractiveSoftSkills() {
                                 </div>
                             </motion.div>
                         )}
-
-                        {/* Mobile illustration - only shown on smaller screens */}
-                        {/* <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            className="lg:hidden mt-8 relative"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-sky-700/20 to-transparent rounded-lg blur-2xl"></div>
-                            <Image
-                                src="/teamwork.svg"
-                                width={200}
-                                height={200}
-                                alt="Illustration showing various soft skills in action"
-                                className="relative z-10 drop-shadow-2xl rounded-lg mx-auto"
-                            />
-                        </motion.div> */}
                     </motion.div>
                 </div>
             </div>
