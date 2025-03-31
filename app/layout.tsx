@@ -10,6 +10,8 @@ import { Toaster } from "@/components/ui/toaster";
 import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
+import { AuthProvider } from "../contexts/AuthContext";
+
 
 export default function RootLayout({
   children,
@@ -103,14 +105,17 @@ export default function RootLayout({
         </script>
       </head>
       <body className={`bg-gray-50 font-poppins`}>
-        <Toaster />
-        <Nav />
-        <main className="pt-20 pb-12">{children}</main>
-        <footer className="bg-sky-50 text-sky-800 py-6 text-center">
-          <div className="container mx-auto">
-            <p className="text-sm">&copy; {new Date().getFullYear()} Sudeep Bogati. All rights reserved.</p>
-          </div>
-        </footer>
+
+        <AuthProvider>
+          <Toaster />
+          <Nav />
+          <main className="pt-20 pb-12">{children}</main>
+          <footer className="bg-sky-50 text-sky-800 py-6 text-center">
+            <div className="container mx-auto">
+              <p className="text-sm">&copy; {new Date().getFullYear()} Sudeep Bogati. All rights reserved.</p>
+            </div>
+          </footer>
+        </AuthProvider>
       </body>
     </html>
   );

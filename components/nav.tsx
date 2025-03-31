@@ -9,6 +9,7 @@ import { Phone, Hand, User, Code, BookOpen, Mail, ExternalLink, ChartNoAxesCombi
 import { Fragment, useState } from 'react'
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import LoginPopup from "./authentication/login-popup";
 interface NavProps {
     bgColor: string;
 }
@@ -69,8 +70,11 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                         <Link href={'/contact'} className=""> Contact me ! </Link>
                     </span> */}
                     </div>
-                    <div className="usm:hidden bg-green-100 rounded-xl py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center md:block">
-                        <Link href={'/contact'} className="flex items-center gap-1 "> <Phone className="hover:text-white" size={18} /> Get in touch </Link>
+                    <div className="flex gap-2 items-center justify-center">
+                        <div className="usm:hidden bg-green-100 rounded py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center md:block">
+                            <Link href={'/contact'} className="flex items-center gap-1 "> <Phone className="hover:text-white" size={18} /> Get in touch </Link>
+                        </div>
+                        <LoginPopup />
                     </div>
                 </div>
             </nav>
