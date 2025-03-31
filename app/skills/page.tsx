@@ -1,5 +1,5 @@
 'use client';
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import AOS from 'aos';
@@ -8,11 +8,10 @@ import './scroll.css';
 import { Braces } from 'lucide-react'
 import Nav from "@/components/nav";
 import { ExternalLink, Medal } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 import { MessageSquare, Users, Brain, Trophy, Shuffle, GraduationCap, Sparkles } from "lucide-react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import TechTabs from "./tech-tabs-horizontal";
 export default function Skills() {
     useEffect(() => {
         AOS.init({ duration: 900 }); // Initialize AOS with a duration of 1000ms
@@ -344,10 +343,14 @@ export default function Skills() {
                 </div>
 
 
-                <div className="font-bold font-sans text-gray-700 text-center mx-auto text-lg gap-1 flex items-center w-fit mt-8 mb-4">
+                <TechTabs />
+
+
+
+                <div className="font-bold text-xl  text-gray-700 text-center mx-auto mt-16 gap-1 flex items-center w-fit mb-4">
                     <Braces className="mr-2" /> Web Application Development
                 </div>
-                <div className="flex font-mono flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-4/5 p-6 rounded-lg">
+                <div className="flex  flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-4/5 p-6 rounded-lg">
                     <div className="flex flex-col w-full">
                         <h2 data-aos="fade-up" className="font-semibold flex mx-auto text-center items-center gap-2 py-4 text-lg">
                             <Image src={"/frontend.png"} width={22} height={20} alt="frontend" />
@@ -519,81 +522,6 @@ export default function Skills() {
                     </div>
                 </div>
 
-                <Tabs defaultValue="featured" className="mb-16">
-                    <TabsList className="  px-12 max-w-md w-fit mx-auto py-6 gap-3 flex items-center mb-8">
-                        <TabsTrigger className="rounded-md" value="dev_tools">Dev Tools</TabsTrigger>
-                        <TabsTrigger value="db_and_caching">DB and Caching </TabsTrigger>
-                    </TabsList>
-
-                    <TabsContent value="featured" className="space-y-12">
-
-                    </TabsContent>
-                </Tabs>
-
-                <div className="py-12 mx-auto md:w-4/6 font-mono rounded-2xl shadow  w-full bg-sky-100 ">
-                    <div className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-8">
-                        <Image src={"/tools.png"} height={20} width={24} alt="Development and DevOps tools icon" />
-                        Dev Tools
-                    </div>
-
-                    <div className="flex gap-8 flex-wrap px-2 mx-auto items-center justify-center">
-                        {tools.map((tool, index) => (
-                            <span
-                                key={index}
-                                className={`
-                                    border shadow ${tool.shadowColor} 
-                                    cursor-pointer py-1.5 text-sm text-gray-700 
-                                    ${tool.borderColor} w-fit px-3 rounded-md 
-                                    ${tool.bgColor} flex items-center gap-2 
-                                    font-medium hover:scale-105 transition-transform
-                                    `}
-                            >
-                                <Image
-                                    src={tool.icon || "/placeholder.svg"}
-                                    width={22}
-                                    height={24}
-                                    alt={`${tool.name} icon`}
-                                    className="object-contain"
-                                />
-                                {tool.name}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-
-
-                <div className="font-mono bg-indigo-100 shadow w-full mx-auto py-12 my-16 rounded-2xl md:w-4/6">
-                    <div className=" mb-8 flex items-center gap-2 w-fit mx-auto text-xl font-bold">
-                        <Image src={"/db.png"} width={20} height={20} alt="Database technologies icon" />
-                        Databases & Caching
-                    </div>
-
-                    <div className="flex text-gray-700 flex-wrap gap-6 px-2 items-center justify-center mx-auto w-fit">
-                        {databases.map((db, index) => (
-                            <span
-                                key={index}
-                                className={`
-                                    ${db.borderColor} border
-                                    shadow ${db.shadowColor} 
-                                    ${db.bgColor} 
-                                    flex items-center px-3 py-1.5 
-                                    rounded-md w-fit text-sm gap-2
-                                    hover:scale-105 transition-transform
-                                    cursor-pointer
-                                    `}
-                            >
-                                <Image
-                                    src={db.icon || "/placeholder.svg"}
-                                    width={20}
-                                    height={20}
-                                    alt={`${db.name} icon`}
-                                    className="object-contain"
-                                />
-                                {db.name}
-                            </span>
-                        ))}
-                    </div>
-                </div>
                 {/* Soft skills section */}
                 <div className="relative mt-6 w-full     mx-auto">
                     {/* Top Wave */}
@@ -629,6 +557,7 @@ export default function Skills() {
                                     className="relative z-10 drop-shadow-2xl rounded-lg"
                                 />
                             </div>
+
                             <div className="flex flex-col justify-center gap-6 p-4">
                                 {softSkills.map((skill, index) => (
                                     <div
