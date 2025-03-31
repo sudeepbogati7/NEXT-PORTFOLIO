@@ -672,11 +672,7 @@ export default function Projects() {
                 </motion.div>
             </main>
 
-            <footer className="bg-gray-800 text-white py-6 text-center">
-                <div className="container mx-auto">
-                    <p className="text-sm">&copy; {new Date().getFullYear()} Sudeep Bogati. All rights reserved.</p>
-                </div>
-            </footer>
+           
         </div>
     )
 }

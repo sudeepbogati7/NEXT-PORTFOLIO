@@ -52,7 +52,7 @@ export default function RootLayout({
 
         <script defer src="https://cloud.umami.is/script.js" data-website-id="e1b474a2-bdcd-4552-9eab-89f9f8a3fea6"></script>
         <script defer src="https://analytics.sudipbogati.com.np/script.js" data-website-id="bc85fa94-16c1-421b-8800-08fda1b69b7f"></script>
-        
+
         <meta property="og:title" content="Sudeep Bogati - Software Engineer" />
         <meta property="og:description" content="Hello, this is Sudeep Bogati, a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
         <meta property="og:url" content="https://sudipbogati.com.np" />
@@ -106,6 +106,11 @@ export default function RootLayout({
         <Toaster />
         <Nav />
         <main className="pt-20 pb-12">{children}</main>
+        <footer className="bg-sky-50 text-sky-800 py-6 text-center">
+          <div className="container mx-auto">
+            <p className="text-sm">&copy; {new Date().getFullYear()} Sudeep Bogati. All rights reserved.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );

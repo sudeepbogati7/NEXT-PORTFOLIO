@@ -268,7 +268,7 @@ export default function InteractiveSoftSkills() {
                                 <div className="bg-sky-50 rounded-lg p-6 border border-sky-100">
                                     <h3 className="text-sky-700 font-semibold mb-3">Why Soft Skills Matter in Tech</h3>
                                     <p className="text-gray-600 mb-4">
-                                        In today's collaborative development environments, technical expertise alone isn't enough. The
+                                        In todays collaborative development environments, technical expertise alone is not enough. The
                                         ability to communicate effectively, work in teams, and adapt to changing requirements is equally
                                         important for project success.
                                     </p>
