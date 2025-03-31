@@ -5,8 +5,8 @@ import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { motion } from "framer-motion"
 import { CodeXml, Database, Frame } from "lucide-react"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 export default function TechTabs() {
     const [activeTab, setActiveTab] = useState("dev-tools")
@@ -159,12 +159,26 @@ export default function TechTabs() {
         }),
     }
 
+    // Animation variants for illustrations
+    const illustrationVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delay: 0.5,
+                duration: 0.5,
+                ease: "easeOut",
+            },
+        },
+    }
+
     useEffect(() => {
-        AOS.init({ duration: 200 }); // Initialize AOS with a duration of 1000ms
-    }, []);
+        AOS.init({ duration: 900 }) // Initialize AOS with a duration of 900ms
+    }, [])
 
     return (
-        <div data-aos="fade-up" className="w-full mx-auto md:w-4/6 font-mono rounded-2xl shadow bg-gray-50 p-5">
+        <div data-aos="fade-up" className="w-full my-12 mx-auto md:w-4/6 font-mono rounded-2xl shadow bg-gray-50 p-5">
             <Tabs
                 defaultValue="dev-tools"
                 orientation="horizontal"
@@ -172,6 +186,13 @@ export default function TechTabs() {
                 onValueChange={setActiveTab}
             >
                 <TabsList className="flex flex-row md:flex-col gap-2 h-auto md:h-auto md:w-64 p-2 bg-sky-100 rounded-xl">
+                    <TabsTrigger
+                        value="languages"
+                        className="flex items-center gap-2 justify-start w-full px-4 py-3 data-[state=active]:bg-white data-[state=active]:shadow-md data-[state=active]:text-sky-600 transition-all duration-200"
+                    >
+                        <CodeXml />
+                        <span className="font-medium">Programming Languages</span>
+                    </TabsTrigger>
                     <TabsTrigger
                         value="dev-tools"
                         className="flex items-center gap-2 justify-start w-full px-4 py-3 data-[state=active]:bg-white data-[state=active]:shadow-md data-[state=active]:text-sky-600 transition-all duration-200"
@@ -188,13 +209,7 @@ export default function TechTabs() {
                         <span className="font-medium">Databases & Caching</span>
                     </TabsTrigger>
 
-                    <TabsTrigger
-                        value="languages"
-                        className="flex items-center gap-2 justify-start w-full px-4 py-3 data-[state=active]:bg-white data-[state=active]:shadow-md data-[state=active]:text-sky-600 transition-all duration-200"
-                    >
-                        <CodeXml />
-                        <span className="font-medium">Programming Languages</span>
-                    </TabsTrigger>
+
                 </TabsList>
 
                 <div className="flex-1  rounded-xl p-6 h-[400px] overflow-y-auto ">
@@ -207,7 +222,7 @@ export default function TechTabs() {
                             className="h-full"
                         >
                             <h3 className="text-xl font-bold mb-6 text-sky-700">Development Tools</h3>
-                            <div className="flex gap-4 flex-wrap items-start justify-start">
+                            <div className="flex gap-4 flex-wrap items-start justify-start mb-8">
                                 {tools.map((tool, index) => (
                                     <motion.span
                                         custom={index}
@@ -216,13 +231,13 @@ export default function TechTabs() {
                                         animate="visible"
                                         key={index}
                                         className={`
-                      border shadow ${tool.shadowColor} 
-                      cursor-pointer py-2 text-sm text-gray-700 
-                      ${tool.borderColor} w-fit px-4 rounded-md 
-                      ${tool.bgColor} flex items-center gap-2 
-                      font-medium hover:scale-110 hover:shadow-md
-                      transition-all duration-300 ease-in-out
-                    `}
+                                          border shadow ${tool.shadowColor} 
+                                          cursor-pointer py-2 text-sm text-gray-700 
+                                          ${tool.borderColor} w-fit px-4 rounded-md 
+                                          ${tool.bgColor} flex items-center gap-2 
+                                          font-medium hover:scale-110 hover:shadow-md
+                                          transition-all duration-300 ease-in-out
+                                        `}
                                     >
                                         <Image
                                             src={tool.icon || "/placeholder.svg?height=22&width=22"}
@@ -235,6 +250,27 @@ export default function TechTabs() {
                                     </motion.span>
                                 ))}
                             </div>
+
+                            <motion.div
+                                className="flex gap-4 overflow-hidden items-center  mt-4"
+                                variants={illustrationVariants}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <p className="text-center overflow-hidden w-1/2 text-sky-700 mt-4 italic">
+                                    "Code with Git, share on GitHub, run in Docker, scale on AWS, serve with Nginx, and let RabbitMQ do the talking!"
+                                </p>
+                                <div className="relative w-56 h-56">
+                                    <Image
+                                        src="/dev_tools.svg"
+                                        alt="Developer tools illustration"
+                                        width={256}
+                                        height={256}
+                                        className="object-contain"
+                                    />
+                                </div>
+
+                            </motion.div>
                         </motion.div>
                     </TabsContent>
 
@@ -244,10 +280,10 @@ export default function TechTabs() {
                             animate="visible"
                             variants={contentVariants}
                             key={`content-${activeTab === "databases"}`}
-                            className="h-full"
+                            className="h-full  flex flex-col items-start justify-center"
                         >
                             <h3 className="text-xl font-bold mb-6 text-sky-700">Databases & Caching</h3>
-                            <div className="flex flex-wrap gap-4 items-start justify-start">
+                            <div className="flex flex-wrap gap-4 items-start justify-start mb-8">
                                 {databases.map((db, index) => (
                                     <motion.span
                                         custom={index}
@@ -256,15 +292,15 @@ export default function TechTabs() {
                                         animate="visible"
                                         key={index}
                                         className={`
-                      ${db.borderColor} border
-                      shadow ${db.shadowColor} 
-                      ${db.bgColor} 
-                      flex items-center px-4 py-2 
-                      rounded-md w-fit text-sm gap-2
-                      hover:scale-110 hover:shadow-md
-                      transition-all duration-300 ease-in-out
-                      cursor-pointer
-                    `}
+                                          ${db.borderColor} border
+                                          shadow ${db.shadowColor} 
+                                          ${db.bgColor} 
+                                          flex items-center px-4 py-2 
+                                          rounded-md w-fit text-sm gap-2
+                                          hover:scale-110 hover:shadow-md
+                                          transition-all duration-300 ease-in-out
+                                          cursor-pointer
+                                        `}
                                     >
                                         <Image
                                             src={db.icon || "/placeholder.svg?height=20&width=20"}
@@ -277,6 +313,37 @@ export default function TechTabs() {
                                     </motion.span>
                                 ))}
                             </div>
+
+                            <motion.div
+                                className="flex overflow-hidden items-center gap-8 mt-6"
+                                variants={illustrationVariants}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <div className="bg-sky-50 p-4 rounded-lg shadow-md">
+                                    <h4 className="text-sky-700 font-semibold mb-2">SQL vs NoSQL</h4>
+                                    <div className="flex gap-4">
+                                        <div className="bg-white p-3 rounded border border-sky-200 shadow-sm">
+                                            <p className="text-xs font-medium">Structured</p>
+                                            <p className="text-xs text-gray-600">Tables & Relations</p>
+                                        </div>
+                                        <div className="bg-white p-3 rounded border border-sky-200 shadow-sm">
+                                            <p className="text-xs font-medium">Flexible</p>
+                                            <p className="text-xs text-gray-600">Documents & Collections</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="relative w-64  flex items-center justify-center">
+                                    <Image
+                                        src="/database_ill.svg"
+                                        alt="Database illustration"
+                                        width={170}
+                                        height={160}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </motion.div>
                         </motion.div>
                     </TabsContent>
 
@@ -286,10 +353,10 @@ export default function TechTabs() {
                             animate="visible"
                             variants={contentVariants}
                             key={`content-${activeTab === "languages"}`}
-                            className="h-full"
+                            className="h-full flex flex-col  justify-center"
                         >
                             <h3 className="text-xl font-bold mb-6 text-sky-700">Programming Languages</h3>
-                            <div className="flex flex-wrap gap-4 items-start justify-start">
+                            <div className="flex flex-wrap gap-4 items-start justify-start mb-8">
                                 {languages.map((lang, index) => (
                                     <motion.span
                                         custom={index}
@@ -298,15 +365,15 @@ export default function TechTabs() {
                                         animate="visible"
                                         key={index}
                                         className={`
-                      ${lang.borderColor} border
-                      shadow ${lang.shadowColor} 
-                      ${lang.bgColor} 
-                      flex items-center px-4 py-2 
-                      rounded-md w-fit text-sm gap-2
-                      hover:scale-110 hover:shadow-md
-                      transition-all duration-300 ease-in-out
-                      cursor-pointer
-                    `}
+                                          ${lang.borderColor} border
+                                          shadow ${lang.shadowColor} 
+                                          ${lang.bgColor} 
+                                          flex items-center px-4 py-2 
+                                          rounded-md w-fit text-sm gap-2
+                                          hover:scale-110 hover:shadow-md
+                                          transition-all duration-300 ease-in-out
+                                          cursor-pointer
+                                        `}
                                     >
                                         <Image
                                             src={lang.image || "/placeholder.svg?height=20&width=20"}
@@ -319,6 +386,41 @@ export default function TechTabs() {
                                     </motion.span>
                                 ))}
                             </div>
+
+                            <motion.div
+                                className="flex items-center justify-center  w-full gap-4 mt-6"
+                                variants={illustrationVariants}
+                                initial="hidden"
+                                animate="visible"
+                            >
+                                <div className="bg-gradient-to-br w-full md:w-1/2 from-sky-50 to-blue-100 p-4 rounded-lg shadow-md">
+                                    <h4 className="text-sky-700 font-semibold mb-2">Language Paradigms</h4>
+                                    <ul className="text-sm space-y-1 text-gray-700">
+                                        <li className="flex items-center gap-2">
+                                            <span className="w-2 h-2 rounded-full bg-sky-500"></span>
+                                            Object-Oriented
+                                        </li>
+                                        <li className="flex items-center gap-2">
+                                            <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                                            Functional
+                                        </li>
+                                        <li className="flex items-center gap-2">
+                                            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                                            Procedural
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="relative w-full md:w-1/2  flex items-center justify-center">
+                                    <Image
+                                        src="/coding_illustration.svg"
+                                        alt="Database illustration"
+                                        width={170}
+                                        height={160}
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </motion.div>
                         </motion.div>
                     </TabsContent>
                 </div>

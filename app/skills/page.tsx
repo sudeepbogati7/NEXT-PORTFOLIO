@@ -12,138 +12,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { MessageSquare, Users, Brain, Trophy, Shuffle, GraduationCap, Sparkles } from "lucide-react"
 import TechTabs from "./tech-tabs-horizontal";
+import InteractiveSoftSkills from "./soft-skills";
 export default function Skills() {
     useEffect(() => {
         AOS.init({ duration: 900 }); // Initialize AOS with a duration of 1000ms
     }, []);
-
-    const languages = [
-        {
-            name: "JavaScript",
-            image: "/js.png",
-            borderColor: "border-yellow-500",
-            shadowColor: "shadow-yellow-500/40",
-            bgColor: "bg-yellow-100",
-        },
-        {
-            name: "TypeScript",
-            image: "/ts.png",
-            borderColor: "border-blue-500",
-            shadowColor: "shadow-blue-500/40",
-            bgColor: "bg-blue-100",
-        },
-        {
-            name: "Python",
-            image: "/python.png",
-            borderColor: "border-yellow-500",
-            shadowColor: "shadow-orange-400/40",
-            bgColor: "bg-blue-100",
-        },
-        {
-            name: "C/C++",
-            image: "/c.png",
-            borderColor: "border-gray-500",
-            shadowColor: "shadow-gray-600/40",
-            bgColor: "bg-gray-200",
-        },
-        {
-            name: "C#",
-            image: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg",
-            borderColor: "border-purple-500",
-            shadowColor: "shadow-purple-500/40",
-            bgColor: "bg-purple-100",
-        },
-        {
-            name: "SQL",
-            image: "/sql.svg",
-            borderColor: "border-teal-500",
-            shadowColor: "shadow-teal-500/40",
-            bgColor: "bg-teal-100",
-        },
-    ]
-    const tools = [
-        {
-            name: "Git",
-            icon: "/git.png",
-            borderColor: "border-orange-400",
-            shadowColor: "shadow-orange-400/50",
-            bgColor: "bg-orange-100",
-        },
-        {
-            name: "Github",
-            icon: "/github.png",
-            borderColor: "border-gray-500",
-            shadowColor: "shadow-gray-800/50",
-            bgColor: "bg-gray-200",
-        },
-        {
-            name: "Docker",
-            icon: "/docker.png",
-            borderColor: "border-blue-600",
-            shadowColor: "shadow-blue-600/50",
-            bgColor: "bg-blue-100",
-        },
-        {
-            name: "AWS Cloud",
-            icon: "/aws.svg",
-            borderColor: "border-orange-500",
-            shadowColor: "shadow-orange-800/50",
-            bgColor: "bg-gray-200",
-        },
-        {
-            name: "Nginx",
-            icon: "/nginx.svg",
-            borderColor: "border-green-600",
-            shadowColor: "shadow-green-600/50",
-            bgColor: "bg-green-100",
-        },
-        {
-            name: "RabbitMQ",
-            icon: "/rabbitmq.svg",
-            borderColor: "border-orange-500",
-            shadowColor: "shadow-orange-500/50",
-            bgColor: "bg-orange-50",
-        },
-    ]
-
-
-    const databases = [
-        {
-            name: "MySQL",
-            icon: "/mysql.png",
-            borderColor: "border-blue-900",
-            shadowColor: "shadow-indigo-500/50",
-            bgColor: "bg-blue-100",
-        },
-        {
-            name: "PostgreSQL",
-            icon: "/postgresql.svg",
-            borderColor: "border-blue-700",
-            shadowColor: "shadow-blue-500/50",
-            bgColor: "bg-blue-100",
-        },
-        {
-            name: "MongoDB",
-            icon: "/mongodb.svg",
-            borderColor: "border-green-400",
-            shadowColor: "shadow-green-500/30",
-            bgColor: "bg-green-100",
-        },
-        {
-            name: "Elasticsearch",
-            icon: "/elastic.svg",
-            borderColor: "border-yellow-500",
-            shadowColor: "shadow-yellow-500/40",
-            bgColor: "bg-yellow-50",
-        },
-        {
-            name: "Redis",
-            icon: "/redis.svg",
-            borderColor: "border-red-500",
-            shadowColor: "shadow-red-500/40",
-            bgColor: "bg-red-50",
-        },
-    ]
 
 
 
@@ -305,40 +178,6 @@ export default function Skills() {
                         <span className=""><Image src={'/nginx.svg'} width={38} height={38} alt="nginx" /></span>
                         <span className=""><Image src={'/fastapi.svg'} width={38} height={38} alt="fast-api" /></span>
 
-                    </div>
-                </div>
-
-                <div className="flex items-start bg-sky-100 rounded-lg p-4 flex-col my-8 md:w-4/5 xl:w-4/6 mx-auto">
-                    <h1 className="font-bold px-2 text-xl text-gray-600 py-4 flex items-center gap-2">
-                        Programming Languages
-                        <Image src={"/lang.png"} width={24} height={24} alt="Programming languages icon" />
-                    </h1>
-
-                    <div className="w-full  text-sm max-w-3xl">
-                        <ul className="flex flex-wrap gap-4 justify-start">
-                            {languages.map((lang, index) => (
-                                <li
-                                    key={index}
-                                    className={`flex items-center gap-2 px-3 py-1 rounded-lg transition-transform hover:scale-105 
-                ${lang.borderColor} border-2 ${lang.shadowColor} shadow-lg ${lang.bgColor}`}
-                                >
-                                    <span className="flex items-center justify-center w-6 h-4 rounded overflow-hidden">
-                                        <Image
-                                            src={lang.image || "/placeholder.svg"}
-                                            width={16}
-                                            height={24}
-                                            alt={`${lang.name} logo`}
-                                            className="object-contain"
-                                        />
-                                    </span>
-                                    <span className="font-medium">{lang.name}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className="mt-6 text-center text-sm text-gray-500">
-                        <p>Explore our projects built with these technologies</p>
                     </div>
                 </div>
 
@@ -523,7 +362,7 @@ export default function Skills() {
                 </div>
 
                 {/* Soft skills section */}
-                <div className="relative mt-6 w-full     mx-auto">
+                <div className="relative mt-6 w-full  bg-white  mx-auto">
                     {/* Top Wave */}
                     <div className="custom-shape-divider-top-1718303048 ">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -534,9 +373,11 @@ export default function Skills() {
                         </svg>
                     </div>
 
-                    <div className="relative z-10 py-24 ">
+                    <InteractiveSoftSkills />
+
+                    {/* <div className="relative z-10 py-24 ">
                         <div className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto">
-                            <Sparkles className="w-6 h-6 text-primary" />
+                            <Sparkles className="w-6 h-6 text-sky-700" />
                             Soft Skills
                         </div>
 
@@ -550,7 +391,7 @@ export default function Skills() {
                             <div className="md:relative hidden md:block ">
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-lg blur-2xl"></div>
                                 <Image
-                                    src={"/soft-skills-demo.webp"}
+                                    src={"/teamwork.svg"}
                                     width={300}
                                     height={300}
                                     alt="Illustration showing various soft skills in action"
@@ -572,7 +413,7 @@ export default function Skills() {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Bottom Wave */}
                     <div className="custom-shape-divider-bottom-1718303150">

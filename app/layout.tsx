@@ -102,7 +102,7 @@ export default function RootLayout({
           `}
         </script>
       </head>
-      <body className={`bg-gray-100 font-poppins`}>
+      <body className={`bg-gray-50 font-poppins`}>
         <Toaster />
         <Nav />
         <main className="pt-20 pb-12">{children}</main>
