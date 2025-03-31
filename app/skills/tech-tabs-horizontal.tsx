@@ -252,13 +252,13 @@ export default function TechTabs() {
                             </div>
 
                             <motion.div
-                                className="flex gap-4 overflow-hidden items-center  mt-4"
+                                className="flex flex-col md:flex-row gap-4 overflow-hidden items-center  mt-4"
                                 variants={illustrationVariants}
                                 initial="hidden"
                                 animate="visible"
                             >
-                                <p className="text-center overflow-hidden w-1/2 text-sky-700 mt-4 italic">
-                                    "Code with Git, share on GitHub, run in Docker, scale on AWS, serve with Nginx, and let RabbitMQ do the talking!"
+                                <p className="text-center overflow-hidden w-full md:w-1/2 text-sky-700 mt-4 italic">
+                                    Code with Git, share on GitHub, run in Docker, scale on AWS, serve with Nginx, and let RabbitMQ do the talking!
                                 </p>
                                 <div className="relative w-56 h-56">
                                     <Image
@@ -315,7 +315,7 @@ export default function TechTabs() {
                             </div>
 
                             <motion.div
-                                className="flex overflow-hidden items-center gap-8 mt-6"
+                                className="flex flex-col md:flex-row overflow-hidden items-center gap-8 mt-6"
                                 variants={illustrationVariants}
                                 initial="hidden"
                                 animate="visible"
@@ -334,7 +334,7 @@ export default function TechTabs() {
                                     </div>
                                 </div>
 
-                                <div className="relative w-64  flex items-center justify-center">
+                                <div className="relative w-64 hidden md:flex items-center justify-center">
                                     <Image
                                         src="/database_ill.svg"
                                         alt="Database illustration"
