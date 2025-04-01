@@ -38,7 +38,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                         </div>
 
                     </Link>
-                    <div className="flex gap-6 py-2 transition-all duration-200 ease-in-out">
+                    <div className=" flex items-center  gap-6 py-2 transition-all duration-200 ease-in-out">
                         <div className="relative  transition-all duration-600 ease-in-out p-1 block md:hidden rounded-full">
                             <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
                             <button
@@ -48,7 +48,6 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                                 <Image src={'/menu.svg'} width={30} height={30} alt="menu" />
                             </button>
                         </div>
-
                         <span className={`${isActive('/about')} usm:hidden border-b-2 md:block`}>
                             <Link href={'/about'} className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> About me </Link>
                         </span>
@@ -74,7 +73,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                         <div className="usm:hidden bg-green-100 rounded py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center md:block">
                             <Link href={'/contact'} className="flex items-center gap-1 "> <Phone className="hover:text-white" size={18} /> Get in touch </Link>
                         </div>
-                        <LoginPopup />
+                        <div className="hidden md:block"><LoginPopup /></div>
                     </div>
                 </div>
             </nav>

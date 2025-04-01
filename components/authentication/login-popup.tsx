@@ -81,7 +81,7 @@ export default function LoginPopup() {
             {!user ? (
                 <Dialog open={isOpen} onOpenChange={setIsOpen}>
                     <DialogTrigger asChild>
-                        <Button variant="link">Login</Button>
+                        <Button  variant="link">Login</Button>
                     </DialogTrigger>
                     <AnimatePresence>
                         {isOpen && (
