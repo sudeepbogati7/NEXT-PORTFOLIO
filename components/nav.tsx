@@ -32,7 +32,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
         className={`fixed w-full px-3 z-50 shadow transition-all duration-300 h-20 flex items-center justify-center bg-white `}
       >
         <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-medium items-center">
-          <Link href={"/"} className="p-2 flex items-center gap-2 justify-center">
+          <Link href={"/"} className="p-2 flex flex-row-reverse  items-center gap-2 justify-center">
             <div className="flex flex-col gap-2">
               <div>Sudeep Bogati</div>
               <div className="text-xs relative flex items-center text-gray-500">
@@ -43,16 +43,16 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
             <Image src={"/profile.jpg"} className="rounded-full" width={40} height={40} alt="logo" />
           </Link>
           <div className="flex items-center gap-6 py-2 transition-all duration-200 ease-in-out">
-            <div className="relative transition-all duration-600 ease-in-out p-1 block md:hidden rounded-full order-first">
+            <div className="relative transition-all duration-600 ease-in-out p-1 block lg:hidden rounded-full order-first">
               <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
               <button
                 onClick={() => setSidebarVisible(true)}
-                className="relative usm:block md:hidden border rounded-full bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
+                className="relative usm:block lg:hidden border rounded-full bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
               >
                 <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
               </button>
             </div>
-            <span className={`${isActive("/about")} usm:hidden border-b-2 md:block`}>
+            <span className={`${isActive("/about")} usm:hidden border-b-2 lg:block`}>
               <Link
                 href={"/about"}
                 className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
@@ -61,7 +61,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 About me{" "}
               </Link>
             </span>
-            <span className={`${isActive("/skills")} usm:hidden border-b-2 md:block`}>
+            <span className={`${isActive("/skills")} usm:hidden border-b-2 lg:block`}>
               <Link
                 href={"/skills"}
                 className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
@@ -70,7 +70,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 Skills{" "}
               </Link>
             </span>
-            <span className={`${isActive("/projects")} usm:hidden border-b-2 md:block`}>
+            <span className={`${isActive("/projects")} usm:hidden border-b-2 lg:block`}>
               <Link
                 href={"/projects"}
                 className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
@@ -79,7 +79,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 Projects{" "}
               </Link>
             </span>
-            <div className={`${isActive("/blogs")} usm:hidden border-b-2   md:flex items-center gap-1`}>
+            <div className={`${isActive("/blogs")} usm:hidden border-b-2   lg:flex items-center gap-1`}>
               <Link
                 target="_blank"
                 href={"https://blogs.sudipbogati.com.np"}
@@ -90,7 +90,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
               </Link>
               <ExternalLink size={14} />
             </div>
-            <div className={`${isActive("/analytics")} usm:hidden border-b-2   md:flex items-center gap-1`}>
+            <div className={`${isActive("/analytics")} usm:hidden border-b-2   lg:flex items-center gap-1`}>
               <Link
                 target="_blank"
                 href={"https://analytics.sudipbogati.com.np/share/PzlltMCGz9DUl4l3/sudipbogati.com.np"}
@@ -101,18 +101,18 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
               </Link>
               <ExternalLink size={14} />
             </div>
-            {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center md:block`}>
+            {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center lg:block`}>
                         <Link href={'/contact'} className=""> Contact me ! </Link>
                     </span> */}
           </div>
           <div className="flex gap-2 items-center justify-center">
-            <div className="usm:hidden bg-green-100 rounded py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center md:block">
+            <div className="usm:hidden bg-green-100 rounded py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center lg:block">
               <Link href={"/contact"} className="flex items-center gap-1 ">
                 {" "}
                 <Phone className="hover:text-white" size={18} /> Get in touch{" "}
               </Link>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <LoginPopup />
             </div>
           </div>
