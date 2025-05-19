@@ -84,7 +84,7 @@ export default function ContactPage() {
     }, [state.errors, toast])
 
     return (
-        <main className="flex flex-col items-center justify-center p-4 mt-12 bg-gray-100">
+        <main className="flex flex-col items-center justify-center p-4 mt-12 ">
             <div className="w-full max-w-5xl flex flex-col md:flex-row gap-6">
                 {/* Social Media Links */}
                 <Card className="w-full md:w-96 p-6 bg-white">

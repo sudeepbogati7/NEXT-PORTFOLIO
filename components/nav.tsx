@@ -18,14 +18,32 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
 
   const isActive = (href: string) => {
     return pathname === href
-      ? " border-gray-800 transition-all duration-500 ease-in-out"
-      : "border-transparent transition-all text-slate-500 hover:text-black duration-300 ease-in-out"
+      ? "text-sky-600 transition-all duration-500 ease-in-out"
+      : "transition-all text-slate-500 k duration-300 ease-in-out"
   }
 
   const [sidebarVisible, setSidebarVisible] = useState(false)
   function toggleSidebar() {
     setSidebarVisible(!sidebarVisible)
   }
+
+  // Navigation items with descriptions
+  const navDescriptions = {
+    "/about": "Learn about my background and journey",
+    "/skills": "Explore my technical expertise",
+    "/projects": "View my portfolio of work",
+    "https://blogs.sudipbogati.com.np": "Read my thoughts and tutorials",
+    "https://analytics.sudipbogati.com.np/share/PzlltMCGz9DUl4l3/sudipbogati.com.np": "See website performance metrics",
+    "/contact": "Get in touch with me"
+  }
+
+  // Skills sub-links
+  const skillsSubLinks = [
+    { href: "/skills#tech-stack", label: "Tech Stack" },
+    { href: "/skills#soft-skills", label: "Soft Skills" },
+    { href: "/skills#certifications", label: "Certifications" }
+  ]
+
   return (
     <>
       <nav
@@ -52,65 +70,120 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
               </button>
             </div>
-            <span className={`${isActive("/about")} usm:hidden border-b-2 lg:block`}>
+
+            {/* About me - with tooltip */}
+            <span className={`${isActive("/about")} usm:hidden lg:block relative group`}>
               <Link
                 href={"/about"}
-                className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+                className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                {" "}
-                About me{" "}
+                About me
               </Link>
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {navDescriptions["/about"]}
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+              </div>
             </span>
-            <span className={`${isActive("/skills")} usm:hidden border-b-2 lg:block`}>
+
+            {/* Skills - with dropdown */}
+            <span className={`${isActive("/skills")} usm:hidden lg:block relative group`}>
               <Link
                 href={"/skills"}
-                className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+                className="transition-colors hover-underline-animation left w-fit hover:text-sky-500 flex items-center gap-1"
               >
-                {" "}
-                Skills{" "}
+                <div className="flex gap-1 items-center">Skills
+                  <span> <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-transform duration-200 group-hover:rotate-180"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg></span></div>
               </Link>
+
+              {/* Tooltip */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-0 transition-all duration-200 z-50">
+                {navDescriptions["/skills"]}
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+              </div>
+
+              {/* Skills dropdown */}
+              <div className="absolute left-0 top-full mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                {skillsSubLinks.map((subItem) => (
+                  <Link
+                    key={subItem.href}
+                    href={subItem.href}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-600"
+                  >
+                    {subItem.label}
+                  </Link>
+                ))}
+              </div>
             </span>
-            <span className={`${isActive("/projects")} usm:hidden border-b-2 lg:block`}>
+
+            {/* Projects - with tooltip */}
+            <span className={`${isActive("/projects")} usm:hidden lg:block relative group`}>
               <Link
                 href={"/projects"}
-                className=" relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+                className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                {" "}
-                Projects{" "}
+                Projects
               </Link>
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {navDescriptions["/projects"]}
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+              </div>
             </span>
-            <div className={`${isActive("/blogs")} usm:hidden border-b-2   lg:flex items-center gap-1`}>
+
+            {/* Blogs - with tooltip */}
+            <div className={`${isActive("/blogs")} usm:hidden lg:flex items-center gap-1 relative group`}>
               <Link
                 target="_blank"
                 href={"https://blogs.sudipbogati.com.np"}
-                className="  gap-1 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "
+                className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                {" "}
-                Blogs{" "}
+                Blogs
               </Link>
               <ExternalLink size={14} />
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {navDescriptions["https://blogs.sudipbogati.com.np"]}
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+              </div>
             </div>
-            <div className={`${isActive("/analytics")} usm:hidden border-b-2   lg:flex items-center gap-1`}>
+
+            {/* Analytics - with tooltip */}
+            <div className={`${isActive("/analytics")} usm:hidden lg:flex items-center gap-1 relative group`}>
               <Link
                 target="_blank"
                 href={"https://analytics.sudipbogati.com.np/share/PzlltMCGz9DUl4l3/sudipbogati.com.np"}
-                className="  gap-1 relative  w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center "
+                className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                {" "}
-                Analytics{" "}
+                Analytics
               </Link>
               <ExternalLink size={14} />
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {navDescriptions["https://analytics.sudipbogati.com.np/share/PzlltMCGz9DUl4l3/sudipbogati.com.np"]}
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+              </div>
             </div>
-            {/* <span className={`${isActive('/contact')} usm:hidden bg-green-500 rounded-lg px-2 text-white border-none hover:text-white hover:bg-green-800 flex items-center justify-center lg:block`}>
-                        <Link href={'/contact'} className=""> Contact me ! </Link>
-                    </span> */}
           </div>
+
           <div className="flex gap-2 items-center justify-center">
-            <div className="usm:hidden bg-green-100 rounded py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center lg:block">
-              <Link href={"/contact"} className="flex items-center gap-1 ">
-                {" "}
-                <Phone className="hover:text-white" size={18} /> Get in touch{" "}
+            <div className="usm:hidden bg-green-100 rounded py-1 px-4 text-green-800 border-none hover:text-white hover:bg-green-700 flex items-center justify-center lg:block relative group">
+              <Link href={"/contact"} className="flex items-center gap-1">
+                <Phone className="hover:text-white" size={18} /> Get in touch
               </Link>
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {navDescriptions["/contact"]}
+                <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
+              </div>
             </div>
             <div className="hidden lg:block">
               <LoginPopup />

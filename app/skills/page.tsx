@@ -136,7 +136,7 @@ export default function Skills() {
 
 
                 {/* [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] */}
-                <div className="scroll imgBox md:w-4/6 w-full px-8 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                <div id="tech-stack" className="scroll imgBox md:w-4/6 w-full px-8 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                     <div>
                         <span className=""><Image src={'/html.png'} width={38} height={38} alt="html" /></span>
                         <span className=""><Image src={'/css.png'} width={38} height={38} alt="css" /></span>
@@ -362,7 +362,7 @@ export default function Skills() {
                 </div>
 
                 {/* Soft skills section */}
-                <div className="relative mt-6 w-full  bg-white  mx-auto">
+                <div id="soft-skills" className="relative mt-6 w-full  bg-white  mx-auto">
                     {/* Top Wave */}
                     <div className="custom-shape-divider-top-1718303048 ">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -425,7 +425,7 @@ export default function Skills() {
                         </svg>
                     </div>
                 </div>
-                <div className="my-4 font-sans">
+                <div id="certifications" className="my-4 font-sans">
                     <h1 className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-6 mt-14">
                         <Medal className="h-6 w-6 text-primary" />
                         License and Certifications
@@ -436,7 +436,7 @@ export default function Skills() {
                             {certifications.slice(0, 3).map((cert, index) => (
                                 <div
                                     key={index}
-                                    className="w-full bg-gray-50 hover:bg-gray-100/80 transition-colors shadow-lg flex justify-start p-4 rounded-lg mx-auto gap-4 border border-gray-400"
+                                    className="w-full bg-white hover:bg-gray-100/80 transition-colors shadow-lg flex justify-start p-4 rounded-lg mx-auto gap-4 border border-gray-400"
                                 >
                                     <div className="p-4 w-fit">
                                         <Image
