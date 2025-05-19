@@ -34,6 +34,7 @@
     "heroicons": "^2.1.3",
     "lenis": "^1.3.3",
     "lucide-react": "^0.469.0",
+    "motion": "^12.12.1",
     "next": "14.2.3",
     "next-sitemap": "^4.2.3",
     "react": "^18",

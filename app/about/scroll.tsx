@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion';
 import { ReactLenis } from 'lenis/react';
 import { GraduationCap } from 'lucide-react';
+import Image from 'next/image';
+import WorkExperience from './work-experience';
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -96,13 +98,13 @@ export default function Index(): JSX.Element {
                     <section className='text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0'>
                         <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
                         <h1 className='2xl:text-7xl md:w-4/6 w-full mx-auto  text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-                            Explore my educational background and the experiences that fueled my growth.
+                            Get to know more about my educational background and how it shaped my journey.
                         </h1>
                     </section>
                 </div>
 
                 <section className='text-white   w-full bg-slate-950  '>
-                    <div className='grid  md:w-4/6 w-full mx-auto   grid-cols-2'>
+                    <div className='md:grid  md:w-4/6 w-full mx-auto   md:grid-cols-2'>
                         <div className='sticky top-0 h-screen flex items-center justify-center'>
                             <div className=" group  rounded-lg shadow-sm">
                                 <div className="p-6">
@@ -136,39 +138,51 @@ export default function Index(): JSX.Element {
                                 </div>
                             </div>
                         </div>
-                        <div className='grid gap-2'>
+                        <div className='gap-2 hidden md:grid '>
                             <figure className='grid place-content-center -skew-x-12'>
-                                <img
+                                <Image
                                     src='https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop'
                                     alt=''
+                                    width={320}
+                                    height={384}
                                     className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
                                 />
                             </figure>
                             <figure className='grid place-content-center skew-x-12'>
-                                <img
+                                <Image
                                     src='https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop'
                                     alt=''
+                                    width={320}
+                                    height={384}
                                     className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
                                 />
                             </figure>
                             <figure className='grid place-content-center -skew-x-12'>
-                                <img
+                                <Image
                                     src='https://images.unsplash.com/photo-1718601980986-0ce75101d52d?w=500&auto=format&fit=crop'
                                     alt=''
+                                    width={320}
+                                    height={384}
                                     className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
                                 />
                             </figure>
                             <figure className='grid place-content-center skew-x-12'>
-                                <img
+                                <Image
                                     src='https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop'
                                     alt=''
+                                    width={320}
+                                    height={384}
                                     className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
                                 />
                             </figure>
                         </div>
                     </div>
                 </section>
-                <section className='text-white   w-full bg-slate-950  '>
+
+
+              <WorkExperience />
+
+                {/* <section className='text-white z-40  w-full bg-slate-950  '>
                     <div className='grid grid-cols-2 px-8'>
                         <div className='grid gap-2'>
                             <figure className='sticky top-0 h-screen grid place-content-center'>
@@ -207,7 +221,7 @@ export default function Index(): JSX.Element {
                             </h1>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </main>
         </ReactLenis>
     );

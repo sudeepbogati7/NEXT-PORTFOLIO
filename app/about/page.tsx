@@ -165,88 +165,8 @@ export default function AboutPage() {
 
                 <Index />
 
-                {/* Education Section */}
-                <motion.section
-                    className="mb-16"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeIn}
-                >
-                    <div className="bg-gray-50 group  rounded-lg border border-gray-200   shadow-sm">
-                        <div className="p-6">
-                            <div className="flex items-center gap-2 mb-6">
-                                <GraduationCap className="w-6 h-6 text-sky-700" />
-                                <h2 className="text-2xl font-bold text-gray-900">Education</h2>
-                            </div>
-                            <div className="space-y-6">
-                                <TimelineItem
-                                    year="2021 - 2025"
-                                    title="Bachelors in Information Technology (BIT)"
-                                    organization="Tribhuvan University, Kathmandu"
-                                    description="Comprehensive study of Information Technology with focus on programming, databases, and web development."
-                                    details={[
-                                        "Programming: Java, C and C++",
-                                        "Databases: SQL and NoSQL",
-                                        "Web Development: HTML, CSS, PHP and JavaScript",
-                                        "Software Engineering and System Design",
-                                        "Networking and Security",
-                                        "Data Structures and Algorithms",
-                                    ]}
-                                />
-                                <TimelineItem
-                                    year="2019 - 2021"
-                                    title="+2, Computer Science"
-                                    organization="Sungava College, Chitwan"
-                                    description="Grade XI CGPA: 3.79 | Grade XII CGPA: 3.59"
-                                    details={["Major Subjects: Physics, Chemistry, Mathematics, Computer"]}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </motion.section>
-
-                {/* Work Experience Section */}
-                <motion.section
-                    className="mb-16"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeIn}
-                >
-                    <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
-                        <div className="p-6">
-                            <div className="flex items-center gap-2 mb-6">
-                                <Briefcase className="w-6 h-6 text-sky-700" />
-                                <h2 className="text-2xl font-bold text-gray-900">Work Experience</h2>
-                            </div>
-                            <div className="space-y-6">
-                                <TimelineItem
-                                    year="June 2024 - Present"
-                                    title="Associate Software Engineer"
-                                    organization="Greentick Nepal - Gyaneshwor, Kathmandu"
-                                    description="Proactive Associate Software Developer with a strong background in full stack development."
-                                    details={[
-                                        "Developed web applications using React, Next.js, Tailwind CSS, and TypeScript",
-                                        "Built backend services with Django Rest Framework and Python",
-                                        "Integrated RESTful APIs for enhanced data retrieval",
-                                        "Implemented responsive design practices",
-                                        "Technical Stack: React, Next.js, TypeScript, Python, Django REST Framework, MySQL, PostgreSQL, Docker, Git",
-                                    ]}
-                                />
-                                <TimelineItem
-                                    year="March 2024 - May 2024"
-                                    title="Software Engineer Intern"
-                                    organization="Greentick Nepal - Gyaneshwor, Kathmandu"
-                                    description="Full Stack Developer Intern focusing on web application development using modern technologies."
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </motion.section>
-
                 {/* Volunteering Section */}
-                <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
+                {/* <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
                     <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
                         <div className="p-6">
                             <div className="flex items-center gap-2 mb-6">
@@ -269,7 +189,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                     </div>
-                </motion.section>
+                </motion.section> */}
             </motion.div>
         </div>
     )
