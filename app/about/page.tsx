@@ -5,6 +5,7 @@ import Image from "next/image"
 import { GraduationCap, Briefcase, Heart, Mail, Linkedin, Github } from "lucide-react"
 import './about.css'
 import { SvgComponent1 } from "@/components/SvgFrame"
+import Index from "./scroll"
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -50,43 +51,43 @@ const TimelineItem = ({
 
 export default function AboutPage() {
     return (
-        <div className="  py-12 px-4 sm:px-6 lg:px-8">
+        <div className=" mx-auto w-full py-12">
+            <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
+
             {/* Hero Section */}
             <motion.div
-                className="max-w-5xl mx-auto"
+                className=" mx-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">
-                    <motion.div className="relative w-64 h-64" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
-                        {/* SVG Mask Definition */}
-                        <svg width="0" height="0" className="hidden">
-                            <defs>
-                                <clipPath id="splash-mask" clipPathUnits="objectBoundingBox">
-                                    <path d="M0.99,0.475 C0.99,0.475 0.99,0.475 0.99,0.475 C0.99,0.74 0.77,0.95 0.5,0.95 C0.23,0.95 0.01,0.74 0.01,0.475 C0.01,0.475 0.01,0.475 0.01,0.475 C0.01,0.475 0.01,0.215 0.01,0.215 C0.01,0.215 0.01,0.215 0.01,0.215 C0.01,-0.05 0.23,0.16 0.5,0.16 C0.77,0.16 0.99,-0.05 0.99,0.215 C0.99,0.215 0.99,0.215 0.99,0.215 C0.99,0.215 0.99,0.475 0.99,0.475 Z M0.5,0.85 C0.71,0.85 0.88,0.68 0.88,0.475 C0.88,0.27 0.71,0.1 0.5,0.1 C0.29,0.1 0.12,0.27 0.12,0.475 C0.12,0.68 0.29,0.85 0.5,0.85 Z" />
-                                </clipPath>
-                            </defs>
-                        </svg>
+                <div className="md:w-4/6 w-full mx-auto  flex flex-col lg:flex-row items-center gap-8 mb-16">
+                    <motion.div className="relative" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+
 
                         {/* Image Container with Mask */}
                         <div
-                            className="relative w-64 h-64 rounded-2xl overflow-hidden "
+                            className="rounded-2xl overflow-hidden "
                         >
                             <Image
-                                src="/hero_pic.webp"
+                                width={500}
+                                height={500}
+                                src="/new_profile.png"
                                 alt="Sudeep Bogati"
-                                fill
                                 className="object-cover drop-shadow-xl"
                                 sizes="(max-width: 768px) 100vw, 256px"
-                                priority
+                                style={{
+                                    maskImage: "url('/clip-path.svg')",
+                                    maskRepeat: 'no-repeat',
+                                    maskPosition: 'center',
+                                }}
                             />
                         </div>
-                
+
                     </motion.div>
                     <div className="flex-1 text-center lg:text-left">
                         <motion.h1
-                            className="text-3xl font-bold text-gray-900"
+                            className="text-5xl font-bold text-gray-900"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
@@ -94,7 +95,7 @@ export default function AboutPage() {
                             Sudeep Bogati
                         </motion.h1>
                         <motion.h2
-                            className="text-base md:text-base text-sky-800 mb-4"
+                            className="text-base md:text-xl text-sky-800 mb-4"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
@@ -102,7 +103,7 @@ export default function AboutPage() {
                             Full Stack Software Engineer
                         </motion.h2>
                         <motion.p
-                            className="md:text-base text-base text-justify text-gray-500 mb-6"
+                            className="md:text-lg text-base text-justify text-gray-500 mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
@@ -143,8 +144,26 @@ export default function AboutPage() {
                                 GitHub
                             </a>
                         </motion.div>
+                        {/* Scroll Indicator */}
+
                     </div>
                 </div>
+                <div className="flex justify-center mt-8">
+                    <motion.div
+                        initial={{ y: 0, opacity: 1 }}
+                        animate={{ y: [0, 10, 0], opacity: [1, 0.7, 1] }}
+                        transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+                        className="flex flex-col items-center"
+                    >
+                        <span className="block w-1.5 h-8 bg-sky-700 rounded-full mb-1" />
+                        <svg width="24" height="24" fill="none" className="animate-bounce">
+                            <path d="M12 16V4M12 16l-5-5M12 16l5-5" stroke="#0369a1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span className="text-xs text-gray-500 mt-1">Scroll</span>
+                    </motion.div>
+                </div>
+
+                <Index />
 
                 {/* Education Section */}
                 <motion.section

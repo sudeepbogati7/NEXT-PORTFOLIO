@@ -89,8 +89,6 @@ export default function ContactPage() {
                 {/* Social Media Links */}
                 <Card className="w-full md:w-96 p-6 bg-white">
                     <div className="space-y-6">
-                        <h2 className="text-xl font-bold text-gray-900">Connect with me</h2>
-
                         <div className="flex justify-center">
                             <Image src={'/contact_me.svg'} width={224} height={224} alt="contact illustration"></Image>
                         </div>
