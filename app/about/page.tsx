@@ -61,13 +61,13 @@ export default function AboutPage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="md:w-4/6 w-full mx-auto  flex flex-col lg:flex-row items-center gap-8 mb-16">
+                <div className="md:w-4/6 p-6 w-full mx-auto  flex flex-col lg:flex-row items-center gap-8 mb-16">
                     <motion.div className="relative" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
 
 
                         {/* Image Container with Mask */}
                         <div
-                            className="rounded-2xl overflow-hidden "
+                            className=" w-fit md:w-[500px] mx-auto rounded-2xl overflow-hidden "
                         >
                             <Image
                                 width={500}
@@ -75,7 +75,7 @@ export default function AboutPage() {
                                 src="/new_profile.png"
                                 alt="Sudeep Bogati"
                                 className="object-cover drop-shadow-xl"
-                                sizes="(max-width: 768px) 100vw, 256px"
+                                sizes="(max-width: 768px) 100vw, 106px"
                                 style={{
                                     maskImage: "url('/clip-path.svg')",
                                     maskRepeat: 'no-repeat',
