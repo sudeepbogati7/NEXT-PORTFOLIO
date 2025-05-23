@@ -191,7 +191,7 @@ export default function Certifications() {
                         <div className="w-16 h-px bg-stone-300"></div>
                     </div>
                     <p className="text-gray-500 mt-4 italic font-serif">
-                        `&quot;`The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice.`&quot;`
+                        &quot;The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice.&quot;
                     </p>
                     <p className="text-gray-600 mt-2 text-sm">— Brian Herbert</p>
                 </div>
