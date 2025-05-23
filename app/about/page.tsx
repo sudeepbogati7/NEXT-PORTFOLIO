@@ -5,7 +5,8 @@ import Image from "next/image"
 import { GraduationCap, Briefcase, Heart, Mail, Linkedin, Github } from "lucide-react"
 import './about.css'
 import { SvgComponent1 } from "@/components/SvgFrame"
-import Index from "./scroll"
+import Index from "./components/introScrollHeadings"
+import WorkExperience from "./components/work-experience"
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -165,6 +166,7 @@ export default function AboutPage() {
 
                 <Index />
 
+                <WorkExperience />
                 {/* Volunteering Section */}
                 {/* <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
                     <div className="bg-gray-50 rounded-lg border border-gray-200 shadow-sm">

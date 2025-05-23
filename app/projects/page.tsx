@@ -101,10 +101,10 @@ export default function Projects() {
                 </motion.div>
 
                 <Tabs defaultValue="featured" className="mb-16">
-                    <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-8">
-                        <TabsTrigger value="featured">Featured</TabsTrigger>
-                        <TabsTrigger value="apis">APIs</TabsTrigger>
-                        <TabsTrigger value="small">Small Projects</TabsTrigger>
+                    <TabsList className="flex items-center justify-between w-full max-w-4xl py-8 px-4  gap-4  mx-auto grid-cols-3 mb-8">
+                        <TabsTrigger  className="w-1/3 " value="featured">Featured</TabsTrigger>
+                        <TabsTrigger className="w-1/3 " value="apis">APIs</TabsTrigger>
+                        <TabsTrigger value="small" className="w-1/3 ">Small Projects</TabsTrigger>
                     </TabsList>
 
                     <TabsContent value="featured" className="space-y-12">

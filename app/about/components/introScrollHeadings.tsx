@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ReactLenis } from 'lenis/react';
 import { GraduationCap } from 'lucide-react';
 import Image from 'next/image';
-import WorkExperience from './work-experience';
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -178,10 +177,6 @@ export default function Index(): JSX.Element {
                         </div>
                     </div>
                 </section>
-
-
-              <WorkExperience />
-
                 {/* <section className='text-white z-40  w-full bg-slate-950  '>
                     <div className='grid grid-cols-2 px-8'>
                         <div className='grid gap-2'>

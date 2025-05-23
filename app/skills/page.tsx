@@ -18,6 +18,7 @@ import InteractiveSoftSkills from "./soft-skills";
 import { softSkills } from "@/data/skills";
 import { certifications } from "@/data/certifications";
 import Certifications from "./components/certifications";
+import FallingText from "./components/falling-text";
 
 
 export default function Skills() {
@@ -70,6 +71,19 @@ export default function Skills() {
                     </div>
                 </div>
 
+
+                <div className="w-full lg:4/6 md:w-5/6 mx-auto h-[30vh]"> <FallingText
+                    text={`I expertise in Full Stack Development with Python, Django, FastAPI, AI, Langchain, JavaScript, React, Next.js, Tailwind CSS, PostgreSQL, Docker, and Linux.`}
+                    highlightWords={["React", "Django", "FastAPI", "AI", "Docker", "Linux", "Python", 'JavaScript']}
+                    highlightClass="highlighted"
+                    trigger="hover"
+                    backgroundColor="transparent"
+                    wireframes={false}
+                    gravity={0.56}
+                    fontSize="2rem"
+                    mouseConstraintStiffness={0.9}
+                />
+                </div>
 
                 {/* [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] */}
                 <div id="tech-stack" className="scroll imgBox md:w-4/6 w-full px-8 h-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
