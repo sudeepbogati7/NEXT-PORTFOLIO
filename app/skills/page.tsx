@@ -9,92 +9,28 @@ import { Braces } from 'lucide-react'
 import Nav from "@/components/nav";
 import { ExternalLink, Medal } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
 import { MessageSquare, Users, Brain, Trophy, Shuffle, GraduationCap, Sparkles } from "lucide-react"
 import TechTabs from "./tech-tabs-horizontal";
 import InteractiveSoftSkills from "./soft-skills";
+
+
+// data
+import { softSkills } from "@/data/skills";
+import { certifications } from "@/data/certifications";
+import Certifications from "./components/certifications";
+
+
 export default function Skills() {
     useEffect(() => {
         AOS.init({ duration: 900 }); // Initialize AOS with a duration of 1000ms
     }, []);
 
 
-
-    const softSkills = [
-        {
-            name: "Communication Skills",
-            icon: MessageSquare,
-        },
-        {
-            name: "Teamwork and Collaboration",
-            icon: Users,
-        },
-        {
-            name: "Problem-Solving and Critical Thinking",
-            icon: Brain,
-        },
-        {
-            name: "Leadership and Management",
-            icon: Trophy,
-        },
-        {
-            name: "Adaptability and Flexibility",
-            icon: Shuffle,
-        },
-        {
-            name: "Personal Development",
-            icon: GraduationCap,
-        },
-    ]
-
-    const certifications = [
-        {
-            logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg",
-            title: "Fortinet Certified Fundamentals in Cybersecurity",
-            issuer: "Fortinet",
-            date: "Feb 2025",
-            credentialLink: "https://training.fortinet.com/pluginfile.php/1/tool_certificate/issues/1740675772/8926231707SB.pdf",
-        },
-        {
-            logo: "/freecodecamp.svg",
-            title: "Foundational C# with Microsoft",
-            issuer: "FreeCodeCamp",
-            date: "Feb 2025",
-            credentialLink: "https://www.freecodecamp.org/certification/sudeepbogati1/foundational-c-sharp-with-microsoft",
-        },
-        {
-            logo: "/aws.svg",
-            title: "AWS Cloud Technical Essentials",
-            issuer: "Amazon Web Services",
-            date: "March 2024",
-            credentialLink: "https://www.coursera.org/account/accomplishments/certificate/Y4NPZGC92EKD",
-        },
-        {
-            logo: "/meta.png",
-            title: "React",
-            issuer: "Meta",
-            date: "Feb 2024",
-            credentialLink: "https://www.coursera.org/account/accomplishments/certificate/6WQVDPNQP299",
-        },
-        {
-            logo: "/meta.png",
-            title: "Programming with JavaScript",
-            issuer: "Meta",
-            date: "Sept 2023",
-            credentialLink: "https://www.coursera.org/account/accomplishments/certificate/3SK63CHTPMZE",
-        },
-        {
-            logo: "/dl.png",
-            title: "Deep Learning and Neural Networks",
-            issuer: "DeepLearning.AI",
-            date: "Sept 2023",
-            credentialLink: "https://www.coursera.org/account/accomplishments/certificate/AXVXYG72PSD8",
-        },
-
-    ]
     return (
         <>
             <section className="my-24">
+                <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_top,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
+
                 <div className="flex   mx-auto p-4 md:w-4/6 w-full flex-col lg:flex-row items-center gap-8 mb-16">
                     {/* Left Column - Illustration */}
                     <div data-aos="fade-right" className="w-3/6  lg:w-2/6 flex justify-center">
@@ -426,73 +362,10 @@ export default function Skills() {
                     </div>
                 </div>
                 <div id="certifications" className="my-4 font-sans">
-                    <h1 className="flex items-center gap-2 font-bold text-xl mx-auto w-fit mb-6 mt-14">
-                        <Medal className="h-6 w-6 text-primary" />
-                        License and Certifications
-                    </h1>
-
-                    <div className="flex flex-col w-full xl:w-2/3 mx-auto px-4 items-center justify-center md:flex-row gap-6">
-                        <div className="flex flex-col gap-4 w-full  justify-center">
-                            {certifications.slice(0, 3).map((cert, index) => (
-                                <div
-                                    key={index}
-                                    className="w-full bg-white hover:bg-gray-100/80 transition-colors shadow-lg flex justify-start p-4 rounded-lg mx-auto gap-4 border border-gray-400"
-                                >
-                                    <div className="p-4 w-fit">
-                                        <Image
-                                            src={cert.logo || "/placeholder.svg"}
-                                            width={60}
-                                            height={40}
-                                            alt={`${cert.issuer} certification logo`}
-                                        />
-                                    </div>
-                                    <div className="w-fit flex flex-col">
-                                        <h2 className="font-semibold">{cert.title}</h2>
-                                        <h3>{cert.issuer}</h3>
-                                        <time className="text-gray-500">Issued {cert.date}</time>
-                                        <Link className="py-2" target="_blank" href={cert.credentialLink}>
-                                            <span className="flex text-sm items-center gap-2 bg-gray-200 hover:bg-gray-300 transition-colors px-2 border border-gray-500 rounded-lg w-fit text-gray-700">
-                                                Show credential
-                                                <ExternalLink className="h-4 w-4" />
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="flex w-full flex-col gap-4  justify-center">
-                            {certifications.slice(3).map((cert, index) => (
-                                <div
-                                    key={index}
-                                    className="w-full bg-gray-50 hover:bg-gray-100/80 transition-colors shadow-lg flex justify-start p-4 rounded-lg mx-auto gap-4 border border-gray-400"
-                                >
-                                    <div className="p-4 w-fit">
-                                        <Image
-                                            src={cert.logo || "/logo.png"}
-                                            width={60}
-                                            height={40}
-                                            alt={`${cert.issuer} certification logo`}
-                                        />
-                                    </div>
-                                    <div className="w-fit flex flex-col">
-                                        <h2 className="font-semibold">{cert.title}</h2>
-                                        <h3>{cert.issuer}</h3>
-                                        <time className="text-gray-500">Issued {cert.date}</time>
-                                        <Link className="py-2" target="_blank" href={cert.credentialLink}>
-                                            <span className="flex text-sm items-center gap-2 bg-gray-200 hover:bg-gray-300 transition-colors px-2 border border-gray-500 rounded-lg w-fit text-gray-700">
-                                                Show credential
-                                                <ExternalLink className="h-4 w-4" />
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <Certifications />
                 </div>
             </section>
-          
+
         </>
     )
 }
