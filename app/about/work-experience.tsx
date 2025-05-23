@@ -1,12 +1,11 @@
-// @ts-nocheck
 'use client';
 
 import { useScroll, useTransform, motion } from 'motion/react';
 import { useEffect, useRef } from 'react';
 import WorkTimeline from './work-timeline-component';
-
+import Image from 'next/image';
 export default function WorkExperience() {
-  const container = useRef();
+  const container = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start start', 'end end'],
@@ -22,7 +21,7 @@ export default function WorkExperience() {
   );
 }
 
-const Section1 = ({ scrollYProgress }) => {
+const Section1 = ({ scrollYProgress }: any) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   return (
@@ -33,12 +32,11 @@ const Section1 = ({ scrollYProgress }) => {
       <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
 
       <div className=" w-full  max-w-[280px] ">
-        <img
-          src="/professional.svg"
-          alt="Career growth illustration"
+        <Image
+          src={"/professional.svg"}
+          alt={"Career growth illustration"}
           width={280}
           height={200}
-          // className="object-contain"
         />
       </div>
       <h1 className='2xl:text-7xl top-2 w-full md:w-4/6 mx-auto text-transparent bg-gradient-to-br from-sky-700 to-sky-300 bg-clip-text text-5xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
@@ -48,7 +46,7 @@ const Section1 = ({ scrollYProgress }) => {
   );
 };
 
-const Section2 = ({ scrollYProgress }) => {
+const Section2 = ({ scrollYProgress } : any) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
 
