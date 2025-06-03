@@ -11,15 +11,24 @@ import { BackgroundLines } from '@/components/ui/background-lines';
 import 'aos/dist/aos.css';
 import SocialLinks from '@/components/SocialLinks';
 import MyServices from '@/components/MyServices';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Copy, Globe, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { Link as LinkIcon } from 'lucide-react';
 // import DevelopmentSteps from '@/components/DevSteps';
 
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const [copied, setCopied] = useState(false);
+  const darkWebLink = 'yehe256alulvglz6brpih7vybd5jebzy3mphnyorist2pqm22lhhakyd.onion';
+  const displayedLink = 'yehe256alulv...lhhakyd.onion';
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(darkWebLink);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -310,6 +319,74 @@ export default function Home() {
             >
               <SocialLinks />
             </motion.div>
+
+            <motion.div
+              className="mt-6 flex flex-col  w-fit items-center justify-center gap-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.1 }}
+            >
+              <div className="flex flex-col gap-2 bg-gray-100 p-2 rounded-xl   mx-auto border shadow-sm">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 1.3 }}
+                >
+                  <div className="flex items-center gap-2">
+                    <div className='flex flex-col gap-1'>
+                      <div className='text-gray-500 pl-1 text-sm flex items-center'> Find me on dark web.</div>
+                      <div className='flex gap-1'>
+                        <Link
+                          href={`http://${darkWebLink}`}
+                          className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors group"
+                        >
+                          <LinkIcon className="w-4 h-4 group-hover:text-sky-600 transition-colors" />
+                          <span className="group-hover:text-sky-600 transition-colors">
+                            {displayedLink}
+                          </span>
+                        </Link>
+                        <button
+                          onClick={handleCopy}
+                          className="p-1 rounded-md hover:bg-gray-100 transition-colors relative"
+                          aria-label="Copy dark web link"
+                        >
+                          <Copy className="w-4 h-4 text-gray-600 hover:text-sky-600 transition-colors" />
+                          {copied && (
+                            <motion.span
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="absolute top-[-2rem] left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded"
+                            >
+                              Copied!
+                            </motion.span>
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+              <div className='flex flex-col gap-2 bg-gray-100 p-2 rounded-xl w-full mx-auto border shadow-sm'>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 1.5 }}
+                >
+                  <Link
+                    href="https://sudeep.is-a.dev"
+                    target='_blank'
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 pl-2 text-gray-600 hover:text-sky-600 transition-colors group"
+                  >
+                    <Globe className="w-4 h-4 group-hover:text-sky-600 transition-colors" />
+                    <span className="group-hover:text-sky-600 transition-colors">sudeep.is-a.dev</span>
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+
+
           </motion.div>
         </div>
       </motion.main>
