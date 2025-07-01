@@ -62,7 +62,7 @@ export default function Index(): JSX.Element {
                         <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
                         <div className=" md:w-4/6 w-full mx-auto flex flex-col items-center gap-6">
                             <h1 className='2xl:text-7xl text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
-                                From learning loops to professional pipelines — I turned theory into action, challenges into projects, and passion into profession.
+                                From learning loops to professional pipelines — Turning theory into action, challenges into projects, and passion into profession.
                             </h1>
                             <div className="flex gap-6 justify-center mt-4">
                                 <svg width="48" height="48" className="text-sky-600" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><use href="#icon-book-open" /></svg>
@@ -137,35 +137,35 @@ export default function Index(): JSX.Element {
                                 </div>
                             </div>
                         </div>
-                        <div className='gap-2 hidden md:grid '>
-                            <figure className='grid place-content-center -skew-x-12'>
+                        <div className='gap-6 hidden md:grid '>
+                            <figure className='grid place-content-center '>
                                 <Image
-                                    src='https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop'
+                                    src='/college-images/col1_1.jpeg'
                                     alt=''
                                     width={320}
                                     height={384}
                                     className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
                                 />
                             </figure>
-                            <figure className='grid place-content-center skew-x-12'>
+                            {/* <figure className='grid place-content-center'>
                                 <Image
-                                    src='https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop'
+                                    src='/college-images/col2.jpeg'
+                                    alt=''
+                                    width={320}
+                                    height={384}
+                                    className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
+                                />
+                            </figure> */}
+                            <figure className='grid place-content-center '>
+                                <Image
+                                    src='/college-images/col3.jpeg'
                                     alt=''
                                     width={320}
                                     height={384}
                                     className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
                                 />
                             </figure>
-                            <figure className='grid place-content-center -skew-x-12'>
-                                <Image
-                                    src='https://images.unsplash.com/photo-1718601980986-0ce75101d52d?w=500&auto=format&fit=crop'
-                                    alt=''
-                                    width={320}
-                                    height={384}
-                                    className='transition-all duration-300 w-80 h-96  align-bottom object-cover '
-                                />
-                            </figure>
-                            <figure className='grid place-content-center skew-x-12'>
+                            <figure className='grid place-content-center'>
                                 <Image
                                     src='https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop'
                                     alt=''

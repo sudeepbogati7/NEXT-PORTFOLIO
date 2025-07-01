@@ -77,7 +77,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 href={"/about"}
                 className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                About me
+                Who am I? 
               </Link>
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {navDescriptions["/about"]}
@@ -197,7 +197,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
 }
 
 const menuItems = [
-  { href: "/about", label: "About me", icon: <User size={20} className="" /> },
+  { href: "/about", label: "Who am I? ", icon: <User size={20} className="" /> },
   { href: "/skills", label: "Skills", icon: <Code size={20} /> },
   { href: "/projects", label: "Projects", icon: <BookOpen size={20} /> },
   {
