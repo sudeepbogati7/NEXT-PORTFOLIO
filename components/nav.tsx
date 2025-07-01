@@ -38,12 +38,6 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
   }
 
   // Skills sub-links
-  const skillsSubLinks = [
-    { href: "/skills#tech-stack", label: "Tech Stack" },
-    { href: "/skills#soft-skills", label: "Soft Skills" },
-    { href: "/skills#certifications", label: "Certifications" }
-  ]
-
   return (
     <>
       <nav
@@ -77,7 +71,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 href={"/about"}
                 className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                Who am I? 
+                Who am I?
               </Link>
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {navDescriptions["/about"]}
@@ -92,40 +86,17 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 className="transition-colors hover-underline-animation left w-fit hover:text-sky-500 flex items-center gap-1"
               >
                 <div className="flex gap-1 items-center">Skills
-                  <span> <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform duration-200 group-hover:rotate-180"
-                  >
-                    <path d="m6 9 6 6 6-6" />
-                  </svg></span></div>
+                </div>
               </Link>
 
               {/* Tooltip */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-0 transition-all duration-200 z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {navDescriptions["/skills"]}
                 <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></div>
               </div>
 
               {/* Skills dropdown */}
-              <div className="absolute left-0 top-full mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {skillsSubLinks.map((subItem) => (
-                  <Link
-                    key={subItem.href}
-                    href={subItem.href}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-600"
-                  >
-                    {subItem.label}
-                  </Link>
-                ))}
-              </div>
+
             </span>
 
             {/* Projects - with tooltip */}
@@ -134,7 +105,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 href={"/projects"}
                 className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                Projects
+                Stuff I’ve Built
               </Link>
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 {navDescriptions["/projects"]}
@@ -149,7 +120,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
                 href={"https://blogs.sudipbogati.com.np"}
                 className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
               >
-                Blogs
+                What I’m Exploring
               </Link>
               <ExternalLink size={14} />
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -199,10 +170,10 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
 const menuItems = [
   { href: "/about", label: "Who am I? ", icon: <User size={20} className="" /> },
   { href: "/skills", label: "Skills", icon: <Code size={20} /> },
-  { href: "/projects", label: "Projects", icon: <BookOpen size={20} /> },
+  { href: "/projects", label: "Stuff I’ve Built", icon: <BookOpen size={20} /> },
   {
     href: "https://blogs.sudipbogati.com.np",
-    label: "Blogs",
+    label: "What I’m Exploring",
     icon: <BookOpen size={20} />,
     external: true,
   },
