@@ -151,7 +151,7 @@ export default function Home() {
   return (
     <>
       <motion.main
-        className="overflow-hidden w-full md:container  mx-auto"
+        className="overflow-hidden w-full   mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -166,7 +166,7 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className="relative z-10 mt-16 flex flex-col-reverse h-full  lg:flex-row  lg:w-4/5 mx-auto items-center justify-center w-full">
+        <div className="relative max-w-7xl z-10 mt-32 flex flex-col-reverse  h-full  lg:flex-row  mx-auto items-center justify-center w-full">
           {/* Left Content */}
           <motion.div
             className="px-4 md:px-2 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2"

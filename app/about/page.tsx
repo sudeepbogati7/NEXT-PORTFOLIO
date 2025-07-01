@@ -70,7 +70,7 @@ export default function AboutPage() {
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-200/10 to-blue-200/10 rounded-full blur-3xl"></div>
                     </div>
 
-                    <div className="relative z-10 container mx-auto px-6 py-20">
+                    <div className="relative z-10  mx-auto px-6 py-20">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
                             {/* Image Section */}
                             <motion.div
@@ -81,12 +81,12 @@ export default function AboutPage() {
                             >
                                 {/* Decorative Background Elements */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-blue-600/20 rounded-3xl transform rotate-6 scale-105"></div>
-                                <div className="absolute inset-0 bg-gradient-to-tl from-purple-400/15 to-pink-500/15 rounded-3xl transform -rotate-3 scale-110"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tl from-purple-400/15 to-indigo-500/15 rounded-3xl transform -rotate-3 scale-110"></div>
 
                                 {/* Main Image Container */}
                                 <div className="relative w-80 h-80 md:w-96 md:h-96">
                                     {/* Gradient Border */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-blue-500 to-purple-600 rounded-3xl p-1">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 rounded-3xl p-1">
                                         <div className="w-full h-full bg-white rounded-3xl overflow-hidden">
                                             <Image
                                                 width={400}
@@ -132,7 +132,7 @@ export default function AboutPage() {
                             </motion.div>
 
                             {/* Content Section */}
-                            <div className="flex-1 text-center lg:text-left max-w-2xl">
+                            <div className="w-full flex-1 text-center lg:text-left max-w-4xl">
                                 <motion.div
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -181,17 +181,17 @@ export default function AboutPage() {
                                     transition={{ delay: 0.6, duration: 0.6 }}
                                 >
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-gray-900">5+</div>
+                                        <div className="text-2xl font-bold text-gray-900">1+</div>
                                         <div className="text-sm text-gray-600">Years Experience</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-gray-900">50+</div>
+                                        <div className="text-2xl font-bold text-gray-900">10+</div>
                                         <div className="text-sm text-gray-600">Projects Completed</div>
                                     </div>
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-gray-900">100%</div>
-                                        <div className="text-sm text-gray-600">Client Satisfaction</div>
-                                    </div>
+                                    {/* <div className="text-center">
+                                        <div className="text-2xl font-bold text-gray-900"></div>
+                                        <div className="text-sm text-gray-600">Companies Worked With</div>
+                                    </div> */}
                                 </motion.div>
 
                                 {/* Action Buttons */}
