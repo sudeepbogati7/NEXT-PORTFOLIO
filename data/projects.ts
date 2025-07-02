@@ -2,6 +2,59 @@
 // Mock data for projects
 export const projectsData = [
     {
+        id: "deepCyberQ",
+        title: "DeepCyberQ ",
+        date: "March, 2025",
+        description:
+            "DeepCyber! is an AI chatbot to query about recent threats and news around the world among several topics.",
+        technologies: [
+            { name: "typescript" },
+            { name: "next.js" },
+            { name: "tailwindCSS" },
+            { name: "FastAPI" },
+            { name: "Langchain" },
+            { name: "RAG" },
+            { name: "FAISS" },
+        ],
+        features: [
+            {
+                title: "Real-time Cyber Threat News",
+                description: "Stay updated with the latest global cyber threat intelligence by chatting with the AI chatbot in real time.",
+            },
+            {
+                title: "RAG-powered Threat Analysis",
+                description: "Utilizes Retrieval-Augmented Generation (RAG) to fetch the most recent and relevant cyber threat reports from trusted sources.",
+            },
+            {
+                title: "LangChain Integration",
+                description: "Seamlessly integrates LangChain to orchestrate prompt engineering, data retrieval, and conversation flow.",
+            },
+            {
+                title: "Interactive Chat Interface",
+                description: "Engage with a responsive and intelligent chatbot that can explain threats, suggest preventive actions, and clarify security trends.",
+            },
+            {
+                title: "Filter Threats by Category",
+                description: "Easily filter threat news based on categories like phishing, ransomware, data breaches, and nation-state attacks for focused insights.",
+            },
+            {
+                title: "Visual Threat Dashboard",
+                description: "Analyze threat trends using graphical dashboards showing threat frequency, severity, and category distribution over time.",
+            },
+        ],
+        images: [
+            { src: "/deep-cyber-q/homepage.png", alt: "Home page" },
+            { src: "/deep-cyber-q/news.png", alt: "Deep Cyber Q" },
+            { src: "/deep-cyber-q/chat2.png", alt: "Deep Cyber Q" },
+            { src: "/deep-cyber-q/chat3.png", alt: "Deep Cyber Q" },
+        ],
+        liveUrl: "https://kharcha.sudipbogati.com.np/",
+        githubUrl: "https://github.com/sudeepbogati7/Expense-tracking-System",
+        bgColor: "bg-sky-100",
+    },
+
+
+    {
         id: "expense-tracker",
         title: "Kharcha ",
         date: "April 2, 2024",
