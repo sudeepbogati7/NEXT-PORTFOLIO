@@ -89,7 +89,7 @@ export default function Projects() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-            <main className="md:container mx-auto py-20 px-4 font-sans">
+            <main className=" max-w-7xl mx-auto py-20 px-4 font-sans">
                 <motion.div initial="hidden" animate="visible" variants={fadeIn} className="text-center mb-16">
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
                         <span className="text-blue-600">Projects</span> that I Have Built
@@ -101,7 +101,7 @@ export default function Projects() {
                 </motion.div>
 
                 <Tabs defaultValue="featured" className="mb-16">
-                    <TabsList className="flex items-center justify-between w-full max-w-4xl py-8 px-4  gap-4  mx-auto grid-cols-3 mb-8">
+                    <TabsList className="flex items-center justify-between w-full max-w-4xl py-5 px-4  gap-4  mx-auto grid-cols-3 mb-8">
                         <TabsTrigger  className="w-1/3 " value="featured">Featured</TabsTrigger>
                         <TabsTrigger className="w-1/3 " value="apis">APIs</TabsTrigger>
                         <TabsTrigger value="small" className="w-1/3 ">Small Projects</TabsTrigger>
@@ -339,7 +339,6 @@ export default function Projects() {
                                     <Card className="h-full border-0 bg-transparent transition-all duration-300 hover:shadow-lg">
                                         <CardHeader>
                                             <CardTitle className="text-lg">{project.title}</CardTitle>
-                                            {project.date && <CardDescription>{project.date}</CardDescription>}
                                         </CardHeader>
                                         <CardContent className="space-y-4">
                                             {project.image && (
@@ -375,16 +374,7 @@ export default function Projects() {
                                                     </motion.div>
                                                 ))}
                                             </motion.div>
-                                            {project.features && (
-                                                <div>
-                                                    <h3 className="font-semibold text-sm mb-2">Features</h3>
-                                                    <ul className="list-disc pl-5 space-y-1 text-sm">
-                                                        {project.features.map((feature, i) => (
-                                                            <li key={i}>{feature}</li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            )}
+                                          
                                         </CardContent>
                                         <CardFooter className="flex gap-4">
                                             {project.liveUrl && (

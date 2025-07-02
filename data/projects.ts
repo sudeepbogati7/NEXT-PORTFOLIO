@@ -48,8 +48,7 @@ export const projectsData = [
             { src: "/deep-cyber-q/chat2.png", alt: "Deep Cyber Q" },
             { src: "/deep-cyber-q/chat3.png", alt: "Deep Cyber Q" },
         ],
-        liveUrl: "https://kharcha.sudipbogati.com.np/",
-        githubUrl: "https://github.com/sudeepbogati7/Expense-tracking-System",
+        githubUrl: "https://github.com/sudeepbogati7/threat-news-summarizer",
         bgColor: "bg-sky-100",
     },
 
@@ -140,41 +139,6 @@ export const projectsData = [
         githubUrl: "https://github.com/sudeepbogati7/Node.js-Realtime-Chat-App-",
         bgColor: "bg-blue-100",
     },
-    {
-        id: "blog-app",
-        title: "Create Blogs Application",
-        date: "Sept 26, 2023",
-        description:
-            "Built a blog application using Node.js and Express with server-side rendering. Implemented user login and logout, and features for adding, deleting, and editing blogs. Utilized JWT for secure authentication, showcasing my skills in backend development and user authentication.",
-        technologies: [
-            { name: "typescript" },
-            { name: "node.js" },
-            { name: "express.js" },
-            { name: "jwt" },
-            { name: "joi" },
-        ],
-        features: [
-            {
-                title: "User Authentication",
-                description: "Secure login and registration system",
-            },
-            {
-                title: "Blog Management",
-                description: "Create, edit, and delete blog posts",
-            },
-            {
-                title: "Server-side Rendering",
-                description: "Fast page loads and SEO-friendly content",
-            },
-        ],
-        images: [
-            { src: "/create-blog1.png", alt: "Blog app preview" },
-            { src: "/create-blog3.png", alt: "Blog post creation" },
-        ],
-        liveUrl: "https://createyourownblogs.onrender.com/",
-        githubUrl: "https://github.com/sudeepbogati7/CreateBlog_NODE.js?tab=readme-ov-file",
-        bgColor: "bg-purple-50",
-    },
 ]
 
 
@@ -196,6 +160,21 @@ export const apiProjectsData = [
             "A backend API with two user roles: Organizers and Attendees. Organizers can create tickets for events, sell tickets and attendees can purchase.",
         technologies: ["JavaScript", "express.js", "mysql2", "node.js", "bcrypt", "jwt", "sequelize ORM"],
         githubUrl: "https://github.com/sudeepbogati7/Event-Ticket-Manager-App-NODE.js.-MySQL",
+    },
+    {
+        title: "Human Resource Management System API",
+        description:
+            "The backend application API which allows you to fetch the information of HR, Jobs, and candidates for the respective job",
+        date: "Feb, 2024",
+        technologies: ["JavaScript", "express.js", "node.js", "jwt", "nodemailer", "multer", "mongoDB"],
+        features: [
+            "Only HR/Admin can register to the system and has the most authorities.",
+            "HR can post, update and delete jobs.",
+            "An automated email is sent to the HRs email-address when the new Job is posted.",
+            "Candidates are allowed to see all the jobs and can apply any job.",
+        ],
+        githubUrl: "https://github.com/sudeepbogati7/HRM-System",
+        bgColor: "bg-gray-100",
     },
     {
         title: "Task Management System",
@@ -224,33 +203,7 @@ export const smallProjectsData = [
         githubUrl: "https://github.com/sudeepbogati7/python-script-for-multimedia-gestures",
         bgColor: "bg-blue-50",
     },
-    {
-        title: "Human Resource Management System API",
-        description:
-            "The backend application API which allows you to fetch the information of HR, Jobs, and candidates for the respective job",
-        date: "Feb, 2024",
-        technologies: ["JavaScript", "express.js", "node.js", "jwt", "nodemailer", "multer", "mongoDB"],
-        features: [
-            "Only HR/Admin can register to the system and has the most authorities.",
-            "HR can post, update and delete jobs.",
-            "An automated email is sent to the HRs email-address when the new Job is posted.",
-            "Candidates are allowed to see all the jobs and can apply any job.",
-            "Candidates will receive an email to confirm their application is submitted successfully.",
-            "Only HR has the permission to see the job applications.",
-        ],
-        githubUrl: "https://github.com/sudeepbogati7/HRM-System",
-        bgColor: "bg-gray-100",
-    },
-    {
-        title: "My AI Chatbot",
-        description:
-            "Developed a fully responsive chatbot to integrate on websites as a chat assistant. Used OpenAI API for response text.",
-        technologies: ["JavaScript", "HTML5", "CSS3", "OpenAI API"],
-        image: "/chatbot.png",
-        liveUrl: "#",
-        githubUrl: "https://github.com/sudeepbogati7/My-Chat-Bot",
-        bgColor: "bg-gray-100",
-    },
+
     {
         title: "Image Search App",
         description:
@@ -277,5 +230,16 @@ export const smallProjectsData = [
         technologies: ["bash", "shell"],
         githubUrl: "https://github.com/sudeepbogati7/Shell-Scripts-for-Debian-",
         bgColor: "bg-red-50",
+    },
+
+    {
+        title: "My AI Chatbot",
+        description:
+            "Developed a fully responsive chatbot to integrate on websites as a chat assistant. Used OpenAI API for response text.",
+        technologies: ["JavaScript", "HTML5", "CSS3", "OpenAI API"],
+        image: "/chatbot.png",
+        liveUrl: "#",
+        githubUrl: "https://github.com/sudeepbogati7/My-Chat-Bot",
+        bgColor: "bg-gray-100",
     },
 ]
