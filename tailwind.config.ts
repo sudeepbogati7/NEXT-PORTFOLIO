@@ -26,7 +26,6 @@ const config: Config = {
         'sorts-mill-goudy': ['"Sorts Mill Goudy"', 'serif'],
         'rowdies': ['"Rowdies"', 'sans-serif'],
         'merienda' : ['"Merienda"', 'cursive;']
-
       },
       keyframes: {
         scroll: {
