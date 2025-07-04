@@ -135,8 +135,6 @@ export default function ContactPage() {
                         </div>
                     </div>
                 </Card>
-
-                {/* Contact Form */}
                 <Card className="w-full max-w-xl p-6 bg-white">
                     <div className="space-y-6">
                         <h1 className="text-3xl font-bold text-gray-900">Contact me</h1>
