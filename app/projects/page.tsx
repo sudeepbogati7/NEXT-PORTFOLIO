@@ -86,7 +86,6 @@ export default function Projects() {
             transition: { duration: 0.3 },
         },
     }
-
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
             <main className=" max-w-6xl mx-auto py-20 px-4 font-sans">
