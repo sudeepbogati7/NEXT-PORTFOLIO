@@ -82,7 +82,6 @@ export default function ContactPage() {
             })
         }
     }, [state.errors, toast])
-
     return (
         <main className="flex flex-col items-center justify-center p-4 mt-12 ">
             <div className="w-full max-w-6xl px-4  flex flex-col md:flex-row gap-6">
