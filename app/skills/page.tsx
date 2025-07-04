@@ -25,8 +25,6 @@ export default function Skills() {
     useEffect(() => {
         AOS.init({ duration: 900 }); // Initialize AOS with a duration of 1000ms
     }, []);
-
-
     return (
         <>
             <section className="my-24">
