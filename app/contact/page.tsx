@@ -91,12 +91,10 @@ export default function ContactPage() {
                         <div className="flex justify-center">
                             <Image src={'/contact_me.svg'} width={224} height={224} alt="contact illustration"></Image>
                         </div>
-
                         <p className=" text-justify text-gray-600">
                             I&apos;m always excited to connect with fellow developers, potential collaborators, and anyone interested in my
                             work. Feel free to reach out through any of the following channels.
                         </p>
-
                         <div className="space-y-4">
                             <a
                                 href="https://github.com/sudeepbogati7"
