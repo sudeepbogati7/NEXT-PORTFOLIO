@@ -147,8 +147,6 @@ export default function InteractiveSoftSkills() {
                 <Sparkles className="w-6 h-6 text-sky-700" />
                 Soft Skills
             </motion.div>
-
-
             <div className="md:w-4/6 w-full  mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-10 gap-8">
                     {/* Left side - Skills list */}
