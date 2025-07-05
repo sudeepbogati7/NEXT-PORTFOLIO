@@ -70,8 +70,6 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
-
-
                 <div className="w-full max-w-6xl mx-auto font-black-ops-one h-[30vh]"> <FallingText
                     text={`I expertise in Full Stack Development with Python, Django, FastAPI, AI, Langchain, JavaScript, React, Next.js, Tailwind CSS, PostgreSQL, Docker, and Linux.`}
                     highlightWords={["React", "Django", "FastAPI", "AI", "Docker", "Linux", "Python", 'JavaScript']}
