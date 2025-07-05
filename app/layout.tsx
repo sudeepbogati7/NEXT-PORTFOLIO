@@ -50,11 +50,8 @@ export default function RootLayout({
         <meta name="keywords" content="Sudip Bogati, Sudeep Bogati, Sudeep Bogati Software Engineer, ASCOL, software engineer, software engineer from nepal, software developer, software developer from nepal, talented software developer from nepal, IT, software, engineer, nepal, nepali in IT, developer, engineer, green tick nepal, digitalize business, sudeep, bogati, sudip, bogati, boy, greentick, sudeepbogati, sudipbogati, Software Engineer, portfolio, skills, web developer, projects" />
         <link rel="canonical" href="https://sudipbogati.com.np" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5570809106422894" crossOrigin="anonymous"></script>
-
-
         <script defer src="https://cloud.umami.is/script.js" data-website-id="e1b474a2-bdcd-4552-9eab-89f9f8a3fea6"></script>
         <script defer src="https://analytics.sudipbogati.com.np/script.js" data-website-id="bc85fa94-16c1-421b-8800-08fda1b69b7f"></script>
-
         <meta property="og:title" content="Sudeep Bogati - Software Engineer" />
         <meta property="og:description" content="Hello, this is Sudeep Bogati, a passionate Software Engineer from Nepal. Explore my projects and skills in Full Stack Software Development." />
         <meta property="og:url" content="https://sudipbogati.com.np" />
@@ -105,12 +102,10 @@ export default function RootLayout({
         </script>
       </head>
       <body className={`bg-gray-50 font-fraunces`}>
-
         <AuthProvider>
           <Toaster />
           <Nav />
           <main className="pt-20 pb-12">{children}</main>
-          
         </AuthProvider>
       </body>
     </html>
