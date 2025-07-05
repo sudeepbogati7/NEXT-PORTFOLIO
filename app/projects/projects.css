@@ -4,11 +4,9 @@
     border-radius: 0.5rem;
     overflow: hidden;
 }
-
 .image-container img {
     display: block;
 }
-
 .image-container.fullscreen {
     position: fixed;
     top: 0;
