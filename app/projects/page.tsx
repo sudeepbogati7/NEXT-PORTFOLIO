@@ -57,7 +57,6 @@ export default function Projects() {
             [projectId]: !prev[projectId],
         }))
     }
-
     // Animation variants
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
@@ -67,7 +66,6 @@ export default function Projects() {
             transition: { duration: 0.5 },
         },
     }
-
     const staggerContainer = {
         hidden: { opacity: 0 },
         visible: {
@@ -77,7 +75,6 @@ export default function Projects() {
             },
         },
     }
-
     const staggerItem = {
         hidden: { opacity: 0, y: 10 },
         visible: {
