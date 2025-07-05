@@ -129,7 +129,6 @@ export default function InteractiveSoftSkills() {
 
     return (
         <div className="relative z-10 py-24">
-
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -193,9 +192,6 @@ export default function InteractiveSoftSkills() {
                             ))}
                         </div>
                     </motion.div>
-
-
-
                     {/* Right side - Description and details */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
