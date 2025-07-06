@@ -60,8 +60,8 @@ export default function Certifications() {
                     <div className="flex justify-center mb-4">
                         <div className="w-16 h-1 bg-sky-700"></div>
                     </div>
-                    <h1 className="font-serif text-4xl font-bold mb-4">Professional Certifications</h1>
-                    <div className="flex justify-center mb-6">
+                    <h1 className=" text-4xl font-bold font-rowdies mb-4">Professional Certifications</h1>
+                    <div className="flex justify-center mb-6"> 
                         <div className="w-24 h-1 bg-sky-700"></div>
                     </div>
                     <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -191,9 +191,8 @@ export default function Certifications() {
                         <div className="w-16 h-px bg-stone-300"></div>
                     </div>
                     <p className="text-gray-500 mt-4 italic font-serif">
-                        &quot;The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice.&quot;
+                       Keep Learning , Keep Exploring .....
                     </p>
-                    <p className="text-gray-600 mt-2 text-sm">— Brian Herbert</p>
                 </div>
             </div>
         </div>

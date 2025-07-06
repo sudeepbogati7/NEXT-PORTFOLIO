@@ -32,7 +32,7 @@ export default function Skills() {
             <section className="my-24">
                 <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_top,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
 
-                <div className="flex   mx-auto p-4 md:w-4/6 w-full flex-col lg:flex-row items-center gap-8 mb-16">
+                <div className="flex   mx-auto p-4 max-w-6xl w-full flex-col lg:flex-row items-center gap-8 mb-16">
                     {/* Left Column - Illustration */}
                     <div data-aos="fade-right" className="w-3/6  lg:w-2/6 flex justify-center">
                         <div className="relative w-full rounded-2xl overflow-hidden  p-6">
@@ -51,8 +51,8 @@ export default function Skills() {
 
                     {/* Right Column - Description */}
                     <div data-aos="fade-left" className="w-full px-4 lg:w-3/4">
-                        <h3 className="text-xl text-center md:text-left font-bold mb-4 text-indigo-900">Full Stack Development Expertise</h3>
-                        <p className="text-gray-600 mb-6 text-justify leading-relaxed">
+                        <h3 className="text-xl lg:text-3xl text-center md:text-left font-bold mb-4 font-black-ops-one text-indigo-900">Full Stack Development Expertise</h3>
+                        <p className="text-gray-600 mb-6 text-base text-justify leading-relaxed">
                             As a Full Stack Software Engineer, I have experience in designing, developing, and deploying secure and scalable applications. I follow DevSecOps practices, ensuring security is integrated throughout the development process. From writing secure code to automating security checks in CI/CD pipelines, I focus on building reliable and well-protected software solutions.
                         </p>
                         <p className="text-gray-600 mb-8 text-justify leading-relaxed">
@@ -60,7 +60,7 @@ export default function Skills() {
                         </p>
 
 
-                        <div className="flex flex-wrap gap-3">
+                        <div className="flex flex-wrap gap-3 max-w-6xl">
                             {["NEXTjs", "Node.js", "Django", "AWS", "FastAPI", "Docker"].map((skill) => (
                                 <span key={skill} className="px-4 py-2 bg-sky-50 text-sky-700 rounded-full text-sm font-medium">
                                     {skill}
@@ -72,7 +72,7 @@ export default function Skills() {
                 </div>
 
 
-                <div className="w-full lg:4/6 md:w-5/6 mx-auto h-[30vh]"> <FallingText
+                <div className="w-full max-w-6xl mx-auto h-[30vh]"> <FallingText
                     text={`I expertise in Full Stack Development with Python, Django, FastAPI, AI, Langchain, JavaScript, React, Next.js, Tailwind CSS, PostgreSQL, Docker, and Linux.`}
                     highlightWords={["React", "Django", "FastAPI", "AI", "Docker", "Linux", "Python", 'JavaScript']}
                     highlightClass="highlighted"
@@ -136,7 +136,7 @@ export default function Skills() {
 
 
 
-                <div className="font-bold text-xl  text-gray-700 text-center mx-auto mt-16 gap-1 flex items-center w-fit mb-4">
+                <div className="font-bold text-xl md:text-2xl font-rowdies  text-gray-700 text-center mx-auto mt-16 gap-1 flex items-center w-fit mb-4">
                     <Braces className="mr-2" /> Web Application Development
                 </div>
                 <div className="flex  flex-col gap-4 md:flex-row justify-center mx-auto w-full xl:w-4/5 p-6 rounded-lg">

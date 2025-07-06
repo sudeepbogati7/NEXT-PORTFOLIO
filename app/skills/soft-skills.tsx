@@ -142,7 +142,7 @@ export default function InteractiveSoftSkills() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex gap-2 items-center font-bold text-2xl w-fit mx-auto mb-12"
+                className="flex gap-2 font-rowdies items-center font-bold text-2xl md:text-3xl w-fit mx-auto mb-12"
             >
                 <Sparkles className="w-6 h-6 text-sky-700" />
                 Soft Skills

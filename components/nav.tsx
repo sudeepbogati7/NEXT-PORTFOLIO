@@ -54,7 +54,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
             </div>
             <Image src={"/profile.jpg"} className="rounded-full" width={40} height={40} alt="logo" />
           </Link>
-          <div className="md:flex items-end   md:items-center gap-4 px-2 rounded py-2 transition-all duration-200 w-fit absolute lg:static right-5 ease-in-out">
+          <div className="md:flex items-end   md:items-center gap-6  rounded py-2 transition-all duration-200 w-fit absolute lg:static right-5 ease-in-out">
             <button
               onClick={() => setSidebarVisible(true)}
               className=" usm:block lg:hidden   px-2 z-50"
