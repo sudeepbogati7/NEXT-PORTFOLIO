@@ -166,7 +166,7 @@ export default function Home() {
         </div>
 
         {/* Content Section */}
-        <div className="relative max-w-7xl z-10 mt-32 flex flex-col-reverse  h-full  lg:flex-row  mx-auto items-center justify-center w-full">
+        <div className="relative max-w-6xl z-10 mt-32 flex flex-col-reverse  h-full  lg:flex-row  mx-auto items-center justify-center w-full">
           {/* Left Content */}
           <motion.div
             className="px-4 md:px-2 mt-4 md:mt-0 w-full md:w-4/5 mx-auto mb-2"

@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import "@/components/nav.css"
-import { Phone, User, Code, BookOpen, Mail, ExternalLink, BarChartIcon as ChartNoAxesCombined } from "lucide-react"
+import { Phone, User, Code, BookOpen, Mail, ExternalLink, BarChartIcon as ChartNoAxesCombined, Menu } from "lucide-react"
 
 import { useState } from "react"
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react"
@@ -41,10 +41,10 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
   return (
     <>
       <nav
-        className={`fixed w-full px-3 z-50 font-russo-one shadow transition-all duration-300 h-20 flex items-center justify-center bg-white `}
+        className={`fixed w-full px-3 z-50 font-russo-one  transition-all duration-300 h-20 flex items-center justify-center bg-white `}
       >
-        <div className="w-full border  max-w-6xl flex justify-between mx-auto z-50 font-medium items-center">
-          <Link href={"/"} className="p-2 border border-red-300 flex flex-row-reverse  items-center gap-2 justify-center">
+        <div className="w-full  rounded px-3 max-w-6xl flex justify-between mx-auto z-50 font-medium items-center">
+          <Link href={"/"} className="p-2  flex flex-row-reverse  items-center gap-2 justify-center">
             <div className="flex flex-col gap-2">
               <div>Sudeep Bogati</div>
               <div className="text-xs relative flex items-center text-gray-500">
@@ -54,12 +54,12 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
             </div>
             <Image src={"/profile.jpg"} className="rounded-full" width={40} height={40} alt="logo" />
           </Link>
-          <div className="md:flex items-end border md:items-center gap-6 py-2 transition-all duration-200 ease-in-out">
+          <div className="md:flex items-end   md:items-center gap-4 px-2 rounded py-2 transition-all duration-200 w-fit absolute lg:static right-5 ease-in-out">
             <button
               onClick={() => setSidebarVisible(true)}
-              className=" usm:block lg:hidden border rounded-full bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
+              className=" usm:block lg:hidden   px-2 z-50"
             >
-              <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
+             <Menu />
             </button>
 
             {/* About me - with tooltip */}
