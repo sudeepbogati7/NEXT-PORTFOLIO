@@ -39,7 +39,7 @@ const Section1 = ({ scrollYProgress }: any) => {
           height={200}
         />
       </div>
-      <h1 className='2xl:text-7xl top-2 w-full md:w-4/6 mx-auto text-transparent bg-gradient-to-br from-sky-700 to-sky-300 bg-clip-text text-5xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
+      <h1 className='2xl:text-7xl font-rowdies top-2 w-full md:w-4/6 mx-auto text-transparent bg-gradient-to-br from-sky-700 to-sky-300 bg-clip-text text-5xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
         Turning Skills Into Real-World Solutions; Workplaces, responsibilities, and the results that followed.
       </h1>
     </motion.section>

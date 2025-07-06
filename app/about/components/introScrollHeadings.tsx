@@ -53,7 +53,7 @@ export default function Index(): JSX.Element {
                     <section className='text-gray-700  h-[80vh] w-full   grid place-content-center sticky top-0'>
                         <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_top,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
 
-                        <h1 className='2xl:text-7xl md:w-4/6 w-full mx-auto text-transparent bg-gradient-to-br from-sky-300 to-gray-500 bg-clip-text text-5xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
+                        <h1 className='2xl:text-7xl font-rowdies md:w-4/6 w-full mx-auto text-transparent bg-gradient-to-br from-sky-300 to-gray-500 bg-clip-text text-5xl md:text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
                             Who am I? Just a guy trying to make software smarter, smoother, and a bit more human.
                         </h1>
                     </section>
@@ -61,7 +61,7 @@ export default function Index(): JSX.Element {
                     <section className='bg-gray-200  text-black grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden'>
                         <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
                         <div className=" md:w-4/6 w-full mx-auto flex flex-col items-center gap-6">
-                            <h1 className='2xl:text-7xl text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
+                            <h1 className='2xl:text-7xl font-rowdies text-4xl px-8 font text-center tracking-tight leading-[120%]'>
                                 From learning loops to professional pipelines — Turning theory into action, challenges into projects, and passion into profession.
                             </h1>
                             <div className="flex gap-6 justify-center mt-4">
@@ -96,7 +96,7 @@ export default function Index(): JSX.Element {
                     </section>
                     <section className='text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0'>
                         <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'></div>
-                        <h1 className='2xl:text-7xl md:w-4/6 w-full mx-auto  text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
+                        <h1 className='2xl:text-7xl font-rowdies md:w-4/6 w-full mx-auto  text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]'>
                             Get to know more about my educational background and how it shaped my journey.
                         </h1>
                     </section>
@@ -109,7 +109,7 @@ export default function Index(): JSX.Element {
                                 <div className="p-6">
                                     <div className="flex items-center gap-2 mb-6">
                                         <GraduationCap className="w-6 h-6 text-sky-500" />
-                                        <h2 className="text-2xl font-bold text-sky-500">Education</h2>
+                                        <h2 className="text-2xl font-bold font-black-ops-one text-sky-500">Education</h2>
                                     </div>
                                     <div className="space-y-6">
                                         <TimelineItem

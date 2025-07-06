@@ -71,7 +71,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="relative z-10  mx-auto px-6 py-20">
-                        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+                        <div className="max-w-6xl px-4 mx-auto flex flex-col lg:flex-row items-center gap-12">
                             {/* Image Section */}
                             <motion.div
                                 className="relative flex-shrink-0"
@@ -81,7 +81,7 @@ export default function AboutPage() {
                             >
                                 {/* Decorative Background Elements */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-blue-600/20 rounded-3xl transform rotate-6 scale-105"></div>
-                                <div className="absolute inset-0 bg-gradient-to-tl from-purple-400/15 to-indigo-500/15 rounded-3xl transform -rotate-3 scale-110"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tl from-indigo-400/15 to-sky-500/15 rounded-3xl transform -rotate-3 scale-110"></div>
 
                                 {/* Main Image Container */}
                                 <div className="relative w-80 h-80 md:w-96 md:h-96">
@@ -106,7 +106,7 @@ export default function AboutPage() {
                                         transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                                     ></motion.div>
                                     <motion.div
-                                        className="absolute -bottom-6 -left-6 w-6 h-6 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full shadow-lg"
+                                        className="absolute -bottom-6 -left-6 w-6 h-6 bg-gradient-to-br from-sky-400 to-sky-700 rounded-full shadow-lg"
                                         animate={{ y: [10, -10, 10] }}
                                         transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
                                     ></motion.div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                                 </motion.div>
 
                                 <motion.h1
-                                    className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-sky-600   to-gray-900 bg-clip-text text-transparent py-3"
+                                    className=" font-black-ops-one text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-br from-sky-600   to-gray-900 bg-clip-text text-transparent py-3"
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3, duration: 0.6 }}

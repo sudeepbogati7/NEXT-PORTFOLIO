@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function WorkTimeline() {
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-4xl text-sky-500 font-bold mb-8 text-center md:text-left">Professional Journey</h1>
+      <h1 className="text-4xl text-sky-500  font-black-ops-one font-bold mb-8 text-center md:text-left">Professional Journey</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8 items-start">
         {/* Timeline Section */}
