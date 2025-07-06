@@ -41,29 +41,26 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
   return (
     <>
       <nav
-        className={`fixed w-full px-3 z-50 shadow transition-all duration-300 h-20 flex items-center justify-center bg-white `}
+        className={`fixed w-full px-3 z-50 font-russo-one shadow transition-all duration-300 h-20 flex items-center justify-center bg-white `}
       >
-        <div className="w-full md:w-4/6 flex justify-between mx-auto z-50 font-medium items-center">
+        <div className="w-full max-w-6xl flex justify-between mx-auto z-50 font-medium items-center">
           <Link href={"/"} className="p-2 flex flex-row-reverse  items-center gap-2 justify-center">
             <div className="flex flex-col gap-2">
               <div>Sudeep Bogati</div>
               <div className="text-xs relative flex items-center text-gray-500">
                 <span className="w-2 h-2 rounded-full absolute bg-green-500"></span>
-                <span className="absolute left-3 font-normal w-full">available for gigs</span>
+                <span className="absolute left-3 font-normal font-petrona w-full">available for gigs</span>
               </div>
             </div>
             <Image src={"/profile.jpg"} className="rounded-full" width={40} height={40} alt="logo" />
           </Link>
           <div className="flex items-center gap-6 py-2 transition-all duration-200 ease-in-out">
-            <div className="relative transition-all duration-600 ease-in-out p-1 block lg:hidden rounded-full order-first">
-              <div className="absolute inset-0 animate-outer-ping rounded-xl"></div>
-              <button
-                onClick={() => setSidebarVisible(true)}
-                className="relative usm:block lg:hidden border rounded-full bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
-              >
-                <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
-              </button>
-            </div>
+            <button
+              onClick={() => setSidebarVisible(true)}
+              className="relative usm:block lg:hidden border rounded-full bg-gray-200 border-slate-400 shadow-lg px-2 z-50"
+            >
+              <Image src={"/menu.svg"} width={30} height={30} alt="menu" />
+            </button>
 
             {/* About me - with tooltip */}
             <span className={`${isActive("/about")} usm:hidden lg:block relative group`}>

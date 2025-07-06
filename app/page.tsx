@@ -180,11 +180,11 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h1 className='text-lg flex gap-1 font-medium font-handwriting text-green-700'>
+              <h1 className='text-lg font-russo-one flex gap-1 font-medium font-handwriting text-green-700'>
                 Namaste <Image src={'/namaste.svg'} width={18} height={20} alt='namaste'></Image> !
               </h1>
               <div className='text-2xl font-extrabold'>
-                My name is <span className='bg-gradient-to-r from-green-200 to-blue-300 rounded-md px-2 text-gray-700'>Sudeep Bogati</span>
+                My name is <span className='bg-gradient-to-r   from-green-200 to-blue-300 rounded-md px-2 text-gray-700'>Sudeep Bogati</span>
               </div>
               <div className='text-gray-600 text-lg flex  font-medium'>
                 originating from the beautiful landscapes of Nepal <Image src={'/nepal_flag.svg'} width={20} height={20} alt='nepal'></Image>
@@ -248,7 +248,7 @@ export default function Home() {
               <div className="text-lg font-semibold text-gray-800">
                 As a <span className="text-green-600">Software Engineer</span>,
               </div>
-              <div className="text-xl font-semibold text-blue-900">
+              <div className="text-xl font-semibold  font-fraunces text-blue-900">
                 I build complete Web Applications to solve business problems
               </div>
               <div className="text-gray-700 text-lg font-medium">
@@ -295,7 +295,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <div className="mt-2 font-extrabold text-2xl tracking-wide text-gray-700">
+              <div className="mt-2 font-extrabold font-black-ops-one text-2xl tracking-wide text-gray-700">
                 Sudeep Bogati
               </div>
               <div className="text-gray-700">
@@ -321,7 +321,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="mt-6 flex flex-col  w-fit items-center justify-center gap-2"
+              className="mt-6 flex flex-col   md:w-fit items-center justify-center gap-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.1 }}

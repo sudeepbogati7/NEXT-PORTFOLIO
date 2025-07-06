@@ -15,14 +15,17 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        cursive: ['"Dancing Script"', 'cursive'],
-        handwriting: ["Sour Gummy", "sans"],
-        poppins: ['Poppins', 'sans-serif'],
-        karla: ['Karla', 'sans-serif'],
-        railway: ['Railway', 'sans-serif'],
-        open_sans: ['Open Sans', 'sans-serif']
-
-
+        'black-ops-one': ['"Black Ops One"', 'sans-serif'],
+        'concert-one': ['"Concert One"', 'sans-serif'],
+        'fraunces': ['Fraunces', 'serif'],
+        'pacifico': ['Pacifico', 'cursive'],
+        'petrona': ['Petrona', 'serif'],
+        'playfair-display': ['"Playfair Display"', 'serif'],
+        'press-start-2p': ['"Press Start 2P"', 'monospace'],
+        'russo-one': ['"Russo One"', 'sans-serif'],
+        'sorts-mill-goudy': ['"Sorts Mill Goudy"', 'serif'],
+        'rowdies': ['"Rowdies"', 'sans-serif'],
+        'merienda' : ['"Merienda"', 'cursive;']
 
       },
       keyframes: {

@@ -104,17 +104,13 @@ export default function RootLayout({
           `}
         </script>
       </head>
-      <body className={`bg-gray-50 font-poppins`}>
+      <body className={`bg-gray-50 font-fraunces`}>
 
         <AuthProvider>
           <Toaster />
           <Nav />
           <main className="pt-20 pb-12">{children}</main>
-          <footer className="bg-gray-300 text-sky-900 py-6 text-center">
-            <div className="container mx-auto">
-              <p className="text-sm">&copy; {new Date().getFullYear()} Sudeep Bogati. All rights reserved.</p>
-            </div>
-          </footer>
+          
         </AuthProvider>
       </body>
     </html>
