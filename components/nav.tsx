@@ -45,8 +45,8 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
       >
         <div className="w-full  rounded px-3 max-w-6xl flex justify-between mx-auto z-50 font-medium items-center">
           <Link href={"/"} className="p-2  flex flex-row-reverse  items-center gap-2 justify-center">
-            <div className="flex flex-col gap-2">
-              <div>Sudeep Bogati</div>
+            <div className="flex flex-col gap-1">
+              <div className="font-russo-one text-sky-700">Sudeep Bogati</div>
               <div className="text-xs relative flex items-center text-gray-500">
                 <span className="w-2 h-2 rounded-full absolute bg-green-500"></span>
                 <span className="absolute left-3 font-normal font- w-full">available for gigs</span>
@@ -66,7 +66,7 @@ export default function Nav({ bgColor = "bg-gray-100" }: { bgColor?: string }) {
             <span className={`${isActive("/about")} usm:hidden lg:block relative group`}>
               <Link
                 href={"/about"}
-                className="transition-colors hover-underline-animation left w-fit hover:text-sky-500"
+                className="transition-colors hover-underline-animation left  w-fit hover:text-sky-500"
               >
                 Who am I?
               </Link>

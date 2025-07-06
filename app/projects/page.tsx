@@ -89,12 +89,12 @@ export default function Projects() {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
-            <main className=" max-w-7xl mx-auto py-20 px-4 font-sans">
-                <motion.div initial="hidden" animate="visible" variants={fadeIn} className="text-center mb-16">
-                    <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+            <main className=" max-w-6xl mx-auto py-20 px-4 font-sans">
+                <motion.div initial="hidden" animate="visible" variants={fadeIn} className="text-center mb-16 ">
+                    <h1 className="text-3xl font-black-ops-one md:text-4xl font-bold mb-4 text-gray-800">
                         <span className="text-blue-600">Projects</span> that I Have Built
                     </h1>
-                    <p className="text-gray-500 max-w-3xl mx-auto">
+                    <p className="text-gray-500 max-w-3xl  mx-auto">
                         Here are some of the projects I have worked on. Each one reflects my skills and dedication in full stack
                         software development. Take a look to see what I have created and the problems I have solved.
                     </p>
