@@ -21,12 +21,6 @@ const FollowCursor: React.FC<FollowCursorProps> = ({ color = '#34b7eb' }) => {
       width: number;
       lag: number;
 
-      constructor(x: number, y: number, width: number, lag: number) {
-        this.position = { x, y };
-        this.width = width;
-        this.lag = lag;
-      }
-
       moveTowards(x: number, y: number, context: CanvasRenderingContext2D) {
         this.position.x += (x - this.position.x) / this.lag;
         this.position.y += (y - this.position.y) / this.lag;
