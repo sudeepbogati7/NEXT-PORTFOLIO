@@ -70,6 +70,25 @@ const FollowCursor: React.FC<FollowCursorProps> = ({ color = '#34b7eb' }) => {
       animationFrame = requestAnimationFrame(loop);
     };
 
+    const init = () => {
+      if (prefersReducedMotion.matches) {
+        console.log('Reduced motion enabled, cursor effect skipped.');
+        return;
+      }
+      canvas = document.createElement('canvas');
+      context = canvas.getContext('2d');
+      canvas.style.position = 'fixed';
+      canvas.style.top = '0';
+      canvas.style.left = '0';
+      canvas.style.pointerEvents = 'none';
+      canvas.width = width;
+      canvas.height = height;
+      document.body.appendChild(canvas);
+
+      window.addEventListener('mousemove', onMouseMove);
+      window.addEventListener('resize', onWindowResize);
+      loop();
+    };
 
     const destroy = () => {
       if (canvas) canvas.remove();
