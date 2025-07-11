@@ -11,6 +11,8 @@ import Loading from "./Loading";
 const inter = Inter({ subsets: ["latin"] });
 import { Suspense } from "react";
 import { AuthProvider } from "../contexts/AuthContext";
+import FollowCursor from "@/components/cursor";
+import SmoothFollower from "@/components/cursor";
 
 
 export default function RootLayout({
@@ -102,6 +104,7 @@ export default function RootLayout({
         </script>
       </head>
       <body className={`bg-gray-50 font-fraunces`}>
+        <FollowCursor />
         <AuthProvider>
           <Toaster />
           <Nav />
