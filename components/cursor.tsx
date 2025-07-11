@@ -5,7 +5,6 @@ import React, { useEffect } from 'react';
 interface FollowCursorProps {
   color?: string;
 }
-
 const FollowCursor: React.FC<FollowCursorProps> = ({ color = '#34b7eb' }) => {
   useEffect(() => {
     let canvas: HTMLCanvasElement;
@@ -17,7 +16,6 @@ const FollowCursor: React.FC<FollowCursorProps> = ({ color = '#34b7eb' }) => {
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     );
-
     class Dot {
       position: { x: number; y: number };
       width: number;
