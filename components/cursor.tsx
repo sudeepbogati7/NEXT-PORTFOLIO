@@ -104,15 +104,11 @@ const FollowCursor: React.FC<FollowCursorProps> = ({ color = '#34b7eb' }) => {
         init();
       }
     };
-
     init();
-
     return () => {
       destroy();
     };
   }, [color]);
-
-  return null; // This component doesn't render any visible JSX
+  return null;
 };
-
 export default FollowCursor;
